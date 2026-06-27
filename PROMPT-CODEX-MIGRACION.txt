@@ -1,0 +1,581 @@
+PROYECTO: Rediseño y migración completa del portal ATRAHDOM
+RUTA LOCAL DEL PROYECTO:
+/Users/juanvelasquez/Proyectos/atrahdom
+
+OBJETIVO GENERAL
+
+Estamos rehaciendo el portal público de ATRAHDOM, cuyo sitio actual es:
+https://atrahdom.org/
+
+El nuevo sitio debe conservar el 100% del contenido público existente del portal original, pero presentarlo dentro de una nueva plantilla visual y de navegación inspirada en:
+https://fondocentroamericano.org/
+
+La inspiración debe aplicarse únicamente a la lógica de diseño, composición editorial, jerarquías, navegación compacta, uso de fotografía documental, bloques destacados, filtros y biblioteca de recursos. No debe copiarse literalmente la identidad visual de FCAM.
+
+La identidad visual del nuevo sitio debe basarse en el logo oficial de ATRAHDOM y sus colores: rosa, morado, lila, negro y tonos complementarios compatibles.
+
+REGLA PRINCIPAL DEL PROYECTO
+
+No resumir, no reinterpretar, no reescribir y no inventar contenido existente.
+
+Cada página, entrada, documento, galería, imagen, fecha, usuario, autoría, categoría, lista, enlace, pie de foto, archivo adjunto y estructura editorial debe migrarse de forma literal desde el sitio original.
+
+Los placeholders solo deben utilizarse para funciones nuevas que no existen en el portal actual, por ejemplo:
+- formularios modernos de contacto;
+- ruta de solicitud de apoyo;
+- proceso de afiliación;
+- cifras de impacto no publicadas;
+- política de privacidad nueva;
+- datos institucionales actuales no disponibles;
+- mecanismos nuevos de donación.
+
+Nunca debe utilizarse un placeholder para sustituir contenido que ya existe en el sitio original.
+
+ESTADO ACTUAL DEL PROYECTO
+
+Actualmente existen estos archivos principales:
+
+1. index.html
+   - Contiene la estructura base del mockup.
+   - Usa navegación tipo SPA mediante hashes.
+   - Incluye encabezado, menú, pie, buscador y contenedor principal.
+
+2. styles.css
+   - Contiene la nueva identidad visual inspirada en FCAM y adaptada a ATRAHDOM.
+   - Incluye diseño responsive.
+   - Tiene estilos para tarjetas, hero, archivos, fichas de contenido, galerías, placeholders y bloques institucionales.
+
+3. app.js
+   - Renderiza el contenido desde datos locales.
+   - No debe consultar WordPress ni ninguna API en tiempo de ejecución.
+   - Contiene rutas para:
+     - inicio;
+     - quiénes somos;
+     - qué hacemos;
+     - recursos;
+     - actualidad;
+     - sindicatos;
+     - contacto;
+     - ayuda;
+     - participación;
+     - donación;
+     - privacidad;
+     - fichas individuales.
+   - Incluye filtros, buscador y paginación local.
+
+4. content-data.js
+   - Contiene una migración parcial y manual.
+   - NO representa el 100% del sitio.
+   - Algunas entradas tienen contenido completo.
+   - Otras tienen resúmenes, reconstrucciones o enlaces al original.
+   - Debe ser reemplazado progresivamente por datos completos y verificados.
+
+5. MAPA-SITIO-ORIGEN.md
+   - Mapa inicial del portal origen.
+   - Incluye navegación principal, categorías, páginas institucionales y observaciones de arquitectura.
+
+6. REFERENCIA-FCAM-ESTILO-NAVEGACION.md
+   - Análisis del sitio de FCAM como referencia visual y de navegación.
+
+7. MIGRACION-AUDITORIA.md
+   - Documento de reinicio de la migración.
+   - Define criterios de aceptación.
+   - Incluye URLs detectadas, entradas conocidas, categorías, adjuntos y medios pendientes.
+
+8. PROMPT-CODEX-MIGRACION.txt
+   - Este documento.
+
+SERVIDOR LOCAL
+
+El proyecto fue servido previamente en:
+http://localhost:4173
+
+Verificar si el servidor sigue activo. Si no lo está, iniciar un servidor estático local desde:
+/Users/juanvelasquez/Proyectos/atrahdom
+
+No usar frameworks innecesarios. La implementación actual es HTML, CSS y JavaScript puro.
+
+PROBLEMA DETECTADO
+
+El mockup inicial fue construido como una maqueta visual y no como una migración literal.
+
+Como resultado:
+- faltan muchas entradas históricas;
+- algunas páginas están resumidas;
+- varias publicaciones documentales solo enlazan al original;
+- faltan imágenes;
+- faltan PDFs y adjuntos locales;
+- no se ha recorrido toda la paginación;
+- no se ha verificado cada ficha contra el original;
+- algunas fechas y usuarios podrían estar incompletos o aproximados;
+- algunas categorías no están representadas;
+- varios medios siguen cargándose desde WordPress en lugar de estar descargados localmente.
+
+La tarea ahora es corregir esto de forma exhaustiva.
+
+OBJETIVO TÉCNICO PARA CODEX
+
+Realizar una migración completa y verificable del sitio original a la nueva plantilla.
+
+La migración debe quedar completamente local.
+
+El sitio final no debe consultar:
+- WordPress REST API;
+- WordPress.com API;
+- HTML remoto del portal original;
+- imágenes remotas de WordPress;
+- recursos remotos evitables.
+
+Las únicas dependencias externas permitidas serán aquellas que por su naturaleza no puedan descargarse o migrarse legal o técnicamente, por ejemplo:
+- YouTube;
+- SlideShare;
+- Scribd;
+- redes sociales;
+- documentos alojados únicamente en servicios externos sin descarga pública.
+
+En esos casos debe existir un manifiesto local con URL, título, plataforma, autor y estado.
+
+FASE 1: INVENTARIO EXHAUSTIVO
+
+Recorrer el sitio completo empezando en:
+https://atrahdom.org/
+
+Debes inventariar:
+- páginas;
+- entradas;
+- categorías;
+- subcategorías;
+- archivos por autor;
+- archivos por fecha;
+- paginación completa;
+- páginas de adjuntos;
+- imágenes;
+- galerías;
+- PDFs;
+- DOC, DOCX;
+- PPT, PPTX;
+- XLS, XLSX;
+- ZIP;
+- enlaces externos;
+- embeds;
+- iframes;
+- videos;
+- audios;
+- SlideShare;
+- Scribd;
+- YouTube;
+- enlaces sociales;
+- archivos históricos.
+
+Debes seguir todos los enlaces internos relevantes hasta que no existan URLs nuevas.
+
+No te limites al menú principal.
+
+Debes recorrer:
+- “Older Posts”;
+- paginación numérica;
+- archivos de categorías;
+- subcategorías;
+- autores;
+- formatos;
+- páginas de adjuntos;
+- publicaciones relacionadas;
+- enlaces internos dentro del cuerpo.
+
+Crear estos archivos:
+
+inventory/urls.json
+inventory/media.json
+inventory/external-resources.json
+inventory/verification.json
+inventory/broken-links.json
+inventory/redirects.json
+
+Cada registro de URL debe contener al menos:
+- original_url;
+- final_url;
+- status_code;
+- type;
+- title;
+- slug;
+- publication_date;
+- modified_date;
+- wordpress_user;
+- internal_author;
+- categories;
+- tags;
+- parent;
+- pagination_source;
+- canonical_url;
+- content_hash;
+- media_count;
+- attachment_count;
+- migration_status;
+- verification_status.
+
+FASE 2: DESCARGA DEL CONTENIDO
+
+Descargar y almacenar localmente todo el contenido público.
+
+Crear estructura sugerida:
+
+assets/
+  images/
+  documents/
+  presentations/
+  spreadsheets/
+  archives/
+  video-posters/
+  external/
+
+content/
+  pages/
+  posts/
+  categories/
+  attachments/
+
+inventory/
+
+Usar nombres de archivo estables y legibles.
+
+Preferencia:
+- slug + identificador corto;
+- conservar extensión original;
+- evitar espacios;
+- evitar colisiones;
+- registrar el nombre original en el manifiesto.
+
+Para cada imagen:
+- descargar el archivo original de mayor resolución disponible;
+- registrar URL original;
+- registrar dimensiones;
+- registrar MIME type;
+- conservar texto alternativo;
+- conservar pie de foto;
+- conservar contexto de uso;
+- generar ruta local relativa;
+- no depender de URLs remotas en el mockup.
+
+Para cada documento:
+- descargar el archivo;
+- conservar el nombre original en metadatos;
+- registrar título visible;
+- registrar fecha;
+- registrar publicación de origen;
+- registrar tipo de archivo;
+- registrar tamaño;
+- generar ruta local.
+
+FASE 3: EXTRACCIÓN LITERAL
+
+Para cada página y entrada:
+
+Extraer el cuerpo HTML completo de la publicación original.
+
+Conservar:
+- párrafos;
+- encabezados;
+- listas;
+- tablas;
+- citas;
+- columnas;
+- separadores;
+- enlaces;
+- imágenes;
+- galerías;
+- pies de foto;
+- negritas;
+- cursivas;
+- bloques embebidos;
+- descargas;
+- texto visible;
+- errores ortográficos originales;
+- mayúsculas originales;
+- signos originales;
+- orden original.
+
+Eliminar únicamente elementos globales ajenos al cuerpo:
+- navegación de WordPress;
+- barra de WordPress.com;
+- widgets globales;
+- comentarios;
+- botones de compartir;
+- pie global;
+- login;
+- suscripción global;
+- publicidad de plataforma;
+- elementos de administración.
+
+No resumir.
+No corregir estilo.
+No corregir ortografía.
+No modernizar el texto.
+No completar frases.
+No inferir contenido faltante.
+
+FASE 4: NORMALIZACIÓN DE DATOS
+
+Reemplazar el modelo manual actual de content-data.js por una estructura mantenible.
+
+Se recomienda generar un archivo JSON principal o varios archivos por tipo:
+
+content/site.json
+content/pages.json
+content/posts.json
+content/categories.json
+content/media.json
+content/external.json
+
+Luego adaptar app.js para cargar esos datos locales.
+
+Si se decide mantener content-data.js, debe generarse automáticamente desde los archivos de inventario y contenido.
+
+Cada entrada debe contener al menos:
+- id local;
+- id original si existe;
+- type;
+- slug;
+- original_url;
+- title_html;
+- title_text;
+- excerpt_html;
+- content_html;
+- date;
+- modified;
+- wordpress_user;
+- internal_author;
+- categories;
+- tags;
+- featured_image;
+- gallery;
+- attachments;
+- external_embeds;
+- parent;
+- previous_post;
+- next_post;
+- migration_status;
+- verification_status.
+
+FASE 5: RENDERIZADO EN LA NUEVA PLANTILLA
+
+Mantener la plantilla visual existente, pero adaptar el renderizado para que soporte correctamente:
+- contenido largo;
+- imágenes verticales y horizontales;
+- galerías;
+- columnas;
+- tablas;
+- listas extensas;
+- archivos descargables;
+- documentos destacados;
+- embeds;
+- notas y pies de foto;
+- enlaces internos;
+- navegación anterior/siguiente;
+- categorías;
+- autorías múltiples;
+- fechas originales;
+- archivos históricos.
+
+Las tarjetas deben mostrar:
+- título exacto;
+- fecha exacta;
+- usuario exacto;
+- categoría principal;
+- imagen destacada real si existe;
+- extracto original si existe;
+- si no existe extracto, generar únicamente una vista previa visual sin alterar el contenido almacenado.
+
+Al ingresar a una tarjeta:
+- mostrar el cuerpo completo;
+- mostrar todas las imágenes;
+- mostrar adjuntos;
+- mostrar autoría;
+- mostrar fecha;
+- mostrar categorías;
+- mostrar enlace original solo como referencia secundaria;
+- no depender del original para leer el contenido.
+
+FASE 6: ENLACES INTERNOS
+
+Reescribir todos los enlaces internos para que apunten a rutas locales del mockup.
+
+Ejemplos:
+- enlaces a otras entradas;
+- enlaces a páginas;
+- enlaces a categorías;
+- enlaces a adjuntos;
+- enlaces a imágenes;
+- enlaces a PDFs.
+
+Conservar externos como externos.
+
+Crear un reporte de enlaces rotos.
+
+FASE 7: VERIFICACIÓN CONTRA EL ORIGINAL
+
+Para cada URL migrada:
+
+1. Abrir la URL original.
+2. Abrir la versión local.
+3. Comparar:
+   - título;
+   - fecha;
+   - usuario;
+   - autoría interna;
+   - número de párrafos;
+   - número de encabezados;
+   - número de listas;
+   - número de enlaces;
+   - número de imágenes;
+   - número de adjuntos;
+   - orden del contenido;
+   - texto completo;
+   - estructura visual.
+4. Registrar diferencias.
+5. Corregir.
+6. Marcar como verificada solo cuando no existan diferencias de contenido.
+
+Guardar resultados en:
+inventory/verification.json
+
+Cada registro debe incluir:
+- original_url;
+- local_route;
+- title_match;
+- date_match;
+- user_match;
+- text_match;
+- image_count_match;
+- attachment_count_match;
+- link_count_match;
+- structure_match;
+- visual_review;
+- notes;
+- verified_at;
+- status.
+
+Estados permitidos:
+- not_started;
+- inventoried;
+- downloaded;
+- rendered;
+- needs_review;
+- verified;
+- blocked_external_dependency.
+
+FASE 8: CONTROL DE CALIDAD
+
+Ejecutar estas comprobaciones:
+
+- No existen llamadas fetch al sitio original en tiempo de ejecución.
+- No existen imágenes remotas de WordPress en HTML, CSS o JavaScript.
+- No existen enlaces internos que apunten al dominio original salvo el enlace explícito “Ver publicación original”.
+- Todas las rutas locales funcionan.
+- El buscador encuentra todo el contenido.
+- Los filtros muestran conteos correctos.
+- Las fechas están en español.
+- Los usuarios coinciden con WordPress.
+- Las autorías internas se conservan.
+- Los adjuntos descargan correctamente.
+- Las galerías cargan correctamente.
+- El diseño funciona en móvil, tableta y escritorio.
+- El contenido largo no rompe el layout.
+- No hay contenido inventado.
+- No hay resúmenes usados como sustitución del cuerpo original.
+- No hay placeholders dentro de contenido histórico existente.
+- Los placeholders solo aparecen en funciones nuevas.
+
+FASE 9: DOCUMENTACIÓN FINAL
+
+Actualizar:
+- MIGRACION-AUDITORIA.md
+- README.md
+
+Crear:
+- MIGRATION-REPORT.md
+- CONTENT-GAPS.md
+- EXTERNAL-DEPENDENCIES.md
+- QA-REPORT.md
+
+El reporte final debe indicar:
+- total de URLs encontradas;
+- total de páginas;
+- total de entradas;
+- total de categorías;
+- total de imágenes;
+- total de documentos;
+- total de embeds;
+- total de URLs verificadas;
+- URLs pendientes;
+- recursos imposibles de descargar;
+- enlaces rotos;
+- redirecciones;
+- contenido duplicado;
+- páginas de adjuntos descartadas o integradas;
+- decisiones técnicas.
+
+ARCHIVOS Y CONTENIDO YA IDENTIFICADOS
+
+Revisar primero:
+- MIGRACION-AUDITORIA.md
+- MAPA-SITIO-ORIGEN.md
+- REFERENCIA-FCAM-ESTILO-NAVEGACION.md
+- content-data.js
+- app.js
+- styles.css
+- index.html
+
+No asumir que content-data.js es correcto.
+Debe validarse cada registro contra el original.
+
+CASO DE REFERENCIA DEL ERROR ANTERIOR
+
+La página:
+https://atrahdom.org/espacios-de-participacion/
+
+fue inicialmente resumida en un solo párrafo, aunque el original contiene:
+- dos columnas;
+- múltiples bloques;
+- separadores;
+- una galería de cinco imágenes;
+- texto institucional más amplio.
+
+Este caso demuestra por qué no deben utilizarse resúmenes.
+
+Toda la migración debe evitar repetir ese error.
+
+PRIORIDAD DE EJECUCIÓN
+
+Orden recomendado:
+
+1. Crear crawler e inventario total.
+2. Completar paginación de Blog y Centro de Documentación.
+3. Inventariar todas las páginas y adjuntos.
+4. Descargar medios.
+5. Extraer cuerpos completos.
+6. Generar datos locales.
+7. Adaptar renderizado.
+8. Verificar cada URL.
+9. Corregir diferencias.
+10. Generar reportes finales.
+
+RESTRICCIONES
+
+- No borrar el diseño actual sin respaldo.
+- No eliminar archivos sin confirmar que son reemplazados.
+- No sobrescribir manualmente datos sin guardar copia.
+- No inventar texto.
+- No sustituir documentos por descripciones.
+- No marcar como verificado algo incompleto.
+- No depender de WordPress en tiempo de ejecución.
+- No usar OCR salvo que sea absolutamente necesario.
+- No modificar el contenido histórico por razones de estilo.
+- No eliminar fechas o usuarios.
+
+RESULTADO ESPERADO
+
+Un mockup navegable completamente local que refleje el 100% del contenido público del sitio original, dentro de la nueva plantilla visual.
+
+El usuario debe poder navegar el portal completo, abrir cualquier tarjeta, leer el contenido íntegro, ver las imágenes originales, descargar los documentos y encontrar las publicaciones mediante buscador y filtros, sin necesidad de acceder al WordPress original.
+
+La migración solo se considera terminada cuando todas las URLs relevantes estén inventariadas, descargadas, renderizadas y verificadas contra el original.

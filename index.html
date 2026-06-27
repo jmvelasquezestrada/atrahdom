@@ -1,61 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
 <head>
-<title>ATRAHDOM</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <meta name="description" content="Mockup navegable del rediseño de ATRAHDOM">
+  <title>ATRAHDOM — Trabajo digno, derechos para todas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=embeds-20260626c">
 </head>
 <body>
-<div class="container">
-  <div class="jumbotron">
-    <h1>ATRAHDOM</h1> 
-    <p>Asociación de Trabajadoras del Hogar a Domicilio y de Maquila.</p> 
-  </div>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+    <div class="utility-bar">
+      <div class="wrap utility-inner">
+        <p>Asociación de Trabajadoras del Hogar, a Domicilio y de Maquila</p>
+        <nav aria-label="Enlaces rápidos">
+          <a href="#/ayuda">Solicita apoyo</a><a href="#/participa">Afíliate</a><a href="#/donar">Haz una donación</a>
+        </nav>
+      </div>
+    </div>
+    <div class="wrap main-nav">
+      <a class="brand" href="#/" aria-label="ATRAHDOM, inicio">
+        <span class="brand-mark" aria-hidden="true"><img src="assets/images/logo-oficial-atrahdom.png" alt=""></span>
+        <span><strong>ATRAHDOM</strong><small>Trabajo digno. Derechos para todas.</small></span>
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="primary-menu">Menú</button>
+      <nav id="primary-menu" class="primary-menu" aria-label="Navegación principal">
+        <a href="#/quienes-somos">Quiénes somos</a>
+        <a href="#/que-hacemos">Qué hacemos</a>
+        <a href="#/recursos">Recursos</a>
+        <a href="#/actualidad">Actualidad</a>
+        <a href="#/organizaciones">Sindicatos</a>
+        <button class="search-open" aria-label="Abrir búsqueda">Buscar</button>
+      </nav>
+    </div>
+  </header>
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">ATRAHDOM</a>
+  <main id="contenido" tabindex="-1"></main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <section><h2>ATRAHDOM</h2><p>Organización de mujeres trabajadoras guatemaltecas dedicada a la formación, defensa de derechos humanos laborales y acompañamiento jurídico.</p></section>
+      <section><h3>Contacto</h3><p><a href="mailto:coordinacion@atrahdom.org">coordinacion@atrahdom.org</a><br><a href="mailto:amarroquin@atrahdom.org">amarroquin@atrahdom.org</a><br><a href="tel:+50222532382">(502) 2253 2382</a></p></section>
+      <section><h3>Explora</h3><a href="#/recursos">Biblioteca</a><a href="#/actualidad">Noticias y blog</a><a href="#/contacto">Contacto</a><a href="#/privacidad">Privacidad</a></section>
+      <section class="placeholder"><h3>PLACEHOLDER</h3><p>Agregar aquí dirección física vigente, horario de atención y redes sociales verificadas.</p></section>
     </div>
-    <div>
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Inicio</a></li>
-        <li><a href="#">Noticias</a></li>
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Proyectos en Ejecución
-          <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Proyecto 1</a></li>
-            <li><a href="#">Proyecto 2</a></li>
-            <li><a href="#">Proyecto 3</a></li> 
-          </ul>
-        </li>
-        <li><a href="#">Proyectos Finalizados</a></li> 
-        <li><a href="#">Acerca de nosotros</a></li> 
-        <li><a href="#">Nuestros Cooperantes</a></li>
-        <li><a href="#">Contactanos</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-<div class="container">
-  <div class="row">
-    <div class="col-sm-6" style="background-color:lavender;">
-      <p>Lorem ipsum...</p>
-    </div>
-    <div class="col-sm-6" style="background-color:lavenderblush;">
- <li><a href="#">Acerca de nosotros</a></li>      <p>Sed ut perspiciatis...</p>
-    </div>
-  </div>
-</div>
-  <p>This is some text.</p> 
-  <p>This is another text.</p> 
-</div>
+    <div class="wrap footer-bottom"><p>© <span id="year"></span> ATRAHDOM. Mockup de rediseño.</p><p>Contenido sincronizado desde el portal original.</p></div>
+  </footer>
+
+  <dialog id="search-dialog">
+    <form method="dialog" class="search-panel"><button class="dialog-close" aria-label="Cerrar">×</button><label for="site-search">Buscar en todo el archivo</label><input id="site-search" type="search" placeholder="Escribe una palabra o tema…" autocomplete="off"><div id="search-results"></div></form>
+  </dialog>
+
+  <template id="loading-template"><section class="loading wrap"><span></span><p>Cargando el archivo local de ATRAHDOM…</p></section></template>
+  <script src="content/site-data.js"></script>
+  <script src="content-data.js"></script>
+  <script src="app.js?v=embeds-20260626c" defer></script>
 </body>
 </html>
-
