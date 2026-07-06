@@ -29,7 +29,7 @@ function enhanceContent(html){const box=document.createElement('div');box.innerH
 function attachmentEmbeds(p,rendered=''){const html=rendered||contentOf(p);return (p.attachments||[]).filter(path=>!html.includes(path)).map(path=>mediaEmbed(path,fileName(path))).filter(Boolean).join('')}
 const allYears=()=>[...new Set(state.posts.map(p=>{const d=dateOf(p);return d?new Date(d).getFullYear():null}).filter(Boolean))].sort((a,b)=>b-a);
 const relatedPosts=(p,count=3)=>{const cats=categoryNames(p);return state.posts.filter(x=>x.id!==p.id&&categoryNames(x).some(c=>cats.includes(c))).sort((a,b)=>new Date(dateOf(b)||0)-new Date(dateOf(a)||0)).slice(0,count)};
-const postType=p=>{if((p.attachments||[]).length||/\.(pdf|docx?|pptx?|xlsx?)/i.test(contentOf(p)))return'doc';if(/youtube|youtu\.be|embed/i.test(contentOf(p)))return'video';return''};
+const postType=p=>{if((p.attachments||[]).length||/\.(pdf|docx?|pptx?|xlsx?)/i.test(contentOf(p)))return'doc';if(/youtube|youtu\.be|youtube\.com/i.test(contentOf(p)))return'video';return''};
 const highlightText=(text,term)=>{const esc=term.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');return text.replace(new RegExp(`(${esc})`,'gi'),'<mark>$1</mark>')};
 function resourceCard(p){const cats=categoryNames(p);const type=postType(p);const year=dateOf(p)?new Date(dateOf(p)).getFullYear():'';const atts=p.attachments||[];return`<article class="card resource-card type-${type||'default'}"><div class="card-body"><div class="meta"><span class="resource-type-badge type-${type||'default'}">${type==='doc'?'PDF':type==='video'?'VID':'ART'}</span><span>${cats[0]||'Documento'}</span>${year?`<span>${year}</span>`:''}</div><h3>${titleOf(p)}</h3><div class="resource-actions"><a class="read" href="${routeOf(p)}">Ver ficha →</a>${atts.length?`<a class="btn small alt" href="${atts[0]}" target="_blank" rel="noopener">Descargar ↓</a>`:''}</div></div></article>`}
 
@@ -103,7 +103,7 @@ function bindArchive(kind){
       if(cat&&!categoryNames(p).includes(cat))return false;
       if(year){const d=dateOf(p);if(!d||new Date(d).getFullYear()!==Number(year))return false}
       if(term&&!`${titleOf(p)} ${strip(contentOf(p))}`.toLowerCase().includes(term))return false;
-      if(typeFilter){if(typeFilter==='doc'&&!(p.attachments||[]).length&&!/\.(pdf|docx?|pptx?|xlsx?)/i.test(contentOf(p)))return false;if(typeFilter==='video'&&!/youtube|youtu\.be|embed/i.test(contentOf(p)))return false}
+      if(typeFilter){if(typeFilter==='doc'&&!(p.attachments||[]).length&&!/\.(pdf|docx?|pptx?|xlsx?)/i.test(contentOf(p)))return false;if(typeFilter==='video'&&!/youtube|youtu\.be|youtube\.com/i.test(contentOf(p)))return false}
       return true;
     });
     const pgs=Math.max(1,Math.ceil(filtered.length/per));page=Math.min(page,pgs);
