@@ -1,0 +1,459 @@
+================================================================================
+PROMPT MAESTRO — REDISEÑO VISUAL DEL PORTAL ATRAHDOM
+Versión: 1.0 — 5 de julio de 2026
+Ruta local del proyecto: /Users/juanvelasquez/Proyectos/atrahdom
+================================================================================
+
+Este documento es un prompt de ejecución autocontenido. Cualquier modelo o
+desarrollador debe poder ejecutar el rediseño completo leyendo únicamente este
+archivo. Está dividido en 5 fases secuenciales. NO ejecutes una fase sin haber
+completado y verificado la anterior.
+
+--------------------------------------------------------------------------------
+0. CONTEXTO DEL PROYECTO
+--------------------------------------------------------------------------------
+
+ATRAHDOM es la Asociación de Trabajadoras del Hogar, a Domicilio y de Maquila
+de Guatemala. Su sitio actual (https://atrahdom.org/) es un blog WordPress.com
+cuyo contenido ya fue migrado localmente a este proyecto como sitio estático
+tipo SPA.
+
+Archivos existentes relevantes:
+
+- index.html ............ estructura base del SPA (navegación por hashes #/)
+- app.js ................ router SPA; consume window.ATRAHDOM_SITE desde
+                          content/site-data.js (datos migrados) con fallback a
+                          content-data.js (datos manuales antiguos)
+- styles.css ............ hoja de estilos actual (SERÁ REESCRITA en Fase 1)
+- content/site-data.js .. 211 contenidos migrados (183 posts, 6 páginas,
+                          adjuntos) — NO MODIFICAR
+- content/items.json .... datos migrados en JSON — NO MODIFICAR
+- assets/images/ ........ ~140 imágenes descargadas del sitio original
+- assets/documents/ ..... PDFs y documentos descargados
+- inventory/ ............ manifiestos de auditoría — NO MODIFICAR
+- MIGRACION-AUDITORIA.md  criterios de aceptación de la migración
+- MAPA-SITIO-ORIGEN.md .. arquitectura del sitio original
+
+Logos oficiales (NO alterar, NO recrear, NO sustituir):
+- assets/images/logo-oficial-atrahdom.png (sombrilla morada con siluetas de
+  mujeres en movimiento sobre fondo rosa)
+- assets/images/logotipo-2019-500-5c7b24eb84.png (favicon)
+
+--------------------------------------------------------------------------------
+1. REGLAS INVIOLABLES (aplican a TODAS las fases)
+--------------------------------------------------------------------------------
+
+R1. CONTENIDO LITERAL. El contenido migrado (títulos, cuerpos, fechas,
+    autorías, categorías, enlaces, imágenes, adjuntos) NUNCA se resume,
+    reescribe, reinterpreta ni inventa. El rediseño cambia SOLO el contenedor
+    visual. No editar content/, inventory/, ni los HTML de content/posts/,
+    content/pages/, content/attachments/, content/raw/.
+
+R2. IDENTIDAD. Los colores corporativos son los del logo: rosa, morado, lila
+    y negro. PROHIBIDO introducir amarillo, coral, menta o cualquier color
+    heredado de la referencia FCAM como color protagonista. Los únicos colores
+    permitidos fuera de la paleta corporativa son tonos utilitarios discretos
+    para estados funcionales (éxito/error en formularios), que nunca deben
+    dominar una sección.
+
+R3. LOGO. El logo oficial se usa tal cual está en assets/images/. No se
+    recolorea, no se recorta, no se le agregan efectos.
+
+R4. PLACEHOLDERS. Solo se permiten placeholders para funciones NUEVAS que no
+    existen en el portal original (formulario de contacto moderno, ruta de
+    solicitud de apoyo, proceso de afiliación, política de privacidad, datos
+    institucionales no publicados). Un placeholder debe verse claramente como
+    tal (clase .placeholder ya existente). NUNCA usar un placeholder para
+    sustituir contenido que sí existe en el sitio original.
+
+R5. SIN FRAMEWORKS. El sitio es HTML + CSS + JavaScript vanilla, sin build
+    step, sin npm, sin dependencias externas salvo Google Fonts. Debe abrir
+    con un servidor estático simple (python3 -m http.server).
+
+R6. ACCESIBILIDAD. Mantener y mejorar: skip-link, aria-labels, navegación por
+    teclado, foco visible, contraste AA mínimo en todo texto. Toda animación
+    debe respetar @media (prefers-reduced-motion: reduce).
+
+R7. RESPONSIVE. Todo componente nuevo debe funcionar en 360px, 620px, 900px y
+    1180px+ de ancho. Sin scroll horizontal en ningún breakpoint.
+
+R8. VERIFICACIÓN POR FASE. Al terminar cada fase: levantar servidor local,
+    navegar la portada y al menos 3 rutas internas (#/recursos, #/actualidad,
+    una ficha de contenido), revisar consola sin errores y validar los
+    criterios de cierre de la fase. No avanzar con errores abiertos.
+
+--------------------------------------------------------------------------------
+2. SISTEMA DE DISEÑO (fuente de verdad para todas las fases)
+--------------------------------------------------------------------------------
+
+2.1 CONCEPTO RECTOR — «La sombrilla que organiza»
+
+El sistema gráfico deriva del logo:
+a) ARCOS DE SOMBRILLA: semicírculos concéntricos (sólidos, punteados y en
+   línea fina) como motivo decorativo en héroe, tarjetas y separadores.
+   Se dibujan con SVG inline o border-radius/clip-path en CSS. Siempre en
+   morado o lila, con opacidades entre .15 y .55.
+b) SILUETAS EN MOVIMIENTO: el dinamismo del logo se traduce en
+   micro-animaciones de entrada (fade + translateY) y patrones sutiles.
+   No dibujar figuras humanas nuevas; el movimiento es de la interfaz.
+
+2.2 PALETA (variables CSS obligatorias en :root)
+
+  --ink:         #1a1118;   /* negro tinta: texto, bordes, footer, topbar */
+  --paper:       #fdf8f6;   /* lienzo general, blanco cálido */
+  --rosa:        #f8e3e7;   /* fondo héroe y secciones tintadas */
+  --rosa-suave:  #fbeef0;   /* tinte alternativo de sección */
+  --morado:      #6d3fa4;   /* primario: botones, enlaces, categorías */
+  --morado-osc:  #472668;   /* bandas oscuras, eyebrows, profundidad */
+  --lila:        #b99bdd;   /* acento: arcos, hovers, fondos de tarjeta */
+  --lila-claro:  #e9def6;   /* fondo de tarjeta alternativo */
+  --blanco:      #ffffff;
+  --linea:       rgba(26,17,24,.14);
+  --sombra:      0 18px 45px rgba(71,38,104,.14);
+
+Reglas de uso:
+- Máximo 2 colores protagonistas por sección.
+- Texto sobre --morado-osc y --ink: blanco puro o lila claro (#d8c8ec para
+  texto secundario sobre morado oscuro).
+- Texto sobre --rosa, --lila-claro, --paper: --ink o --morado-osc.
+- Enlaces y acciones: --morado. Hover: --morado-osc.
+- ELIMINAR de styles.css todo rastro de: --coral, --yellow, --mint y sus usos.
+
+2.3 TIPOGRAFÍA
+
+- Display/serif: "Fraunces" (Google Fonts, opsz 9..144, pesos 600/700/800).
+  Titulares H1 portada: clamp(3rem, 7vw, 6.5rem), letter-spacing -0.03em,
+  line-height 1.04. Palabras clave del titular pueden ir en --morado.
+- Sans: "DM Sans" (400/500/700). Cuerpo 1.05–1.15rem, line-height 1.7.
+- Eyebrow (firma de sección): mayúsculas, font-size .78rem, font-weight 800,
+  letter-spacing .18em, color --morado-osc.
+- Cargar fuentes con preconnect + font-display: swap.
+
+2.4 COMPONENTES BASE
+
+- Botón primario: fondo --morado, texto blanco, border-radius 999px,
+  min-height 48px, font-weight 800. Hover: --morado-osc.
+- Botón secundario: transparente, borde 2px --ink, texto --ink.
+- Botón sobre fondo oscuro: fondo --lila, texto --ink.
+- Tarjeta: fondo blanco, borde 0.5-1px --linea, border-radius 12px,
+  sombra suave solo en hover (translateY(-3px) + --sombra).
+- Píldora de filtro: border-radius 999px; activa = fondo --ink texto blanco;
+  inactiva = borde 1px, texto atenuado.
+- Fotografías del archivo: filter grayscale(1) + mix-blend-mode multiply
+  sobre fondos --morado o --lila (duotono). Las portadas de PDFs y documentos
+  históricos se muestran SIN alterar dentro de marcos neutros.
+
+2.5 MOVIMIENTO
+
+- Entrada al hacer scroll: opacity 0→1 + translateY(20px→0), 300ms ease-out,
+  implementado con IntersectionObserver y una clase .reveal.
+- Contadores de cifras: animar de 0 al valor al entrar en viewport (600ms).
+- Hover en tarjetas de ejes: el arco punteado decorativo rota lentamente
+  (transform rotate, transition 2s).
+- TODO envuelto en @media (prefers-reduced-motion: reduce) { desactivar }.
+
+--------------------------------------------------------------------------------
+FASE 1 — SISTEMA VISUAL BASE (reescritura de styles.css)
+--------------------------------------------------------------------------------
+
+Objetivo: sustituir la hoja de estilos actual por el nuevo sistema de diseño,
+sin tocar HTML ni JS, dejando el sitio funcional y coherente.
+
+Tareas:
+
+F1.1 Crear una copia de respaldo: styles.css → styles-legacy.css (no
+     referenciada desde index.html; solo respaldo en disco).
+
+F1.2 Reescribir styles.css desde cero con la estructura:
+     1) :root con las variables de la sección 2.2 (eliminando coral/yellow/
+        mint), 2) reset y base, 3) utilidades (.wrap, .eyebrow, .btn,
+        .placeholder, .notice), 4) header/topbar/nav, 5) componentes (card,
+        feature-card, topic-pill, media-embed, pagination, archive-tools),
+        6) secciones (hero, impact-band, program-grid, page-hero,
+        content-layout, prose, sidebar, footer), 7) responsive.
+     IMPORTANTE: conservar TODOS los nombres de clase que app.js e index.html
+     ya usan (grep de clases en app.js antes de empezar). La lista mínima de
+     clases que deben seguir existiendo: .wrap .skip-link .utility-bar
+     .utility-inner .site-header .main-nav .brand .brand-mark .menu-toggle
+     .primary-menu .search-open .hero .hero-grid .hero-copy .hero-art
+     .photo-collage .collage-card .thread .eyebrow .actions .btn .btn.alt
+     .btn.purple .section .section.tint .section.dark .section-head .grid
+     .card .card-media .card-body .meta .read .impact-band .impact-grid
+     .impact .program-grid .program .feature-grid .feature-card .topic-grid
+     .topic-pill .archive-tools .page-hero .content-layout .prose .sidebar
+     .placeholder .loading .empty .site-footer .footer-grid .footer-bottom
+     dialog .search-panel .dialog-close .search-hit .notice .original-columns
+     .original-gallery .photo-placeholder .pagination .media-embed
+     .media-embed-head .document-embed .video-embed .file-fallback .reveal
+     — más las reglas de "responsive hardening" del final del archivo actual
+     (min-width:0, overflow-wrap, etc.), que deben migrarse tal cual.
+
+F1.3 Mantener el tratamiento duotono de imágenes de archivo (grayscale +
+     multiply) descrito en 2.4.
+
+F1.4 Añadir las clases nuevas del sistema: .arc (decoración de arcos SVG/CSS),
+     .reveal (animación de entrada), .counter (cifras animadas), .pill-filter.
+
+F1.5 Actualizar el query string de la hoja en index.html:
+     styles.css?v=rediseno-f1
+
+Criterios de cierre de Fase 1:
+- El sitio carga sin errores de consola y sin FOUC evidente.
+- Ninguna sección muestra amarillo, coral ni menta.
+- Portada, #/recursos, #/actualidad y una ficha (#/contenido/...) se ven
+  coherentes con la paleta nueva en 360/620/900/1180px.
+- El texto cumple contraste AA (verificar al menos: morado sobre paper,
+  blanco sobre morado-osc, ink sobre rosa).
+
+--------------------------------------------------------------------------------
+FASE 2 — PORTADA Y COMPONENTES PRINCIPALES
+--------------------------------------------------------------------------------
+
+Objetivo: reconstruir la función home() de app.js y el header/footer de
+index.html según el nuevo diseño.
+
+Estructura de la nueva portada (orden exacto de secciones):
+
+F2.1 TOPBAR (utility-bar): fondo --ink. Izquierda: nombre completo de la
+     asociación. Derecha: "Solicita apoyo" (#/ayuda), "Afíliate"
+     (#/participa), "Dona" (#/donar) — el botón Dona con fondo --morado y
+     border-radius 999px. En móvil solo se muestra "Dona".
+
+F2.2 HEADER: logo oficial + wordmark "ATRAHDOM" en Fraunces + tagline
+     "Trabajo digno. Derechos para todas." Navegación: Quiénes somos,
+     Qué hacemos, Biblioteca (#/recursos), Actualidad, Sindicatos
+     (#/organizaciones), botón Buscar. Sticky con blur, fondo
+     rgba(253,248,246,.95).
+
+F2.3 HÉROE: fondo --rosa con arcos concéntricos decorativos (SVG inline,
+     lila/morado, opacidad ≤ .5) en la esquina superior derecha. Grid 2
+     columnas (1.15fr / .85fr):
+     - Columna izquierda: eyebrow "Defensa · Formación · Organización";
+       H1 "Trabajo como ninguno, derechos como cualquier otro." (lema real
+       del sitio original — NO cambiarlo) con "cualquier otro" en --morado;
+       párrafo introductorio breve; botones "Solicita apoyo" (primario) y
+       "Explorar biblioteca" (secundario).
+     - Columna derecha: collage de 3-4 fotografías reales del archivo
+       migrado (usar postsWithRealImages() de app.js) en duotono, tarjetas
+       rotadas ±2-4deg con border-radius 8px, más una tarjeta blanca con
+       borde --ink que diga "20+ años de lucha" en Fraunces.
+
+F2.4 BANDA DE IMPACTO: fondo --morado-osc, 4 métricas con borde superior
+     4px --lila. Los valores se calculan de los datos reales cargados:
+     posts.length, attachments/documentos, páginas institucionales, y una
+     métrica fija "C189 / incidencia OIT". Números en Fraunces 3rem,
+     animados con .counter.
+
+F2.5 EJES DE TRABAJO ("Cuatro ejes, una misma sombrilla"): grid 2x2 de
+     tarjetas enlazadas alternando fondos --rosa y --lila-claro, cada una
+     con icono SVG inline simple (balanza, birrete, altavoz, libros; trazo
+     --morado-osc, 24px), título Fraunces, descripción breve, y arco
+     punteado decorativo que rota en hover. Destinos: #/que-hacemos,
+     #/tema/Talleres, #/tema/Comunicados, #/recursos.
+
+F2.6 BIBLIOTECA DESTACADA: encabezado de sección + enlace "Explorar N
+     documentos →" (N real de postsWithDocuments()). Fila de píldoras de
+     filtro (decorativas aquí; funcionales en Fase 3): Todos,
+     Investigaciones, Comunicados, Legislación, Manuales. Grid de 3 fichas
+     de documentos reales (título literal, categoría y año reales),
+     cabecera de ficha con fondo alternando --morado / --lila / --rosa e
+     icono de documento.
+
+F2.7 ACTUALIDAD: grid de 6 tarjetas con latestPosts(6): imagen duotono,
+     meta (categoría, fecha es-GT, "Por {autor literal}"), título literal,
+     extracto truncado a 190 caracteres, enlace "Leer contenido completo →".
+
+F2.8 CONTENIDO INSTITUCIONAL: tarjetas de las páginas organizacion,
+     ejes-de-trabajo y espacios-de-participacion (contenido literal).
+
+F2.9 CTA DE CONTACTO (pre-footer): banda fondo --ink: "¿Necesitas
+     orientación laboral?" + coordinacion@atrahdom.org + (502) 2253 2382
+     (datos reales del sitio original) + botón lila "Escríbenos hoy" →
+     #/contacto.
+
+F2.10 FOOTER: fondo --ink, 4 columnas: descripción institucional, contacto
+      real, exploración (Biblioteca, Actualidad, Contacto, Privacidad), y
+      bloque .placeholder para dirección física/horarios/redes verificadas
+      (dato no publicado → placeholder legítimo según R4).
+
+Criterios de cierre de Fase 2:
+- La portada muestra ÚNICAMENTE datos reales de content/site-data.js (títulos,
+  fechas, autores literales). Cero contenido inventado.
+- Los contadores y reveals funcionan y se desactivan con
+  prefers-reduced-motion.
+- Sin errores de consola; navegación por teclado completa (tab por topbar,
+  menú, tarjetas, footer).
+
+--------------------------------------------------------------------------------
+FASE 3 — BIBLIOTECA FACETADA Y FICHAS DOCUMENTALES
+--------------------------------------------------------------------------------
+
+Objetivo: convertir #/recursos en un centro de documentación de primer nivel
+y elevar la plantilla de detalle de contenido.
+
+F3.1 VISTA BIBLIOTECA (#/recursos):
+     - page-hero con fondo --rosa, eyebrow "Centro de Documentación Digital",
+       H1 "Biblioteca viva" y contador real de documentos.
+     - Barra de herramientas: input de búsqueda por texto (título +
+       extracto), select de categoría (generado de state.categories),
+       select de año (extraído de las fechas reales), y píldoras de tipo:
+       Todos / Con documento descargable / Con video / Con galería.
+     - Los filtros COMBINAN entre sí y se reflejan en la URL con query
+       params del hash (#/recursos?cat=X&año=Y&q=Z) para que sean
+       compartibles. Filtrado 100% client-side sobre state.posts.
+     - Resultados en grid de fichas: icono según tipo de adjunto (PDF, doc,
+       presentación, video), categoría, año, título literal, y botones
+       "Ver ficha" y "Descargar" (enlace directo al archivo local en
+       assets/documents/ cuando exista).
+     - Estado vacío amable ("No hay resultados con esos filtros") con botón
+       para limpiar filtros.
+     - Paginación client-side de 12 fichas por página reutilizando
+       .pagination.
+
+F3.2 FICHA DOCUMENTAL (plantilla de detalle de post con adjuntos):
+     - Cabecera: categoría(s) como píldoras moradas, título literal en
+       Fraunces, meta con fecha original, autor de WordPress literal y
+       enlace "Ver en el sitio original ↗" (link canónico registrado).
+     - Cuerpo: contenido migrado literal renderizado con enhanceContent()
+       existente (visores PDF embebidos, videos YouTube, fallback de
+       archivos office). NO tocar esa lógica, solo estilizarla.
+     - Sidebar sticky: "Sobre este documento" (tipo, fecha, autoría,
+       categorías), botones de descarga de cada adjunto, y bloque "Cita
+       sugerida" generado con patrón: ATRAHDOM. (AÑO). Título. Recuperado
+       de URL-original.
+     - Sección "Documentos relacionados": hasta 3 posts que compartan
+       categoría, ordenados por fecha.
+
+F3.3 BUSCADOR GLOBAL (dialog existente): resaltar coincidencias, agrupar
+     resultados por tipo (Páginas / Publicaciones / Documentos), máximo 8
+     por grupo, con conteo total.
+
+Criterios de cierre de Fase 3:
+- Filtros combinables y compartibles por URL funcionan con datos reales.
+- Toda ficha muestra título, fecha, autoría y categorías LITERALES.
+- Los visores de PDF embebidos siguen funcionando igual que antes.
+
+--------------------------------------------------------------------------------
+FASE 4 — MEMORIA HISTÓRICA Y PÁGINAS INSTITUCIONALES
+--------------------------------------------------------------------------------
+
+F4.1 LÍNEA DE TIEMPO (#/memoria, nueva ruta):
+     - Agrupar state.posts por año (2011→2026) a partir de las fechas
+       reales. Navegación por años (barra horizontal de años clicable,
+       sticky bajo el header).
+     - Cada año: hitos = posts de ese año como tarjetas compactas (fecha,
+       categoría, título literal, enlace a ficha). Un arco decorativo
+       conecta visualmente la columna (línea vertical lila con nodos
+       morados).
+     - Entrada "Memoria histórica" en el menú Actualidad o como sub-enlace
+       en Quiénes somos.
+
+F4.2 PÁGINAS INSTITUCIONALES (#/quienes-somos, #/que-hacemos,
+     #/organizaciones):
+     - Plantilla: page-hero rosa con arcos + contenido literal de las
+       páginas migradas (organizacion, ejes-de-trabajo,
+       espacios-de-participacion, sitradom) + tarjetas de navegación
+       cruzada.
+     - La galería original de Espacios de Participación se presenta como
+       galería en grid con lightbox simple (dialog nativo), imágenes
+       locales, alt text original conservado.
+     - SITRADOM y SITRADOMSA: página #/organizaciones con una tarjeta
+       grande por sindicato usando contenido literal migrado (incluidas
+       las dos entradas de SITRADOMSA con sus fotos Foto0044/Foto0045).
+
+F4.3 RUTAS DE SERVICIO (#/ayuda, #/participa, #/donar, #/contacto):
+     - #/contacto: datos reales migrados + formulario nuevo marcado
+       completo como .placeholder (R4).
+     - #/ayuda y #/participa: estructura de pasos (1-2-3) con .placeholder
+       en cada paso, dejando claro que el flujo debe validarse con la
+       organización.
+     - #/donar: contenido literal de la entrada "Haz una donación" del
+       sitio original + bloque .placeholder para mecanismos nuevos.
+
+Criterios de cierre de Fase 4:
+- La línea de tiempo cubre todos los años con posts reales, sin huecos
+  inventados.
+- Todas las páginas institucionales muestran el contenido migrado literal.
+- Todo placeholder es visualmente identificable y corresponde solo a
+  funciones nuevas.
+
+--------------------------------------------------------------------------------
+FASE 5 — PULIDO, ACCESIBILIDAD Y CIERRE
+--------------------------------------------------------------------------------
+
+F5.1 MOVIMIENTO FINAL: revisar que todos los .reveal, .counter y arcos en
+     hover estén aplicados de forma consistente y desactivados bajo
+     prefers-reduced-motion.
+
+F5.2 RESPONSIVE FINO: auditar cada vista en 360, 620, 900 y 1180px. Sin
+     scroll horizontal; menú móvil accesible (aria-expanded correcto,
+     cierre con Escape); collage del héroe degrada a 2 fotos en móvil.
+
+F5.3 ACCESIBILIDAD: pasar revisión manual completa —
+     - contraste AA en todas las combinaciones de la paleta;
+     - foco visible en todos los interactivos (outline 2px --morado con
+       offset);
+     - jerarquía de encabezados sin saltos (h1 único por vista);
+     - alt text: las imágenes migradas conservan su alt original; las
+       decorativas llevan alt="" y aria-hidden en SVGs decorativos;
+     - dialog de búsqueda y lightbox: focus trap y cierre con Escape.
+
+F5.4 RENDIMIENTO:
+     - loading="lazy" y decoding="async" en toda imagen fuera del viewport
+       inicial;
+     - preconnect a fonts.googleapis.com y fonts.gstatic.com,
+       font-display: swap;
+     - verificar que content/site-data.js (~900KB) se carga con defer y
+       que existe el estado .loading mientras tanto;
+     - objetivo Lighthouse: Performance ≥ 90, Accessibility ≥ 95,
+       Best Practices ≥ 95.
+
+F5.5 PENDIENTES DE MIGRACIÓN (coordinar, no improvisar):
+     - revisar content/migration-summary.json: 49 assets fallidos — listar
+       cuáles son y reintentarlos con migrate_content.py si hay red;
+     - ejecutar verify_migration.py y actualizar
+       inventory/verification.json;
+     - la revisión visual URL por URL (211 contenidos) es humana: generar
+       una checklist en MIGRACION-AUDITORIA.md con el estado de cada URL.
+
+F5.6 DOCUMENTACIÓN DE CIERRE: actualizar MIGRATION-REPORT.md con lo
+     ejecutado en las 5 fases, capturas del antes/después y lista de
+     placeholders pendientes de validación por la organización.
+
+Criterios de cierre de Fase 5:
+- Lighthouse cumple los umbrales de F5.4.
+- Cero errores de consola en todas las rutas.
+- MIGRATION-REPORT.md refleja el estado final real.
+
+--------------------------------------------------------------------------------
+ANEXO A — CÓMO LEVANTAR EL SITIO PARA VERIFICAR
+--------------------------------------------------------------------------------
+
+cd /Users/juanvelasquez/Proyectos/atrahdom
+python3 -m http.server 8080
+# Abrir http://localhost:8080
+
+Rutas mínimas de humo por fase:
+  /                        (portada)
+  /#/recursos              (biblioteca)
+  /#/actualidad            (archivo de noticias)
+  /#/tema/Comunicados      (vista por tema)
+  /#/quienes-somos         (institucional)
+  cualquier /#/contenido/post/...  (ficha de detalle)
+
+--------------------------------------------------------------------------------
+ANEXO B — QUÉ HACER ANTE AMBIGÜEDADES
+--------------------------------------------------------------------------------
+
+1. Si un dato institucional no existe en el contenido migrado → placeholder
+   visible (R4), nunca inventarlo.
+2. Si una imagen del archivo no está en assets/images/ → mantener la
+   referencia original absoluta a atrahdom.org y anotarla como pendiente;
+   no sustituir por otra imagen.
+3. Si un nombre de clase CSS es necesario y no existe → crearlo siguiendo la
+   nomenclatura existente (kebab-case, sin prefijos de framework).
+4. Si hay conflicto entre este prompt y el contenido migrado → gana el
+   contenido migrado (R1 es la regla suprema).
+5. Ante cualquier duda de color → usar solo la paleta de 2.2.
+
+FIN DEL PROMPT MAESTRO
