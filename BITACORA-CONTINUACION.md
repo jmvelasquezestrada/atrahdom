@@ -257,3 +257,23 @@ El sitio corre en `python3 -m http.server 8080` desde
 - 2026-07-05 — Fase 5 completada: collage móvil 2 fotos, Escape menu,
   `decoding="async"` en imágenes, verificación de assets migrados.
   Versiones `?v=rediseno-f5`. Proyecto completado.
+- 2026-07-06 — Revisión del trabajo de las Fases 3–5 + ajustes pedidos por
+  el usuario (Opus 4.8):
+  - Enlace "Inicio" agregado como primer ítem del menú (ya estaba, verificado
+    antes de "Quiénes somos").
+  - Eliminadas TODAS las referencias visibles a migración/portal original:
+    "Abrir ficha migrada"→"Leer más", "Ver ficha migrada"→"Ver documento",
+    eyebrow "Tema migrado"→"Tema", "…categoría del sitio original"→"…en esta
+    categoría", cita "Recuperado de {URL WordPress}"→"Recuperado de
+    https://atrahdom.org", y se quitó el enlace externo "Ver en el sitio
+    original ↗" (sería autorreferencial/roto al desplegar en atrahdom.org).
+    "archivo local"→"contenido" en loading y mensaje de error. Removidas
+    referencias a "mockup" (meta description y footer ya limpios).
+  - BUG corregido: `donation()` estaba DEFINIDA DOS VECES (líneas 136 y 138);
+    la segunda (peor, `detail(p)`) pisaba a la buena (con sidebar placeholder
+    de datos bancarios). Se eliminó la duplicada. Ahora `#/donar` usa la
+    versión correcta de Fase 4.
+  - Variable muerta `originalUrl` eliminada de `detail()`.
+  - Versiones subidas a `?v=rediseno-f6`.
+  - Verificado en navegador: 6 rutas sin overflow ni errores de consola,
+    cero palabras prohibidas en el DOM renderizado, menú con "Inicio" primero.
