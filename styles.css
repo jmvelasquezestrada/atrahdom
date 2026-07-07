@@ -440,3 +440,43 @@ a.feature-card{text-decoration:none;color:inherit}
   .brand-mark,.brand-mark img{width:46px;height:46px}
   .menu-toggle{padding:8px 10px}
 }
+
+/* ============================================================
+   Propuesta: héroe cinematográfico + bandas fotográficas
+   (rama propuesta-video-fotos). Bloque aislado para rollback.
+   ============================================================ */
+.cine-hero{position:relative;min-height:clamp(520px,82vh,760px);display:flex;align-items:center;padding:84px 0;background:var(--morado-osc);overflow:hidden}
+.cine-hero:before{display:none}
+.cine-bg{position:absolute;inset:0;z-index:0}
+.cine-video,.cine-slides{position:absolute;inset:0;width:100%;height:100%}
+.cine-video{object-fit:cover;z-index:2;background:transparent}
+.cine-video.hidden{display:none}
+.cine-slides{z-index:1}
+.cine-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.6s ease;will-change:opacity,transform}
+.cine-slide.active{opacity:1}
+.cine-hero.animate .cine-slide.active{animation:kenburns 8s ease-out forwards}
+@keyframes kenburns{from{transform:scale(1.06)}to{transform:scale(1.16)}}
+.cine-scrim{position:absolute;inset:0;z-index:3;background:linear-gradient(90deg,rgba(26,17,24,.88) 0%,rgba(26,17,24,.6) 44%,rgba(71,38,104,.4) 100%)}
+.cine-hero .hero-inner{position:relative;z-index:4;max-width:720px;color:#fff}
+.cine-hero .eyebrow{color:var(--lila)}
+.cine-hero h1{color:#fff}
+.cine-hero .destacado{color:var(--lila)}
+.cine-hero .hero-inner>p{color:rgba(255,255,255,.92);font-size:1.18rem;max-width:600px}
+.btn.light{background:#fff;border-color:#fff;color:var(--morado-osc)}
+.btn.light:hover,.btn.light:focus-visible{background:var(--lila);border-color:var(--lila);color:var(--ink)}
+
+.photo-band{position:relative;background-size:cover;background-position:center;padding:112px 0;color:#fff;overflow:hidden}
+.photo-band-scrim{position:absolute;inset:0;background:linear-gradient(120deg,rgba(71,38,104,.92) 0%,rgba(109,63,164,.72) 100%)}
+.photo-band-inner{position:relative;z-index:2;max-width:840px}
+.photo-band .eyebrow{color:var(--lila)}
+.photo-band blockquote{margin:14px 0 0;font-family:var(--serif);font-weight:700;font-size:clamp(1.7rem,3.4vw,2.9rem);line-height:1.22;letter-spacing:-.01em}
+
+@media(max-width:900px){.cine-hero{min-height:clamp(460px,72vh,640px)}}
+@media(max-width:620px){
+  .cine-hero{padding:64px 0;min-height:auto}
+  .cine-scrim{background:linear-gradient(180deg,rgba(26,17,24,.72) 0%,rgba(26,17,24,.82) 100%)}
+  .photo-band{padding:72px 0}
+}
+@media (prefers-reduced-motion:reduce){
+  .cine-hero.animate .cine-slide.active{animation:none}
+}
