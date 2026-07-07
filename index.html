@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="assets/images/logotipo-2019-500-5c7b24eb84.png">
   <link rel="apple-touch-icon" href="assets/images/logotipo-2019-500-5c7b24eb84.png">
-  <link rel="stylesheet" href="styles.css?v=propuesta-video-f7">
+  <link rel="stylesheet" href="styles.css?v=propuesta-f8">
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -31,12 +31,34 @@
       <button class="menu-toggle" aria-expanded="false" aria-controls="primary-menu">Menú</button>
       <nav id="primary-menu" class="primary-menu" aria-label="Navegación principal">
         <a href="#/">Inicio</a>
-        <a href="#/quienes-somos">Quiénes somos</a>
-        <a href="#/que-hacemos">Qué hacemos</a>
-        <a href="#/recursos">Biblioteca</a>
+        <div class="nav-group">
+          <button class="nav-trigger" aria-expanded="false" aria-haspopup="true">Quiénes somos</button>
+          <div class="dropdown">
+            <a href="#/quienes-somos">Presentación</a>
+            <a href="#/organizacion">Organización</a>
+            <a href="#/que-hacemos">Ejes de trabajo</a>
+            <a href="#/espacios-de-participacion">Espacios de participación</a>
+            <a href="#/organizaciones">Sindicatos</a>
+          </div>
+        </div>
+        <div class="nav-group">
+          <button class="nav-trigger" aria-expanded="false" aria-haspopup="true">Biblioteca</button>
+          <div class="dropdown">
+            <a href="#/recursos">Centro de documentación</a>
+            <a href="#/publicaciones">Publicaciones propias</a>
+            <a href="#/memoria">Memoria histórica</a>
+          </div>
+        </div>
         <a href="#/actualidad">Actualidad</a>
-        <a href="#/memoria">Memoria</a>
-        <a href="#/organizaciones">Sindicatos</a>
+        <div class="nav-group">
+          <button class="nav-trigger" aria-expanded="false" aria-haspopup="true">Participa</button>
+          <div class="dropdown">
+            <a href="#/ayuda">Solicita apoyo</a>
+            <a href="#/participa">Afíliate</a>
+            <a href="#/donar">Haz una donación</a>
+            <a href="#/contacto">Contacto</a>
+          </div>
+        </div>
         <button class="search-open" aria-label="Abrir búsqueda">Buscar</button>
       </nav>
     </div>
@@ -71,6 +93,6 @@
   <template id="loading-template"><section class="loading wrap"><span></span><p>Cargando el contenido de ATRAHDOM…</p></section></template>
   <script src="content/site-data.js"></script>
   <script src="content-data.js"></script>
-  <script src="app.js?v=propuesta-video-f7" defer></script>
+  <script src="app.js?v=propuesta-f8" defer></script>
 </body>
 </html>

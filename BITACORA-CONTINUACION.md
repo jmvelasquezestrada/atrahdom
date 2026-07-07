@@ -277,3 +277,29 @@ El sitio corre en `python3 -m http.server 8080` desde
   - Versiones subidas a `?v=rediseno-f6`.
   - Verificado en navegador: 6 rutas sin overflow ni errores de consola,
     cero palabras prohibidas en el DOM renderizado, menú con "Inicio" primero.
+- 2026-07-06 — Cuatro funciones estilo asocirgua.org (rediseno-f8, aprobadas
+  tras la propuesta de video/fotos):
+  1. **Menú agrupado con desplegables**: nav reestructurado en index.html con
+     `.nav-group`/`.nav-trigger`/`.dropdown`. Grupos: Quiénes somos
+     (Presentación, Organización, Ejes, Espacios, Sindicatos), Biblioteca
+     (Centro de documentación, Publicaciones propias, Memoria), Participa
+     (Solicita apoyo, Afíliate, Dona, Contacto). Desktop = hover/click
+     (`.open`); móvil = acordeón. JS: `closeMenus()` + triggers en
+     bindGlobal; cierra en Escape y clic fuera.
+  2. **Publicaciones propias destacadas**: helper `ownPublications()` (filtra
+     Investigaciones/Informes/Publicaciones propias/Tesis = 40 items, porque
+     la categoría "Publicaciones propias" quedó con solo 1 en la migración),
+     `publicationCard()` con lomo de color, sección en home + página nueva
+     `#/publicaciones` (`publications()`, ruta agregada).
+  3. **Afíliate con tarjetas**: `participa()` reescrita de 3 pasos a 3
+     tarjetas (Trabajadora afiliada / Organización aliada / Voluntariado) con
+     checklist y CTA mailto; placeholder de requisitos/cuotas.
+  4. **Agenda de actividades**: sección nueva en home con `agendaCard()` (3
+     tarjetas placeholder con chip "Por confirmar") + nota placeholder. R4:
+     función nueva, claramente placeholder.
+  - CSS nuevo (bloque f8): nav dropdowns, `.pub-grid/.pub-card/.pub-spine`,
+    `.agenda-*`, `.affiliate-*`. Fondos de sección del home re-alternados.
+  - Verificado en navegador desktop (1280) y móvil (375): menú desplegable
+    OK, 4 secciones OK, 7 rutas sin overflow, enlaces del dropdown resuelven
+    a contenido real, cero errores de consola. Versiones `?v=propuesta-f8`.
+  - La propuesta de video/fotos (f7) ya está fusionada en master.

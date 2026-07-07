@@ -86,6 +86,17 @@ h3{font-size:1.5rem}
 .primary-menu a:hover,.primary-menu a:focus-visible,.search-open:hover{color:var(--morado)}
 .menu-toggle{display:none;border:2px solid var(--ink);background:transparent;padding:10px 14px;font-weight:700;border-radius:999px;font-family:var(--sans);cursor:pointer}
 
+/* ---------- Menú con desplegables ---------- */
+.nav-group{position:relative}
+.nav-trigger{font-weight:700;font-size:.9rem;background:none;border:0;font-family:var(--sans);cursor:pointer;padding:8px 0;color:var(--ink);display:inline-flex;align-items:center;gap:6px}
+.nav-trigger:after{content:"";width:6px;height:6px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg) translateY(-1px);transition:transform .2s ease}
+.nav-trigger:hover,.nav-group:focus-within .nav-trigger,.nav-group.open .nav-trigger{color:var(--morado)}
+.nav-group:hover .nav-trigger:after,.nav-group:focus-within .nav-trigger:after,.nav-group.open .nav-trigger:after{transform:rotate(225deg) translateY(-2px)}
+.dropdown{position:absolute;top:100%;left:0;min-width:238px;background:var(--paper);border:1px solid var(--linea);border-radius:12px;box-shadow:var(--sombra);padding:10px;display:flex;flex-direction:column;gap:2px;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .18s ease,transform .18s ease;z-index:60}
+.nav-group:hover .dropdown,.nav-group:focus-within .dropdown,.nav-group.open .dropdown{opacity:1;visibility:visible;transform:none}
+.dropdown a{padding:10px 12px;border-radius:8px;font-size:.9rem;font-weight:600;color:var(--ink);text-decoration:none;white-space:nowrap}
+.dropdown a:hover,.dropdown a:focus-visible{background:var(--rosa-suave);color:var(--morado)}
+
 /* ---------- Héroe con arcos de sombrilla ---------- */
 .hero{position:relative;overflow:hidden;background:var(--rosa);padding:90px 0 76px}
 .hero:before{content:"";position:absolute;right:-160px;top:-260px;width:560px;height:560px;border-radius:50%;background:
@@ -392,6 +403,11 @@ a.feature-card{text-decoration:none;color:inherit}
   .primary-menu{display:none;position:absolute;left:0;right:0;top:100%;background:var(--paper);padding:24px 20px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--linea)}
   .primary-menu.open{display:flex}
   .menu-toggle{display:block}
+  .nav-group{width:100%}
+  .nav-trigger{width:100%;justify-content:space-between;padding:12px 0;font-size:1rem}
+  .dropdown{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:0;border-radius:0;background:transparent;padding:0 0 10px 14px;display:none}
+  .nav-group:hover .dropdown,.nav-group:focus-within .dropdown{display:none}
+  .nav-group.open .dropdown{display:flex}
   .hero-grid,.content-layout{grid-template-columns:1fr}
   .hero-art,.photo-collage{min-height:400px}
   .grid{grid-template-columns:repeat(2,1fr)}
@@ -480,3 +496,44 @@ a.feature-card{text-decoration:none;color:inherit}
 @media (prefers-reduced-motion:reduce){
   .cine-hero.animate .cine-slide.active{animation:none}
 }
+
+/* ============================================================
+   Publicaciones propias · Agenda · Afiliación (f8)
+   ============================================================ */
+.pub-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.pub-grid-page{grid-template-columns:repeat(2,minmax(0,1fr))}
+.pub-card{display:flex;background:var(--blanco);border:1px solid var(--linea);border-radius:12px;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease}
+.pub-card:hover{transform:translateY(-3px);box-shadow:var(--sombra)}
+.pub-spine{flex:0 0 8px;background:var(--morado)}
+.pub-card:nth-child(3n+2) .pub-spine{background:var(--lila)}
+.pub-card:nth-child(3n) .pub-spine{background:var(--morado-osc)}
+.pub-body{padding:24px;display:flex;flex-direction:column;flex:1;min-width:0}
+.pub-body h3{font-size:1.2rem;margin:4px 0 0;overflow-wrap:anywhere}
+.pub-body h3 a{text-decoration:none;color:var(--ink)}
+.pub-body h3 a:hover{color:var(--morado)}
+.pub-actions{margin-top:auto;padding-top:16px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+
+.agenda-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.agenda-card{display:flex;gap:16px;background:var(--blanco);border:1px solid var(--linea);border-radius:12px;padding:22px}
+.agenda-card.placeholder{border-style:dashed;border-color:var(--lila)}
+.agenda-date{flex:0 0 auto;width:78px;text-align:center;background:var(--morado-osc);color:#fff;border-radius:10px;padding:12px 6px;display:flex;flex-direction:column;justify-content:center;gap:3px}
+.agenda-day{font-family:var(--serif);font-size:1.9rem;line-height:1}
+.agenda-mon{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--texto-inv-suave)}
+.agenda-cat{display:inline-block;font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--morado)}
+.agenda-body{min-width:0}
+.agenda-body h3{font-size:1.1rem;margin:6px 0 6px;overflow-wrap:anywhere}
+.agenda-body p{margin:0;font-size:.86rem;color:var(--texto-suave)}
+
+.affiliate-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.affiliate-card{display:flex;flex-direction:column;background:var(--blanco);border:1px solid var(--linea);border-radius:12px;padding:30px;transition:transform .18s ease,box-shadow .18s ease}
+.affiliate-card:hover{transform:translateY(-3px);box-shadow:var(--sombra)}
+.affiliate-card h3{margin:8px 0 8px}
+.affiliate-card>p{color:var(--texto-suave)}
+.affiliate-list{list-style:none;padding:0;margin:14px 0 24px;display:flex;flex-direction:column;gap:10px}
+.affiliate-list li{position:relative;padding-left:26px;font-size:.92rem}
+.affiliate-list li:before{content:"";position:absolute;left:2px;top:3px;width:14px;height:8px;border-left:2.5px solid var(--morado);border-bottom:2.5px solid var(--morado);transform:rotate(-45deg)}
+.affiliate-card .btn{margin-top:auto;align-self:flex-start}
+.affiliate-note{margin-top:34px}
+
+@media(max-width:900px){.pub-grid,.pub-grid-page,.agenda-grid,.affiliate-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.pub-grid,.pub-grid-page,.agenda-grid,.affiliate-grid{grid-template-columns:1fr}}
