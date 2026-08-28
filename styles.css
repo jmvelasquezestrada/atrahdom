@@ -67,6 +67,7 @@ h3{font-size:1.5rem}
 .utility-bar{background:var(--ink);color:#fff;font-size:.78rem}
 .utility-inner{min-height:40px;display:flex;align-items:center;justify-content:space-between;gap:20px}
 .utility-inner p{margin:0;letter-spacing:.03em}
+.utility-tagline{margin-left:18px;color:var(--lila);font-weight:700}
 .utility-inner nav{display:flex;gap:18px;align-items:center}
 .utility-inner a{text-decoration:none;color:#fff;font-weight:500}
 .utility-inner a:hover{color:var(--lila)}
@@ -79,8 +80,8 @@ h3{font-size:1.5rem}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
 .brand strong{font-family:var(--serif);font-size:1.7rem;display:block;line-height:1}
 .brand small{display:block;font-size:.72rem;margin-top:6px;color:var(--texto-suave)}
-.brand-mark{width:66px;height:66px;display:grid;place-items:center;overflow:visible}
-.brand-mark img{width:66px;height:66px;object-fit:contain;display:block}
+.brand-mark{width:220px;height:78px;display:grid;place-items:center;overflow:hidden}
+.brand-mark img{width:220px;height:auto;object-fit:contain;display:block}
 .primary-menu{display:flex;align-items:center;gap:24px}
 .primary-menu a,.search-open{font-weight:700;font-size:.9rem;text-decoration:none;background:none;border:0;font-family:var(--sans);cursor:pointer;padding:8px 0;color:var(--ink)}
 .primary-menu a:hover,.primary-menu a:focus-visible,.search-open:hover{color:var(--morado)}
@@ -432,7 +433,7 @@ a.feature-card{text-decoration:none;color:inherit}
   .brand{min-width:0;gap:8px}
   .brand small{display:none}
   .brand strong{font-size:1.28rem}
-  .brand-mark,.brand-mark img{width:52px;height:52px}
+  .brand-mark{width:150px;height:52px}.brand-mark img{width:150px;height:auto}
   .menu-toggle{flex:0 0 auto;padding:9px 12px}
   .grid,.impact-grid,.footer-grid,.feature-grid,.topic-grid{grid-template-columns:1fr}
   .section{padding:65px 0}
@@ -453,7 +454,7 @@ a.feature-card{text-decoration:none;color:inherit}
 @media(max-width:360px){
   .wrap{width:calc(100% - 20px)}
   .brand strong{font-size:1.12rem}
-  .brand-mark,.brand-mark img{width:46px;height:46px}
+  .brand-mark{width:130px;height:46px}.brand-mark img{width:130px;height:auto}
   .menu-toggle{padding:8px 10px}
 }
 
