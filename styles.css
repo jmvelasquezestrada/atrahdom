@@ -258,7 +258,7 @@ dialog::backdrop{background:rgba(26,17,24,.72)}
 .footer-grid p{color:var(--texto-inv-suave)}
 .footer-grid a{display:block;margin:.4rem 0;color:#fff}
 .footer-grid a:hover{color:var(--lila)}
-.map-buttons{display:flex;align-items:center;gap:8px;margin-top:.5rem}
+.map-buttons{display:flex;align-items:center;gap:19px;margin-top:.5rem;margin-left:15px}
 .footer-grid .map-button{display:inline-flex;align-items:center;justify-content:center;margin:0;padding:0;width:30px;height:30px;border-radius:7px;overflow:hidden;background:#000}
 .footer-grid .map-button img{display:block;width:100%;height:100%;object-fit:cover}
 .footer-grid .map-button:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.25)}
