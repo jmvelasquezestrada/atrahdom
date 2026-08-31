@@ -548,6 +548,7 @@ a.feature-card{text-decoration:none;color:inherit}
 .organization-chart{margin:0 auto 2.5rem;text-align:center}
 .organization-chart img{display:block;width:min(100%,1024px);height:auto;margin:0 auto;border-radius:1rem}
 .axes-page .sidebar{display:none}
+.participation-page .sidebar{display:none}
 .content-carousel{position:relative;min-height:420px;margin:0 auto 2.5rem;overflow:hidden;border-radius:1rem;background:var(--ink)}
 .carousel-slide{position:absolute;inset:0;margin:0;opacity:0;transition:opacity .8s ease}
 .carousel-slide.active{opacity:1}
