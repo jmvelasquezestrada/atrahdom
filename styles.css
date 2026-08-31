@@ -547,3 +547,11 @@ a.feature-card{text-decoration:none;color:inherit}
 @media(max-width:620px){.pub-grid,.pub-grid-page,.agenda-grid,.affiliate-grid{grid-template-columns:1fr}}
 .organization-chart{margin:0 auto 2.5rem;text-align:center}
 .organization-chart img{display:block;width:min(100%,1024px);height:auto;margin:0 auto;border-radius:1rem}
+.axes-page .sidebar{display:none}
+.content-carousel{position:relative;min-height:420px;margin:0 auto 2.5rem;overflow:hidden;border-radius:1rem;background:var(--ink)}
+.carousel-slide{position:absolute;inset:0;margin:0;opacity:0;transition:opacity .8s ease}
+.carousel-slide.active{opacity:1}
+.carousel-slide img{display:block;width:100%;height:100%;min-height:420px;object-fit:cover}
+@keyframes carouselFade{0%,2%{opacity:0}5%,18%{opacity:1}21%,100%{opacity:0}}
+.content-carousel .carousel-slide{animation:carouselFade 45s infinite}
+.content-carousel .carousel-slide:nth-child(1){animation-delay:0s}.content-carousel .carousel-slide:nth-child(2){animation-delay:-5s}.content-carousel .carousel-slide:nth-child(3){animation-delay:-10s}.content-carousel .carousel-slide:nth-child(4){animation-delay:-15s}.content-carousel .carousel-slide:nth-child(5){animation-delay:-20s}.content-carousel .carousel-slide:nth-child(6){animation-delay:-25s}.content-carousel .carousel-slide:nth-child(7){animation-delay:-30s}.content-carousel .carousel-slide:nth-child(8){animation-delay:-35s}.content-carousel .carousel-slide:nth-child(9){animation-delay:-40s}
