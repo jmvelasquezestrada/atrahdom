@@ -560,4 +560,5 @@ a.feature-card{text-decoration:none;color:inherit}
 .axes-placeholder p{margin:12px 0 0;color:inherit;font-size:.95rem;line-height:1.55}
 .axes-placeholder-1{background:var(--rosa-suave)}.axes-placeholder-2{background:var(--lila-claro)}.axes-placeholder-3{background:#d8f0e4}
 .axes-placeholder-number{font-weight:800;color:var(--morado-osc);font-size:.8rem;letter-spacing:.12em}
+.affiliate-note{display:none}
 @media(max-width:900px){.axes-placeholders{grid-template-columns:1fr}}
