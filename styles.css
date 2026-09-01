@@ -589,6 +589,9 @@ a.feature-card{text-decoration:none;color:inherit}
 .axes-transverse-grid .axes-placeholder-2{background:#d8f0e4}
 .axes-transverse-grid .axes-placeholder-3{background:#dbe8ff}
 .axes-transverse-grid .axes-placeholder-4{background:#dff4fb}
+.axes-transverse-grid .axes-placeholder-1{background:var(--lila-claro);color:var(--ink)}
+.axes-transverse-grid .axes-placeholder-1 h3{color:var(--morado-osc)}
+.axes-transverse-grid .axes-placeholder-1::after{border-color:rgba(71,38,104,.45)}
 .axes-placeholder-number{font-weight:800;color:var(--morado-osc);font-size:.8rem;letter-spacing:.12em}
 .affiliate-note{display:none}
 @media(max-width:900px){.axes-placeholders,.axes-transverse-grid{grid-template-columns:1fr}}
