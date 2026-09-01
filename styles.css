@@ -583,6 +583,12 @@ a.feature-card{text-decoration:none;color:inherit}
 .axes-placeholder-1{background:var(--rosa-suave)}.axes-placeholder-2{background:var(--lila-claro)}.axes-placeholder-3{background:#d8f0e4}
 .axes-placeholder-4{background:var(--rosa-suave)}
 .axes-transverse-card h3{position:relative;z-index:1;margin:0;color:var(--morado-osc);font-family:var(--serif);font-size:1.25rem}
+.axes-transverse-grid .axes-placeholder-1{background:var(--morado);color:#fff}
+.axes-transverse-grid .axes-placeholder-1 h3{color:#fff}
+.axes-transverse-grid .axes-placeholder-1::after{border-color:rgba(255,255,255,.6)}
+.axes-transverse-grid .axes-placeholder-2{background:#d8f0e4}
+.axes-transverse-grid .axes-placeholder-3{background:#dbe8ff}
+.axes-transverse-grid .axes-placeholder-4{background:#dff4fb}
 .axes-placeholder-number{font-weight:800;color:var(--morado-osc);font-size:.8rem;letter-spacing:.12em}
 .affiliate-note{display:none}
 @media(max-width:900px){.axes-placeholders,.axes-transverse-grid{grid-template-columns:1fr}}
