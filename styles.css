@@ -604,5 +604,5 @@ a.feature-card{text-decoration:none;color:inherit}
 .participation-space-card h3{margin:0;color:var(--morado-osc);font-family:var(--serif);font-size:1.35rem}
 .participation-space-card ul{margin:14px 0 0;padding-left:1.2rem;max-width:82%;line-height:1.55}
 .participation-space-card li{margin:.28rem 0}
-.participation-space-1{background:var(--rosa-suave)}.participation-space-2{background:var(--lila-claro)}.participation-space-3{background:#d8f0e4}.participation-space-4{background:#dbe8ff}.participation-space-5{background:#dff4fb;grid-column:1/-1}
+.participation-space-1{background:var(--lila-claro)}.participation-space-2{background:var(--rosa-suave)}.participation-space-3{background:#d8f0e4}.participation-space-4{background:#dbe8ff}.participation-space-5{background:#dff4fb;grid-column:1/-1}
 @media(max-width:900px){.participation-spaces-grid{grid-template-columns:1fr}.participation-space-5{grid-column:auto}}
