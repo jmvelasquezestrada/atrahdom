@@ -259,9 +259,9 @@ dialog::backdrop{background:rgba(26,17,24,.72)}
 .footer-address{margin-left:-18px}
 .footer-address p{color:#fff}
 .footer-social{margin-left:-6px}
-.social-buttons{display:grid;grid-template-columns:repeat(2,30px);gap:15px}
-.social-buttons a{display:block;width:30px;height:30px;margin:0;border-radius:7px;overflow:hidden;background:#fff}
-.social-buttons img{display:block;width:100%;height:100%;object-fit:cover}
+.footer-social .social-buttons{display:grid!important;grid-template-columns:repeat(2,30px)!important;grid-auto-rows:30px;gap:15px}
+.footer-social .social-buttons a{display:block;width:30px!important;height:30px!important;min-width:30px;min-height:30px;margin:0;border-radius:7px;overflow:hidden;background:#fff}
+.footer-social .social-buttons img{display:block;width:30px!important;height:30px!important;max-width:30px;max-height:30px;object-fit:cover}
 .social-buttons a:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.25)}
 .footer-grid a{display:block;margin:.4rem 0;color:#fff}
 .footer-grid a:hover{color:var(--lila)}
