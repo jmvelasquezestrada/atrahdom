@@ -610,6 +610,10 @@ a.feature-card{text-decoration:none;color:inherit}
 .organization-structure-card>*{position:relative;z-index:1}
 .organization-structure-card .organization-chart{order:2;margin:28px 0 0}
 .organization-structure-card .organization-chart img{display:block;width:100%;height:auto;border-radius:8px}
+.organization-structure-card p,.organization-structure-card ul{line-height:1.35}
+.organization-structure-card p{margin-block:.45rem}
+.organization-structure-card ul{margin-block:.45rem}
+.organization-structure-card li{margin-block:.15rem}
 .participation-spaces-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:18px 0 34px}
 .participation-space-card{position:relative;overflow:hidden;min-height:250px;padding:35px;border-radius:12px;color:var(--ink);transition:transform .18s ease,box-shadow .18s ease}
 .participation-space-card:hover,.participation-space-card:focus-within{transform:translateY(-3px);box-shadow:var(--sombra)}
