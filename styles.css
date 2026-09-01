@@ -334,6 +334,12 @@ a.feature-card{text-decoration:none;color:inherit}
 .step h4{font-family:var(--serif);font-size:1.2rem;color:var(--morado-osc);margin:0 0 10px}
 .step p{margin:0;color:var(--texto-suave);font-size:.95rem}
 .placeholder-note{text-align:center;padding:16px;background:var(--rosa-suave);border-radius:8px;font-size:.88rem;color:var(--texto-suave);border:1px solid var(--linea)}
+.steps .step{position:relative;overflow:hidden;min-height:250px;padding:35px;border:0;border-radius:12px;background:var(--rosa)}
+.steps .step::after{content:"";position:absolute;width:190px;height:190px;border:3px dashed rgba(71,38,104,.45);border-radius:50%;right:-40px;bottom:-50px;pointer-events:none}
+.steps .step h3,.steps .step h4,.steps .step p{position:relative;z-index:1}
+.steps .step h3{color:var(--morado)}
+.steps .step h4{font-size:1.2rem}
+.steps .step p{max-width:78%;color:var(--texto-suave)}
 /* ---------- Fase 4: Institutional ---------- */
 .org-card{border:1px solid var(--linea);border-radius:12px;overflow:hidden;background:var(--blanco);margin-bottom:30px}
 .org-card-body{padding:28px}
