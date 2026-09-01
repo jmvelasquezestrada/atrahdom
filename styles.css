@@ -76,15 +76,18 @@ h3{font-size:1.5rem}
 
 /* ---------- Cabecera ---------- */
 .site-header{position:sticky;top:0;z-index:50;background:rgba(253,248,246,.95);backdrop-filter:blur(14px);border-bottom:1px solid var(--linea)}
-.main-nav{min-height:120px;display:flex;align-items:center;justify-content:space-between;gap:30px}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.main-nav{min-height:120px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:18px;text-decoration:none}
 .brand strong{font-family:var(--serif);font-size:1.7rem;display:block;line-height:1}
 .brand small{display:block;font-size:.72rem;margin-top:6px;color:var(--texto-suave)}
-.brand-mark{width:300px;height:112px;margin-left:18px;display:grid;place-items:center;overflow:visible}
+.brand-mark{width:300px;height:112px;margin-left:0;display:grid;place-items:center;overflow:visible}
 .brand-mark img{width:300px;height:auto;object-fit:contain;display:block}
+.brand-tagline{color:var(--lila);font-weight:700;white-space:nowrap;font-size:.9rem}
 .primary-menu{display:flex;align-items:center;gap:24px}
 .primary-menu a,.search-open{font-weight:700;font-size:.9rem;text-decoration:none;background:none;border:0;font-family:var(--sans);cursor:pointer;padding:8px 0;color:var(--ink)}
 .primary-menu a:hover,.primary-menu a:focus-visible,.search-open:hover{color:var(--morado)}
+.primary-menu .nav-donate{background:var(--morado);color:#fff;padding:5px 14px;border-radius:999px}
+.primary-menu .nav-donate:hover,.primary-menu .nav-donate:focus-visible{background:var(--lila);color:var(--ink)}
 .menu-toggle{display:none;border:2px solid var(--ink);background:transparent;padding:10px 14px;font-weight:700;border-radius:999px;font-family:var(--sans);cursor:pointer}
 
 /* ---------- Menú con desplegables ---------- */
@@ -452,10 +455,12 @@ a.feature-card{text-decoration:none;color:inherit}
   .photo-collage .photo-2{width:50%;height:40%;left:0;bottom:5%}
   .main-nav{gap:10px;min-height:78px}
   .brand{min-width:0;gap:8px}
+  .brand-tagline{font-size:.75rem}
   .brand small{display:none}
   .brand strong{font-size:1.28rem}
   .main-nav{min-height:90px}
   .brand-mark{width:240px;height:90px;margin-left:12px}.brand-mark img{width:240px;height:auto}
+  .brand-tagline{display:none}
   .menu-toggle{flex:0 0 auto;padding:9px 12px}
   .grid,.impact-grid,.footer-grid,.feature-grid,.topic-grid{grid-template-columns:1fr}
   .section{padding:65px 0}
