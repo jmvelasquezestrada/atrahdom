@@ -256,6 +256,8 @@ dialog::backdrop{background:rgba(26,17,24,.72)}
 .site-footer h2,.site-footer h3{color:#fff}
 .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:38px}
 .footer-grid p{color:var(--texto-inv-suave)}
+.footer-address{margin-left:-18px}
+.footer-address p{color:#fff}
 .footer-grid a{display:block;margin:.4rem 0;color:#fff}
 .footer-grid a:hover{color:var(--lila)}
 .map-buttons{display:flex;align-items:center;gap:19px;margin-top:.5rem;margin-left:15px}
@@ -423,6 +425,7 @@ a.feature-card{text-decoration:none;color:inherit}
   .hero-art,.photo-collage{min-height:400px}
   .grid{grid-template-columns:repeat(2,1fr)}
   .impact-grid,.footer-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-address{margin-left:0}
   .feature-grid,.topic-grid{grid-template-columns:repeat(2,1fr)}
   .sidebar{position:static}
   .program-grid{grid-template-columns:1fr}
