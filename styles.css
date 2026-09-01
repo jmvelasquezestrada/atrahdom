@@ -76,12 +76,12 @@ h3{font-size:1.5rem}
 
 /* ---------- Cabecera ---------- */
 .site-header{position:sticky;top:0;z-index:50;background:rgba(253,248,246,.95);backdrop-filter:blur(14px);border-bottom:1px solid var(--linea)}
-.main-nav{min-height:120px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.main-nav{min-height:96px;display:flex;align-items:center;justify-content:space-between;gap:24px}
 .brand{display:flex;align-items:center;gap:18px;text-decoration:none}
 .brand strong{font-family:var(--serif);font-size:1.7rem;display:block;line-height:1}
 .brand small{display:block;font-size:.72rem;margin-top:6px;color:var(--texto-suave)}
-.brand-mark{width:300px;height:112px;margin-left:0;display:grid;place-items:center;overflow:visible}
-.brand-mark img{width:300px;height:auto;object-fit:contain;display:block}
+.brand-mark{width:240px;height:90px;margin-left:0;display:grid;place-items:center;overflow:visible}
+.brand-mark img{width:240px;height:auto;object-fit:contain;display:block}
 .brand-tagline{color:var(--morado);font-weight:700;white-space:nowrap;font-size:.9rem}
 .primary-menu{display:flex;align-items:center;gap:24px}
 .primary-menu a,.search-open{font-weight:700;font-size:.9rem;text-decoration:none;background:none;border:0;font-family:var(--sans);cursor:pointer;padding:8px 0;color:var(--ink)}
@@ -458,8 +458,8 @@ a.feature-card{text-decoration:none;color:inherit}
   .brand-tagline{font-size:.75rem}
   .brand small{display:none}
   .brand strong{font-size:1.28rem}
-  .main-nav{min-height:90px}
-  .brand-mark{width:240px;height:90px;margin-left:12px}.brand-mark img{width:240px;height:auto}
+  .main-nav{min-height:72px}
+  .brand-mark{width:192px;height:72px;margin-left:12px}.brand-mark img{width:192px;height:auto}
   .brand-tagline{display:none}
   .menu-toggle{flex:0 0 auto;padding:9px 12px}
   .grid,.impact-grid,.footer-grid,.feature-grid,.topic-grid{grid-template-columns:1fr}
@@ -481,8 +481,8 @@ a.feature-card{text-decoration:none;color:inherit}
 @media(max-width:360px){
   .wrap{width:calc(100% - 20px)}
   .brand strong{font-size:1.12rem}
-  .main-nav{min-height:82px}
-  .brand-mark{width:210px;height:78px;margin-left:8px}.brand-mark img{width:210px;height:auto}
+  .main-nav{min-height:66px}
+  .brand-mark{width:168px;height:62px;margin-left:8px}.brand-mark img{width:168px;height:auto}
   .menu-toggle{padding:8px 10px}
 }
 
