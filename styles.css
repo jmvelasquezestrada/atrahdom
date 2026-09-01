@@ -82,7 +82,7 @@ h3{font-size:1.5rem}
 .brand small{display:block;font-size:.72rem;margin-top:6px;color:var(--texto-suave)}
 .brand-mark{width:300px;height:112px;margin-left:0;display:grid;place-items:center;overflow:visible}
 .brand-mark img{width:300px;height:auto;object-fit:contain;display:block}
-.brand-tagline{color:var(--lila);font-weight:700;white-space:nowrap;font-size:.9rem}
+.brand-tagline{color:var(--morado);font-weight:700;white-space:nowrap;font-size:.9rem}
 .primary-menu{display:flex;align-items:center;gap:24px}
 .primary-menu a,.search-open{font-weight:700;font-size:.9rem;text-decoration:none;background:none;border:0;font-family:var(--sans);cursor:pointer;padding:8px 0;color:var(--ink)}
 .primary-menu a:hover,.primary-menu a:focus-visible,.search-open:hover{color:var(--morado)}
