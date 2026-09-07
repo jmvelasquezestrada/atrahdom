@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Estimación orientativa de prestaciones laborales — ATRAHDOM">
+  <title>Calculadora laboral | ATRAHDOM</title>
+  <link rel="stylesheet" href="css/calculadora.css">
+</head>
+<body>
+  <a class="skip" href="#calculadora">Saltar a la calculadora</a>
+  <header class="top"><a href="index.html" class="brand"><img src="assets/images/logo-atrahdom-2022.png" alt="ATRAHDOM"><span>Trabajo digno. Derechos para todas.</span></a><a href="index.html">← Volver al sitio</a></header>
+  <main id="calculadora" class="shell">
+    <header class="intro"><p class="kicker">ATRAHDOM · ESTIMACIÓN ORIENTATIVA</p><h1>Calculadora de prestaciones laborales</h1><p>Ingresá los datos que conozcás. Los cálculos se hacen únicamente en este navegador.</p></header>
+    <div class="notice" role="note">Esta calculadora proporciona una estimación orientativa de posibles prestaciones y montos laborales con base en los datos ingresados y los parámetros incorporados por la normativa laboral vigente de Guatemala. <strong>No constituye una resolución legal, inspección laboral ni asesoría jurídica definitiva.</strong></div>
+    <div class="layout">
+      <form id="calculator-form" novalidate>
+        <section><h2>1. Relación laboral</h2><div class="fields two">
+          <label>Fecha de nacimiento <input type="date" name="birthDate"></label>
+          <label>Sector <select name="sector"><option value="privado">Privado</option><option value="publico">Público</option><option value="otro">Otro / por determinar</option></select></label>
+          <label>Actividad económica <select name="activity"><option value="agricola">Agrícola</option><option value="noAgricola">No agrícola</option><option value="maquila">Exportación y maquila</option></select></label>
+          <label>Circunscripción <select name="circumscription"><option value="ce1">CE1 — Departamento de Guatemala</option><option value="ce2">CE2 — Resto del país</option></select><small>Para 2016–2022 se usa la tabla nacional.</small></label>
+          <label>Fecha de inicio <input required type="date" name="startDate"></label><label>Fecha de terminación <input required type="date" name="endDate"></label>
+          <label>Motivo <select name="reason"><option value="despido_injustificado">Despido injustificado</option><option value="renuncia">Renuncia voluntaria</option><option value="despido_justificado">Despido justificado</option><option value="mutuo_acuerdo">Mutuo acuerdo</option></select></label>
+        </div></section>
+        <section><h2>2. Jornada y salario</h2><div class="fields two">
+          <label>Tipo de jornada <select name="shift"><option value="diurna">Diurna (8 horas)</option><option value="nocturna">Nocturna (6 horas)</option><option value="mixta">Mixta (7 horas)</option></select></label>
+          <label>Horas por semana <input type="number" min="0" step=".5" name="weeklyHours" placeholder="Ej. 48"></label>
+          <label>Salario ordinario promedio (Q) <input required type="number" min="0" step=".01" name="ordinarySalary" placeholder="0.00"></label>
+          <label>Salario extraordinario promedio (Q) <input type="number" min="0" step=".01" name="extraordinarySalary" value="0"></label>
+          <label>Comisiones promedio (Q) <input type="number" min="0" step=".01" name="commissions" value="0"></label>
+          <label>Bonificación incentivo (Q) <input type="number" name="bonus" value="250" readonly><small>Parámetro del prototipo.</small></label>
+        </div></section>
+        <section><h2>3. Períodos de prestaciones</h2><div class="fields two">
+          <label>Último período de vacaciones pagado <input type="date" name="vacationLastPaid"></label><label>Días de vacaciones anuales <input type="number" min="0" name="vacationDays" value="15"></label>
+          <label>Días de vacaciones gozados <input type="number" min="0" name="vacationTaken" value="0"></label><label>Último período de aguinaldo pagado <input type="date" name="aguinaldoLastPaid"></label>
+          <label>Último período de Bono 14 pagado <input type="date" name="bono14LastPaid"></label><label>Último salario efectivamente pagado <input type="date" name="lastSalaryPaid"></label>
+        </div><p class="hint">Si nunca recibió aguinaldo o Bono 14, dejá el campo vacío: se tomará la fecha de inicio.</p></section>
+        <section><h2>4. Montos pendientes</h2><div class="fields two">
+          <label>Horas extraordinarias sin pagar <input type="number" min="0" step=".5" name="unpaidOvertime" value="0"></label>
+          <label>Días pendientes para ajuste salarial <input type="number" min="0" step="1" name="salaryAdjustmentDays" value="0" readonly><small>Se calcula desde el último salario efectivamente pagado hasta la terminación.</small></label>
+          <label>¿Recibías ventajas económicas? <select name="economicAdvantages"><option value="no">No</option><option value="si">Sí</option></select></label>
+          <label>Bonificación incentivo <select name="bonusStatus"><option value="recibida">Recibida</option><option value="no_recibida">No recibida</option><option value="desconocida">No sé / no me la desglosaban</option></select></label>
+          <label>Meses laborados para bonificación incentivo <input type="number" min="0" step="1" name="bonusMonths" placeholder="Se calcula con las fechas si lo dejás vacío"><small>Ingresá los meses completos que reportés; Q250 × meses.</small></label>
+        </div>
+        <div class="repeat-head"><h3>Ajustes y salarios pendientes por año</h3><button type="button" class="secondary" id="add-adjustment">+ Agregar año</button></div>
+        <p class="hint">El ajuste salarial principal compara automáticamente tu salario ordinario promedio con el salario mínimo ordinario vigente más reciente (2026), según la actividad y circunscripción seleccionadas. Los registros por año sirven para documentar salarios pendientes históricos.</p><div id="adjustments"></div>
+        </section>
+        <p id="form-errors" class="errors" role="alert"></p><button class="calculate" type="submit">Calcular estimación</button>
+      </form>
+      <aside id="results" aria-live="polite"><div class="results-empty"><p class="kicker">RESULTADOS</p><h2>Tu estimación aparecerá aquí</h2><p>Completá al menos las fechas y el salario ordinario para comenzar.</p></div></aside>
+    </div>
+  </main>
+  <script src="data/salarios-minimos.js?v=4"></script><script src="js/prestaciones.js?v=4"></script><script src="js/ui.js?v=4"></script>
+</body></html>
