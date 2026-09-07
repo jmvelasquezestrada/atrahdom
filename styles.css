@@ -130,7 +130,8 @@ h3{font-size:1.5rem}
 /* ---------- Secciones ---------- */
 .section{padding:90px 0}
 .donation-cta-wrap{text-align:center;margin-top:30px}
-.donation-cta{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 30px;border:2px solid #ef4b9b;background:var(--lila);color:var(--ink);font:800 1rem var(--sans);border-radius:999px;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease}
+.donation-cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 30px;border:2px solid #ef4b9b;background:var(--lila);color:var(--ink);font:800 1rem var(--sans);border-radius:999px;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease}
+.donation-cta .paypal-logo{width:18px;height:18px;display:block;flex:0 0 18px}
 .donation-cta:hover,.donation-cta:focus-visible{transform:translateY(-2px);box-shadow:0 8px 20px rgba(239,75,155,.24)}
 .donation-hero + .section{padding-top:0}
 .section.tint{background:var(--rosa-suave)}
