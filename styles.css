@@ -143,6 +143,7 @@ h3{font-size:1.5rem}
 .donation-cta:hover,.donation-cta:focus-visible{transform:translateY(-2px);box-shadow:0 8px 20px rgba(239,75,155,.24)}
 .donation-hero + .section{padding-top:0}
 .donation-hero + .section .content-layout{grid-template-columns:minmax(0,1fr)}
+.donation-hero + .section .prose>p{text-align:justify;text-justify:inter-word}
 .section.tint{background:var(--rosa-suave)}
 .section.dark{background:var(--morado-osc);color:#fff}
 .section-head{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:42px}
