@@ -585,6 +585,8 @@ a.feature-card{text-decoration:none;color:inherit}
 .organization-chart{margin:0 auto 2.5rem;text-align:center}
 .organization-chart img{display:block;width:min(100%,1024px);height:auto;margin:0 auto;border-radius:1rem}
 .axes-page .sidebar{display:none}
+.axes-page .content-carousel{margin-bottom:10px}
+.axes-page .prose h2{margin-top:.5em}
 .participation-page .sidebar{display:none}
 .participation-page.content-layout{grid-template-columns:minmax(0,1fr)}
 .content-carousel{position:relative;min-height:420px;margin:0 auto 2.5rem;overflow:hidden;border-radius:1rem;background:var(--ink)}
