@@ -134,7 +134,7 @@ h3{font-size:1.5rem}
 .donation-priorities p:hover,.donation-priorities p:focus-within{transform:translateY(-3px);box-shadow:var(--sombra)}
 .donation-priorities p::after{content:"";position:absolute;width:190px;height:190px;border:3px dashed rgba(71,38,104,.45);border-radius:50%;right:-40px;bottom:-50px;pointer-events:none;transition:transform 2s ease}
 .donation-priorities p:hover::after,.donation-priorities p:focus-within::after{transform:rotate(120deg)}
-.donation-priorities p:nth-child(1){background:var(--rosa-suave)}.donation-priorities p:nth-child(2){background:var(--lila-claro)}.donation-priorities p:nth-child(3){background:#d8f0e4}.donation-priorities p:nth-child(4){background:var(--rosa)}
+.donation-priorities p{background:var(--rosa-suave)}
 .donation-priorities strong,.donation-priorities br+*{position:relative;z-index:1}.donation-priorities strong{display:block;margin-bottom:14px;color:var(--morado-osc);font-family:var(--serif);font-size:1.1rem;line-height:1.2}.donation-priorities p{line-height:1.45}
 @media(max-width:1100px){.donation-priorities{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:620px){.donation-priorities{grid-template-columns:1fr}.donation-priorities p{min-height:0}}
 .donation-cta-wrap{text-align:center;margin-top:30px}
