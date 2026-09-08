@@ -100,6 +100,7 @@ function archive(kind='posts'){
   }
   return `<section class="page-hero"><div class="wrap"><p class="eyebrow">Archivo completo</p><h1>Actualidad y memoria histórica</h1><p>Publicaciones históricas con fecha, autoría y categorías.</p></div></section><section class="section"><div class="wrap"><div class="archive-tools"><input id="archive-search" type="search" placeholder="Buscar por título o contenido"><select id="archive-cat"><option value="">Todas las categorías</option>${state.categories.filter(c=>c.count).map(c=>`<option value="${esc(c.name)}">${decode(c.name)} (${c.count})</option>`).join('')}</select></div><p id="archive-count"></p><div id="archive-grid" class="grid"></div><div id="archive-pages" class="pagination"></div></div></section>`;
 }
+const archiveWithoutResourceSubtitle=archive;archive=kind=>kind==='resources'?archiveWithoutResourceSubtitle(kind).replace(/<p>\d+ documentos, investigaciones y materiales en el archivo de ATRAHDOM\.<\/p>/i,''):archiveWithoutResourceSubtitle(kind);
 function bindArchive(kind){
   const source=(kind==='resources'?state.posts.filter(p=>categoryNames(p).some(c=>/document|publicaciones propias|investig|informe|manual|tesis/i.test(c))||(p.attachments||[]).length):state.posts).slice().sort((a,b)=>new Date(dateOf(b)||0)-new Date(dateOf(a)||0));
   let page=1;const per=12;
