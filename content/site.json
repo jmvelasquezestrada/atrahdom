@@ -7687,6 +7687,44 @@
       "attachments": [],
       "external_links": [],
       "internal_links": []
+    },
+    {
+      "original_url": "https://atrahdom.org/2026/07/27/memoria-del-primer-congreso-nacional-de-los-cuidados-en-guatemala-voces-de-la-sociedad-civil/",
+      "final_url": "https://atrahdom.org/2026/07/27/memoria-del-primer-congreso-nacional-de-los-cuidados-en-guatemala-voces-de-la-sociedad-civil/",
+      "status_code": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "type": "post",
+      "title": "Memoria del Primer Congreso Nacional de los Cuidados en Guatemala \"Voces de la Sociedad Civil\"",
+      "slug": "memoria-del-primer-congreso-nacional-de-los-cuidados-en-guatemala-voces-de-la-sociedad-civil",
+      "publication_date": "2026-07-27T00:00:00-06:00",
+      "modified_date": "2026-07-27T00:00:00-06:00",
+      "wordpress_user": "",
+      "internal_author": "",
+      "categories": [
+        "Centro de Documentación Digital"
+      ],
+      "tags": [],
+      "parent": "",
+      "pagination_source": "",
+      "canonical_url": "https://atrahdom.org/2026/07/27/memoria-del-primer-congreso-nacional-de-los-cuidados-en-guatemala-voces-de-la-sociedad-civil/",
+      "content_hash": "",
+      "media_count": 1,
+      "attachment_count": 1,
+      "migration_status": "needs_review",
+      "verification_status": "not_started",
+      "featured_image_original": "",
+      "featured_image": "",
+      "local_route": "#/post/memoria-del-primer-congreso-nacional-de-los-cuidados-en-guatemala-voces-de-la-sociedad-civil",
+      "content_file": "content/posts/memoria-del-primer-congreso-nacional-de-los-cuidados-en-guatemala-voces-de-la-sociedad-civil.html",
+      "raw_file": "",
+      "content_html": "<div class=\"wp-block-file\"><a href=\"assets/documents/memoria-del-i-congreso-nacional-de-los-cuidados.pdf\">Memoria del I Congreso Nacional de los Cuidados</a><a class=\"wp-block-file__button wp-element-button\" href=\"assets/documents/memoria-del-i-congreso-nacional-de-los-cuidados.pdf\" download>Descargar</a></div>",
+      "content_hash_local": "",
+      "images": [],
+      "attachments": [
+        "assets/documents/memoria-del-i-congreso-nacional-de-los-cuidados.pdf"
+      ],
+      "external_links": [],
+      "internal_links": []
     }
   ],
   "attachments": [
