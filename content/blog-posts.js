@@ -1,0 +1,1 @@
+window.ATRAHDOM_BLOG = [];

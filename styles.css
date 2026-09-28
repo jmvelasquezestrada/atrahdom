@@ -84,9 +84,9 @@ h3{font-size:1.5rem}
 .brand-mark img{width:240px;height:auto;object-fit:contain;display:block}
 .brand-tagline{color:var(--morado);font-weight:700;white-space:nowrap;font-size:.9rem}
 .primary-menu{display:flex;align-items:center;gap:24px}
-.primary-menu a,.primary-menu .nav-placeholder,.search-open{font-weight:700;font-size:.9rem;text-decoration:none;background:none;border:0;font-family:var(--sans);cursor:pointer;padding:8px 0;color:var(--ink)}
-.primary-menu .nav-placeholder{cursor:default}
+.primary-menu a,.search-open{font-weight:700;font-size:.9rem;text-decoration:none;background:none;border:0;font-family:var(--sans);cursor:pointer;padding:8px 0;color:var(--ink)}
 .primary-menu a:hover,.primary-menu a:focus-visible,.search-open:hover{color:var(--morado)}
+.primary-menu a.active{color:var(--morado)}
 .primary-menu .nav-donate{background:var(--morado);color:#fff;padding:5px 14px;border-radius:999px}
 .primary-menu .nav-donate:hover,.primary-menu .nav-donate:focus-visible{background:var(--lila);color:var(--ink)}
 .menu-toggle{display:none;border:2px solid var(--ink);background:transparent;padding:10px 14px;font-weight:700;border-radius:999px;font-family:var(--sans);cursor:pointer}
