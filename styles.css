@@ -223,6 +223,13 @@ h3{font-size:1.5rem}
 .page-hero h1{font-size:clamp(2.6rem,6vw,4.8rem);max-width:950px;position:relative}
 .page-hero .wrap{position:relative}
 .content-layout{display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:60px}
+.contact-page .prose{max-width:1180px;margin:0 auto}
+.contact-page .prose .wp-block-columns{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(260px,.75fr);align-items:center;gap:64px}
+.contact-page .prose .wp-block-column{min-width:0}
+.contact-page .prose .wp-block-column:last-child{padding:18px 0}
+.contact-page .prose .wp-block-image{margin:0}
+.contact-page .prose .wp-block-image img{display:block;width:100%;height:auto;max-width:none;border-radius:16px}
+.contact-page .prose .wp-block-social-links{margin-top:14px}
 .prose{font-size:1.08rem}
 .prose h2,.prose h3{margin-top:2em}
 .prose iframe{max-width:100%}
@@ -450,6 +457,8 @@ a.feature-card{text-decoration:none;color:inherit}
   .nav-group:hover .dropdown,.nav-group:focus-within .dropdown{display:none}
   .nav-group.open .dropdown{display:flex}
   .hero-grid,.content-layout{grid-template-columns:1fr}
+  .contact-page .prose .wp-block-columns{grid-template-columns:1fr;gap:30px}
+  .contact-page .prose .wp-block-column:last-child{padding:0}
   .hero-art,.photo-collage{min-height:400px}
   .grid{grid-template-columns:repeat(2,1fr)}
   .impact-grid,.footer-grid{grid-template-columns:repeat(2,1fr)}
