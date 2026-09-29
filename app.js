@@ -15,7 +15,7 @@ const searchMeta=p=>{const date=dateOf(p),author=authorOf(p);return date||author
 const categoryNames=p=>Array.isArray(p.categories)?p.categories.map(c=>typeof c==='string'?c:state.categories.find(x=>x.id===c)?.name).filter(Boolean):[];
 const imageOf=p=>p.featured_image||p.images?.[0]||p?._embedded?.['wp:featuredmedia']?.[0]?.source_url||'';
 const slugOf=p=>p.slug||String(p.id||'contenido');
-const routeOf=p=>p.local_route||`#/contenido/${p.type}/${p.id}`;
+const routeOf=p=>{const slug=slugOf(p);const clean={contactanos:'/contacto/',organizacion:'/organizacion/','ejes-de-trabajo':'/que-hacemos/','has-una-donacion':'/donar/'}[slug];if(clean)return clean;if(p.type==='post'&&categoryNames(p).some(c=>String(c).toLowerCase()==='blog'))return`/blog/${slug}/`;return p.local_route||`#/contenido/${p.type}/${p.id}`};
 const isLogoImage=url=>/cropped-atrahdom-logo|logotipo-2019/i.test(url||'');
 const allContent=()=>[...state.pages,...state.posts];
 const latestPosts=(count=6)=>state.posts.slice().sort((a,b)=>new Date(dateOf(b)||0)-new Date(dateOf(a)||0)).slice(0,count);
