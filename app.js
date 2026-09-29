@@ -20,6 +20,7 @@ const isLogoImage=url=>/cropped-atrahdom-logo|logotipo-2019/i.test(url||'');
 const allContent=()=>[...state.pages,...state.posts];
 const latestPosts=(count=6)=>state.posts.slice().sort((a,b)=>new Date(dateOf(b)||0)-new Date(dateOf(a)||0)).slice(0,count);
 const editorialPosts=()=>Array.isArray(window.ATRAHDOM_BLOG)?window.ATRAHDOM_BLOG.map(p=>({...p,type:'post',local_route:p.local_route||`#/post/${p.slug}`,categories:[...new Set(['Blog',...(p.categories||[])])]})):[];
+const hydrateEditorialPosts=async posts=>Promise.all(posts.map(async p=>{if(p.content_html||!p.content_file)return p;try{const response=await fetch(p.content_file);if(!response.ok)return p;return {...p,content_html:await response.text()}}catch(_){return p}}));
 const postsWithRealImages=()=>state.posts.filter(p=>imageOf(p)&&!isLogoImage(imageOf(p)));
 const postsWithDocuments=()=>state.posts.filter(p=>(p.attachments||[]).length);
 const byCategory=category=>state.posts.filter(p=>categoryNames(p).includes(category));
@@ -37,26 +38,27 @@ const postType=p=>{if((p.attachments||[]).length||/\.(pdf|docx?|pptx?|xlsx?)/i.t
 const highlightText=(text,term)=>{const esc=term.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');return text.replace(new RegExp(`(${esc})`,'gi'),'<mark>$1</mark>')};
 function resourceCard(p){const cats=categoryNames(p);const type=postType(p);const year=dateOf(p)?new Date(dateOf(p)).getFullYear():'';const atts=p.attachments||[];return`<article class="card resource-card type-${type||'default'}"><div class="card-body"><div class="meta"><span class="resource-type-badge type-${type||'default'}">${type==='doc'?'PDF':type==='video'?'VID':'ART'}</span><span>${cats[0]||'Documento'}</span>${year?`<span>${year}</span>`:''}</div><h3>${titleOf(p)}</h3><div class="resource-actions"><a class="read" href="${routeOf(p)}">Ver ficha →</a>${atts.length?`<a class="btn small alt" href="${atts[0]}" target="_blank" rel="noopener">Descargar ↓</a>`:''}</div></div></article>`}
 
-function normalizeMigrated(site){
+function normalizeMigrated(site,editorials=[]){
   const pages=(site.pages||[]).map(p=>({...p,type:'page'}));
   const migratedPosts=(site.posts||[]).map(p=>({...p,type:'post'}));
-  const posts=[...migratedPosts,...editorialPosts().filter(p=>!migratedPosts.some(existing=>existing.slug===p.slug||(existing.local_route&&existing.local_route===p.local_route)))];
+  const posts=[...migratedPosts,...editorials.filter(p=>!migratedPosts.some(existing=>existing.slug===p.slug||(existing.local_route&&existing.local_route===p.local_route)))];
   const attachments=(site.attachments||[]).map(p=>({...p,type:'attachment'}));
   const names=[...new Set([...pages,...posts].flatMap(categoryNames))].sort((a,b)=>a.localeCompare(b,'es'));
   const categories=names.map((name,index)=>({id:index+1,name,count:[...pages,...posts].filter(p=>categoryNames(p).includes(name)).length}));
   Object.assign(state,{pages,posts,attachments,categories,users:[],ready:true,source:'migrated'});
 }
 
-function normalizeManual(data){
-  const posts=[...(data.posts||[]),...editorialPosts().filter(p=>!(data.posts||[]).some(existing=>existing.slug===p.slug||(existing.local_route&&existing.local_route===p.local_route)))];
+function normalizeManual(data,editorials=[]){
+  const posts=[...(data.posts||[]),...editorials.filter(p=>!(data.posts||[]).some(existing=>existing.slug===p.slug||(existing.local_route&&existing.local_route===p.local_route)))];
   Object.assign(state,{posts,pages:data.pages||[],attachments:[],categories:data.categories||[],users:data.users||[],ready:true,source:'manual'});
 }
 
-function load(){
+async function load(){
   showLoading();
   try{
-    if(window.ATRAHDOM_SITE)normalizeMigrated(window.ATRAHDOM_SITE);
-    else if(window.ATRAHDOM_DATA)normalizeManual(window.ATRAHDOM_DATA);
+    const editorials=await hydrateEditorialPosts(editorialPosts());
+    if(window.ATRAHDOM_SITE)normalizeMigrated(window.ATRAHDOM_SITE,editorials);
+    else if(window.ATRAHDOM_DATA)normalizeManual(window.ATRAHDOM_DATA,editorials);
     else throw new Error('No se encontró content/site-data.js ni content-data.js');
     route();
   }catch(e){state.error=e;state.ready=true;route()}
@@ -79,8 +81,9 @@ function carouselizeSlideshows(html){const box=document.createElement('div');box
 function promoteCarousel(html){const box=document.createElement('div');box.innerHTML=html;const carousel=box.querySelector('.content-carousel');if(carousel){carousel.remove();box.insertBefore(carousel,box.firstChild)}return box.innerHTML}
 function enhanceAxesContent(html){const box=document.createElement('div');box.innerHTML=html;box.querySelectorAll('.wp-block-spacer[style*="500px"],.wp-block-spacer[style*="428px"]').forEach(spacer=>spacer.remove());const heading=[...box.querySelectorAll('h2')].find(h=>h.textContent.trim()==='Principales ejes');if(heading){const source=[...box.querySelectorAll('p')].filter(p=>p.textContent.trim()).slice(0,3);const cards=document.createElement('div');cards.className='axes-placeholders';source.forEach((p,i)=>{const card=document.createElement('article');card.className=`axes-placeholder axes-placeholder-${i+1}`;card.innerHTML=`<span class="axes-placeholder-number">0${i+1}</span><p>${p.innerHTML}</p>`;cards.appendChild(card);p.remove()});heading.insertAdjacentElement('afterend',cards)}return box.innerHTML}
 function detail(p){
-  const cats=categoryNames(p);const organizationPage=slugOf(p)==='organizacion';const axesPage=slugOf(p)==='ejes-de-trabajo';const participationPage=slugOf(p)==='espacios-de-participacion';
+  const cats=categoryNames(p);const editorialColumn=p.editorial_type==='Columna';const organizationPage=slugOf(p)==='organizacion';const axesPage=slugOf(p)==='ejes-de-trabajo';const participationPage=slugOf(p)==='espacios-de-participacion';
   let body=enhanceContent(contentOf(p));
+  if(editorialColumn&&imageOf(p))body=`<figure class="editorial-featured"><img src="${esc(imageOf(p))}" alt="${esc(titleOf(p))}" loading="eager" decoding="async"></figure>${body}`;
   if(organizationPage){
     body=body.replace(/<div class="wp-block-image">[\s\S]*?<\/div>/i,'').replace(/<figure class="wp-block-image size-large">[\s\S]*?<\/figure>/i,'');
     body=`<figure class="organization-chart"><img src="assets/images/ORGANIGRAMA.png" alt="Organigrama de ATRAHDOM" loading="lazy" decoding="async"></figure>${body}`;
@@ -92,7 +95,8 @@ function detail(p){
   const catHtml=cats.map(c=>`<span class="cat-pill">${c}</span>`).join(' · ')||(p.type==='page'?'Información institucional':'Archivo histórico');
   const backLink=p.type==='page'?'#/quienes-somos':(cats.some(c=>/document|investig|informe|manual|tesis/i.test(c))?'#/recursos':(cats.some(c=>String(c).toLowerCase()==='blog')?'#/blog':'#/'));
   const pageClass=organizationPage?'organization-page':axesPage?'axes-page':participationPage?'participation-page':'';
-   const sidebar=organizationPage?'':`<aside class="sidebar"><h3>Sobre este documento</h3><p><strong>Tipo:</strong><br>${p.type==='page'?'Página institucional':'Publicación'}</p>${authorSidebar(p)}${dateOf(p)?`<p><strong>Fecha:</strong><br>${safeDate(dateOf(p))}</p>`:''}${cats.length?`<p><strong>Categorías:</strong><br>${cats.join(', ')}</p>`:''}${atts.length?`<p><strong>Descargas:</strong></p>${atts.map(a=>`<a href="${a}" target="_blank" rel="noopener" download>↓ ${fileName(a)}</a>`).join('')}`:''}<div class="citation-block"><p><strong>Cita sugerida:</strong></p><blockquote>ATRAHDOM. (${year||'s.f.'}). <em>${strip(titleOf(p))}</em>. Recuperado de https://atrahdom.org</blockquote></div><a href="${backLink}">← Volver al archivo</a></aside>`;
+   const citationAuthor=authorOf(p)||'ATRAHDOM';const citationType=p.editorial_type|| (p.type==='page'?'Página institucional':'Publicación');const citationDate=dateOf(p)?safeDate(dateOf(p)):'';const citationDay=dateOf(p)?new Intl.DateTimeFormat('es-GT',{day:'numeric',month:'long'}).format(new Date(dateOf(p))):'';
+   const sidebar=organizationPage?'':`<aside class="sidebar"><h3>Sobre este documento</h3><p><strong>Tipo:</strong><br>${citationType}</p>${authorSidebar(p)}${dateOf(p)?`<p><strong>Fecha:</strong><br>${citationDate}</p>`:''}${cats.length?`<p><strong>Categorías:</strong><br>${cats.join(', ')}</p>`:''}${atts.length?`<p><strong>Descargas:</strong></p>${atts.map(a=>`<a href="${a}" target="_blank" rel="noopener" download>↓ ${fileName(a)}</a>`).join('')}`:''}<div class="citation-block"><p><strong>Cita sugerida:</strong></p><blockquote>${citationAuthor}. (${year||'s.f.'}${citationDay?`, ${citationDay}`:''}). <em>${strip(titleOf(p))}</em>. ATRAHDOM.</blockquote></div><a href="${backLink}">← Volver al archivo</a></aside>`;
    return `<section class="page-hero"><div class="wrap"><p class="eyebrow">${catHtml}</p><h1>${titleOf(p)}</h1><div class="meta">${dateOf(p)?`<span>${safeDate(dateOf(p))}</span>`:''}${authorMeta(p)}${modifiedOf(p)&&modifiedOf(p)!==dateOf(p)?`<span>Actualizado el ${safeDate(modifiedOf(p))}</span>`:''}</div></div></section><section class="section"><div class="wrap ${pageClass} ${organizationPage||axesPage?'':'content-layout'}"><article class="prose">${body}${embeds?`<h2>Recursos embebidos</h2>${embeds}`:''}</article>${sidebar}</div></section>${related.length?`<section class="section tint"><div class="wrap"><h2>Documentos relacionados</h2><div class="grid">${related.map(card).join('')}</div></div></section>`:''}`;
 }
 
