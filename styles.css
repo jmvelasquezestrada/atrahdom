@@ -87,8 +87,8 @@ h3{font-size:1.5rem}
 .primary-menu a,.search-open{font-weight:700;font-size:.9rem;text-decoration:none;background:none;border:0;font-family:var(--sans);cursor:pointer;padding:8px 0;color:var(--ink)}
 .primary-menu a:hover,.primary-menu a:focus-visible,.search-open:hover{color:var(--morado)}
 .primary-menu a.active{color:var(--morado)}
-.primary-menu .nav-donate{background:var(--morado);color:#fff;padding:5px 14px;border-radius:999px}
-.primary-menu .nav-donate:hover,.primary-menu .nav-donate:focus-visible{background:var(--lila);color:var(--ink)}
+.primary-menu .nav-donate{display:inline-flex;align-items:center;justify-content:center;background:var(--morado);color:#fff !important;font-size:.9rem;line-height:1;padding:8px 14px;border-radius:999px}
+.primary-menu .nav-donate:hover,.primary-menu .nav-donate:focus-visible{background:var(--lila);color:#fff !important}
 .menu-toggle{display:none;border:2px solid var(--ink);background:transparent;padding:10px 14px;font-weight:700;border-radius:999px;font-family:var(--sans);cursor:pointer}
 
 /* ---------- Menú con desplegables ---------- */
@@ -144,6 +144,7 @@ h3{font-size:1.5rem}
 .donation-cta:hover,.donation-cta:focus-visible{transform:translateY(-2px);box-shadow:0 8px 20px rgba(239,75,155,.24)}
 .donation-hero + .section{padding-top:0}
 .donation-hero + .section .content-layout{grid-template-columns:minmax(0,1fr)}
+.donation-hero + .section .prose h2{margin-top:.5em}
 .donation-hero + .section .prose>p{text-align:justify;text-justify:inter-word}
 .section.tint{background:var(--rosa-suave)}
 .section.dark{background:var(--morado-osc);color:#fff}
