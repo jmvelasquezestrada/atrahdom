@@ -236,6 +236,12 @@ h3{font-size:1.5rem}
 .contact-page .prose .wp-block-social-links{margin-top:14px}
 .prose{font-size:1.08rem}
 .prose h2,.prose h3{margin-top:2em}
+.section.blog-editorial-section{padding-top:30px}
+.blog-editorial{text-align:justify;text-justify:inter-word}
+.blog-editorial> :first-child{margin-top:0}
+.blog-editorial h2,.blog-editorial h3{margin-top:.75em;margin-bottom:.35em}
+.blog-editorial p{margin-bottom:1em}
+.blog-editorial figure{margin:1.25rem 0 1.5rem}
 .prose iframe{max-width:100%}
 .prose img{border-radius:12px}
 .editorial-featured{margin:0 0 2.5rem}
