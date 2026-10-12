@@ -33,5 +33,17 @@ window.ATRAHDOM_BLOG = [
     excerpt_html: '<p>En las zonas periféricas de la Ciudad de Guatemala, como Mixco o Villa Nueva, el paisaje cotidiano suele esconder una realidad que pocos perciben al pasar por sus calles.</p>',
     content_file: 'blog/trabajo-a-domicilio-guatemala/index.html',
     local_route: '/blog/trabajo-a-domicilio-guatemala/'
+  },
+  {
+    slug: 'que-es-el-conasso',
+    title: 'Qué es el CONASSO',
+    publication_date: '2026-10-14T00:00:00-06:00',
+    internal_author: 'Susana Vásquez',
+    editorial_type: 'Narrativo',
+    categories: ['Blog', 'CONASSO', 'Salud y seguridad ocupacional'],
+    featured_image: 'assets/images/logo-oficial-atrahdom.png',
+    excerpt_html: '<p>Susana Vásquez comparte su experiencia como consejera ante el Consejo Nacional de Salud, Higiene y Seguridad Ocupacional y reflexiona sobre la prevención de riesgos laborales.</p>',
+    content_file: 'blog/que-es-el-conasso/index.html',
+    local_route: '/blog/que-es-el-conasso/'
   }
 ];
