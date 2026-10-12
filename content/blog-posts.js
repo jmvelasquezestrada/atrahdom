@@ -35,6 +35,18 @@ window.ATRAHDOM_BLOG = [
     local_route: '/blog/trabajo-a-domicilio-guatemala/'
   },
   {
+    slug: 'conoce-tus-derechos-aguinaldo-bono-14-prestaciones',
+    title: "Conoce tus derechos: Guía práctica sobre el Aguinaldo, el Bono 14 y tus prestaciones en Guatemala",
+    publication_date: '2026-10-16T00:00:00-06:00',
+    internal_author: 'ATRAHDOM',
+    editorial_type: 'Análisis',
+    categories: ['Blog', 'Análisis'],
+    featured_image: 'assets/images/conoce-tus-derechos-aguinaldo-bono-14-prestaciones.png',
+    excerpt_html: '<p>Conocer la legislación es el primer paso para identificar, detener y prevenir la explotación laboral.</p>',
+    content_file: 'blog/conoce-tus-derechos-aguinaldo-bono-14-prestaciones/index.html',
+    local_route: '/blog/conoce-tus-derechos-aguinaldo-bono-14-prestaciones/'
+  },
+  {
     slug: 'que-es-el-conasso',
     title: 'Qué es el CONASSO',
     publication_date: '2026-10-14T00:00:00-06:00',
