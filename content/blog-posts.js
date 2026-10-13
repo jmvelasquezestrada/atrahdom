@@ -59,6 +59,9 @@ window.ATRAHDOM_BLOG = [
     local_route: '/blog/convenio-189-derechos-trabajadoras-hogar-guatemala/'
   },
   {
+    slug: 'organizacion-trabajadoras-guatemala', title: 'Unidas contra la precariedad: Por qué la organización es el motor de cambio para las trabajadoras en Guatemala', publication_date: '2026-10-23T00:00:00-06:00', internal_author: 'ATRAHDOM', editorial_type: 'Análisis', categories: ['Blog', 'Análisis', 'Organización'], featured_image: 'assets/images/organizacion-trabajadoras-guatemala.png', excerpt_html: '<p>El trabajo de las mujeres es el motor silencioso que mantiene en pie la economía de Guatemala.</p>', content_file: 'blog/organizacion-trabajadoras-guatemala/index.html', local_route: '/blog/organizacion-trabajadoras-guatemala/'
+  },
+  {
     slug: 'conoce-tus-derechos-aguinaldo-bono-14-prestaciones',
     title: "Conoce tus derechos: Guía práctica sobre el Aguinaldo, el Bono 14 y tus prestaciones en Guatemala",
     publication_date: '2026-10-16T00:00:00-06:00',
