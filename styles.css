@@ -242,6 +242,11 @@ h3{font-size:1.5rem}
 .blog-editorial h2,.blog-editorial h3{margin-top:.75em;margin-bottom:.35em}
 .blog-editorial p{margin-bottom:1em}
 .blog-editorial figure{margin:1.25rem 0 1.5rem}
+#gallery-228-5{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:28px auto;max-width:900px}
+#gallery-228-5 .gallery-item{min-width:0;margin:0}
+#gallery-228-5 .gallery-icon a{display:block;overflow:hidden;border-radius:12px}
+#gallery-228-5 .gallery-icon img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+@media(max-width:600px){#gallery-228-5{gap:10px}}
 .prose iframe{max-width:100%}
 .prose img{border-radius:12px}
 .editorial-featured{margin:0 0 2.5rem}
