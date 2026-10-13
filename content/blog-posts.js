@@ -35,6 +35,18 @@ window.ATRAHDOM_BLOG = [
     local_route: '/blog/trabajo-a-domicilio-guatemala/'
   },
   {
+    slug: 'convenio-189-derechos-trabajadoras-hogar-guatemala',
+    title: 'Convenio 189: Por qué los derechos de las trabajadoras del hogar en Guatemala no pueden seguir esperando',
+    publication_date: '2026-10-21T00:00:00-06:00',
+    internal_author: 'ATRAHDOM',
+    editorial_type: 'Análisis',
+    categories: ['Blog', 'Análisis', 'Convenio 189', 'Trabajo del hogar'],
+    featured_image: 'assets/images/convenio-189-derechos-trabajadoras-hogar-guatemala.png',
+    excerpt_html: '<p>En Guatemala, el motor que sostiene la vida cotidiana de miles de familias es, a menudo, el más invisible.</p>',
+    content_file: 'blog/convenio-189-derechos-trabajadoras-hogar-guatemala/index.html',
+    local_route: '/blog/convenio-189-derechos-trabajadoras-hogar-guatemala/'
+  },
+  {
     slug: 'conoce-tus-derechos-aguinaldo-bono-14-prestaciones',
     title: "Conoce tus derechos: Guía práctica sobre el Aguinaldo, el Bono 14 y tus prestaciones en Guatemala",
     publication_date: '2026-10-16T00:00:00-06:00',
