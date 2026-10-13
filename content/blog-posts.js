@@ -35,6 +35,18 @@ window.ATRAHDOM_BLOG = [
     local_route: '/blog/trabajo-a-domicilio-guatemala/'
   },
   {
+    slug: 'revolucion-de-1944-derechos-de-las-trabajadoras',
+    title: 'Una deuda pendiente: por qué el espíritu de la Revolución de 1944 debe llegar hoy a las trabajadoras',
+    publication_date: '2026-10-20T00:00:00-06:00',
+    internal_author: 'ATRAHDOM',
+    editorial_type: 'Análisis',
+    categories: ['Blog', 'Análisis', 'Revolución de 1944'],
+    featured_image: 'assets/images/revolucion-de-1944-derechos-de-las-trabajadoras.png',
+    excerpt_html: '<p>Cada 20 de octubre, Guatemala hace una pausa para recordar un momento decisivo de su historia.</p>',
+    content_file: 'blog/revolucion-de-1944-derechos-de-las-trabajadoras/index.html',
+    local_route: '/blog/revolucion-de-1944-derechos-de-las-trabajadoras/'
+  },
+  {
     slug: 'convenio-189-derechos-trabajadoras-hogar-guatemala',
     title: 'Convenio 189: Por qué los derechos de las trabajadoras del hogar en Guatemala no pueden seguir esperando',
     publication_date: '2026-10-21T00:00:00-06:00',
