@@ -226,6 +226,13 @@ h3{font-size:1.5rem}
 .page-hero h1{font-size:clamp(2.6rem,6vw,4.8rem);max-width:950px;position:relative}
 .page-hero .wrap{position:relative}
 .content-layout{display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:60px}
+/* Fichas individuales CENDOC y Comunicados: reserva solo 20px (frente a 90px genéricos) y elimina el margen superior del primer bloque visible. Las fuentes pueden anteponer un marcador WordAds oculto o un párrafo verdaderamente vacío; estos no deben dejar el margen del encabezado siguiente. Las plantillas compartidas aplican esta clase también a futuras generaciones. */
+.publication-detail-section{padding-top:20px}
+.publication-detail-section .prose> :first-child{margin-top:0}
+.publication-detail-section .prose> p:empty:first-child{display:none}
+.publication-detail-section .prose> #wordads-inline-marker:first-child + *,
+.publication-detail-section .prose> p:empty:first-child + #wordads-inline-marker + *{margin-top:0}
+@media(max-width:620px){.publication-detail-section{padding-top:16px}}
 .contact-page{margin-top:-38px}
 .contact-page .prose{max-width:1180px;margin:0 auto}
 .contact-page .prose .wp-block-columns{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(260px,.75fr);align-items:start;gap:64px}

@@ -146,6 +146,7 @@ Junta Directiva para el trabajo técnico/administrativo …</p><a class="read" h
 
   <template id="loading-template"><section class="loading wrap"><span></span><p>Cargando el contenido de ATRAHDOM…</p></section></template>
   <script src="content/site-data.js"></script>
+  <script src="content/editorial-data.js"></script>
   <script src="content-data.js"></script>
   <script src="content/blog-posts.js"></script>
 
@@ -165,7 +166,8 @@ Junta Directiva para el trabajo técnico/administrativo …</p><a class="read" h
   dialog.showModal();input.focus();
   if(!searchItems){
    const site=window.ATRAHDOM_SITE||{},editorials=window.ATRAHDOM_BLOG||[];
-   const posts=[...(site.posts||[]),...editorials.filter(p=>!(site.posts||[]).some(x=>x.slug===p.slug))];
+   const excluded=new Set(window.ATRAHDOM_EDITORIAL?.cendoc_excluded_slugs||[]);
+   const posts=[...(site.posts||[]),...editorials.filter(p=>!(site.posts||[]).some(x=>x.slug===p.slug))].filter(p=>!excluded.has(p.slug));
    searchItems=[...(site.pages||[]).map(p=>({...p,type:'page'})),...await Promise.all(posts.map(async p=>({...p,type:'post',content_html:p.content_html||(p.content_file?await fetch(p.content_file).then(r=>r.ok?r.text():'').catch(()=>''):'')})))];
   }
   input.dispatchEvent(new Event('input'));

@@ -339,7 +339,15 @@
         "https://scribd.com/doc/1046068349",
         "https://scribd.com/embeds/1046068349/content?start_page=1&view_mode&access_key=key-UvTe3og6vzYHpwIQGBdh"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "Fernanda Brandão Lapa",
+      "editorial_date": null,
+      "editorial_institutions": "Institute for Development and Human Rights - IDDH; Friedrich Ebert Stiftung",
+      "editorial_identifier": {
+        "type": "ISBN",
+        "value": "978-65-981306-8-8"
+      }
     },
     {
       "original_url": "https://atrahdom.org/2026/04/29/caracterizacion-de-las-trabajadoras-de-la-maquila-textil-frente-a-las-violencias-de-genero-incluida-la-economica-en-guatemala/",
@@ -379,7 +387,12 @@
         "assets/documents/estudio-maquila-8e5a18b07f.pdf"
       ],
       "external_links": [],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "ATRAHDOM",
+      "editorial_date": "2026",
+      "editorial_institutions": "ISCOD; Generalitat Valenciana",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2025/11/12/estado-de-situacion-del-sector-de-cuidados-en-guatemala-el-salvador-y-honduras/",
@@ -421,7 +434,12 @@
         "assets/documents/surfuturolestadodesituaciondelsectordecuidados-b85a4c3278.pdf"
       ],
       "external_links": [],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "Maritza Velásquez Estrada; Ismael Ot Padilla; Amory Marroquín",
+      "editorial_date": "2025",
+      "editorial_institutions": "Sur Futuro; IDRC - CRDI",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2025/10/07/52-semanas-en-el-continente-americano/",
@@ -460,7 +478,12 @@
         "assets/documents/52-semanas-en-el-continente-americano-06e2f287ab.pdf"
       ],
       "external_links": [],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "Daniel Velazquez",
+      "editorial_date": "s.f.",
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2025/07/11/posicionamiento-de-las-osc-en-el-fpan-2025/",
@@ -500,7 +523,12 @@
         "assets/documents/rnv-sc-de-guatemala-2025-e6609eacff.pdf"
       ],
       "external_links": [],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2021/07/30/libertad-de-asociacion/",
@@ -694,7 +722,12 @@
       "images": [],
       "attachments": [],
       "external_links": [],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2020/07/07/las-necesidades-de-la-poblacion-vulnerada-por-la-indiferencia/",
@@ -931,7 +964,12 @@
         "assets/documents/acuerdo-gubernativo-45-2018-41df2b8ffb.pdf"
       ],
       "external_links": [],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "MINTRAB",
+      "editorial_date": "6 de febrero de 2018",
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2024/08/19/el-control-de-convencionalidad-una-herramienta-estrategica/",
@@ -975,7 +1013,12 @@
         "assets/documents/ec189-1-5bf0969968.pdf"
       ],
       "external_links": [],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "Ingrid Zurama Urizar",
+      "editorial_date": "2024",
+      "editorial_institutions": "ATRAHDOM; Friedrich Ebert Stiftung",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2024/04/05/la-violencia-laboral-en-guatemala-en-el-marco-del-convenio-190-de-la-oit/",
@@ -1017,7 +1060,15 @@
         "https://slideshare.net/ATRAHDOM",
         "https://slideshare.net/slideshow/embed_code/key/kqfIdkKLqwPm2D"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "Georgina Sticco; Carolina Villanueva; Marisol Andrés; Celina de Belaieff; Tatiana Ardissone; Sarah Herold; Ana Kukurutz; Camila Pereyra de la Sovera; Rocío Senra; Ramiro Cejas Colombo; Fabiana Sosa; Gabriela Lozano Rubello; Tomás Di Giannantonio; Sofía Curutchet; Isabel Messina.",
+      "editorial_date": "2022",
+      "editorial_institutions": "Grow; Friedrich Ebert Stiftung",
+      "editorial_identifier": {
+        "type": "ISBN",
+        "value": "978-956-6138-32-7"
+      }
     },
     {
       "original_url": "https://atrahdom.org/2024/04/02/comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar-2/",
@@ -1144,7 +1195,12 @@
         "https://slideshare.net/ATRAHDOM",
         "https://slideshare.net/slideshow/embed_code/key/36C3xDuHmPHJqU"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "CIMOEA; PADF",
+      "editorial_date": "s.f.",
+      "editorial_institutions": "CIMOEA; PADF",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2023/06/15/aporte-para-abordar-las-causas-que-afectan-a-la-laguna-chichoj-san-cristobal-verapaz-a-v-guatemala/",
@@ -1186,7 +1242,12 @@
         "https://slideshare.net/ATRAHDOM/estudio-metaanalisis-laguna-chichoj-sc-av-1pdf",
         "https://slideshare.net/slideshow/embed_code/key/fWvFHQJ8uOIX99"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "Maritza Velásquez Estrada; Kimberly Galindo; Olivia Chiquin; Dulce Guillermo; Ludvina Isem; Thelma Cho; Fabiola Tilom; Jennifer Morán",
+      "editorial_date": "2023",
+      "editorial_institutions": "ATRAHDOM; FCAM",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2022/07/06/trabajo-domestico-en-el-contexto-de-la-pandemia-del-covid-19/",
@@ -1226,7 +1287,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/252135546"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2021/12/02/desigualdades-y-afectaciones-generadas-por-el-covid-19-en-la-vida-de-las-mujeres-trabajadoras-en-sectores-laborales-vulnerables-en-guatemala-2020-2021/",
@@ -1266,7 +1332,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/250772843"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "Maritza Velásquez Estrada; Edwin Ortega; Gabriell Duarte; Luis Linares",
+      "editorial_date": "2020",
+      "editorial_institutions": "ATRAHDOM; ASIES;  Unión Europea",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2021/05/21/monitoreando-la-situacion-de-trata-laboral-con-fines-de-explotacion-sexual-en-guatemala-en-trabajadoras-domesticas-y-tortilleras/",
@@ -1306,7 +1377,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/248414109"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "Maritza Velásquez Estrada; Susana Vásquez",
+      "editorial_date": "2021",
+      "editorial_institutions": "ATRAHDOM; FCAM",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2016/01/25/la-necesidad-de-trabajar-es-un-arma-de-dos-filos-para-las-trabajadoras-a-domicilio-el-campo-y-del-hogar-en-guatemala/",
@@ -1345,7 +1421,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/113101498"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "ATRAHDOM",
+      "editorial_date": "2011",
+      "editorial_institutions": "ATRAHDOM; USAID; Pact",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2012/11/11/investigacion-los-rostros-ocultos-en-la-maquila/",
@@ -1385,7 +1466,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/113106109"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "Maritza Velásquez Estrada; Karla Amaya",
+      "editorial_date": "2012",
+      "editorial_institutions": "ATRAHDOM; Mama Cash",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2011/02/12/las-mujeres-en-el-mercado-laboral-guatemalteco/",
@@ -1425,7 +1511,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/242119284"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "ATRAHDOM",
+      "editorial_date": "s.f.",
+      "editorial_institutions": "ATRAHDOM; FCAM",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2011/02/12/diagnostico/",
@@ -1465,7 +1556,12 @@
         "assets/documents/situacion-de-las-trabajadoras-del-hogar-20101-deff900842.pdf"
       ],
       "external_links": [],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2011/02/12/presentaciones-2009-2010/",
@@ -1507,7 +1603,12 @@
         "assets/documents/presentacic3b3n-partiraria-dfb4c47cce.pptx"
       ],
       "external_links": [],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2012/05/28/sitradomsa/",
@@ -1621,7 +1722,12 @@
         "assets/documents/comunicado-20-10-12-dfd7bc69bc.pdf"
       ],
       "external_links": [],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2012/10/24/campana-para-la-ratificacion-del-convenio-189-y-recomendacion-201/",
@@ -1699,7 +1805,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/250011670"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2021/07/04/comunicado-ante-abuso-de-poder/",
@@ -1738,7 +1849,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/249594416"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2020/09/04/comunicado-en-referencia-a-salarios-regionalizados/",
@@ -1777,7 +1893,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/238395979"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2021/02/04/planes-de-igualdad-de-genero-en-universidades-y-centros-de-investigacion-en-america-latina/",
@@ -1816,7 +1937,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/242271371"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "FLACSO",
+      "editorial_date": "2019",
+      "editorial_institutions": "FLACSO; UNESCO",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2020/07/07/comunicado-31-de-mayo-2020/",
@@ -1855,7 +1981,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/236688102"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2019/12/18/felices-fiestas-2019/",
@@ -2049,7 +2180,12 @@
       "external_links": [
         "https://www.publinews.gt/gt/opinion/2014/12/20/aguinaldo-cumple-50-anos.html"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2019/08/06/no-se-debe-congelar-el-salario-minimo-2019-necesitamos-la-tutelaridad-del-presidente/",
@@ -2363,7 +2499,12 @@
         "https://slideshare.net/ATRAHDOM",
         "https://slideshare.net/slideshow/embed_code/key/jXufsQMXaeqEfi"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "CIMOEA; PADF",
+      "editorial_date": "s.f.",
+      "editorial_institutions": "CIMOEA; PADF",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2024/04/02/derechos-de-las-trabajadoras-remunerasdas-del-hogar-de-las-americas-avances-y-brechas-persistentes/",
@@ -2407,7 +2548,12 @@
         "https://slideshare.net/ATRAHDOM",
         "https://slideshare.net/slideshow/embed_code/key/GYlYytF3yZjirG"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "CIMOEA; PADF",
+      "editorial_date": "s.f.",
+      "editorial_institutions": "CIMOEA; PADF",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2023/11/21/el-convenio-189-de-la-oit-sobre-el-trabajo-decente-para-las-trabajadoras-y-los-trabajadores-domesticos-y-su-incorporacion-a-la-legislacion-guatemalteca/",
@@ -2447,7 +2593,12 @@
         "https://www.slideshare.net/ATRAHDOM/tesissandrapintofinalpdf",
         "https://www.slideshare.net/slideshow/embed_code/key/nQOeCq1KqXT9rR"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "Sandra Carolina Pinto Mendoza",
+      "editorial_date": "2023",
+      "editorial_institutions": "Facultad de Ciencias Jurídicas y Sociales; Universidad de San Carlos de Guatemala",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2022/11/22/tendencias-de-la-poblacion-de-america-latina-y-el-caribe-efectos-demograficos-dela-pandemia-de-covid-19/",
@@ -2487,7 +2638,12 @@
         "https://www.slideshare.net/ATRAHDOM/s2200706espdf",
         "https://www.slideshare.net/slideshow/embed_code/key/eye1rF7xiGy3cU"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "CEPAL",
+      "editorial_date": "2022",
+      "editorial_institutions": "CEPAL",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2022/07/29/manual-para-la-elaboracion-de-informes-de-derechos-humanos-para-la-incidencia/",
@@ -2526,7 +2682,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/252362566"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "Pedro León Cortés Ruiz",
+      "editorial_date": "2020",
+      "editorial_institutions": "International Institute on Race, Equality and Human Rights",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2022/06/02/relatoria-del-foro-75-aniversario-del-codigo-de-trabajo/",
@@ -2565,7 +2726,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/251908967"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "Ana Contreras; Catalina Soberanis; Byron Dardón; Luis Linares",
+      "editorial_date": "2022",
+      "editorial_institutions": "ASIES; Unión Europea",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2022/06/02/encuesta-sobre-el-trabajo-en-plantacion/",
@@ -2604,7 +2770,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/251908973"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "Marco Barahona; Luis Linares; Enmanuel López; Juan Pira",
+      "editorial_date": "2022",
+      "editorial_institutions": "ASIES; Unión Europea",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2022/06/02/boletin-no-5-trabajo-no-remunerado-y-labores-de-cuidado-en-guatemala/",
@@ -2643,7 +2814,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/251908968"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "ASIES",
+      "editorial_date": "2022",
+      "editorial_institutions": "ASIES; Unión Europea",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2021/11/11/comunicado-apmd-en-relacion-al-presupuesto-2022/",
@@ -2682,7 +2858,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/250634528"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2021/12/29/comunicado-25-anos-de-los-acuerdos-de-paz/",
@@ -2721,7 +2902,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/250917897"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2021/05/12/comunicado-ante-situacion-en-colombia/",
@@ -2760,7 +2946,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/248304228"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2021/05/24/fusiles-racismo-y-protesta-la-historia-politica-de-guatemala/",
@@ -2800,7 +2991,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/248496407"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "Manuel Villacorta",
+      "editorial_date": "2012",
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2015/12/14/atrahdom-se-pronuncia-ante-el-congreso-de-la-republica-por-la-inminetne-aprobacion-de-la-iniciativa-de-ley-5007/",
@@ -2839,7 +3035,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/113101844"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2016/04/15/oferta-para-la-aplicacion-a-consultorias-2016/",
@@ -2877,7 +3078,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/113101155"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2013/07/17/8-de-marzo-dia-internacional-de-la-mujer/",
@@ -3072,7 +3278,12 @@
         "assets/documents/declaratoria-chimaltenango-2-7418aa5335.pdf"
       ],
       "external_links": [],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "ATRAHDOM",
+      "editorial_date": "2012",
+      "editorial_institutions": "ATRAHDOM",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2012/05/28/3r-congreso-de-mujeres-trabajadoras-de-guatemala/",
@@ -3113,7 +3324,12 @@
       "external_links": [
         "https://youtube.com/embed/MCmvGkFz3oQ?version=3&rel=1&showsearch=0&showinfo=1&iv_load_policy=1&fs=1&hl=es&autohide=2&wmode=transparent"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "ATRAHDOM",
+      "editorial_date": "2012",
+      "editorial_institutions": "ATRAHDOM",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2012/05/28/conferencia-de-prensa/",
@@ -3203,7 +3419,12 @@
         "assets/documents/presentacion-convenio-189-9116320cf7.ppt"
       ],
       "external_links": [],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "ATRAHDOM",
+      "editorial_date": "2011",
+      "editorial_institutions": "ATRAHDOM",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2012/05/28/pronunciamiento-del-1ro-de-mayo-2012-dia-internacional-del-trabajo/",
@@ -3242,7 +3463,12 @@
         "assets/documents/1-mayo-12-d64545cef7.pdf"
       ],
       "external_links": [],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2012/05/28/nuestra-postura-dia-internacional-de-la-trabajadora-domestica/",
@@ -3281,7 +3507,12 @@
         "assets/documents/30-de-marzo-12-7bdb86aa86.pdf"
       ],
       "external_links": [],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2012/05/28/participacion-en-la-conmemoracion-del-8-de-marzo-dia-internacional-de-las-mujeres-2012/",
@@ -3620,7 +3851,12 @@
       "external_links": [
         "https://forms.gle/Ej2Lw195Z5kzubVi9"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2019/08/05/votemos-por-lo-que-hemos-alcanzado-votemos-por-la-une/",
@@ -3775,7 +4011,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/250598052"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "Ricardo Barrientos; Ana Cevallos; Sucely Donis; Walter Figueroa; Carlos Gossmann; Michelle Molina; José Rodrigo Monzón",
+      "editorial_date": "2021",
+      "editorial_institutions": "ICEFI",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2021/06/14/informe-anual-de-la-alta-comisionada-de-las-naciones-unidas-para-los-derechos-humanos-2021/",
@@ -3814,7 +4055,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/249354531"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "OACNUDH",
+      "editorial_date": "2021",
+      "editorial_institutions": "OACNUDH; ONU",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2021/06/14/informe-al-consejo-de-seguridad-de-la-onu-sobre-violencia-sexual-durante-conflictos-armados/",
@@ -3853,7 +4099,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/249354529"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "OACNUDH",
+      "editorial_date": "2021",
+      "editorial_institutions": "OACNUDH; ONU",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2021/05/31/entornos-de-trabajo-seguros-y-saludables-libres-de-violencia-y-acoso/",
@@ -3894,7 +4145,15 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/248792865"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "OIT",
+      "editorial_date": "2020",
+      "editorial_institutions": "OIT",
+      "editorial_identifier": {
+        "type": "ISBN",
+        "value": "9789220323588"
+      }
     },
     {
       "original_url": "https://atrahdom.org/2021/04/08/iniciativa-por-el-derecho-de-las-mujeres-a-un-trabajo-digno/",
@@ -3936,7 +4195,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/245927364"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "Domestic Workers Federation",
+      "editorial_date": "2019",
+      "editorial_institutions": "Domestic Workers Federation",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2021/02/25/iniciativa-de-ley-2698-convenio-183-de-oit-y-recomendacion-191/",
@@ -3976,7 +4240,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/243427962"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "Congreso de la República de Guatemala",
+      "editorial_date": "2002",
+      "editorial_institutions": "Organismo Legislativo",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2021/04/07/progressing-national-sdgs-implementation/",
@@ -4016,7 +4285,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/245866841"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "Cooperation Canada",
+      "editorial_date": "2021",
+      "editorial_institutions": "Cooperation Canada",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2021/02/25/politica-nacional-de-empleo-digno-2017-2032/",
@@ -4055,7 +4329,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/243427703"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "MINTRAB",
+      "editorial_date": "2017",
+      "editorial_institutions": "MINTRAB",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2018/09/25/carta-de-organizaciones-de-guatemala-dirigida-a-la-organizacion-de-naciones-unidas-onu/",
@@ -4094,7 +4373,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/116543491"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2018/09/20/nos-sumamos-al-paro20s/",
@@ -4171,7 +4455,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/115470980"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2013/10/12/el-gran-ausente-ministerio-de-trabajo/",
@@ -4210,7 +4499,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/113104639"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2011/02/11/ultimos-pronunciamientos/",
@@ -4287,7 +4581,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/249369638"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2021/02/05/fund-for-gender-equality-annual-report-2017-2018/",
@@ -4326,7 +4625,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/242271262"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "UN Women",
+      "editorial_date": "2018",
+      "editorial_institutions": "UN Women",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2020/07/07/comunicado-24-de-mayo-2020/",
@@ -4365,7 +4669,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/236688099"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2020/07/07/comunicado-9-de-marzo-2020/",
@@ -4404,7 +4713,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/236688097"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2013/09/24/noticias-internacionales/",
@@ -4796,7 +5110,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/243428134"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "ONU Mujeres; PNUD; PNUMA",
+      "editorial_date": "2020",
+      "editorial_institutions": "ONU Mujeres; PNUD; PNUMA",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2021/02/24/el-telar-de-los-suenos/",
@@ -4835,7 +5154,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/243357246"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "Tejedoras de Sueños",
+      "editorial_date": "s.f.",
+      "editorial_institutions": "Tejedoras de Sueños",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2021/02/05/manual-de-la-democracia-social-1/",
@@ -4874,7 +5198,15 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/242271264"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "Akademie Für Soziale Demokratie; Friedrich Ebert Stiftung",
+      "editorial_date": "2010",
+      "editorial_institutions": "Friedriech Ebert Stiftung; Nueva Sociedad",
+      "editorial_identifier": {
+        "type": "ISBN",
+        "value": "978-987-95677-3-9"
+      }
     },
     {
       "original_url": "https://atrahdom.org/2022/02/15/cuadernillos-de-jurisprudencia-de-la-corte-interamericana-de-derechos-humanos-14-igualdad-y-no-discriminacion/",
@@ -4913,7 +5245,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/251179803"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "CIDH",
+      "editorial_date": "2021",
+      "editorial_institutions": "CIDH; GIZ",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2021/02/24/acuerdo-gubernativo-1-8-de-febrero-de-2019/",
@@ -4952,7 +5289,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/243357232"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "MINTRAB",
+      "editorial_date": "2018",
+      "editorial_institutions": "Diario de Centroamérica",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2021/02/05/declaracion-universal-de-los-derechos-humanos/",
@@ -4991,7 +5333,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/242323906"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "Organizacióin de Naciones Unidas",
+      "editorial_date": "1948",
+      "editorial_institutions": "ONU",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2021/02/05/tratado-de-versailles/",
@@ -5030,7 +5377,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/242271407"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": "s.f.",
+      "editorial_institutions": "Archivo Nacional de Honduras",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2021/02/05/codigo-de-trabajo-republica-de-guatemala/",
@@ -5069,7 +5421,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/242323628"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "MINTRAB",
+      "editorial_date": "s.f.",
+      "editorial_institutions": "MINTRAB; ASIES; REALCARD; Canada",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2022/03/18/comunicado-dia-de-la-trabajadora-domestica-latinoamericana-2022/",
@@ -5108,7 +5465,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/251377267"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2021/03/04/comunicado-8-de-marzo-de-2021/",
@@ -5147,7 +5509,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/243851568"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2022/06/02/encuesta-a-poblacion-ocupada-en-el-depto-guatemala-parte-ii/",
@@ -5186,7 +5553,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/251908971"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "Juan Pira; Enmanuel López; Marco Barahona; Luis Linares",
+      "editorial_date": "2021",
+      "editorial_institutions": "ASIES; Unión Europea",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2022/06/02/encuesta-a-poblacion-ocupada-en-el-depto-guatemala-parte-i/",
@@ -5225,7 +5597,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/251908972"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "Juan Pira; Enmanuel López; Marco Barahona; Luis Linares",
+      "editorial_date": "2021",
+      "editorial_institutions": "ASIES; Unión Europea",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2022/06/02/el-bono-demografico-una-oportunidad-para-el-trabajo-decente-en-guatemala/",
@@ -5264,7 +5641,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/251908970"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "Julia Arévalo; Evelyn Badilla; Gabriela Castro; José García; Germán González; Luis Linares",
+      "editorial_date": "2021",
+      "editorial_institutions": "ASIES; Unión Europea; KAS",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2022/06/02/caracterizacion-de-establecimientos-educativos-publicos-del-ciclo-diversificado/",
@@ -5303,7 +5685,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/251908969"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "Elsa Beatríz Orantes Cachupe",
+      "editorial_date": "2022",
+      "editorial_institutions": "ASIES; Unión Europea",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2022/03/29/los-mecanismo-institucionales-de-la-mujer-bases-para-el-analisis-del-mecanismo-nacional-en-guatemala/",
@@ -5342,7 +5729,15 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/251465671"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "Alicia Rodríguez",
+      "editorial_date": "2013",
+      "editorial_institutions": "INTERDEM",
+      "editorial_identifier": {
+        "type": "ISBN",
+        "value": "978-92-1-004760-9"
+      }
     },
     {
       "original_url": "https://atrahdom.org/2022/03/19/practicas-de-reclutamiento-de-personas-trabajadoras-migrantes-en-belice-el-salvador-guatemala-honduras-y-mexico/",
@@ -5420,7 +5815,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/246770926"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "CEPAL",
+      "editorial_date": "2021",
+      "editorial_institutions": "CEPAL; Cooperación Española",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2015/12/01/mama-cash-nos-ovaciona/",
@@ -5459,7 +5859,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/113102024"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "Esther Vonk",
+      "editorial_date": "2015",
+      "editorial_institutions": "Mama Cash",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2016/06/09/declaratoria-guatemala-de-la-asuncion-ii/",
@@ -5496,7 +5901,12 @@
       "external_links": [
         "https://www.slideshare.net/slideshow/embed_code/113100984"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "ATRAHDOM",
+      "editorial_date": "2016",
+      "editorial_institutions": "ATRAHDOM",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2013/07/17/reinstalada-mesa-de-dialogo-cosme-con-el-igss-julio-2013/",
@@ -5956,7 +6366,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/113001270"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2017/01/16/terminos-de-referencia-para-publicista-o-gestora/",
@@ -5994,7 +6409,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/113002366"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2015/07/21/bienvenidos-a-nuestra-pagina-web/",
@@ -6071,7 +6491,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/113104232"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "ATRAHDOM",
+      "editorial_date": "2014",
+      "editorial_institutions": "ATRAHDOM",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2021/06/14/cuantos-esclavos-hay-hoy-en-el-mundo/",
@@ -6112,7 +6537,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/249354527"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "Paul de Maever",
+      "editorial_date": "2018",
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2021/04/22/informe-anual-de-resultados-2020-onu-guatemala/",
@@ -6151,7 +6581,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/246770911"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "Naciones Unidas Guatemala",
+      "editorial_date": "2020",
+      "editorial_institutions": "ONU Guatemala",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2021/04/13/perspectivas-del-comercio-internacional-de-america-latina-y-el-caribe/",
@@ -6190,7 +6625,15 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/246161171"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "CEPAL",
+      "editorial_date": "2021",
+      "editorial_institutions": "CEPAL",
+      "editorial_identifier": {
+        "type": "ISBN",
+        "value": "978-92-1-004751-2"
+      }
     },
     {
       "original_url": "https://atrahdom.org/2021/02/25/pandemia-y-derechos-humanos-en-las-americas/",
@@ -6229,7 +6672,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/243428114"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "CIDH",
+      "editorial_date": "2020",
+      "editorial_institutions": "OEA; RELE; REDESCA; SACROI-COVID19; CIDH",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2021/02/25/ultima-advertencia-los-defensores-de-los-derechos-humanos-victimas-de-amenazas-de-muerte-y-asesinatos/",
@@ -6268,7 +6716,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/243427967"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "OACNUDH",
+      "editorial_date": "2021",
+      "editorial_institutions": "ONU",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2021/02/25/analisis-de-acuerdo-gubernativo-430-2003/",
@@ -6307,7 +6760,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/243427678"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2018/10/16/declaratoria-del-v-encuentro-latinoamericano-de-trabajadoras-domesticas/",
@@ -6346,7 +6804,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/119648465"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": "2018",
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2013/10/02/para-ver-el-libro-en-linea/",
@@ -6384,7 +6847,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/113104834"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "Friedrich Ebert Stiftung",
+      "editorial_date": "2013",
+      "editorial_institutions": "Friedrich Ebert Stiftung",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2014/06/04/boletin-1-ano-1-2014/",
@@ -6423,7 +6891,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/113104410"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2011/02/11/informacion-de-cooperantes/",
@@ -6502,7 +6975,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/236688094"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2020/07/07/comunicado-28-de-marzo-2020/",
@@ -6541,7 +7019,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/236688100"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2013/09/12/creada-concertacion-regional-de-mujeres-por-un-trabajo-digno/",
@@ -6580,7 +7063,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/113105120"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2019/07/22/comunicado-por-los-derechos-de-la-poblacion-lgbti/",
@@ -6619,7 +7107,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/157069659"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2019/04/30/comunicado-dia-internacional-del-trabajo/",
@@ -6658,7 +7151,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/142953322"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2021/02/24/feminismo-y-prostitucion-la-persistencia-de-una-amarga-disputa/",
@@ -6697,7 +7195,15 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/243357239"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "Marta Lamas",
+      "editorial_date": "2016",
+      "editorial_institutions": "UNAM",
+      "editorial_identifier": {
+        "type": "DOI",
+        "value": "http://dx.doi.org/10.1016/j.df.2016.04.001"
+      }
     },
     {
       "original_url": "https://atrahdom.org/2021/02/24/trata-de-personas-y-sus-modalidades/",
@@ -6736,7 +7242,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/243357261"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "Sandra Gularte Murga",
+      "editorial_date": "s.f.",
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2021/02/05/constitucion-politica-de-la-republica-de-guatemala/",
@@ -6775,7 +7286,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/242323625"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "Asamblea Nacional Constituyente",
+      "editorial_date": "1985",
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2021/02/24/dossier-comercio-sexual/",
@@ -6814,7 +7330,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/243357225"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "Evlira Madrid Romero; Jaime Montejo; Rosa Icela Madrid",
+      "editorial_date": "s.f.",
+      "editorial_institutions": "Brigada Callejera de Apoyo a la Mujer \"Eliza Martínez\"",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2021/02/24/el-futuro-de-la-incidencia/",
@@ -6853,7 +7374,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/243357234"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "Women's Major Group",
+      "editorial_date": "2020",
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2020/07/07/comunicado-30-de-marzo-dia-internacional-de-la-trabajadora-domestica/",
@@ -6892,7 +7418,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/236688101"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2019/03/29/conmemoracion-del-dia-latinoamericano-de-las-trabajadoras-del-hogar/",
@@ -6931,7 +7462,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/138761048"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2015/07/21/foro-con-partidos-politicos-atrahdom/",
@@ -7166,7 +7702,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/113002082"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2015/07/15/formacion-y-capacitacion-a-semilleros/",
@@ -7313,7 +7854,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/246161214"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": "s.f.",
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2021/02/25/presentacion-los-amigos-curan/",
@@ -7352,7 +7898,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/243427673"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": "s.f.",
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2018/10/17/comunicado-20-de-octubre-dia-de-la-revolucion/",
@@ -7391,7 +7942,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/119786938"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2019/04/09/declaratoria-vi-congreso-de-mujeres-trabajadoras-de-guatemala/",
@@ -7429,7 +7985,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/140227203"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "ATRAHDOm",
+      "editorial_date": "2019",
+      "editorial_institutions": "ATRAHDOM",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2019/01/07/comunicado-ante-la-situacion-de-cicig-en-guatemala-enero-2019/",
@@ -7468,7 +8029,12 @@
       "external_links": [
         "https://slideshare.net/slideshow/embed_code/127460128"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2010/03/14/estructura-organizativa/",
@@ -7724,7 +8290,12 @@
         "assets/documents/memoria-del-i-congreso-nacional-de-los-cuidados.pdf"
       ],
       "external_links": [],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "Red Guatemalteca por los Cuidados",
+      "editorial_date": "2026",
+      "editorial_institutions": "",
+      "editorial_identifier": null
     }
   ],
   "attachments": [
@@ -8671,5 +9242,151 @@
         "#/attachment/7"
       ]
     }
-  ]
+  ],
+  "editorial": {
+    "communication_slugs": [
+      "posicionamiento-de-las-osc-en-el-fpan-2025",
+      "diagnostico",
+      "presentaciones-2009-2010",
+      "comunicado-por-el-dia-de-la-revolucion-20-de-octubre-2012",
+      "comunicado-de-ciudadanas-ante-decreto-4-2020-agosto-de-2021",
+      "comunicado-ante-abuso-de-poder",
+      "comunicado-en-referencia-a-salarios-regionalizados",
+      "comunicado-31-de-mayo-2020",
+      "comunicado-25-anos-de-los-acuerdos-de-paz",
+      "comunicado-ante-situacion-en-colombia",
+      "atrahdom-se-pronuncia-ante-el-congreso-de-la-republica-por-la-inminetne-aprobacion-de-la-iniciativa-de-ley-5007",
+      "oferta-para-la-aplicacion-a-consultorias-2016",
+      "pronunciamiento-del-1ro-de-mayo-2012-dia-internacional-del-trabajo",
+      "nuestra-postura-dia-internacional-de-la-trabajadora-domestica",
+      "convocatoria-en-linea-al-sector-empleador",
+      "carta-de-organizaciones-de-guatemala-dirigida-a-la-organizacion-de-naciones-unidas-onu",
+      "carta-de-organizaciones-a-alta-comisionada-en-derechos-humanos",
+      "el-gran-ausente-ministerio-de-trabajo",
+      "comunicado-16-de-junio-de-2021-dia-internacional-del-trabajo-domestico",
+      "comunicado-24-de-mayo-2020",
+      "comunicado-9-de-marzo-2020",
+      "comunicado-dia-de-la-trabajadora-domestica-latinoamericana-2022",
+      "comunicado-8-de-marzo-de-2021",
+      "conmemoracion-del-dia-internacional-del-trabajo",
+      "terminos-de-referencia-para-publicista-o-gestora",
+      "analisis-de-acuerdo-gubernativo-430-2003",
+      "boletin-1-ano-1-2014",
+      "comunicado-12-de-abril-2020",
+      "comunicado-28-de-marzo-2020",
+      "creada-concertacion-regional-de-mujeres-por-un-trabajo-digno",
+      "comunicado-por-los-derechos-de-la-poblacion-lgbti",
+      "comunicado-dia-internacional-del-trabajo",
+      "comunicado-30-de-marzo-dia-internacional-de-la-trabajadora-domestica",
+      "conmemoracion-del-dia-latinoamericano-de-las-trabajadoras-del-hogar",
+      "comunicado-c189-guatemala",
+      "comunicado-20-de-octubre-dia-de-la-revolucion",
+      "comunicado-ante-la-situacion-de-cicig-en-guatemala-enero-2019"
+    ],
+    "communication_excluded_slugs": [
+      "comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar",
+      "comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar-2",
+      "noticias-internacionales",
+      "origen-del-aguinaldo",
+      "plataforma-politica-2010-2011",
+      "por-un-convenio-y-recomendacion-a-favor-del-trabajo-domestico"
+    ],
+    "cendoc_excluded_slugs": [
+      "analisis-de-acuerdo-gubernativo-430-2003",
+      "atrahdom-se-pronuncia-ante-el-congreso-de-la-republica-por-la-inminetne-aprobacion-de-la-iniciativa-de-ley-5007",
+      "boletin-1-ano-1-2014",
+      "carta-de-organizaciones-a-alta-comisionada-en-derechos-humanos",
+      "carta-de-organizaciones-de-guatemala-dirigida-a-la-organizacion-de-naciones-unidas-onu",
+      "comunicado-12-de-abril-2020",
+      "comunicado-16-de-junio-de-2021-dia-internacional-del-trabajo-domestico",
+      "comunicado-20-de-octubre-dia-de-la-revolucion",
+      "comunicado-24-de-mayo-2020",
+      "comunicado-25-anos-de-los-acuerdos-de-paz",
+      "comunicado-28-de-marzo-2020",
+      "comunicado-30-de-marzo-dia-internacional-de-la-trabajadora-domestica",
+      "comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar",
+      "comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar-2",
+      "comunicado-31-de-mayo-2020",
+      "comunicado-8-de-marzo-de-2021",
+      "comunicado-9-de-marzo-2020",
+      "comunicado-ante-abuso-de-poder",
+      "comunicado-ante-la-situacion-de-cicig-en-guatemala-enero-2019",
+      "comunicado-ante-situacion-en-colombia",
+      "comunicado-c189-guatemala",
+      "comunicado-de-ciudadanas-ante-decreto-4-2020-agosto-de-2021",
+      "comunicado-dia-de-la-trabajadora-domestica-latinoamericana-2022",
+      "comunicado-dia-internacional-del-trabajo",
+      "comunicado-en-referencia-a-salarios-regionalizados",
+      "comunicado-por-el-dia-de-la-revolucion-20-de-octubre-2012",
+      "comunicado-por-los-derechos-de-la-poblacion-lgbti",
+      "conmemoracion-del-dia-internacional-del-trabajo",
+      "conmemoracion-del-dia-latinoamericano-de-las-trabajadoras-del-hogar",
+      "convocatoria-en-linea-al-sector-empleador",
+      "creada-concertacion-regional-de-mujeres-por-un-trabajo-digno",
+      "diagnostico",
+      "el-gran-ausente-ministerio-de-trabajo",
+      "noticias-internacionales",
+      "nuestra-postura-dia-internacional-de-la-trabajadora-domestica",
+      "nuevos-apartados",
+      "oferta-para-la-aplicacion-a-consultorias-2016",
+      "origen-del-aguinaldo",
+      "plataforma-politica-2010-2011",
+      "por-un-convenio-y-recomendacion-a-favor-del-trabajo-domestico",
+      "posicionamiento-de-las-osc-en-el-fpan-2025",
+      "presentaciones-2009-2010",
+      "pronunciamiento-del-1ro-de-mayo-2012-dia-internacional-del-trabajo",
+      "terminos-de-referencia-para-publicista-o-gestora"
+    ],
+    "homepage_cendoc_excluded_slugs": [
+      "analisis-de-acuerdo-gubernativo-430-2003",
+      "atrahdom-se-pronuncia-ante-el-congreso-de-la-republica-por-la-inminetne-aprobacion-de-la-iniciativa-de-ley-5007",
+      "boletin-1-ano-1-2014",
+      "carta-de-organizaciones-a-alta-comisionada-en-derechos-humanos",
+      "carta-de-organizaciones-de-guatemala-dirigida-a-la-organizacion-de-naciones-unidas-onu",
+      "comunicado-12-de-abril-2020",
+      "comunicado-16-de-junio-de-2021-dia-internacional-del-trabajo-domestico",
+      "comunicado-20-de-octubre-dia-de-la-revolucion",
+      "comunicado-24-de-mayo-2020",
+      "comunicado-25-anos-de-los-acuerdos-de-paz",
+      "comunicado-28-de-marzo-2020",
+      "comunicado-30-de-marzo-dia-internacional-de-la-trabajadora-domestica",
+      "comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar",
+      "comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar-2",
+      "comunicado-31-de-mayo-2020",
+      "comunicado-8-de-marzo-de-2021",
+      "comunicado-9-de-marzo-2020",
+      "comunicado-ante-abuso-de-poder",
+      "comunicado-ante-la-situacion-de-cicig-en-guatemala-enero-2019",
+      "comunicado-ante-situacion-en-colombia",
+      "comunicado-c189-guatemala",
+      "comunicado-de-ciudadanas-ante-decreto-4-2020-agosto-de-2021",
+      "comunicado-dia-de-la-trabajadora-domestica-latinoamericana-2022",
+      "comunicado-dia-internacional-del-trabajo",
+      "comunicado-en-referencia-a-salarios-regionalizados",
+      "comunicado-por-el-dia-de-la-revolucion-20-de-octubre-2012",
+      "comunicado-por-los-derechos-de-la-poblacion-lgbti",
+      "conmemoracion-del-dia-internacional-del-trabajo",
+      "conmemoracion-del-dia-latinoamericano-de-las-trabajadoras-del-hogar",
+      "convocatoria-en-linea-al-sector-empleador",
+      "creada-concertacion-regional-de-mujeres-por-un-trabajo-digno",
+      "diagnostico",
+      "el-gran-ausente-ministerio-de-trabajo",
+      "noticias-internacionales",
+      "nuestra-postura-dia-internacional-de-la-trabajadora-domestica",
+      "nuevos-apartados",
+      "oferta-para-la-aplicacion-a-consultorias-2016",
+      "origen-del-aguinaldo",
+      "plataforma-politica-2010-2011",
+      "por-un-convenio-y-recomendacion-a-favor-del-trabajo-domestico",
+      "posicionamiento-de-las-osc-en-el-fpan-2025",
+      "presentaciones-2009-2010",
+      "pronunciamiento-del-1ro-de-mayo-2012-dia-internacional-del-trabajo",
+      "terminos-de-referencia-para-publicista-o-gestora"
+    ],
+    "manual_excluded_slugs": [
+      "plataforma-politica-2010-2011",
+      "noticias-internacionales",
+      "por-un-convenio-y-recomendacion-a-favor-del-trabajo-domestico"
+    ]
+  }
 }

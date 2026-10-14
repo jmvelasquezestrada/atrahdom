@@ -551,10 +551,18 @@ def main() -> None:
     migrated = migrate_html(opener, records, lookup)
     write_json(CONTENT_DIR / "items.json", migrated)
     site_data = build_site_data(migrated)
+    from editorial_data import apply_editorial_overrides, load_editorial_config, write_browser_config
+    from scripts.generate_comunicados_pages import generate_comunicados_pages
+
+    editorial_config = load_editorial_config()
+    site_data = apply_editorial_overrides(site_data, editorial_config)
     write_json(CONTENT_DIR / "site.json", site_data)
 
     js_path = CONTENT_DIR / "site-data.js"
     js_path.write_text("window.ATRAHDOM_SITE = " + json.dumps(site_data, ensure_ascii=False) + ";\n", encoding="utf-8")
+    write_browser_config(editorial_config)
+    generated_pages = generate_comunicados_pages(site_data, editorial_config)
+    print(f"Generated {len(generated_pages) - 1} static Comunicados pages.", flush=True)
 
     summary = {
         "records_considered": len(records),
