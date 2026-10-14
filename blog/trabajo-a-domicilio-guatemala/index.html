@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&amp;display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="assets/images/logotipo-2019-500-5c7b24eb84.png">
-  <link rel="stylesheet" href="styles.css?v=propuesta-f12">
+  <link rel="stylesheet" href="styles.css?v=site-navigation-20261014">
   <link rel="canonical" href="https://www.atrahdom.org/blog/trabajo-a-domicilio-guatemala/">
   <meta property="og:title" content="Trabajo en casa: Cuando el hogar se convierte en fábrica y oficina sin derechos | ATRAHDOM">
   <meta property="og:description" content="Análisis del trabajo a domicilio en Guatemala, la maquila y las ventas por catálogo: condiciones laborales, reconocimiento y derechos.">
@@ -33,11 +33,35 @@
       <button class="menu-toggle" aria-expanded="false" aria-controls="primary-menu">Menú</button>
       <nav id="primary-menu" class="primary-menu" aria-label="Navegación principal">
         <a href="/">Inicio</a>
-        <div class="nav-group"><button class="nav-trigger" aria-expanded="false" aria-haspopup="true">Presentación</button><div class="dropdown"><a href="/quienes-somos/">Quiénes somos</a><a href="/organizacion/">Organización</a><a href="/que-hacemos/">Ejes de trabajo</a><a href="/espacios-de-participacion/">Espacios de participación</a><a href="#/organizaciones">Sindicatos</a></div></div>
-        <a href="#/recursos">Biblioteca</a>
-        <a href="/blog/">Blog</a>
-        <div class="nav-group"><button class="nav-trigger" aria-expanded="false" aria-haspopup="true">Infórmate</button><div class="dropdown"><a href="#/ayuda">Solicita apoyo</a><a href="#/participa">Afíliate</a><a href="/calculadora.html">Calculadora laboral</a><a href="/contacto/">Contacto</a></div></div>
-        <button class="search-open" aria-label="Abrir búsqueda">Buscar</button><a class="nav-donate" href="/donar/">Donar</a>
+        <div class="nav-group">
+          <button class="nav-trigger" aria-expanded="false" aria-haspopup="true">Presentación</button>
+          <div class="dropdown">
+            <a href="/quienes-somos/">Quiénes somos</a>
+            <a href="/organizacion/">Organización</a>
+            <a href="/que-hacemos/">Ejes de trabajo</a>
+            <a href="/espacios-de-participacion/">Espacios de participación</a>
+            <a href="/#/organizaciones">Sindicatos</a>
+          </div>
+        </div>
+        <div class="nav-group nav-group-library">
+          <button class="nav-trigger" aria-expanded="false" aria-haspopup="true">Biblioteca</button>
+          <div class="dropdown">
+            <a href="/cendoc/">Centro de Documentación Digital</a>
+            <a href="/comunicados/">Comunicados</a>
+          </div>
+        </div>
+        <a href="/blog/" class="active" aria-current="page">Blog</a>
+        <div class="nav-group">
+          <button class="nav-trigger" aria-expanded="false" aria-haspopup="true">Infórmate</button>
+          <div class="dropdown">
+            <a href="/#/ayuda">Solicita apoyo</a>
+            <a href="/#/participa">Afíliate</a>
+            <a href="/calculadora.html">Calculadora laboral</a>
+            <a href="/contacto/">Contacto</a>
+          </div>
+        </div>
+        <button class="search-open" aria-label="Abrir búsqueda">Buscar</button>
+        <a class="nav-donate" href="/donar/">Donar</a>
       </nav>
     </div>
   </header>
@@ -102,5 +126,12 @@
     </div>
     <div class="wrap footer-bottom"><p>© <span id="year">2026</span> ATRAHDOM.</p></div>
   </footer>
+<script>
+  document.querySelectorAll('.nav-trigger').forEach(button => button.addEventListener('click', () => {
+    if (!matchMedia('(max-width: 1200px)').matches) return;
+    document.querySelector('#primary-menu')?.classList.add('open');
+    document.querySelector('.menu-toggle')?.setAttribute('aria-expanded', 'true');
+  }));
+</script>
 </body>
 </html>

@@ -18,7 +18,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&amp;display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="assets/images/logotipo-2019-500-5c7b24eb84.png">
   <link rel="apple-touch-icon" href="assets/images/logotipo-2019-500-5c7b24eb84.png">
-  <link rel="stylesheet" href="styles.css?v=propuesta-f12">
+  <link rel="stylesheet" href="styles.css?v=site-navigation-20261014">
 <link rel="canonical" href="https://www.atrahdom.org/blog/dia-internacional-de-la-eliminacion-de-la-violencia-contra-la-mujer/">
 <meta property="og:title" content="Día Internacional de la Eliminación de la Violencia contra la Mujer. — ATRAHDOM">
 <meta property="og:description" content="Día Internacional de la Eliminación de la Violencia contra la Mujer. — Blog de ATRAHDOM.">
@@ -53,17 +53,23 @@
             <a href="/organizacion/">Organización</a>
             <a href="/que-hacemos/">Ejes de trabajo</a>
             <a href="/espacios-de-participacion/">Espacios de participación</a>
-            <a href="#/organizaciones">Sindicatos</a>
+            <a href="/#/organizaciones">Sindicatos</a>
           </div>
         </div>
-        <a href="#/recursos">Biblioteca</a>
-        <a href="/blog/" class="">Blog</a>
+        <div class="nav-group nav-group-library">
+          <button class="nav-trigger" aria-expanded="false" aria-haspopup="true">Biblioteca</button>
+          <div class="dropdown">
+            <a href="/cendoc/">Centro de Documentación Digital</a>
+            <a href="/comunicados/">Comunicados</a>
+          </div>
+        </div>
+        <a href="/blog/" class="active" aria-current="page">Blog</a>
         <div class="nav-group">
           <button class="nav-trigger" aria-expanded="false" aria-haspopup="true">Infórmate</button>
           <div class="dropdown">
-            <a href="#/ayuda">Solicita apoyo</a>
-            <a href="#/participa">Afíliate</a>
-            <a href="calculadora.html">Calculadora laboral</a>
+            <a href="/#/ayuda">Solicita apoyo</a>
+            <a href="/#/participa">Afíliate</a>
+            <a href="/calculadora.html">Calculadora laboral</a>
             <a href="/contacto/">Contacto</a>
           </div>
         </div>
@@ -188,5 +194,12 @@
   }
  };
 })();
+</script>
+<script>
+  document.querySelectorAll('.nav-trigger').forEach(button => button.addEventListener('click', () => {
+    if (!matchMedia('(max-width: 1200px)').matches) return;
+    document.querySelector('#primary-menu')?.classList.add('open');
+    document.querySelector('.menu-toggle')?.setAttribute('aria-expanded', 'true');
+  }));
 </script>
 </body></html>
