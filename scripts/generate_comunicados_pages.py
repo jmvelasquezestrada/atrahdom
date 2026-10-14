@@ -195,10 +195,8 @@ def render_page(template: str, post: dict[str, Any], slug: str) -> str:
 def render_card(post: dict[str, Any], slug: str) -> str:
     title = html.escape(str(post.get("title") or "Sin título"))
     date = post.get("editorial_date") if post.get("editorial_metadata_reviewed") and post.get("editorial_date") else post.get("publication_date") or post.get("date") or ""
-    excerpt = plain_text(post.get("excerpt_html") or "") or plain_text(get_content(post))
-    excerpt = html.escape(excerpt[:190].rstrip() + ("…" if len(excerpt) > 190 else ""))
     meta = '<div class="meta"><span>Comunicado</span>' + (f'<span>{html.escape(display_date(date))}</span>' if date else "") + "</div>"
-    return f'<article class="card"><div class="card-body">{meta}<h2><a href="/comunicados/{slug}/">{title}</a></h2><p>{excerpt}</p><a class="read" href="/comunicados/{slug}/">Leer comunicado →</a></div></article>'
+    return f'<article class="card"><div class="card-body">{meta}<h2><a href="/comunicados/{slug}/">{title}</a></h2><a class="read" href="/comunicados/{slug}/">Leer comunicado →</a></div></article>'
 
 
 def generate_comunicados_pages(site_data: dict[str, Any], config: dict[str, Any] | None = None, *, check: bool = False, pages_only: bool = False) -> list[Path]:
