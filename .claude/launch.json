@@ -3,7 +3,7 @@
   "configurations": [
     {
       "name": "atrahdom",
-      "runtimeExecutable": "python3",
+      "runtimeExecutable": "C:\\Users\\amarr\\AppData\\Local\\Python\\pythoncore-3.15-64\\python.exe",
       "runtimeArgs": ["-m", "http.server", "8090"],
       "port": 8090
     }

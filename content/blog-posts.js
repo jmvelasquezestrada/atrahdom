@@ -84,5 +84,17 @@ window.ATRAHDOM_BLOG = [
     excerpt_html: '<p>Susana Vásquez comparte su experiencia como consejera ante el Consejo Nacional de Salud, Higiene y Seguridad Ocupacional y reflexiona sobre la prevención de riesgos laborales.</p>',
     content_file: 'blog/que-es-el-conasso/index.html',
     local_route: '/blog/que-es-el-conasso/'
-  }
+  },
+  {
+    slug: 'sitradomsa-2011',
+    title: "Hoy, ha nacido una niña, que debió haber nacido hace más de 20 años.",
+    publication_date: '2011',
+    internal_author: 'Maritza Velásquez',
+    editorial_type: 'Comunicado histórico',
+    categories: ['Blog', 'SITRADOMSA'],
+    featured_image: 'assets/images/cropped-atrahdom-logo-2019-91a74affa5.png',
+    excerpt_html: '<p>SITRADOMSA, nacemos conformadas por trabajadoras domésticas, para luchar por el cambio a la legislatura...</p>',
+    content_file: 'content/posts/sitradomsa-2011.html',
+    local_route: '/blog/sitradomsa-2011/'
+  },
 ];
