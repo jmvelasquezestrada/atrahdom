@@ -1,0 +1,51 @@
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const S=require('../js/search.js');
+const index=JSON.parse(fs.readFileSync('content/search-index.json','utf8'));
+const subset=c=>index.records.filter(r=>r.collection===c);
+for(const c of ['cendoc','comunicados']){
+ for(const r of subset(c)) assert(S.search(subset(c),r.title).some(x=>x.local_route===r.local_route),r.title);
+ for(const r of subset(c)) assert(S.search(index.records,r.title).some(x=>x.local_route===r.local_route),r.title);
+ console.log(c,subset(c).length,'all titles found locally and globally');
+}
+const has=(q,slug)=>assert(S.search(index.records,q).some(r=>r.slug===slug),q);
+const control='el-control-de-convencionalidad-una-herramienta-estrategica';
+for(const q of ['Ingrid Zurama Urizar','Friedrich Ebert Stiftung','2024','estrategica','ESTRATÉGICA','Control herramienta','herramienta, estratégica','Convencional'])has(q,control);
+has('Acta constitutiva del Sindicato','primera-acta-constitutiva-sitradomsa');
+has('Presentaciones 2009 - 2010','presentaciones-2009-2010');
+has('Diagnostico','diagnostico');
+has('Donar','donar');has('Quiénes somos','quienes-somos');
+assert.equal(S.search(index.records,'zzzauditoria8090').length,0);
+const polluted=S.search(index.records,'coordinacion@atrahdom.org');
+assert(!polluted.some(r=>r.collection==='blog'),'footer contamination');
+assert(S.search(index.records,'trabajo').length>12);
+assert(S.search(index.records,'Convencionalidad')[0].slug===control);
+assert.equal(new Set(index.records.map(r=>r.local_route)).size,index.records.length);
+assert.equal(index.counts.cendoc,75);assert.equal(index.counts.comunicados,37);
+console.log('Normalization, metadata, description, ranking, routes and contamination checks passed');
+// Failure-path tests use an in-memory fake fetch, never the live server.
+(async()=>{
+ const originalFetch=global.fetch, originalError=console.error;
+ const S=require('../js/search.js');
+ const digest=s=>require('node:crypto').createHash('sha256').update(s).digest('hex');
+ const catalogs={'content/site.json':'{}','content/editorial-config.json':'{}','content/blog-posts.js':'[]'};
+ const valid={version:1,counts:{cendoc:1},records:[{title:'A',local_route:'/a/',collection:'cendoc'}],sources:Object.fromEntries(Object.entries(catalogs).map(([p,s])=>[p,digest(s)]))};
+ let payload=valid, unavailable=false;const requests=[];
+ global.fetch=async (path,options)=>{assert.equal(options.cache,'no-store');requests.push(path);return {ok:!unavailable,status:unavailable?503:200,text:async()=>path.endsWith('search-index.json')?JSON.stringify(payload):catalogs[path.slice(1)]};};
+ console.error=()=>{};
+ try{
+  assert.equal((await S.load(true)).records.length,1);
+  unavailable=true;await assert.rejects(S.load(true),/SEARCH_SOURCE_HTTP 503/);unavailable=false;
+  payload={...valid,counts:{cendoc:2}};await assert.rejects(S.load(true),/SEARCH_COLLECTION_INCOMPLETE/);
+  payload={...valid,sources:{...valid.sources,'content/site.json':'old'}};await assert.rejects(S.load(true),/SEARCH_INDEX_STALE/);
+  payload=valid;assert.equal((await S.load(true)).records.length,1);
+  console.log('HTTP failure, incomplete collection, stale index and retry passed');
+ }finally{global.fetch=originalFetch;console.error=originalError;}
+})().catch(error=>{console.error(error);process.exitCode=1;});
+for(const record of index.records){
+ if(record.local_route.startsWith('/')){
+  const relative=record.local_route.slice(1);
+  assert(fs.existsSync(relative.endsWith('/')?relative+'index.html':relative),'Missing route: '+record.local_route);
+ }
+}
+console.log('Every clean result route resolves to an existing public file');

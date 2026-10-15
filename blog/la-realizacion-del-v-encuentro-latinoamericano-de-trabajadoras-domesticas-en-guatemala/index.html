@@ -151,6 +151,7 @@
 
 
 
+<script src="/js/search.js?v=bbe77c38c824"></script>
 <script>
 (() => {
  const menu=document.querySelector('#primary-menu');
@@ -159,29 +160,7 @@
  document.querySelectorAll('.nav-trigger').forEach(b=>b.onclick=()=>{const g=b.closest('.nav-group'),open=!g.classList.contains('open');close();g.classList.toggle('open',open);b.setAttribute('aria-expanded',open)});
  document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
  document.addEventListener('click',e=>{if(!e.target.closest('.nav-group')&&!e.target.closest('.menu-toggle'))close()});
- const dialog=document.querySelector('#search-dialog'),input=document.querySelector('#site-search'),results=document.querySelector('#search-results');
- let searchItems;
- document.querySelector('.search-open').onclick=async()=>{
-  dialog.showModal();input.focus();
-  if(!searchItems){
-   const site=window.ATRAHDOM_SITE||{},editorials=window.ATRAHDOM_BLOG||[];
-   const posts=[...(site.posts||[]),...editorials.filter(p=>!(site.posts||[]).some(x=>x.slug===p.slug))];
-   searchItems=[...(site.pages||[]).map(p=>({...p,type:'page'})),...await Promise.all(posts.map(async p=>({...p,type:'post',content_html:p.content_html||(p.content_file?await fetch(p.content_file).then(r=>r.ok?r.text():'').catch(()=>''):'')})))];
-  }
-  input.dispatchEvent(new Event('input'));
- };
- document.querySelector('.dialog-close').onclick=()=>dialog.close();
- const strip=s=>{const d=document.createElement('div');d.innerHTML=s||'';return d.textContent.trim()};
- input.oninput=()=>{
-  const q=input.value.toLowerCase().trim();results.replaceChildren();if(!q||!searchItems)return;
-  const found=searchItems.filter(p=>((typeof p.title==='string'?p.title:p.title?.rendered||'')+' '+strip(p.content_html||p.content?.rendered)).toLowerCase().includes(q));
-  const total=document.createElement('p');total.className='search-total';total.textContent=found.length?found.length+' resultado'+(found.length!==1?'s':''):'Sin resultados.';results.append(total);
-  for(const type of ['page','post']){
-   const group=found.filter(p=>p.type===type).slice(0,8);if(!group.length)continue;
-   const heading=document.createElement('h4');heading.className='search-group';heading.textContent=(type==='page'?'Páginas':'Publicaciones')+' ('+group.length+')';results.append(heading);
-   group.forEach(p=>{const hit=document.createElement('div'),a=document.createElement('a');hit.className='search-hit';const href=p.local_route||'#/post/'+p.slug;const blogSlugs=["nueva-imagen-de-nuestra-pagina-web","libertad-de-asociacion","el-deber-civico-nos-llama","10-anos-del-c189","que-es-el-autocuidado","nuevos-apartados","las-necesidades-de-la-poblacion-vulnerada-por-la-indiferencia","despliega-tus-alas","hemos-tocado-puertas-y-no-hemos-logrado-mas-que-setir-la-discriminacion-hacia-nuestra-condicion","pacto-mundial-para-el-empleo","por-malos-tratos-trabajadora-decide-quitarse-la-vida","que-significa-una-mediacion-judicial","manifestamos-nuestra-postura-ante-la-resolucion-del-presidente-de-la-republica-de-congelar-el-salario-minimo-para-el-2019","incorrecto-retener-salarios-de-los-trabajadores-retardo-o-utilizar-otros-mecanismos-para-impedir-el-derecho-del-trabajador","origen-del-aguinaldo","no-se-debe-congelar-el-salario-minimo-2019-necesitamos-la-tutelaridad-del-presidente","mas-del-77-de-la-poblacion-sin-empleos-dignos-un-aproximado-del-25-de-la-poblacion-sin-empleo","dia-internacional-de-la-eliminacion-de-la-violencia-contra-la-mujer","desde-el-2016-se-abrio-la-puerta-del-infierno-en-guatemala","la-migracion-una-necesidad-de-sobrevivencia","historia-del-dia-de-la-revolucion-del-20-de-octubre-en-guatemala","la-comida-que-alimenta-al-mundo-un-analisis-en-la-era-digital","sindicato-de-trabajadoras-domesticas-de-maquila-nexas-y-conexas-sitradom","la-realizacion-del-v-encuentro-latinoamericano-de-trabajadoras-domesticas-en-guatemala","las-energias-limpias","coalicion-de-genero-y-comercio","derechos-laborales-son-derechos-sin-fronteras","juana-raymundo-una-lider-silenciada-por-defender-su-territorio-nuestro-territorio","la-privatizacion-de-la-lactancia-materna"];a.href=href.startsWith('#/post/')&&blogSlugs.includes(href.slice(7))?'/blog/'+href.slice(7)+'/':href;a.textContent=strip(typeof p.title==='string'?p.title:p.title?.rendered);a.onclick=()=>dialog.close();hit.append(a);results.append(hit)});
-  }
- };
+ window.ATRAHDOM_SEARCH.bindGlobal();
 })();
 </script>
 <script>

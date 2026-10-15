@@ -204,8 +204,8 @@ def generate_comunicados_pages(site_data: dict[str, Any], config: dict[str, Any]
     site_data = apply_editorial_overrides(site_data, config)
     all_posts = {str(post.get("slug", "")): post for post in site_data.get("posts", [])}
     slugs = config.get("communication_slugs", [])
-    if len(slugs) != 37 or len(set(slugs)) != 37:
-        raise ValueError(f"Expected 37 unique comunicado slugs; found {len(slugs)} entries / {len(set(slugs))} unique")
+    if not slugs or len(slugs) != len(set(slugs)):
+        raise ValueError(f"Expected nonempty, unique comunicado slugs; found {len(slugs)} entries / {len(set(slugs))} unique")
     excluded = set(config.get("communication_excluded_slugs", []))
     if excluded.intersection(slugs):
         raise ValueError(f"Excluded records are listed for Comunicados: {sorted(excluded.intersection(slugs))}")
@@ -262,6 +262,9 @@ def main() -> None:
         write_browser_config(config)
     outputs = generate_comunicados_pages(site_data, config, check=args.check, pages_only=args.pages_only)
     print(f"{'Checked' if args.check else 'Generated'} {len(config.get('communication_slugs', []))} comunicado pages" + ("; catalog and data files untouched" if args.pages_only or args.check else f" and updated {outputs[0].relative_to(ROOT)}"))
+
+    from scripts.generate_search_index import generate as generate_search
+    generate_search(check=args.check)
 
 
 if __name__ == "__main__":

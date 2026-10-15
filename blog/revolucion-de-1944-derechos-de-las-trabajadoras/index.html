@@ -128,7 +128,8 @@
   <template id="loading-template"><section class="loading wrap"><span></span><p>Cargando el contenido de ATRAHDOM…</p></section></template>
   <script src="content/site-data.js"></script>
   <script src="content/blog-posts.js"></script>
-  <script>
+  <script src="/js/search.js?v=bbe77c38c824"></script>
+<script>
     (() => {
       const menu=document.querySelector('#primary-menu');
       const close=()=>{menu.classList.remove('open');document.querySelector('.menu-toggle').setAttribute('aria-expanded','false');document.querySelectorAll('.nav-group.open').forEach(g=>{g.classList.remove('open');g.querySelector('.nav-trigger').setAttribute('aria-expanded','false')})};
@@ -136,29 +137,7 @@
       document.querySelectorAll('.nav-trigger').forEach(b=>b.onclick=()=>{const g=b.closest('.nav-group'),open=!g.classList.contains('open');close();g.classList.toggle('open',open);b.setAttribute('aria-expanded',open)});
       document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
       document.addEventListener('click',e=>{if(!e.target.closest('.nav-group')&&!e.target.closest('.menu-toggle'))close()});
-      const dialog=document.querySelector('#search-dialog'),input=document.querySelector('#site-search'),results=document.querySelector('#search-results');
-      let searchItems;
-      document.querySelector('.search-open').onclick=async()=>{
-        dialog.showModal();input.focus();
-        if(!searchItems){
-          const site=window.ATRAHDOM_SITE||{},editorials=window.ATRAHDOM_BLOG||[];
-          const posts=[...(site.posts||[]),...editorials.filter(p=>!(site.posts||[]).some(x=>x.slug===p.slug))];
-          searchItems=[...(site.pages||[]).map(p=>({...p,type:'page'})),...await Promise.all(posts.map(async p=>({...p,type:'post',content_html:p.content_html||(p.content_file?await fetch(p.content_file).then(r=>r.ok?r.text():'').catch(()=>''):'')})))];
-        }
-        input.dispatchEvent(new Event('input'));
-      };
-      document.querySelector('.dialog-close').onclick=()=>dialog.close();
-      const strip=s=>{const d=document.createElement('div');d.innerHTML=s||'';return d.textContent.trim()};
-      input.oninput=()=>{
-        const q=input.value.toLowerCase().trim();results.replaceChildren();if(!q||!searchItems)return;
-        const found=searchItems.filter(p=>((typeof p.title==='string'?p.title:p.title?.rendered||'')+' '+strip(p.content_html||p.content?.rendered)).toLowerCase().includes(q));
-        const total=document.createElement('p');total.className='search-total';total.textContent=found.length?found.length+' resultado'+(found.length!==1?'s':''):'Sin resultados.';results.append(total);
-        for(const type of ['page','post']){
-          const group=found.filter(p=>p.type===type).slice(0,8);if(!group.length)continue;
-          const heading=document.createElement('h4');heading.className='search-group';heading.textContent=(type==='page'?'Páginas':'Publicaciones')+' ('+group.length+')';results.append(heading);
-          group.forEach(p=>{const hit=document.createElement('div'),a=document.createElement('a');hit.className='search-hit';a.href=p.local_route||'#/post/'+p.slug;a.textContent=strip(typeof p.title==='string'?p.title:p.title?.rendered);a.onclick=()=>dialog.close();hit.append(a);results.append(hit)});
-        }
-      };
+ window.ATRAHDOM_SEARCH.bindGlobal();
     })();
   </script>
 <script>

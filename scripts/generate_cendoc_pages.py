@@ -364,8 +364,8 @@ def generate(check: bool = False, only_slugs: set[str] | None = None) -> list[Pa
         raise ValueError("The effective CENDOC catalog contains duplicate slugs")
     if communications.intersection(slugs) or manual.intersection(slugs):
         raise ValueError("An excluded communications/manual-review record entered the CENDOC output")
-    if len(communications) != 37:
-        raise ValueError(f"Expected 37 communication routes; found {len(communications)}")
+    if not communications or len(communications) != len(config.get("communication_slugs", [])):
+        raise ValueError("Communication routes must be nonempty and unique")
     if only_slugs is not None:
         missing = only_slugs - set(slugs)
         if missing:
@@ -401,6 +401,9 @@ def main() -> None:
     outputs = generate(check=args.check, only_slugs=set(args.slugs) if args.slugs else None)
     action = "Checked" if args.check else "Generated"
     print(f"{action} {len(outputs)} CENDOC detail pages; no catalog data or communication files written")
+
+    from scripts.generate_search_index import generate as generate_search
+    generate_search(check=args.check)
 
 
 if __name__ == "__main__":
