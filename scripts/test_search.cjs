@@ -23,7 +23,21 @@ assert(!polluted.some(r=>r.collection==='blog'),'footer contamination');
 assert(S.search(index.records,'trabajo').length>12);
 assert(S.search(index.records,'Convencionalidad')[0].slug===control);
 assert.equal(new Set(index.records.map(r=>r.local_route)).size,index.records.length);
-assert.equal(index.counts.cendoc,75);assert.equal(index.counts.comunicados,37);
+assert.equal(index.counts.cendoc,75);assert.equal(index.counts.comunicados,39);
+const restoredCommunications=[
+ 'comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar',
+ 'comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar-2'
+];
+for(const slug of restoredCommunications){
+ const record=subset('comunicados').find(r=>r.slug===slug);
+ assert(record,`${slug} missing from Comunicados search`);
+ assert.equal(record.local_route,`/comunicados/${slug}/`);
+ assert.equal(record.author,'SITRADOM; ATRAHDOM');
+ assert.match(record.date,/^2024-04-02/);
+ assert(fs.existsSync(`comunicados/${slug}/index.html`),`${slug} direct page is missing`);
+ assert(fs.readFileSync('comunicados/index.html','utf8').includes(`href="/comunicados/${slug}/"`),`${slug} missing from Comunicados index`);
+ assert(!subset('cendoc').some(r=>r.slug===slug),`${slug} leaked into CENDOC`);
+}
 const standalone=['plataforma-politica-2010-2011','approval-of-15-non-governmental-organizations-for-association-with-un-public','por-un-convenio-y-recomendacion-a-favor-del-trabajo-domestico'];
 for(const slug of standalone){
  assert(editorial.cendoc_excluded_slugs.includes(slug),`${slug} must be excluded from CENDOC`);

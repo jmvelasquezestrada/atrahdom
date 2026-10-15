@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sources": {
-    "content/site.json": "002db216c4829e67b8dc145a41eee5b67623bd0c21e6a2a299dbe42ffb607619",
-    "content/editorial-config.json": "2648f7a04fa48947f6f7067388e014f5066c36573d4adabaf3b0752aa9069866",
+    "content/site.json": "c86fdd7af403e737195d9d9b23fa7be53e8ed6e3e9a700b24fa4bb707ad72c18",
+    "content/editorial-config.json": "7b66e9b0bb3574ce6d880599c6aa9c72e52b86ae965e49b66279e2fa12eb0e3b",
     "content/blog-posts.js": "3d6396ccfce4078ebb4d52744783617c9b33158914b159a84ba616cbd35a74e7",
     "blog/10-anos-del-c189/index.html": "cc1ffda03737c1eb485c52ee581cc3bba8766c283871a0dfe9ce93639e02c5be",
     "blog/coalicion-de-genero-y-comercio/index.html": "f547e6c91ae2dfe0e7f4fa01274e0205c0f1a2d065c6e4de9db67a594637a578",
@@ -131,6 +131,8 @@
     "comunicados/comunicado-25-anos-de-los-acuerdos-de-paz/index.html": "d473e6709c5ea8033b008daf6303d8e58bed60e7ace8a7e85f02523ee7e77a34",
     "comunicados/comunicado-28-de-marzo-2020/index.html": "66ec176bf322c444f24bbf0a89e044472c7807108fbc2b0e18bd8d42def79c24",
     "comunicados/comunicado-30-de-marzo-dia-internacional-de-la-trabajadora-domestica/index.html": "ef90b17b45353d196a3e7067c0f051edadb0cc35cb410a743aa415d367267f3c",
+    "comunicados/comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar/index.html": "4ca8e45eb70fef0293616589c9e2d414fa9fd5319573ef8f1156b07f19fcdd4c",
+    "comunicados/comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar-2/index.html": "f162c6916dcbe9bf1afca64592f8ada9444d6b53eecd74a7a088e2ac851289c0",
     "comunicados/comunicado-31-de-mayo-2020/index.html": "d04ccd2876b41527ed130029e41f88b77e23e9a2bd90984f92e3e76795b3979d",
     "comunicados/comunicado-8-de-marzo-de-2021/index.html": "1cd58251f0908a8b6eb01a653f2d722ea4b28fb37bbe08d69b1aa2dad7b898bf",
     "comunicados/comunicado-9-de-marzo-2020/index.html": "36bd57bfba273169e2e9c5d70d38a424a8478393be84fe625464a3529df62875",
@@ -164,8 +166,6 @@
     "quienes-somos/index.html": "3293ae8a966d781eb28d1aa12d79bf7d9cab7ca668cebefb09d990a29e0966cd",
     "calculadora.html": "cfc55a7ee069ced860d5b49cd2188ea322a4abca97663f5a2c242bf360750a64",
     "content/pages/sitradom.html": "87d79af2d91dd32f18af12605be35c59a7893edff39a575eaaaba1c1fafcbce7",
-    "content/posts/comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar-2.html": "df7f09fb74bcb46c27de297396e26231fe7dd4fa7f04d56d0900980593415a53",
-    "content/posts/comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar.html": "e4a65c3e2be1f040378c9b3df50c39cc296d63da118f882dd7bb009fdbd73106",
     "content/posts/sitradomsa.html": "56e803fcacc14f33ddaef9f717539e75eff5a59ec07d03c1bb01e15f518c5406",
     "content/posts/nuevo-sindicato-de-trabajadoras-domesticas-similares-y-a-cuenta-propia-sitradomsa.html": "eaf44dd10ffb201caa4a05640b0f1ad82de421a2547acaaa9a682eb2de3a8042",
     "content/posts/campana-para-la-ratificacion-del-convenio-189-y-recomendacion-201.html": "e1f39a55c760b05bb115e4ed3893979714fab2396b801c819e8122fd83b2c2cb",
@@ -212,10 +212,10 @@
     "content/posts/hola-mundo.html": "8dc28a7b87c3e9aec5c97de9d4fdaa6a8f6f92393f08607c96466fcc4c5787ca"
   },
   "counts": {
-    "archive": 49,
+    "archive": 47,
     "blog": 37,
     "cendoc": 75,
-    "comunicados": 37,
+    "comunicados": 39,
     "pages": 8
   },
   "records": [
@@ -734,12 +734,12 @@
     {
       "slug": "comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar-2",
       "title": "Comunicado 30 de marzo, Día latinoamericano de las trabajadoras del hogar.",
-      "local_route": "#/post/comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar-2",
-      "collection": "archive",
+      "local_route": "/comunicados/comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar-2/",
+      "collection": "comunicados",
       "type": "post",
       "body": "30 de marzo día latinoamericano de las trabajadoras del hogar from ATRAHDOM",
       "description": "",
-      "author": "",
+      "author": "SITRADOM; ATRAHDOM",
       "institutions": "",
       "date": "2024-04-02T21:25:36+00:00",
       "categories": [
@@ -755,12 +755,12 @@
     {
       "slug": "comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar",
       "title": "Comunicado 30 de marzo; Red Centroamericana de Trabajadoras del Hogar y los Cuidados, Día Latinoamericano de las Trabajadoras del Hogar.",
-      "local_route": "#/post/comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar",
-      "collection": "archive",
+      "local_route": "/comunicados/comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar/",
+      "collection": "comunicados",
       "type": "post",
       "body": "comunicado 30 de marzo, día latinoamericano de las trabajadoras del Hogar from ATRAHDOM",
       "description": "",
-      "author": "",
+      "author": "SITRADOM; ATRAHDOM",
       "institutions": "",
       "date": "2024-04-02T21:08:44+00:00",
       "categories": [

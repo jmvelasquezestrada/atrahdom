@@ -39,12 +39,12 @@
     "conmemoracion-del-dia-latinoamericano-de-las-trabajadoras-del-hogar",
     "comunicado-c189-guatemala",
     "comunicado-20-de-octubre-dia-de-la-revolucion",
-    "comunicado-ante-la-situacion-de-cicig-en-guatemala-enero-2019"
+    "comunicado-ante-la-situacion-de-cicig-en-guatemala-enero-2019",
+    "comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar",
+    "comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar-2"
   ],
   "communication_excluded_slugs": [
     "approval-of-15-non-governmental-organizations-for-association-with-un-public",
-    "comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar",
-    "comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar-2",
     "origen-del-aguinaldo",
     "plataforma-politica-2010-2011",
     "por-un-convenio-y-recomendacion-a-favor-del-trabajo-domestico"
@@ -142,11 +142,14 @@
     "terminos-de-referencia-para-publicista-o-gestora"
   ],
   "manual_excluded_slugs": [],
-  "bibliography_excluded_slugs": [
-    "comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar",
-    "comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar-2"
-  ],
+  "bibliography_excluded_slugs": [],
   "bibliography_overrides": {
+    "comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar": {
+      "author": "SITRADOM; ATRAHDOM"
+    },
+    "comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar-2": {
+      "author": "SITRADOM; ATRAHDOM"
+    },
     "upr-a-practical-guide-for-civil-society-coalitions-to-engage-in-implementation-mechanisms": {
       "title": "UPR: A Practical Guide for Civil Society Coalitions to Engage in Implementation Mechanisms",
       "date": null,

@@ -1109,7 +1109,12 @@
         "https://slideshare.net/ATRAHDOM",
         "https://slideshare.net/slideshow/embed_code/key/1rY2fxR6vE70xH"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "SITRADOM; ATRAHDOM",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2024/04/02/comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar/",
@@ -1150,7 +1155,12 @@
         "https://slideshare.net/ATRAHDOM",
         "https://slideshare.net/slideshow/embed_code/key/ffrNcKUGsz928C"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "SITRADOM; ATRAHDOM",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2024/04/02/nuestros-derechos-como-trabajadoras-del-hogar-los-acuerdos-internacionales-que-los-respaldan-que-esta-sucediendo-hoy-en-dia-con-ellos-y-como-podemos-exigirlos/",
@@ -9327,12 +9337,12 @@
       "conmemoracion-del-dia-latinoamericano-de-las-trabajadoras-del-hogar",
       "comunicado-c189-guatemala",
       "comunicado-20-de-octubre-dia-de-la-revolucion",
-      "comunicado-ante-la-situacion-de-cicig-en-guatemala-enero-2019"
+      "comunicado-ante-la-situacion-de-cicig-en-guatemala-enero-2019",
+      "comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar",
+      "comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar-2"
     ],
     "communication_excluded_slugs": [
       "approval-of-15-non-governmental-organizations-for-association-with-un-public",
-      "comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar",
-      "comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar-2",
       "origen-del-aguinaldo",
       "plataforma-politica-2010-2011",
       "por-un-convenio-y-recomendacion-a-favor-del-trabajo-domestico"
