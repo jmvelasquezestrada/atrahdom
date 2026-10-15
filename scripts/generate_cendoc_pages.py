@@ -321,7 +321,7 @@ def render_page(template: str, post: dict[str, Any], categories: list[str], all_
     if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", slug):
         raise ValueError(f"Unsafe or unsupported slug for CENDOC path: {slug!r}")
     body = apply_iframe_height_overrides(slug, content_of(post))
-    if not body.strip():
+    if not body.strip() and not embeds_for(post, body, {}, []):
         raise ValueError(f"No usable source content for CENDOC record {slug}")
     body, moved_pdf_labels, download_blocks = prepare_pdf_resources(post, body)
     title = str(post.get("title") or "Sin título")

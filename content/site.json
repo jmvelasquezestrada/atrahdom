@@ -8296,6 +8296,32 @@
       "editorial_date": "2026",
       "editorial_institutions": "",
       "editorial_identifier": null
+    },
+    {
+      "type": "post",
+      "title": "Primera Acta Constitutiva del SITRADOMSA",
+      "slug": "primera-acta-constitutiva-sitradomsa",
+      "publication_date": "2011",
+      "internal_author": "SITRADOMSA",
+      "categories": [
+        "Centro de Documentación Digital",
+        "SITRADOMSA"
+      ],
+      "local_route": "/cendoc/primera-acta-constitutiva-sitradomsa/",
+      "content_file": "content/posts/primera-acta-constitutiva-sitradomsa.html",
+      "excerpt_html": "<p>Acta constitutiva del Sindicato de Trabajadoras Domésticas, Similares y a Cuenta Propia (SITRADOMSA).</p>",
+      "content_html": "",
+      "featured_image": "",
+      "images": [],
+      "attachments": [
+        "assets/documents/primera-acta-constitutiva-sitradomsa.pdf"
+      ],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "SITRADOMSA",
+      "editorial_date": "2011",
+      "editorial_type": "Acta constitutiva",
+      "editorial_institutions": "",
+      "editorial_identifier": null
     }
   ],
   "attachments": [
