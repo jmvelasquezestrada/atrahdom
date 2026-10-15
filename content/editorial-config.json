@@ -42,15 +42,16 @@
     "comunicado-ante-la-situacion-de-cicig-en-guatemala-enero-2019"
   ],
   "communication_excluded_slugs": [
+    "approval-of-15-non-governmental-organizations-for-association-with-un-public",
     "comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar",
     "comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar-2",
-    "noticias-internacionales",
     "origen-del-aguinaldo",
     "plataforma-politica-2010-2011",
     "por-un-convenio-y-recomendacion-a-favor-del-trabajo-domestico"
   ],
   "cendoc_excluded_slugs": [
     "analisis-de-acuerdo-gubernativo-430-2003",
+    "approval-of-15-non-governmental-organizations-for-association-with-un-public",
     "atrahdom-se-pronuncia-ante-el-congreso-de-la-republica-por-la-inminetne-aprobacion-de-la-iniciativa-de-ley-5007",
     "boletin-1-ano-1-2014",
     "carta-de-organizaciones-a-alta-comisionada-en-derechos-humanos",
@@ -83,7 +84,6 @@
     "creada-concertacion-regional-de-mujeres-por-un-trabajo-digno",
     "diagnostico",
     "el-gran-ausente-ministerio-de-trabajo",
-    "noticias-internacionales",
     "nuestra-postura-dia-internacional-de-la-trabajadora-domestica",
     "nuevos-apartados",
     "oferta-para-la-aplicacion-a-consultorias-2016",
@@ -97,6 +97,7 @@
   ],
   "homepage_cendoc_excluded_slugs": [
     "analisis-de-acuerdo-gubernativo-430-2003",
+    "approval-of-15-non-governmental-organizations-for-association-with-un-public",
     "atrahdom-se-pronuncia-ante-el-congreso-de-la-republica-por-la-inminetne-aprobacion-de-la-iniciativa-de-ley-5007",
     "boletin-1-ano-1-2014",
     "carta-de-organizaciones-a-alta-comisionada-en-derechos-humanos",
@@ -129,7 +130,6 @@
     "creada-concertacion-regional-de-mujeres-por-un-trabajo-digno",
     "diagnostico",
     "el-gran-ausente-ministerio-de-trabajo",
-    "noticias-internacionales",
     "nuestra-postura-dia-internacional-de-la-trabajadora-domestica",
     "nuevos-apartados",
     "oferta-para-la-aplicacion-a-consultorias-2016",
@@ -141,15 +141,8 @@
     "pronunciamiento-del-1ro-de-mayo-2012-dia-internacional-del-trabajo",
     "terminos-de-referencia-para-publicista-o-gestora"
   ],
-  "manual_excluded_slugs": [
-    "plataforma-politica-2010-2011",
-    "noticias-internacionales",
-    "por-un-convenio-y-recomendacion-a-favor-del-trabajo-domestico"
-  ],
+  "manual_excluded_slugs": [],
   "bibliography_excluded_slugs": [
-    "plataforma-politica-2010-2011",
-    "noticias-internacionales",
-    "por-un-convenio-y-recomendacion-a-favor-del-trabajo-domestico",
     "comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar",
     "comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar-2"
   ],
@@ -944,6 +937,31 @@
       "author": "Red Guatemalteca por los Cuidados",
       "institutions": "",
       "identifier": null
+    },
+    "plataforma-politica-2010-2011": {
+      "title": "Plataforma Politica Desde El Pensamiento De Las Mujeres Trabajadoras De Guatemala.",
+      "date": null,
+      "author": "ATRAHDOM",
+      "institutions": "",
+      "identifier": null,
+      "citation_title": "Plataforma Politica Desde El Pensamiento De Las Mujeres Trabajadoras De Guatemala"
+    },
+    "approval-of-15-non-governmental-organizations-for-association-with-un-public": {
+      "title": "Approval of 15 non-governmental organizations for association with UN public.",
+      "date": null,
+      "author": "Naciones Unidas",
+      "institutions": "",
+      "identifier": null,
+      "citation_title": "Approval of 15 non-governmental organizations for association with UN public"
+    },
+    "por-un-convenio-y-recomendacion-a-favor-del-trabajo-domestico": {
+      "author": "COSME; ATRAHDOM",
+      "citation_title": "Por un Convenio y Recomendación a favor del Trabajo Doméstico"
     }
-  }
+  },
+  "cendoc_standalone_slugs": [
+    "approval-of-15-non-governmental-organizations-for-association-with-un-public",
+    "plataforma-politica-2010-2011",
+    "por-un-convenio-y-recomendacion-a-favor-del-trabajo-domestico"
+  ]
 }

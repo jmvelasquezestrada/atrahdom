@@ -39,6 +39,10 @@ def apply_editorial_overrides(site_data: dict[str, Any], config: dict[str, Any] 
             post["title"] = values["title"]
         post["editorial_metadata_reviewed"] = True
         post["editorial_author"] = values.get("author") or ""
+        if values.get("citation_title"):
+            post["editorial_citation_title"] = values["citation_title"]
+        else:
+            post.pop("editorial_citation_title", None)
         post["editorial_date"] = values.get("date") or None
         post["editorial_institutions"] = values.get("institutions") or ""
         post["editorial_identifier"] = values.get("identifier")

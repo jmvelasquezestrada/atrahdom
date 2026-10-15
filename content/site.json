@@ -3640,7 +3640,7 @@
       "local_route": "#/post/por-un-convenio-y-recomendacion-a-favor-del-trabajo-domestico",
       "content_file": "content/posts/por-un-convenio-y-recomendacion-a-favor-del-trabajo-domestico.html",
       "raw_file": "content/raw/por-un-convenio-y-recomendacion-a-favor-del-trabajo-domestico-e5472517.html",
-      "content_html": "<ul>\n<li>Conferencia OIT 2010</li>\n</ul>\n<div class=\"jetpack-video-wrapper\"><iframe src=\"https://www.slideshare.net/slideshow/embed_code/242119699\" width=\"1000\" height=\"819\" sandbox=\"allow-popups allow-scripts allow-same-origin allow-presentation\" allowfullscreen=\"\" webkitallowfullscreen=\"\" mozallowfullscreen=\"\"></iframe></div>\n<ul>\n<li>Observaciones COSME del Informe Marrón</li>\n</ul>\n<div class=\"jetpack-video-wrapper\"><iframe src=\"https://www.slideshare.net/slideshow/embed_code/242119701\" width=\"1000\" height=\"819\" sandbox=\"allow-popups allow-scripts allow-same-origin allow-presentation\" allowfullscreen=\"\" webkitallowfullscreen=\"\" mozallowfullscreen=\"\"></iframe></div>\n<ul>\n<li>Informe OIT Trabajo Domestico</li>\n</ul>\n<div class=\"jetpack-video-wrapper\"><iframe src=\"https://www.slideshare.net/slideshow/embed_code/242119700\" width=\"1000\" height=\"819\" sandbox=\"allow-popups allow-scripts allow-same-origin allow-presentation\" allowfullscreen=\"\" webkitallowfullscreen=\"\" mozallowfullscreen=\"\"></iframe></div>\n<div id=\"atatags-370373-6a3ee3bd0a95c\">\n\t\t<script type=\"text/javascript\">\n\t\t\t__ATA = window.__ATA || {};\n\t\t\t__ATA.cmd = window.__ATA.cmd || [];\n\t\t\t__ATA.cmd.push(function() {\n\t\t\t\t__ATA.initVideoSlot('atatags-370373-6a3ee3bd0a95c', {\n\t\t\t\t\tsectionId: '370373',\n\t\t\t\t\tformat: 'inread'\n\t\t\t\t});\n\t\t\t});\n\t\t</script>\n\t</div><span id=\"wordads-inline-marker\" style=\"display: none;\"></span>",
+      "content_html": "<h2>Recursos embebidos</h2>\n<ul>\n<li>Conferencia OIT 2010</li>\n</ul>\n<div class=\"jetpack-video-wrapper\"><iframe src=\"https://www.slideshare.net/slideshow/embed_code/242119699\" width=\"1000\" height=\"819\" sandbox=\"allow-popups allow-scripts allow-same-origin allow-presentation\" allowfullscreen=\"\" webkitallowfullscreen=\"\" mozallowfullscreen=\"\"></iframe></div>\n<ul>\n<li>Observaciones COSME del Informe Marrón</li>\n</ul>\n<div class=\"jetpack-video-wrapper\"><iframe src=\"https://www.slideshare.net/slideshow/embed_code/242119701\" width=\"1000\" height=\"819\" sandbox=\"allow-popups allow-scripts allow-same-origin allow-presentation\" allowfullscreen=\"\" webkitallowfullscreen=\"\" mozallowfullscreen=\"\"></iframe></div>\n<ul>\n<li>Informe OIT Trabajo Domestico</li>\n</ul>\n<div class=\"jetpack-video-wrapper\"><iframe src=\"https://www.slideshare.net/slideshow/embed_code/242119700\" width=\"1000\" height=\"819\" sandbox=\"allow-popups allow-scripts allow-same-origin allow-presentation\" allowfullscreen=\"\" webkitallowfullscreen=\"\" mozallowfullscreen=\"\"></iframe></div>\n<div id=\"atatags-370373-6a3ee3bd0a95c\">\n\t\t<script type=\"text/javascript\">\n\t\t\t__ATA = window.__ATA || {};\n\t\t\t__ATA.cmd = window.__ATA.cmd || [];\n\t\t\t__ATA.cmd.push(function() {\n\t\t\t\t__ATA.initVideoSlot('atatags-370373-6a3ee3bd0a95c', {\n\t\t\t\t\tsectionId: '370373',\n\t\t\t\t\tformat: 'inread'\n\t\t\t\t});\n\t\t\t});\n\t\t</script>\n\t</div><span id=\"wordads-inline-marker\" style=\"display: none;\"></span>",
       "content_hash_local": "3528ecb60a937209ede38a0d2e577467b55ba0f07fec6fdd8afe1736c65f0a4b",
       "images": [],
       "attachments": [],
@@ -3649,7 +3649,13 @@
         "https://slideshare.net/slideshow/embed_code/242119700",
         "https://slideshare.net/slideshow/embed_code/242119701"
       ],
-      "internal_links": []
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "COSME; ATRAHDOM",
+      "editorial_citation_title": "Por un Convenio y Recomendación a favor del Trabajo Doméstico",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2012/05/28/homenaje-a-nuestro-companero-enrique-torres/",
@@ -4726,12 +4732,12 @@
       "status_code": 200,
       "content_type": "text/html; charset=UTF-8",
       "type": "post",
-      "title": "Noticias Internacionales",
-      "slug": "noticias-internacionales",
+      "title": "Approval of 15 non-governmental organizations for association with UN public.",
+      "slug": "approval-of-15-non-governmental-organizations-for-association-with-un-public",
       "publication_date": "2013-09-24T23:33:46+00:00",
       "modified_date": "2021-02-01T20:17:15+00:00",
       "wordpress_user": "",
-      "internal_author": "",
+      "internal_author": "Naciones Unidas",
       "categories": [
         "Centro de Documentación Digital"
       ],
@@ -4745,10 +4751,10 @@
       "migration_status": "rendered",
       "verification_status": "not_started",
       "migration_error": "No WordPress content container found",
-      "local_route": "#/post/noticias-internacionales",
+      "local_route": "#/post/approval-of-15-non-governmental-organizations-for-association-with-un-public",
       "content_file": "content/posts/noticias-internacionales.html",
       "raw_file": "content/raw/noticias-internacionales-7fece10d.html",
-      "content_html": "<p>ATRAHDOM en el Departamento de Información Pública de las Naciones Unidas</p>\r\n<p><a href=\"assets/documents/press-release-dpi-ngo-3c5962ecf1.pdf\">Original Ingles</a></p>\r\n<p><a href=\"assets/documents/conferencia-de-prensa-c605b6b571.pdf\">Traducción Español</a></p>",
+      "content_html": "<h2>Recursos embebidos</h2><p>ATRAHDOM en el Departamento de Información Pública de las Naciones Unidas</p>\r\n<p><a href=\"assets/documents/press-release-dpi-ngo-3c5962ecf1.pdf\">Original Ingles</a></p>\r\n<p><a href=\"assets/documents/conferencia-de-prensa-c605b6b571.pdf\">Traducción Español</a></p>",
       "content_hash_local": "52b51ade729acbd0bcd8971cdf94e2c82ca8209b89b320f747705518e6c03d46",
       "images": [],
       "attachments": [
@@ -4756,7 +4762,14 @@
         "assets/documents/press-release-dpi-ngo-3c5962ecf1.pdf"
       ],
       "external_links": [],
-      "internal_links": []
+      "internal_links": [],
+      "legacy_local_route": "#/post/noticias-internacionales",
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "Naciones Unidas",
+      "editorial_citation_title": "Approval of 15 non-governmental organizations for association with UN public",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2019/07/26/la-comida-que-alimenta-al-mundo-un-analisis-en-la-era-digital/",
@@ -6253,7 +6266,7 @@
       "status_code": 200,
       "content_type": "text/html; charset=UTF-8",
       "type": "post",
-      "title": "Plataforma Politica 2010-2011",
+      "title": "Plataforma Politica Desde El Pensamiento De Las Mujeres Trabajadoras De Guatemala.",
       "slug": "plataforma-politica-2010-2011",
       "publication_date": "2011-02-11T02:49:21+00:00",
       "modified_date": "2021-02-01T19:58:10+00:00",
@@ -6277,14 +6290,21 @@
       "local_route": "#/post/plataforma-politica-2010-2011",
       "content_file": "content/posts/plataforma-politica-2010-2011.html",
       "raw_file": "content/raw/plataforma-politica-2010-2011-57f07690.html",
-      "content_html": "<p>Descargar el archivo en el siguiente link:</p>\n<p><a href=\"assets/documents/plataformapoliticademujerestrabajadorasdeguatemala-1-3722af6954.doc\">Plataforma Política de Mujeres trabajadoras de Guatemala</a></p>\n<p>&nbsp;</p>\n<span id=\"wordads-inline-marker\" style=\"display: none;\"></span>",
-      "content_hash_local": "110c2992fb5915223fb63404b8805dfe8ddbff665608661e3935fe28282e6bab",
+      "content_html": "<h2>Recursos embebidos</h2><section class=\"media-embed document-embed\"><div class=\"media-embed-head\"><h3>Plataforma Politica Desde El Pensamiento De Las Mujeres Trabajadoras De Guatemala.</h3><a href=\"assets/documents/plataformapoliticademujerestrabajadorasdeguatemala-1-3722af6954.pdf\" target=\"_blank\" rel=\"noopener\">Abrir en pestaña nueva</a></div><iframe src=\"assets/documents/plataformapoliticademujerestrabajadorasdeguatemala-1-3722af6954.pdf#view=FitH\" title=\"Plataforma Politica Desde El Pensamiento De Las Mujeres Trabajadoras De Guatemala.\" loading=\"lazy\"></iframe></section><p>Descargar el documento PDF: <a href=\"assets/documents/plataformapoliticademujerestrabajadorasdeguatemala-1-3722af6954.pdf\" download>Plataforma Politica Desde El Pensamiento De Las Mujeres Trabajadoras De Guatemala.</a></p>",
+      "content_hash_local": "dd4519a2f826dd4f9f2dac32fb683674808380e997e673086301e60ab1c8fdee",
       "images": [],
       "attachments": [
-        "assets/documents/plataformapoliticademujerestrabajadorasdeguatemala-1-3722af6954.doc"
+        "assets/documents/plataformapoliticademujerestrabajadorasdeguatemala-1-3722af6954.pdf"
       ],
       "external_links": [],
-      "internal_links": []
+      "internal_links": [],
+      "excerpt_html": "Documento PDF de la Plataforma Politica Desde El Pensamiento De Las Mujeres Trabajadoras De Guatemala.",
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "ATRAHDOM",
+      "editorial_citation_title": "Plataforma Politica Desde El Pensamiento De Las Mujeres Trabajadoras De Guatemala",
+      "editorial_date": null,
+      "editorial_institutions": "",
+      "editorial_identifier": null
     },
     {
       "original_url": "https://atrahdom.org/2011/04/11/talleres-a-extension-agricola-del-ministerio-de-agricultua/",
@@ -9310,15 +9330,16 @@
       "comunicado-ante-la-situacion-de-cicig-en-guatemala-enero-2019"
     ],
     "communication_excluded_slugs": [
+      "approval-of-15-non-governmental-organizations-for-association-with-un-public",
       "comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar",
       "comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar-2",
-      "noticias-internacionales",
       "origen-del-aguinaldo",
       "plataforma-politica-2010-2011",
       "por-un-convenio-y-recomendacion-a-favor-del-trabajo-domestico"
     ],
     "cendoc_excluded_slugs": [
       "analisis-de-acuerdo-gubernativo-430-2003",
+      "approval-of-15-non-governmental-organizations-for-association-with-un-public",
       "atrahdom-se-pronuncia-ante-el-congreso-de-la-republica-por-la-inminetne-aprobacion-de-la-iniciativa-de-ley-5007",
       "boletin-1-ano-1-2014",
       "carta-de-organizaciones-a-alta-comisionada-en-derechos-humanos",
@@ -9351,7 +9372,6 @@
       "creada-concertacion-regional-de-mujeres-por-un-trabajo-digno",
       "diagnostico",
       "el-gran-ausente-ministerio-de-trabajo",
-      "noticias-internacionales",
       "nuestra-postura-dia-internacional-de-la-trabajadora-domestica",
       "nuevos-apartados",
       "oferta-para-la-aplicacion-a-consultorias-2016",
@@ -9365,6 +9385,7 @@
     ],
     "homepage_cendoc_excluded_slugs": [
       "analisis-de-acuerdo-gubernativo-430-2003",
+      "approval-of-15-non-governmental-organizations-for-association-with-un-public",
       "atrahdom-se-pronuncia-ante-el-congreso-de-la-republica-por-la-inminetne-aprobacion-de-la-iniciativa-de-ley-5007",
       "boletin-1-ano-1-2014",
       "carta-de-organizaciones-a-alta-comisionada-en-derechos-humanos",
@@ -9397,7 +9418,6 @@
       "creada-concertacion-regional-de-mujeres-por-un-trabajo-digno",
       "diagnostico",
       "el-gran-ausente-ministerio-de-trabajo",
-      "noticias-internacionales",
       "nuestra-postura-dia-internacional-de-la-trabajadora-domestica",
       "nuevos-apartados",
       "oferta-para-la-aplicacion-a-consultorias-2016",
@@ -9409,10 +9429,6 @@
       "pronunciamiento-del-1ro-de-mayo-2012-dia-internacional-del-trabajo",
       "terminos-de-referencia-para-publicista-o-gestora"
     ],
-    "manual_excluded_slugs": [
-      "plataforma-politica-2010-2011",
-      "noticias-internacionales",
-      "por-un-convenio-y-recomendacion-a-favor-del-trabajo-domestico"
-    ]
+    "manual_excluded_slugs": []
   }
 }

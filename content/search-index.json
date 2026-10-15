@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sources": {
-    "content/site.json": "b5c91ac60ee33439813381e11dcee573b1be669fc8b4c35d5f4f2a150872cf2d",
-    "content/editorial-config.json": "94347cc914ecf2bb831675a9dfd6b10c1abf68fc89ed485dd4bb62e72bdcb891",
+    "content/site.json": "002db216c4829e67b8dc145a41eee5b67623bd0c21e6a2a299dbe42ffb607619",
+    "content/editorial-config.json": "2648f7a04fa48947f6f7067388e014f5066c36573d4adabaf3b0752aa9069866",
     "content/blog-posts.js": "3d6396ccfce4078ebb4d52744783617c9b33158914b159a84ba616cbd35a74e7",
     "blog/10-anos-del-c189/index.html": "cc1ffda03737c1eb485c52ee581cc3bba8766c283871a0dfe9ce93639e02c5be",
     "blog/coalicion-de-genero-y-comercio/index.html": "f547e6c91ae2dfe0e7f4fa01274e0205c0f1a2d065c6e4de9db67a594637a578",
@@ -46,6 +46,7 @@
     "cendoc/acuerdo-gubernativo-1-8-de-febrero-de-2019/index.html": "c01f4a7ee803d88103310dac04df40336b7aafb75f2abb219ea353cfb52e05ac",
     "cendoc/acuerdo-ministerial-45-2018-ministerio-de-trabajo-y-prevision-social-comision-nacional-tripartita-de-relaciones-laborales-y-libertad-sindical/index.html": "5fc24d45f8dd740811b240882d422b9e5f7ea8099e3cfa9927414d0c49be5530",
     "cendoc/aporte-para-abordar-las-causas-que-afectan-a-la-laguna-chichoj-san-cristobal-verapaz-a-v-guatemala/index.html": "9fe569a4e73ca316f97346f1f0d42b05ba347a133053e12a294ee24895ead1b7",
+    "cendoc/approval-of-15-non-governmental-organizations-for-association-with-un-public/index.html": "99ba5d73a875128f5b5021b77fbc360dd6fa3fa50f077c69f42b5ac343be4252",
     "cendoc/boletin-no-5-trabajo-no-remunerado-y-labores-de-cuidado-en-guatemala/index.html": "400bdc1dbc3c6cba42224e6d09a382e6eb60a70c7e5fccc9e5c37adb07971d26",
     "cendoc/campana-para-la-ratificacion-del-convenio-189-a-favor-de-trabajo-decente-para-el-trabajo-domestico/index.html": "35b8fc0318caecee8c1d75c0c9845c31a7d20174793e9ead61f5cd6eadf2c819",
     "cendoc/caracterizacion-de-establecimientos-educativos-publicos-del-ciclo-diversificado/index.html": "e55ddb3b78b22f2c7df8179c7b8cfb521dbedbc1f898cee1b7a0932d17474c57",
@@ -104,7 +105,9 @@
     "cendoc/para-ver-el-libro-en-linea/index.html": "850543b668a5e5809e601dd21d120bfd36d38a0942b84c8d511285282dc4c760",
     "cendoc/perspectivas-del-comercio-internacional-de-america-latina-y-el-caribe/index.html": "620e4df971b26c7b8a9f35593bdbe4ee6442d87e8ff35f79d916a9bd508d5881",
     "cendoc/planes-de-igualdad-de-genero-en-universidades-y-centros-de-investigacion-en-america-latina/index.html": "902cfd350234cc887461ff7a800acb8cdd2f873341aff1ce84b3734c5064133d",
+    "cendoc/plataforma-politica-2010-2011/index.html": "0ee890f4214880e61b6e28a858968bc43523eb8aef8c9015ab4dac4015b25524",
     "cendoc/politica-nacional-de-empleo-digno-2017-2032/index.html": "b4480b8b87d3ca4da297b98c304c212f545ba173c8610a624c6ad6f7728ba18f",
+    "cendoc/por-un-convenio-y-recomendacion-a-favor-del-trabajo-domestico/index.html": "7f40acad4da336f857d6a2c70e0d4af8cd36d7fee0ce0b43612c7526c1a04f19",
     "cendoc/practicas-de-reclutamiento-de-personas-trabajadoras-migrantes-en-belice-el-salvador-guatemala-honduras-y-mexico/index.html": "3a674e100037025cd0638c951e4bfa43472a700b1c7efcea9770eda6f62155ce",
     "cendoc/presentacion-los-amigos-curan/index.html": "00c08fd57ef2910b5f3e0a2a35a97b96a8744ac2f25f8cf43f579f6536a8851a",
     "cendoc/primera-acta-constitutiva-sitradomsa/index.html": "8d1ac2496ad84c5297439e338897aebe66feeac67300fc0f0dca977c0d6aa438",
@@ -174,7 +177,6 @@
     "content/posts/conferencia-de-prensa.html": "9456663c9fdfadc794d56aacec21ad7b25baebf298e28bb37cd0e69b93d042a3",
     "content/posts/participacion-en-la-conmemoracion-del-8-de-marzo-dia-internacional-de-las-mujeres-2012.html": "15f624343c3823092f6f36728a8ec8a67de727274342e4b63a38379a1aa36b22",
     "content/posts/solidaridad-a-las-reynas-de-la-noche.html": "55c6f567091941b0774089d54de2b28f910fcc77be955e71260fecf51882c9e1",
-    "content/posts/por-un-convenio-y-recomendacion-a-favor-del-trabajo-domestico.html": "f51ddd59e7d56f0e4443bafef59203580cd9a90e215952290c75eadef68f1fb7",
     "content/posts/homenaje-a-nuestro-companero-enrique-torres.html": "073f3c5f8d85670fb5e55b28b0bc007db23763fb66f6d0e66f9cc657da3b7e9f",
     "content/posts/instalacion.html": "c2323d631f0e96d9e875c90a38aebdc7ff7113cc5498fdc283fa3fe0a5deb8e2",
     "content/posts/promocion-y-defensa-de-los-derechos-humanos-y-laborales.html": "04ccafe291c6423e3d3bcdba2f60c172f6e0bc2bdb286a187b85a8dd6a05c23c",
@@ -184,7 +186,6 @@
     "content/posts/pautas-radiales-de-la-campana-nacional-para-la-ratificacion-del-convenio-189.html": "8fc79ed62b767a6d5ad2c79ccff9fcb5d1cdb20ba4f36f47d5af7e96952b34da",
     "content/posts/nos-sumamos-al-paro20s.html": "cd9d60d93fc1c59f9289c22ff29f5fc702e2a22208904026bcdfb17ee57973a9",
     "content/posts/ultimos-pronunciamientos.html": "55496613ba774cfaa3912d6fb8a8bfabb2e9e0610f1f9837dc7a01a84e4b300b",
-    "content/posts/noticias-internacionales.html": "3ff40c82bf03e46c7a34fcf5bd92d6324cd67a3dce102dc1f4cdb89ae1a3fd35",
     "content/posts/reinstalada-mesa-de-dialogo-cosme-con-el-igss-julio-2013.html": "744b55604bf0a7809362153df4529bd4da09638fc87502c5b8a0fb51d5943d8f",
     "content/posts/foro-publico-hacia-la-ratificacion-del-convenio-189-trabajo-decente-para-el-trabajo-domestico.html": "c89511d130a0310abdc60cea33faeba5a5512e4a6a19bb6a483423fd1d798465",
     "content/posts/participacion-cosme.html": "cbd77054a72c3d562fafb76ee3f63c02816d108159f049e5df7ab2c08eb2520b",
@@ -193,7 +194,6 @@
     "content/posts/i-congreso-de-mujeres-trabajadoras-de-guatemala-mayo-2010.html": "0092d6ec06cef215afc178afd32594c3bab12abee56ee9d02eae5568c109cd95",
     "content/posts/mesa-de-dialogo-con-el-instituto-guatemalteco-de-seguridad-social-igss.html": "b3e1ab4448cd0beb564eae5a974024d56411d7d52d64c6a5a2d20cc819fcaa42",
     "content/posts/mesa-de-dialogo-con-ministerio-de-trabajo-y-prevision-social.html": "9c6b101d41567b9b7243bc7cabdefc2c28d4a83e00a4acf1f36890f829f37a37",
-    "content/posts/plataforma-politica-2010-2011.html": "3e7af21e46d87523416e638a021743a95bbeecd7b4dd2b327007009b310e3db1",
     "content/posts/talleres-a-extension-agricola-del-ministerio-de-agricultua.html": "a2fa239006d0a0380ea5dedec72635db95a2506ffc00431533d45f725755ca7f",
     "content/posts/bienvenidos-a-nuestra-pagina-web.html": "cd95a65f902cfd2c851d73a6afdb40edaf8b242a346b592cbf6b4fd873101647",
     "content/posts/foro-con-partidos-politicos-atrahdom.html": "3a7724095f5ecb78d7e935ccfff63d1a9d49e901f130f833b7b7b6841625ca03",
@@ -1971,12 +1971,12 @@
     {
       "slug": "por-un-convenio-y-recomendacion-a-favor-del-trabajo-domestico",
       "title": "Por un Convenio y Recomendación a favor del Trabajo Doméstico.",
-      "local_route": "#/post/por-un-convenio-y-recomendacion-a-favor-del-trabajo-domestico",
+      "local_route": "/cendoc/por-un-convenio-y-recomendacion-a-favor-del-trabajo-domestico/",
       "collection": "archive",
       "type": "post",
-      "body": "Conferencia OIT 2010 Observaciones COSME del Informe Marrón Informe OIT Trabajo Domestico",
+      "body": "Recursos embebidos Conferencia OIT 2010 Observaciones COSME del Informe Marrón Informe OIT Trabajo Domestico",
       "description": "",
-      "author": "Maritza Velasquez",
+      "author": "COSME; ATRAHDOM",
       "institutions": "",
       "date": "2011-02-11T03:16:57+00:00",
       "categories": [
@@ -2520,14 +2520,14 @@
       "has_video": false
     },
     {
-      "slug": "noticias-internacionales",
-      "title": "Noticias Internacionales",
-      "local_route": "#/post/noticias-internacionales",
+      "slug": "approval-of-15-non-governmental-organizations-for-association-with-un-public",
+      "title": "Approval of 15 non-governmental organizations for association with UN public.",
+      "local_route": "/cendoc/approval-of-15-non-governmental-organizations-for-association-with-un-public/",
       "collection": "archive",
       "type": "post",
-      "body": "ATRAHDOM en el Departamento de Información Pública de las Naciones Unidas Original Ingles Traducción Español",
+      "body": "Recursos embebidos ATRAHDOM en el Departamento de Información Pública de las Naciones Unidas Traducción Español Abrir en pestaña nueva Original Ingles Abrir en pestaña nueva Original Ingles Traducción Español",
       "description": "",
-      "author": "",
+      "author": "Naciones Unidas",
       "institutions": "",
       "date": "2013-09-24T23:33:46+00:00",
       "categories": [
@@ -3270,13 +3270,13 @@
     },
     {
       "slug": "plataforma-politica-2010-2011",
-      "title": "Plataforma Politica 2010-2011",
-      "local_route": "#/post/plataforma-politica-2010-2011",
+      "title": "Plataforma Politica Desde El Pensamiento De Las Mujeres Trabajadoras De Guatemala.",
+      "local_route": "/cendoc/plataforma-politica-2010-2011/",
       "collection": "archive",
       "type": "post",
-      "body": "Descargar el archivo en el siguiente link: Plataforma Política de Mujeres trabajadoras de Guatemala",
-      "description": "",
-      "author": "Maritza Velasquez",
+      "body": "Recursos embebidos Plataforma Politica Desde El Pensamiento De Las Mujeres Trabajadoras De Guatemala. Abrir en pestaña nueva Descargar el documento PDF: Plataforma Politica Desde El Pensamiento De Las Mujeres Trabajadoras De Guatemala.",
+      "description": "Documento PDF de la Plataforma Politica Desde El Pensamiento De Las Mujeres Trabajadoras De Guatemala.",
+      "author": "ATRAHDOM",
       "institutions": "",
       "date": "2011-02-11T02:49:21+00:00",
       "categories": [
@@ -3286,7 +3286,7 @@
       "keywords": [],
       "identifier": null,
       "attachments": [
-        "assets/documents/plataformapoliticademujerestrabajadorasdeguatemala-1-3722af6954.doc"
+        "assets/documents/plataformapoliticademujerestrabajadorasdeguatemala-1-3722af6954.pdf"
       ],
       "has_document": true,
       "has_video": false

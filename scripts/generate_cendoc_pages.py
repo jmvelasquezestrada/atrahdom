@@ -223,7 +223,8 @@ def embeds_for(post: dict[str, Any], body: str, moved_labels: dict[str, str], do
         embeds.append(pdf_embed(path, label))
     if not embeds and not download_blocks:
         return ""
-    return '<h2>Recursos embebidos</h2>' + "".join(embeds) + "".join(download_blocks)
+    resource_heading = "" if re.search(r"<h2\b[^>]*>\s*Recursos embebidos\s*</h2>", body, re.I) else '<h2>Recursos embebidos</h2>'
+    return resource_heading + "".join(embeds) + "".join(download_blocks)
 
 
 def post_author(post: dict[str, Any]) -> str:
@@ -259,7 +260,8 @@ def sidebar(post: dict[str, Any], categories: list[str], slug: str) -> str:
         if label == "DOI" and value.startswith(("https://doi.org/", "http://doi.org/")):
             value_html = f'<a href="{html.escape(value, quote=True)}" rel="noopener">{html.escape(value)}</a>'
         parts.append(f'<p><strong>{label}:</strong><br>{value_html}</p>')
-    citation = f'{html.escape(author)}. ({citation_year(date)}). <em>{html.escape(plain_text(title))}</em>.' if author else f'<em>{html.escape(plain_text(title))}</em>. ({citation_year(date)}).'
+    citation_title = plain_text(str(post.get("editorial_citation_title") or title))
+    citation = f'{html.escape(author)}. ({citation_year(date)}). <em>{html.escape(citation_title)}</em>.' if author else f'<em>{html.escape(citation_title)}</em>. ({citation_year(date)}).'
     if identifier and identifier.get("type") == "DOI" and str(identifier.get("value") or "").startswith(("https://doi.org/", "http://doi.org/")):
         doi = str(identifier["value"])
         citation += f' <a href="{html.escape(doi, quote=True)}" rel="noopener">{html.escape(doi)}</a>'
@@ -274,16 +276,15 @@ def date_author_line(post: dict[str, Any]) -> str:
     if post_author(post):
         bits.append("Por " + html.escape(post_author(post)))
     modified = str(post.get("modified_date") or post.get("modified") or "")
-    if modified and modified != date_of(post):
+    if modified and modified != date_of(post) and str(post.get("slug") or "") not in {"plataforma-politica-2010-2011", "approval-of-15-non-governmental-organizations-for-association-with-un-public", "por-un-convenio-y-recomendacion-a-favor-del-trabajo-domestico"}:
         bits.append("Actualizado el " + html.escape(display_date(modified)))
     return "".join(f"<span>{item}</span>" for item in bits)
 
 
-def is_cendoc_post(post: dict[str, Any], excluded: set[str]) -> bool:
-    slug = str(post.get("slug") or "")
+def has_cendoc_detail(post: dict[str, Any]) -> bool:
     categories = [str(item) if isinstance(item, str) else "" for item in post.get("categories") or []]
     has_cendoc_category = any(re.search(r"document|publicaciones propias|investig|informe|manual|tesis", category, re.I) for category in categories)
-    return slug not in excluded and (has_cendoc_category or bool(post.get("attachments")))
+    return has_cendoc_category or bool(post.get("attachments"))
 
 
 def route_for_related(post: dict[str, Any], cendoc_slugs: set[str], communications: set[str]) -> str:
@@ -295,10 +296,10 @@ def route_for_related(post: dict[str, Any], cendoc_slugs: set[str], communicatio
     return str(post.get("local_route") or f"#/contenido/{post.get('type', 'post')}/{post.get('id', '')}")
 
 
-def related_markup(post: dict[str, Any], all_posts: list[dict[str, Any]], categories_by_slug: dict[str, list[str]], cendoc_slugs: set[str], communications: set[str]) -> str:
+def related_markup(post: dict[str, Any], all_posts: list[dict[str, Any]], categories_by_slug: dict[str, list[str]], cendoc_slugs: set[str], communications: set[str], hidden_slugs: set[str]) -> str:
     slug = str(post.get("slug") or "")
     categories = categories_by_slug.get(slug, [])
-    related = [item for item in all_posts if item.get("slug") != slug and set(categories).intersection(categories_by_slug.get(str(item.get("slug") or ""), []))]
+    related = [item for item in all_posts if item.get("slug") != slug and str(item.get("slug") or "") not in hidden_slugs and set(categories).intersection(categories_by_slug.get(str(item.get("slug") or ""), []))]
     related.sort(key=lambda item: date_sort_key(date_of(item)), reverse=True)
     cards = []
     for item in related[:3]:
@@ -316,7 +317,7 @@ def related_markup(post: dict[str, Any], all_posts: list[dict[str, Any]], catego
     return '<section class="section tint"><div class="wrap"><h2>Documentos relacionados</h2><div class="grid">' + "".join(cards) + '</div></div></section>'
 
 
-def render_page(template: str, post: dict[str, Any], categories: list[str], all_posts: list[dict[str, Any]], categories_by_slug: dict[str, list[str]], cendoc_slugs: set[str], communications: set[str]) -> str:
+def render_page(template: str, post: dict[str, Any], categories: list[str], all_posts: list[dict[str, Any]], categories_by_slug: dict[str, list[str]], cendoc_slugs: set[str], communications: set[str], hidden_slugs: set[str]) -> str:
     slug = str(post["slug"])
     if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", slug):
         raise ValueError(f"Unsafe or unsupported slug for CENDOC path: {slug!r}")
@@ -339,7 +340,7 @@ def render_page(template: str, post: dict[str, Any], categories: list[str], all_
         "CONTENT": body,
         "EMBEDS": embeds_for(post, body, moved_pdf_labels, download_blocks),
         "SIDEBAR": sidebar(post, categories, slug),
-        "RELATED": related_markup(post, all_posts, categories_by_slug, cendoc_slugs, communications),
+        "RELATED": related_markup(post, all_posts, categories_by_slug, cendoc_slugs, communications, hidden_slugs),
     }
     page = template
     for key, value in values.items():
@@ -355,10 +356,17 @@ def generate(check: bool = False, only_slugs: set[str] | None = None) -> list[Pa
     source_path = ROOT / "content" / "site.json"
     site_data = apply_editorial_overrides(json.loads(source_path.read_text(encoding="utf-8")), config)
     posts = site_data.get("posts", [])
-    excluded = set(config.get("cendoc_excluded_slugs", []))
     communications = set(config.get("communication_slugs", []))
+    communication_excluded = set(config.get("communication_excluded_slugs", []))
+    excluded = set(config.get("cendoc_excluded_slugs", []))
+    standalone = set(config.get("cendoc_standalone_slugs", []))
     manual = set(config.get("manual_excluded_slugs", []))
-    cendoc_posts = [post for post in posts if is_cendoc_post(post, excluded)]
+    known_slugs = {str(post.get("slug") or "") for post in posts}
+    invalid_standalone = standalone - known_slugs
+    invalid_policy = (standalone - excluded) | (standalone - communication_excluded) | (standalone & communications) | (standalone & manual)
+    if invalid_standalone or invalid_policy:
+        raise ValueError(f"Standalone CENDOC pages must be known records excluded from both catalogs and manual review: {sorted(invalid_standalone | invalid_policy)}")
+    cendoc_posts = [post for post in posts if has_cendoc_detail(post) and (str(post.get("slug") or "") not in excluded or str(post.get("slug") or "") in standalone) and str(post.get("slug") or "") not in communications and str(post.get("slug") or "") not in manual]
     slugs = [str(post.get("slug") or "") for post in cendoc_posts]
     if len(slugs) != len(set(slugs)):
         raise ValueError("The effective CENDOC catalog contains duplicate slugs")
@@ -381,7 +389,8 @@ def generate(check: bool = False, only_slugs: set[str] | None = None) -> list[Pa
         source_file = post.get("content_file")
         if source_file and not (ROOT / str(source_file)).is_file() and not post.get("content_html"):
             raise ValueError(f"Source content file is missing for {slug}: {source_file}")
-        page = render_page(template, post, categories_by_slug[slug], all_posts, categories_by_slug, set(slugs), communications)
+        hidden_related = (excluded - communications) | communication_excluded | manual
+        page = render_page(template, post, categories_by_slug[slug], all_posts, categories_by_slug, set(slugs), communications, hidden_related)
         destination = ROOT / "cendoc" / slug / "index.html"
         outputs.append(destination)
         if check:

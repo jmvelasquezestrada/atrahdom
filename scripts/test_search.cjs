@@ -2,6 +2,8 @@ const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const S=require('../js/search.js');
 const index=JSON.parse(fs.readFileSync('content/search-index.json','utf8'));
+const editorial=JSON.parse(fs.readFileSync('content/editorial-config.json','utf8'));
+const site=JSON.parse(fs.readFileSync('content/site.json','utf8'));
 const subset=c=>index.records.filter(r=>r.collection===c);
 for(const c of ['cendoc','comunicados']){
  for(const r of subset(c)) assert(S.search(subset(c),r.title).some(x=>x.local_route===r.local_route),r.title);
@@ -22,6 +24,30 @@ assert(S.search(index.records,'trabajo').length>12);
 assert(S.search(index.records,'Convencionalidad')[0].slug===control);
 assert.equal(new Set(index.records.map(r=>r.local_route)).size,index.records.length);
 assert.equal(index.counts.cendoc,75);assert.equal(index.counts.comunicados,37);
+const standalone=['plataforma-politica-2010-2011','approval-of-15-non-governmental-organizations-for-association-with-un-public','por-un-convenio-y-recomendacion-a-favor-del-trabajo-domestico'];
+for(const slug of standalone){
+ assert(editorial.cendoc_excluded_slugs.includes(slug),`${slug} must be excluded from CENDOC`);
+ assert(editorial.communication_excluded_slugs.includes(slug),`${slug} must be excluded from Comunicados`);
+ assert(editorial.cendoc_standalone_slugs.includes(slug),`${slug} must retain an individual CENDOC page`);
+ assert(site.editorial.cendoc_excluded_slugs.includes(slug),`${slug} exclusion must reach the browser site data`);
+ assert(site.editorial.communication_excluded_slugs.includes(slug),`${slug} communication exclusion must reach the browser site data`);
+ assert(!subset('cendoc').some(r=>r.slug===slug),`${slug} leaked into the CENDOC collection`);
+ assert(!subset('comunicados').some(r=>r.slug===slug),`${slug} leaked into the Comunicados collection`);
+ assert(!editorial.communication_slugs.includes(slug),`${slug} must not be an active Comunicados card`);
+ assert(!fs.readFileSync('comunicados/index.html','utf8').includes(`/comunicados/${slug}/`),`${slug} leaked into the Comunicados index`);
+ const global=S.search(index.records,slug.replaceAll('-',' ')).find(r=>r.slug===slug);
+ assert(global,`${slug} must remain in general search`);
+ assert.equal(global.local_route,`/cendoc/${slug}/`);
+ assert(fs.existsSync(`cendoc/${slug}/index.html`),`${slug} direct page is missing`);
+}
+const renamed=site.posts.find(r=>r.slug===standalone[1]);
+assert(renamed?.legacy_local_route==='#/post/noticias-internacionales','historical noticias-internacionales route alias was lost');
+assert(fs.readFileSync('app.js','utf8').includes('legacy_local_route'),'app route resolver no longer handles legacy aliases');
+for(const file of fs.readdirSync('cendoc').filter(name=>fs.existsSync(`cendoc/${name}/index.html`))){
+ const html=fs.readFileSync(`cendoc/${file}/index.html`,'utf8');
+ const related=html.match(/<section class="section tint"><div class="wrap"><h2>Documentos relacionados<\/h2>[\s\S]*?<\/section>/)?.[0]||'';
+ for(const slug of standalone)assert(!new RegExp(`href=["'](?:/cendoc/${slug}/|#\/post\/${slug})["']`).test(related),`${slug} leaked into automatic CENDOC related links on ${file}`);
+}
 console.log('Normalization, metadata, description, ranking, routes and contamination checks passed');
 // Failure-path tests use an in-memory fake fetch, never the live server.
 (async()=>{

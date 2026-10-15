@@ -61,7 +61,10 @@ def generate(check=False):
     if not node: raise ValueError("Node.js is required to read the repository's blog catalog")
     code="const fs=require('fs'),vm=require('vm');const ctx={window:{}};vm.runInNewContext(fs.readFileSync(process.argv[1],'utf8'),ctx);process.stdout.write(JSON.stringify(ctx.window.ATRAHDOM_BLOG));"
     blog=json.loads(subprocess.check_output([node,"-e",code,str(ROOT/"content/blog-posts.js")],text=True,encoding="utf-8"))
-    excluded=set(cfg.get("cendoc_excluded_slugs",[])); comm=set(cfg.get("communication_slugs",[]))
+    excluded=set(cfg.get("cendoc_excluded_slugs",[])); comm_excluded=set(cfg.get("communication_excluded_slugs",[])); comm=set(cfg.get("communication_slugs",[]))-comm_excluded
+    standalone=set(cfg.get("cendoc_standalone_slugs",[]))
+    invalid_standalone=(standalone-excluded)|(standalone-comm_excluded)|(standalone&comm)
+    if invalid_standalone: raise ValueError(f"Standalone CENDOC details must be excluded from both catalogs: {sorted(invalid_standalone)}")
     def cendoc(p): return p["slug"] not in excluded and (bool(p.get("attachments")) or any(re.search(r"document|publicaciones propias|investig|informe|manual|tesis",str(c),re.I) for c in p.get("categories",[])))
     static={}
     for path in sorted(ROOT.glob("**/index.html")):
@@ -77,7 +80,7 @@ def generate(check=False):
     posts=site.get("posts",[]); known={p["slug"] for p in posts}; records=[]; used=set()
     for p in [*site.get("pages",[]),*posts,*[p for p in blog if p["slug"] not in known]]:
         slug=p["slug"]; collection="comunicados" if slug in comm else "cendoc" if cendoc(p) and p in posts else "blog" if "/blog/"+slug+"/" in static else "pages" if p in site.get("pages",[]) else "archive"
-        route="/"+collection+"/"+slug+"/" if collection in {"cendoc","comunicados","blog"} else p.get("local_route") or "#/post/"+slug
+        route="/"+collection+"/"+slug+"/" if collection in {"cendoc","comunicados","blog"} else "/cendoc/"+slug+"/" if slug in standalone and p in posts else p.get("local_route") or "#/post/"+slug
         alias={"contactanos":"/contacto/","ejes-de-trabajo":"/que-hacemos/","organizacion":"/organizacion/","espacios-de-participacion":"/espacios-de-participacion/"}
         if collection=="pages": route=alias.get(slug,route)
         body=p.get("content_html") or ""
@@ -107,7 +110,13 @@ def generate(check=False):
     for collection in ["cendoc","comunicados"]:
         files={"/"+p.parent.relative_to(ROOT).as_posix()+"/" for p in (ROOT/collection).glob("*/index.html")}
         indexed={p["local_route"] for p in records if p["collection"]==collection}
-        if files!=indexed: raise ValueError(f"{collection}: detail pages and search records differ: {files ^ indexed}")
+        expected=indexed
+        if collection=="cendoc":
+            standalone_routes={f"/cendoc/{slug}/" for slug in standalone}
+            missing_details=standalone_routes-files
+            if missing_details: raise ValueError(f"CENDOC standalone detail pages are missing: {sorted(missing_details)}")
+            expected=indexed|standalone_routes
+        if files!=expected: raise ValueError(f"{collection}: detail pages and collection/search records differ: {files ^ expected}")
     result={"version":1,"sources":sources,"counts":counts,"records":records}
     output=json.dumps(result,ensure_ascii=False,indent=2)+"\n"; path=ROOT/"content/search-index.json"
     if check:
