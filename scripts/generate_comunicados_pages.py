@@ -115,7 +115,7 @@ def sidebar(post: dict[str, Any], date: str) -> str:
         else:
             parts.append(f'<p><strong>{label}:</strong><br>{html.escape(val)}</p>')
 
-    title = str(post.get("title") or "Sin título")
+    title = str(post.get("editorial_citation_title") or post.get("title") or "Sin título")
     year = citation_date(date)
     if author:
         citation = f'{html.escape(str(author))}. ({year}). <em>{html.escape(title)}</em>.'

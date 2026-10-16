@@ -4,13 +4,17 @@
   <meta charset="utf-8">
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FXM438VJSP"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-FXM438VJSP');
+    if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FXM438VJSP');
+      var gaScript = document.createElement('script');
+      gaScript.async = true;
+      gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-FXM438VJSP';
+      document.head.appendChild(gaScript);
+    }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,7 +44,7 @@
             <a href="/organizacion/">Organización</a>
             <a href="/que-hacemos/">Ejes de trabajo</a>
             <a href="/espacios-de-participacion/">Espacios de participación</a>
-            <a href="/#/organizaciones">Sindicatos</a>
+            <a href="/sindicatos/">Sindicatos</a>
           </div>
         </div>
         <div class="nav-group nav-group-library">
@@ -54,8 +58,8 @@
         <div class="nav-group">
           <button class="nav-trigger" aria-expanded="false" aria-haspopup="true">Infórmate</button>
           <div class="dropdown">
-            <a href="/#/ayuda">Solicita apoyo</a>
-            <a href="/#/participa">Afíliate</a>
+            <a href="/solicita-apoyo/">Solicita apoyo</a>
+            <a href="/afiliate/">Afíliate</a>
             <a href="/calculadora.html">Calculadora laboral</a>
             <a href="/contacto/">Contacto</a>
           </div>
@@ -84,7 +88,7 @@
 <li><a href="https://normlex.ilo.org/dyn/nrmlx_es/f?p=NORMLEXPUB:11200:0:0::NO::P11200_COUNTRY_ID:102667" target="_blank" rel="noopener noreferrer">Convenios 87 y 98 de la OIT.</a></li>
 <li><a href="https://atrahdom.org/2024/04/02/nuestros-derechos-como-trabajadoras-del-hogar-los-acuerdos-internacionales-que-los-respaldan-que-esta-sucediendo-hoy-en-dia-con-ellos-y-como-podemos-exigirlos/" target="_blank" rel="noopener noreferrer">Manual de derechos básicos para trabajadoras de casa particular.</a></li>
 <li><a href="https://www.igssgt.org/programa-especial-de-proteccion-para-trabajadoras-de-casa-particular/" target="_blank" rel="noopener noreferrer">Información sobre el programa PRECAPI del IGSS.</a></li>
-</ul><h2>Lecturas relacionadas</h2><ul class="resource-list"><li><a href="/blog/libertad-de-asociacion/">Libertad de Asociación</a></li><li><a href="/blog/sindicato-de-trabajadoras-domesticas-de-maquila-nexas-y-conexas-sitradom/">SITRADOM: trabajadoras domésticas, de maquila, nexas y conexas</a></li><li><a href="/blog/trabajo-a-domicilio-guatemala/">Trabajo a domicilio en Guatemala</a></li><li><a href="/organizacion/">Organización de ATRAHDOM</a></li></ul></article></div></section></main>
+</ul><h2>Lecturas relacionadas</h2><ul class="resource-list"><li><a href="/blog/libertad-de-asociacion/">Libertad de Asociación</a></li><li><a href="/sindicatos/sindicato-de-trabajadoras-domesticas-de-maquila-nexas-y-conexas-sitradom/">SITRADOM: trabajadoras domésticas, de maquila, nexas y conexas</a></li><li><a href="/blog/trabajo-a-domicilio-guatemala/">Trabajo a domicilio en Guatemala</a></li><li><a href="/organizacion/">Organización de ATRAHDOM</a></li></ul></article></div></section></main>
 
 
   <section class="contact-band"><div class="wrap contact-inner"><div><h2>¿Necesitas orientación laboral?</h2></div><a class="btn" href="/contacto/">Escríbenos hoy</a></div></section>

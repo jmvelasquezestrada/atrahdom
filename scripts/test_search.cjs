@@ -14,16 +14,28 @@ const has=(q,slug)=>assert(S.search(index.records,q).some(r=>r.slug===slug),q);
 const control='el-control-de-convencionalidad-una-herramienta-estrategica';
 for(const q of ['Ingrid Zurama Urizar','Friedrich Ebert Stiftung','2024','estrategica','ESTRATÉGICA','Control herramienta','herramienta, estratégica','Convencional'])has(q,control);
 has('Acta constitutiva del Sindicato','primera-acta-constitutiva-sitradomsa');
+has('Revista Sindical SITRADOM','revista-sindical-sitradom');
+const revista=subset('cendoc').find(r=>r.slug==='revista-sindical-sitradom');
+assert.equal(revista?.local_route,'/cendoc/revista-sindical-sitradom/');
+assert.equal(revista?.author,'Amory Marroquín; Sherly Najarro; Vicenta Montes; Gladis Castro; Cecilia Pérez');
+assert.equal(revista?.institutions,'SITRADOM');
+assert.equal(revista?.date,'15 de octubre de 2026');
 has('Presentaciones 2009 - 2010','presentaciones-2009-2010');
 has('Diagnostico','diagnostico');
 has('Donar','donar');has('Quiénes somos','quienes-somos');
 assert.equal(S.search(index.records,'zzzauditoria8090').length,0);
 const polluted=S.search(index.records,'coordinacion@atrahdom.org');
-assert(!polluted.some(r=>r.collection==='blog'),'footer contamination');
+assert(!index.records.some(r=>r.collection==='blog'&&r.body.includes('coordinacion@atrahdom.org')),'footer contamination');
 assert(S.search(index.records,'trabajo').length>12);
 assert(S.search(index.records,'Convencionalidad')[0].slug===control);
 assert.equal(new Set(index.records.map(r=>r.local_route)).size,index.records.length);
-assert.equal(index.counts.cendoc,75);assert.equal(index.counts.comunicados,39);
+assert.equal(index.counts.cendoc,76);assert.equal(index.counts.comunicados,40);
+const alimentacion=subset('comunicados').find(r=>r.slug==='comunicado-dia-internacional-alimentacion-2026');
+assert.equal(alimentacion?.local_route,'/comunicados/comunicado-dia-internacional-alimentacion-2026/');
+assert.equal(alimentacion?.title,'Comunicado en el Día Internacional de la Alimentación, 2026.');
+assert.equal(alimentacion?.author,'ATRAHDOM');
+assert.equal(alimentacion?.date,'2026-10-16');
+assert(alimentacion?.attachments.includes('assets/documents/comunicado-dia-internacional-alimentacion-2026.pdf'));
 const restoredCommunications=[
  'comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar',
  'comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar-2'

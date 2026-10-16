@@ -314,3 +314,7 @@ Esta no es todavía la arquitectura definitiva, pero el contenido existente pued
 ## 10. Conclusión
 
 El sitio contiene un archivo institucional y documental valioso acumulado durante más de quince años, pero su arquitectura responde a la lógica cronológica de WordPress y no a las tareas de sus audiencias. El rediseño debe conservar el archivo histórico, separar claramente el contenido institucional del editorial y documental, y crear rutas directas para ayuda, afiliación, consulta de recursos y donación.
+
+## Regla permanente de integridad institucional: SITRADOM y SITRADOMSA
+
+SITRADOM y SITRADOMSA son instituciones distintas. Mantener separados sus registros, documentos, fechas, fotografías, autorías y atribuciones. La similitud de sus nombres no justifica fusionar identidades, cruzar atribuciones ni deduplicar publicaciones. Cambiar la URL de un registro no cambia su identidad, procedencia ni atribución documental. El índice `/sindicatos/` presenta únicamente fichas institucionales; las publicaciones históricas individuales conservan su identidad y sus páginas propias.

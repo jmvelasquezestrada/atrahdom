@@ -70,6 +70,7 @@ def generate(check=False):
     for path in sorted(ROOT.glob("**/index.html")):
         rel=path.relative_to(ROOT)
         if any(x.startswith(".") or x in {"assets","content","node_modules"} for x in rel.parts): continue
+        if rel.as_posix()=="blog/sindicato-de-trabajadoras-domesticas-de-maquila-nexas-y-conexas-sitradom/index.html": continue
         if rel.as_posix()=="index.html" or len(rel.parts)==2 and rel.parts[0] in {"blog","cendoc","comunicados"}: continue
         source=read(rel); title=title_of(source)
         if title: static["/"+str(rel.parent).replace("\\","/")+"/"]=(rel,source,title)
@@ -78,10 +79,16 @@ def generate(check=False):
         source=read(path.relative_to(ROOT)); title=title_of(source)
         if title: static["/"+path.name]=(path.relative_to(ROOT),source,title)
     posts=site.get("posts",[]); known={p["slug"] for p in posts}; records=[]; used=set()
+    clean_routes={
+        "sitradom":"/sindicatos/sitradom/",
+        "sitradomsa":"/sindicatos/sitradomsa/",
+        "nuevo-sindicato-de-trabajadoras-domesticas-similares-y-a-cuenta-propia-sitradomsa":"/sindicatos/nuevo-sindicato-de-trabajadoras-domesticas-similares-y-a-cuenta-propia-sitradomsa/",
+        "sindicato-de-trabajadoras-domesticas-de-maquila-nexas-y-conexas-sitradom":"/sindicatos/sindicato-de-trabajadoras-domesticas-de-maquila-nexas-y-conexas-sitradom/",
+    }
     for p in [*site.get("pages",[]),*posts,*[p for p in blog if p["slug"] not in known]]:
-        slug=p["slug"]; collection="comunicados" if slug in comm else "cendoc" if cendoc(p) and p in posts else "blog" if "/blog/"+slug+"/" in static else "pages" if p in site.get("pages",[]) else "archive"
-        route="/"+collection+"/"+slug+"/" if collection in {"cendoc","comunicados","blog"} else "/cendoc/"+slug+"/" if slug in standalone and p in posts else p.get("local_route") or "#/post/"+slug
-        alias={"contactanos":"/contacto/","ejes-de-trabajo":"/que-hacemos/","organizacion":"/organizacion/","espacios-de-participacion":"/espacios-de-participacion/"}
+        slug=p["slug"]; collection="comunicados" if slug in comm else "cendoc" if cendoc(p) and p in posts else "blog" if "/blog/"+slug+"/" in static or slug in clean_routes and any(str(c).lower()=="blog" for c in p.get("categories",[])) else "pages" if p in site.get("pages",[]) else "archive"
+        route=clean_routes.get(slug) or ("/"+collection+"/"+slug+"/" if collection in {"cendoc","comunicados","blog"} else "/cendoc/"+slug+"/" if slug in standalone and p in posts else p.get("local_route") or "#/post/"+slug)
+        alias={"contactanos":"/contacto/","ejes-de-trabajo":"/que-hacemos/","organizacion":"/organizacion/","espacios-de-participacion":"/espacios-de-participacion/","sitradom":"/sindicatos/sitradom/"}
         if collection=="pages": route=alias.get(slug,route)
         body=p.get("content_html") or ""
         if route in static:

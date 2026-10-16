@@ -307,7 +307,8 @@ def related_markup(post: dict[str, Any], all_posts: list[dict[str, Any]], catego
         url = html.escape(route_for_related(item, cendoc_slugs, communications), quote=True)
         date = date_of(item)
         image = image_of(item)
-        media = f'<div class="card-media"><img src="{html.escape(image, quote=True)}" alt="" loading="lazy" decoding="async"></div>' if image else '<div class="card-media"></div>'
+        card_image = image or "assets/images/cropped-atrahdom-logo-2019-91a74affa5.png"
+        media = f'<div class="card-media"><img src="{html.escape(card_image, quote=True)}" alt="" loading="lazy" decoding="async"></div>'
         excerpt = plain_text(item.get("excerpt_html") or "") or plain_text(content_of(item))
         excerpt = html.escape(excerpt[:190] + ("…" if len(excerpt) > 190 else ""))
         date_html = f'<span>{html.escape(display_date(date))}</span>' if date else ""

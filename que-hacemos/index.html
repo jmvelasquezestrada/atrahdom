@@ -16,13 +16,17 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Ejes de Trabajo — ATRAHDOM">
   <meta name="twitter:description" content="Conoce los principales ejes de trabajo de ATRAHDOM: derechos humanos laborales, incidencia política e investigación.">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FXM438VJSP"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-FXM438VJSP');
+    if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FXM438VJSP');
+      var gaScript = document.createElement('script');
+      gaScript.async = true;
+      gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-FXM438VJSP';
+      document.head.appendChild(gaScript);
+    }
   </script>
   <base href="/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -54,7 +58,7 @@
             <a href="/organizacion/">Organización</a>
             <a href="/que-hacemos/" class="active" aria-current="page">Ejes de trabajo</a>
             <a href="/espacios-de-participacion/">Espacios de participación</a>
-            <a href="/#/organizaciones">Sindicatos</a>
+            <a href="/sindicatos/">Sindicatos</a>
           </div>
         </div>
         <div class="nav-group nav-group-library">
@@ -68,8 +72,8 @@
         <div class="nav-group">
           <button class="nav-trigger" aria-expanded="false" aria-haspopup="true">Infórmate</button>
           <div class="dropdown">
-            <a href="/#/ayuda">Solicita apoyo</a>
-            <a href="/#/participa">Afíliate</a>
+            <a href="/solicita-apoyo/">Solicita apoyo</a>
+            <a href="/afiliate/">Afíliate</a>
             <a href="/calculadora.html">Calculadora laboral</a>
             <a href="/contacto/">Contacto</a>
           </div>
@@ -167,7 +171,7 @@
       <div>
         <h2>¿Necesitas orientación laboral?</h2>
       </div>
-      <a class="btn" href="https://atrahdom.org/#/ayuda">Escríbenos hoy</a>
+      <a class="btn" href="/solicita-apoyo/">Escríbenos hoy</a>
     </div>
   </section>
 

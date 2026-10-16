@@ -1,5 +1,20 @@
 window.ATRAHDOM_BLOG = [
   {
+    slug: 'historia-de-sitradom',
+    title: 'Entrevista a Maritza Velásquez sobre la historia del SITRADOM y su participación en el movimiento sindical.',
+    publication_date: '2026-10-15T00:00:00-06:00',
+    internal_author: 'Maritza Velásquez',
+    interviewer: 'Amory Marroquín',
+    institutions: 'SITRADOM; ATRAHDOM',
+    editorial_type: 'Entrevista',
+    categories: ['Blog', 'Entrevista', 'SITRADOM'],
+    tags: ['Amory Marroquín', 'SITRADOM', 'ATRAHDOM', 'historia del sindicalismo', 'trabajadoras domésticas'],
+    featured_image: 'assets/images/cropped-atrahdom-logo-2019-91a74affa5.png',
+    excerpt_html: '<p>Entrevista dirigida a Maritza Velásquez; fundadora y Secretaria General SITRADOM.</p>',
+    content_file: 'content/posts/historia-de-sitradom.html',
+    local_route: '/blog/historia-de-sitradom/'
+  },
+  {
     slug: 'nueva-imagen-de-nuestra-pagina-web',
     title: 'Nueva imagen de nuestra página web',
     publication_date: '2026-09-29T00:00:00-06:00',

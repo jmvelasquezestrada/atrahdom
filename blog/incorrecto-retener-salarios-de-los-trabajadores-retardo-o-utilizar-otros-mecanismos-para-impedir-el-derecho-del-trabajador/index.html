@@ -5,13 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Organizaciones sindicales cuestionan una propuesta de deducir salarios a trabajadores extranjeros en Malasia y alertan sobre sus derechos laborales.">
   <title>Incorrecto retener salarios de los trabajadores, retardo o utilizar otros mecanismos para impedir el derecho del trabajador. — ATRAHDOM</title>
-  <!-- Google tag (gtag.js) -->
-  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-FXM438VJSP"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-FXM438VJSP');
+    if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FXM438VJSP');
+      var gaScript = document.createElement('script');
+      gaScript.async = true;
+      gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-FXM438VJSP';
+      document.head.appendChild(gaScript);
+    }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -53,7 +57,7 @@
             <a href="/organizacion/">Organización</a>
             <a href="/que-hacemos/">Ejes de trabajo</a>
             <a href="/espacios-de-participacion/">Espacios de participación</a>
-            <a href="/#/organizaciones">Sindicatos</a>
+            <a href="/sindicatos/">Sindicatos</a>
           </div>
         </div>
         <div class="nav-group nav-group-library">
@@ -67,8 +71,8 @@
         <div class="nav-group">
           <button class="nav-trigger" aria-expanded="false" aria-haspopup="true">Infórmate</button>
           <div class="dropdown">
-            <a href="/#/ayuda">Solicita apoyo</a>
-            <a href="/#/participa">Afíliate</a>
+            <a href="/solicita-apoyo/">Solicita apoyo</a>
+            <a href="/afiliate/">Afíliate</a>
             <a href="/calculadora.html">Calculadora laboral</a>
             <a href="/contacto/">Contacto</a>
           </div>
@@ -191,7 +195,7 @@
       <div>
         <h2>¿Necesitas orientación laboral?</h2>
       </div>
-      <a class="btn" href="https://atrahdom.org/#/ayuda">Escríbenos hoy</a>
+      <a class="btn" href="/solicita-apoyo/">Escríbenos hoy</a>
     </div>
   </section>
 

@@ -3,6 +3,7 @@
   "source_workbook": "INVENTARIO CENDOC-COMUNICADOS.xlsx",
   "source_sheet": "ACTUALIZACION",
   "communication_slugs": [
+    "comunicado-dia-internacional-alimentacion-2026",
     "posicionamiento-de-las-osc-en-el-fpan-2025",
     "diagnostico",
     "presentaciones-2009-2010",
@@ -960,6 +961,22 @@
     "por-un-convenio-y-recomendacion-a-favor-del-trabajo-domestico": {
       "author": "COSME; ATRAHDOM",
       "citation_title": "Por un Convenio y Recomendación a favor del Trabajo Doméstico"
+    },
+    "revista-sindical-sitradom": {
+      "title": "Revista Sindical SITRADOM",
+      "citation_title": "Revista Sindical SITRADOM",
+      "date": "15 de octubre de 2026",
+      "author": "Amory Marroquín; Sherly Najarro; Vicenta Montes; Gladis Castro; Cecilia Pérez",
+      "institutions": "SITRADOM",
+      "identifier": null
+    },
+    "comunicado-dia-internacional-alimentacion-2026": {
+      "title": "Comunicado en el Día Internacional de la Alimentación, 2026.",
+      "citation_title": "Comunicado en el Día Internacional de la Alimentación, 2026",
+      "date": "2026-10-16",
+      "author": "ATRAHDOM",
+      "institutions": "",
+      "identifier": null
     }
   },
   "cendoc_standalone_slugs": [
