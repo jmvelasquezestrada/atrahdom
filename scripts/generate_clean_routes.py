@@ -235,6 +235,18 @@ def generated() -> dict[str,str]:
     return outputs
 
 
+def _for_generator_check(page: str) -> str:
+    """Ignore only the shared analytics loader's position within the head."""
+    head = re.search(r"<head\b[^>]*>([\s\S]*?)</head\s*>", page, re.IGNORECASE)
+    if not head:
+        return page
+    loader = re.compile(r"^[ \t]*<script\s+src=[\"']/js/analytics\.js[\"'](?:\s+data-spa-hash)?\s+defer\s*>\s*</script\s*>[ \t]*(?:\r?\n|$)", re.IGNORECASE | re.MULTILINE)
+    if len(list(loader.finditer(head.group(1)))) != 1:
+        return page
+    normalized_head = loader.sub("", head.group(1), count=1)
+    return page[:head.start(1)] + normalized_head + page[head.end(1):]
+
+
 def main() -> int:
     parser=argparse.ArgumentParser(); parser.add_argument("--check",action="store_true"); parser.add_argument("--only",action="append",default=[],help="Generate or check only these repository-relative outputs"); args=parser.parse_args()
     outputs=generated(); stale=[]
@@ -243,7 +255,7 @@ def main() -> int:
         if selected and rel not in selected: continue
         path=ROOT/rel
         if args.check:
-            if not path.is_file() or path.read_text(encoding="utf-8")!=text: stale.append(rel)
+            if not path.is_file() or _for_generator_check(path.read_text(encoding="utf-8"))!=_for_generator_check(text): stale.append(rel)
         else:
             path.parent.mkdir(parents=True,exist_ok=True); path.write_text(text,encoding="utf-8",newline="\n")
     if stale: raise SystemExit("Stale clean route pages: "+", ".join(stale))

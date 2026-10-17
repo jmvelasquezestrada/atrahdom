@@ -248,6 +248,25 @@ route=()=>{
   }
   previousRoute();
 };
+const routeWithAnalytics=route;
+route=()=>{
+  routeWithAnalytics();
+  if(location.hash&&cleanLegacyRoutes[location.hash.slice(1)])return;
+  if(!state.ready)return;
+  const heading=main.querySelector('h1');
+  const pageTitle=heading?.textContent.trim();
+  if(!pageTitle)return;
+  document.title=`${pageTitle} | ATRAHDOM`;
+  const hostname=String(window.location.hostname||'').toLowerCase().replace(/^\[|\]$/g,'');
+  if(['localhost','127.0.0.1','::1'].includes(hostname))return;
+  const pageView={
+    page_title:document.title,
+    page_location:window.location.href,
+    page_path:window.location.pathname+window.location.search+window.location.hash
+  };
+  if(window.ATRAHDOM_ANALYTICS?.pageView)window.ATRAHDOM_ANALYTICS.pageView(pageView);
+  else(window.ATRAHDOM_PENDING_PAGE_VIEWS||(window.ATRAHDOM_PENDING_PAGE_VIEWS=[])).push(pageView);
+};
 const unionsWithHistoricalCards=unions;
 unions=()=>{
   const rendered=unionsWithHistoricalCards();

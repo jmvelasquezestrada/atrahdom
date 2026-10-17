@@ -395,12 +395,25 @@ def generate(check: bool = False, only_slugs: set[str] | None = None) -> list[Pa
         destination = ROOT / "cendoc" / slug / "index.html"
         outputs.append(destination)
         if check:
-            if not destination.is_file() or destination.read_text(encoding="utf-8") != page:
+            if not destination.is_file() or _for_generator_check(destination.read_text(encoding="utf-8")) != _for_generator_check(page):
                 raise ValueError(f"Generated output is missing or stale: {destination.relative_to(ROOT)}")
         else:
             destination.parent.mkdir(parents=True, exist_ok=True)
             destination.write_text(page, encoding="utf-8", newline="\n")
     return outputs
+
+
+def _for_generator_check(html: str) -> str:
+    """Ignore only the shared analytics loader's position within the head."""
+    head = re.search(r"<head\b[^>]*>([\s\S]*?)</head\s*>", html, re.IGNORECASE)
+    if not head:
+        return html
+    loader = re.compile(r"^[ \t]*<script\s+src=[\"']/js/analytics\.js[\"'](?:\s+data-spa-hash)?\s+defer\s*>\s*</script\s*>[ \t]*(?:\r?\n|$)", re.IGNORECASE | re.MULTILINE)
+    matches = list(loader.finditer(head.group(1)))
+    if len(matches) != 1:
+        return html
+    normalized_head = loader.sub("", head.group(1), count=1)
+    return html[:head.start(1)] + normalized_head + html[head.end(1):]
 
 
 def main() -> None:
