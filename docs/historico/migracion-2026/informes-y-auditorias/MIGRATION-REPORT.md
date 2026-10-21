@@ -2,6 +2,12 @@
 
 Fecha: 26 de junio de 2026
 
+> **Nota de archivo (separada del contenido histórico):** ubicaciones actuales de los encargos, con rutas relativas a la raíz del repositorio:
+> - Migración: docs/historico/migracion-2026/encargos/PROMPT-CODEX-MIGRACION.txt
+> - Rediseño: docs/historico/rediseno-2026/encargos/PROMPT-REDISENO-FASES.txt
+>
+> El prompt de rediseño previó actualizar este informe, pero esta nota de archivo no certifica que ese cierre se haya completado.
+
 ## Estado actual
 
 Se inició la Fase 1 de inventario exhaustivo del portal original `https://atrahdom.org/`.

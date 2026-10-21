@@ -1,3 +1,10 @@
+NOTA DE ARCHIVO — LOCALIZACIÓN ACTUAL
+Este documento estaba originalmente en la raíz del repositorio. Las rutas del texto original corresponden al contexto histórico de esa etapa y no deben reinterpretarse automáticamente respecto de su nueva ubicación.
+Rutas actuales relativas a la raíz del repositorio:
+- Informe de migración: docs/historico/migracion-2026/informes-y-auditorias/MIGRATION-REPORT.md
+- Referencia FCAM: docs/historico/rediseno-2026/referencias/REFERENCIA-FCAM-ESTILO-NAVEGACION.md
+FIN DE LA NOTA DE ARCHIVO. A continuación se conserva el encargo original.
+
 PROYECTO: Rediseño y migración completa del portal ATRAHDOM
 RUTA LOCAL DEL PROYECTO:
 /Users/juanvelasquez/Proyectos/atrahdom

@@ -6,6 +6,8 @@
 > reglas). Este archivo te dice EN QUÉ PUNTO EXACTO va el trabajo y cómo
 > continuar. Actualízalo cada vez que completes una fase o sub-tarea.
 
+> **Nota de localización:** el prompt de rediseño se encuentra ahora en docs/historico/rediseno-2026/encargos/PROMPT-REDISENO-FASES.txt (ruta relativa a la raíz del repositorio). El bloque introductorio y las menciones históricas originales se conservan literalmente.
+
 Última actualización: 5 de julio de 2026 — Fase 5 completada
 
 ---

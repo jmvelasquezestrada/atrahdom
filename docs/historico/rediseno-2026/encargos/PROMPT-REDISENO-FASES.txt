@@ -1,3 +1,8 @@
+NOTA DE ARCHIVO — LOCALIZACIÓN ACTUAL
+Este documento estaba originalmente en la raíz del repositorio. Sus rutas e instrucciones originales se conservan como registro histórico; no deben reinterpretarse automáticamente respecto de su nueva ubicación ni constituyen una certificación de tareas completadas.
+Ruta actual relativa a la raíz del repositorio del informe relacionado: docs/historico/migracion-2026/informes-y-auditorias/MIGRATION-REPORT.md
+FIN DE LA NOTA DE ARCHIVO. A continuación se conserva el encargo original.
+
 ================================================================================
 PROMPT MAESTRO — REDISEÑO VISUAL DEL PORTAL ATRAHDOM
 Versión: 1.0 — 5 de julio de 2026
