@@ -8382,7 +8382,8 @@
       "editorial_date": "15 de octubre de 2026",
       "editorial_type": "Revista sindical",
       "editorial_institutions": "SITRADOM",
-      "editorial_identifier": null
+      "editorial_identifier": null,
+      "editorial_citation_title": "Revista Sindical SITRADOM"
     },
     {
       "original_url": "https://www.atrahdom.org/comunicados/comunicado-dia-internacional-alimentacion-2026/",
@@ -8417,6 +8418,40 @@
       "editorial_author": "ATRAHDOM",
       "editorial_date": "2026-10-16",
       "editorial_citation_title": "Comunicado en el Día Internacional de la Alimentación, 2026",
+      "editorial_institutions": "",
+      "editorial_identifier": null
+    },
+    {
+      "type": "post",
+      "title": "Comunicado 20 de octubre de 2026",
+      "slug": "comunicado-20-de-octubre-de-2026",
+      "publication_date": "2026-10-20",
+      "wordpress_user": "",
+      "internal_author": "",
+      "categories": [
+        "Comunicados"
+      ],
+      "tags": [],
+      "parent": "",
+      "canonical_url": "https://www.atrahdom.org/comunicados/comunicado-20-de-octubre-de-2026/",
+      "local_route": "/comunicados/comunicado-20-de-octubre-de-2026/",
+      "content_file": "content/posts/comunicado-20-de-octubre-de-2026.html",
+      "content_hash_local": "2efe6cf097613b1d29639abcd2bd70ba2b93cf072a1e823e6978d42467aa9708",
+      "media_count": 1,
+      "attachment_count": 1,
+      "migration_status": "editorial",
+      "verification_status": "verified",
+      "featured_image": "",
+      "images": [],
+      "attachments": [
+        "assets/documents/conmemoracion-gesta-revolucionaria-20-octubre-1944-2026.pdf"
+      ],
+      "external_links": [],
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "ATRAHDOM; SITRADOM",
+      "editorial_date": "2026-10-20",
+      "editorial_citation_title": "Comunicado 20 de octubre de 2026",
       "editorial_institutions": "",
       "editorial_identifier": null
     }
@@ -9368,6 +9403,7 @@
   ],
   "editorial": {
     "communication_slugs": [
+      "comunicado-20-de-octubre-de-2026",
       "comunicado-dia-internacional-alimentacion-2026",
       "posicionamiento-de-las-osc-en-el-fpan-2025",
       "diagnostico",

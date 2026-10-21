@@ -261,7 +261,7 @@ h3{font-size:1.5rem}
 .editorial-featured img{display:block;width:100%;max-height:520px;object-fit:cover;border-radius:12px}
 .prose a{color:var(--morado)}
 .sidebar{position:sticky;top:130px;align-self:start;padding:26px;background:var(--rosa-suave);border-radius:12px}
-.sidebar h3{font-size:1.2rem}
+.sidebar h3{font-size:1.2rem;overflow-wrap:anywhere}
 .sidebar a{display:block;margin:10px 0;color:var(--morado);font-weight:700}
 
 /* Contenido migrado literal */

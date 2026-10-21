@@ -29,7 +29,13 @@ assert(!index.records.some(r=>r.collection==='blog'&&r.body.includes('coordinaci
 assert(S.search(index.records,'trabajo').length>12);
 assert(S.search(index.records,'Convencionalidad')[0].slug===control);
 assert.equal(new Set(index.records.map(r=>r.local_route)).size,index.records.length);
-assert.equal(index.counts.cendoc,76);assert.equal(index.counts.comunicados,40);
+assert.equal(index.counts.cendoc,76);assert.equal(index.counts.comunicados,41);
+has('Comunicado 20 de octubre de 2026','comunicado-20-de-octubre-de-2026');
+const revolucion=subset('comunicados').find(r=>r.slug==='comunicado-20-de-octubre-de-2026');
+assert.equal(revolucion?.local_route,'/comunicados/comunicado-20-de-octubre-de-2026/');
+assert.equal(revolucion?.author,'ATRAHDOM; SITRADOM');
+assert.equal(revolucion?.date,'2026-10-20');
+assert(revolucion?.attachments.includes('assets/documents/conmemoracion-gesta-revolucionaria-20-octubre-1944-2026.pdf'));
 const alimentacion=subset('comunicados').find(r=>r.slug==='comunicado-dia-internacional-alimentacion-2026');
 assert.equal(alimentacion?.local_route,'/comunicados/comunicado-dia-internacional-alimentacion-2026/');
 assert.equal(alimentacion?.title,'Comunicado en el Día Internacional de la Alimentación, 2026.');
