@@ -1,5 +1,19 @@
 window.ATRAHDOM_BLOG = [
   {
+    slug: 'mas-que-cuatro-paredes-aire-luz-silencio-derechos-laborales',
+    title: 'Más que cuatro paredes: Por qué el aire, la luz y el silencio en tu trabajo son derechos laborales',
+    publication_date: '2026-10-28T00:00:00-06:00',
+    internal_author: 'ATRAHDOM',
+    editorial_type: 'Análisis',
+    categories: ['Blog', 'Análisis', 'Salud y seguridad laboral'],
+    tags: ['calidad del ambiente interior', 'salud laboral', 'ventilación', 'iluminación', 'ruido', 'maquila', 'trabajo doméstico'],
+    featured_image: 'assets/images/mas-que-cuatro-paredes-aire-luz-silencio-derechos-laborales.png',
+    excerpt_html: '<p>Un análisis sobre la calidad del ambiente interior y el derecho a condiciones de trabajo seguras en fábricas, centros de llamadas y hogares.</p>',
+    content_file: 'content/posts/mas-que-cuatro-paredes-aire-luz-silencio-derechos-laborales.html',
+    local_route: '/blog/mas-que-cuatro-paredes-aire-luz-silencio-derechos-laborales/'
+  },
+
+  {
     slug: 'cooperacion-internacional-obligaciones-legales',
     title: '¿Cómo cumplir con las exigencias de la cooperación internacional sin comprometer las obligaciones legales, fiscales y documentales de las organizaciones en Guatemala?',
     publication_date: '2026-10-26T00:00:00-06:00',
