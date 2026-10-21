@@ -85,9 +85,22 @@ Aplica estos criterios mínimos a las publicaciones de `/blog/`, `/cendoc/` y `/
 ### Publicaciones nuevas y fichas editoriales
 
 - Comprueba, según corresponda, la página o documento publicado, la ficha identificadora y el índice de sección; valida el slug, la ruta, la URL canónica, la ausencia de duplicados no justificados y el orden cronológico cuando aplique.
+- Cada nueva publicación incorporada en `/cendoc/`, `/comunicados/` o `/blog/` debe incluir la actualización del área «Actualidad» de la homepage como parte del mismo procedimiento editorial.
+- Actualidad debe mostrar exactamente las tres publicaciones más recientes del conjunto de los tres apartados, no una por apartado, ordenadas de más reciente a más antigua de izquierda a derecha según sus fechas editoriales documentadas. Conserva las fechas aprobadas, incluidas las futuras; no las excluyas automáticamente por ser posteriores a la fecha de trabajo.
+- Cada tarjeta de Actualidad debe conservar el mismo diseño, estructura visual, campos y convenciones de las tarjetas generadas en el índice de su apartado de origen. Reutiliza los mecanismos existentes cuando sea posible; no sustituyas las variantes de sección por una tarjeta genérica que pierda esas características.
+- Enlaza cada tarjeta a la ruta pública correspondiente y utiliza los datos editoriales existentes, sin inventar títulos, fechas, imágenes, autorías ni otros datos ausentes, conforme a C.
+- La actualización de Actualidad y su validación son requisitos para dar por terminada la tarea editorial. Comprueba cantidad, orden, diseño, datos y enlaces; distingue la verificación local de la disponibilidad pública, que solo puede declararse con evidencia de la versión desplegada, conforme a D y E.
+- Si no puedes determinar el orden con seguridad, incluida una ambigüedad de fechas o empates que afecte la selección, una tarjeta no puede generarse correctamente o aparece un fallo crítico, aplica F y presenta el diagnóstico.
+- Esta obligación no amplía automáticamente el alcance autorizado: si cumplirla requiere modificar archivos u operar fuera de la autorización de la tarea, informa y solicita la ampliación necesaria antes de intervenir; no declares terminada la tarea editorial mientras ese requisito siga pendiente.
 - Verifica el bloque lateral con el título exacto de su sección: Blog, «Sobre esta publicación»; CENDOC, «Sobre este documento»; Comunicados, «Sobre este comunicado».
 - Comprueba fecha documentada, autoría identificada, tipo de material, instituciones documentadas, cita sugerida en APA, 7.ª edición, y enlace de retorno a la sección correspondiente, según los campos aplicables y el diseño existente.
 - Basa los datos bibliográficos exclusivamente en información verificable. Omite el campo o su valor cuando falten datos, conforme al diseño. No inventes fechas, autores, instituciones, editoriales ni otros elementos; no atribuyas automáticamente autoría a ATRAHDOM ni completes citas APA con datos ficticios.
+
+### Pluma invitada en el Blog
+
+- Aplica esta regla a las publicaciones de `/blog/` únicamente cuando el usuario identifique expresamente el artículo como una colaboración de pluma invitada; no infieras esa condición por la autoría ni por el estilo del texto.
+- El campo «Tipo» debe comenzar con la expresión exacta `Pluma invitada, `, seguida de la clasificación temática que Codex asigne según el contenido del artículo. Por ejemplo: `Pluma invitada, Derechos laborales`. Conserva ese orden y formato.
+- La clasificación temática debe ser pertinente, concreta y coherente con el artículo; no debe sustituir ni eliminar la identificación de «Pluma invitada». Si el contenido no permite determinar una clasificación adecuada con suficiente seguridad, detente y consulta al usuario antes de publicar.
 
 ### Presentación tipográfica de artículos del Blog
 
