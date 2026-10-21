@@ -3,12 +3,13 @@
   "sources": {
     "content/site.json": "9ac0de7e8eb751c8c06d06f63ad807ab59597db531a636638c00dc1dad910855",
     "content/editorial-config.json": "4ea6143dec9801352cb21b3aa9a1c7fec2de63ba903f70f9bde4af2f60b7dbe2",
-    "content/blog-posts.js": "749610888c2155fcf06f514c9b87b75b098054a294c8df2a1c6b8a66bdfa243b",
+    "content/blog-posts.js": "cda9af54417be5cc532bd05f4eb8f80bbe84d752c68ad72694faad9f2a2780b9",
     "afiliate/index.html": "86c4fcb0953f0c462089826f9f46e2b9ec08dea93f00e956b55f1fe56a98d737",
     "blog/10-anos-del-c189/index.html": "2b50f8453bd0beb0c9a1bd272ad405f235a4bb8c09ae6a55411bc1fef4513f24",
     "blog/coalicion-de-genero-y-comercio/index.html": "e6a85303c4936ac07cf13e3733108af365ac6334ef6b82f57b374db3e858fbef",
     "blog/conoce-tus-derechos-aguinaldo-bono-14-prestaciones/index.html": "6b14c140cb327daace084d0253e8b006af34447eccc271906ec2b08919777d40",
     "blog/convenio-189-derechos-trabajadoras-hogar-guatemala/index.html": "7b683ff3816bb3c508b838dc424006e9a436df5ad6500eaca004b548d84e4757",
+    "blog/cooperacion-internacional-obligaciones-legales/index.html": "72bb3f676afc8de69792bb80bc8a3c7f1151114469adcd100fa3085295fbafd0",
     "blog/derechos-laborales-son-derechos-sin-fronteras/index.html": "88f221299b8a6b10181a4837a97501e96ab4c743218101a0d901a919db26dca1",
     "blog/desde-el-2016-se-abrio-la-puerta-del-infierno-en-guatemala/index.html": "40df82ff57e1fa28b9c9a3b1a869a90f46ac2d4fc02039e7d7105f4f4db54cad",
     "blog/despliega-tus-alas/index.html": "a56b128faf078339b968e2bb95841f76fd73741aa510c43eca5666350784a00c",
@@ -219,7 +220,7 @@
   },
   "counts": {
     "archive": 47,
-    "blog": 38,
+    "blog": 39,
     "cendoc": 76,
     "comunicados": 40,
     "pages": 11
@@ -4364,6 +4365,34 @@
         "assets/documents/comunicado-dia-internacional-alimentacion-2026.pdf"
       ],
       "has_document": true,
+      "has_video": false
+    },
+    {
+      "slug": "cooperacion-internacional-obligaciones-legales",
+      "title": "¿Cómo cumplir con las exigencias de la cooperación internacional sin comprometer las obligaciones legales, fiscales y documentales de las organizaciones en Guatemala?",
+      "local_route": "/blog/cooperacion-internacional-obligaciones-legales/",
+      "collection": "blog",
+      "type": "post",
+      "body": "Quienes trabajamos en organizaciones sociales sabemos que detrás de cada proyecto hay mucho más que actividades, presupuestos e informes. Hay personas comprometidas, comunidades que esperan resultados y equipos que hacen grandes esfuerzos para que los recursos lleguen a donde realmente se necesitan. La cooperación internacional ha sido una aliada importante para impulsar iniciativas en favor de los derechos humanos, laborales y de las mujeres en Guatemala. Sin embargo, pocas veces hablamos de los desafíos que enfrentamos quienes tenemos la responsabilidad de administrar y justificar esos recursos. Uno de ellos es el manejo de la documentación financiera. Pero siempre surge una preocupación legítima: ¿cómo cumplimos con esa solicitud sin poner en riesgo los documentos que también debemos resguardar en Guatemala? No se trata de negarnos a rendir cuentas. Las organizaciones tenemos claro que administrar fondos de cooperación implica responsabilidad, transparencia y disposición para las auditorías. Sabemos que cada gasto debe estar debidamente respaldado. Pero también debemos cumplir con las leyes de nuestro país. El Código Tributario de Guatemala, Decreto 6-91, en sus artículos 112 y 112 A, contempla obligaciones relacionadas con la conservación y disponibilidad de los documentos y registros que respaldan las operaciones de los contribuyentes. Asimismo, la Ley de Organizaciones No Gubernamentales para el Desarrollo, Decreto 2-2003, y sus reformas mediante el Decreto 4-2020, establece obligaciones contables y de fiscalización para las organizaciones sujetas a esta normativa. Estas disposiciones nos recuerdan que nuestra responsabilidad no termina cuando presentamos un informe financiero a la cooperación. También debemos estar preparadas para responder ante las autoridades guatemaltecas cuando corresponda. Aunque estas leyes no prohíben de manera general que los documentos originales salgan del país, sí nos obligan a tomar en serio su conservación y disponibilidad. Detrás de cada documento también hay una responsabilidad. Quienes trabajamos en la administración sabemos cuánto esfuerzo representa reunir una factura, elaborar una liquidación o conseguir las firmas de las personas que participan en una actividad. No todos los documentos pueden recuperarse fácilmente. Una factura podría, en determinadas circunstancias, reponerse, pero ¿qué sucede con un listado de asistencia que contiene las firmas originales de veinte o treinta participantes? Por eso, cuando planteamos dudas sobre el traslado de documentos, no estamos buscando complicar los procesos. Estamos tratando de proteger el trabajo realizado y evitar problemas futuros. Existen alternativas, como las revisiones digitales, las auditorías en las sedes de las organizaciones o el envío de copias autenticadas, cuando sean aceptadas por el financiador. Estas opciones también requieren planificación, claridad y recursos económicos. La cooperación también debe construirse desde el respeto Las organizaciones locales conocemos nuestras realidades, nuestras responsabilidades legales y las dificultades que enfrentamos para ejecutar los proyectos. Por eso, consideramos importante que nuestras inquietudes administrativas sean escuchadas y comprendidas. Pedir una explicación, consultar una disposición legal o proponer una alternativa no significa falta de colaboración. Significa asumir con seriedad nuestra responsabilidad institucional. Una reflexión final… Rendir cuentas no debería convertirse en una contradicción entre cumplir con el cooperante y cumplir con las leyes de Guatemala. Necesitamos procedimientos claros desde el inicio de cada proyecto, acuerdos sobre la custodia de los documentos y mecanismos de auditoría que protejan tanto los recursos financieros como a las organizaciones responsables de administrarlos. Porque al final, todas las partes buscamos lo mismo: que los recursos sean utilizados correctamente, que exista transparencia y que los proyectos generen cambios positivos en la vida de las personas. La transparencia no se demuestra únicamente entregando documentos. También se demuestra cuidándolos, resguardándolos y tomando decisiones responsables sobre ellos. Y quizá esa sea una de las reflexiones más importantes: una cooperación que busca fortalecer a las organizaciones sociales también debe aprender a escuchar, respetar y confiar en quienes sostienen el trabajo desde los territorios.",
+      "description": "Una reflexión sobre la rendición de cuentas a la cooperación internacional y el resguardo de documentos conforme a las obligaciones legales en Guatemala.",
+      "author": "Rossina Salguero",
+      "institutions": "",
+      "date": "26 de octubre de 2026",
+      "categories": [
+        "Blog",
+        "Opinión",
+        "Cooperación internacional"
+      ],
+      "keywords": [
+        "cooperación internacional",
+        "organizaciones sociales",
+        "obligaciones legales",
+        "documentación financiera",
+        "Guatemala"
+      ],
+      "identifier": null,
+      "attachments": [],
+      "has_document": false,
       "has_video": false
     },
     {

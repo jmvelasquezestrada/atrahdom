@@ -1,5 +1,17 @@
 window.ATRAHDOM_BLOG = [
   {
+    slug: 'cooperacion-internacional-obligaciones-legales',
+    title: '¿Cómo cumplir con las exigencias de la cooperación internacional sin comprometer las obligaciones legales, fiscales y documentales de las organizaciones en Guatemala?',
+    publication_date: '2026-10-26T00:00:00-06:00',
+    internal_author: 'Rossina Salguero',
+    editorial_type: 'Artículo de opinión',
+    categories: ['Blog', 'Opinión', 'Cooperación internacional'],
+    tags: ['cooperación internacional', 'organizaciones sociales', 'obligaciones legales', 'documentación financiera', 'Guatemala'],
+    excerpt_html: '<p>Una reflexión sobre la rendición de cuentas a la cooperación internacional y el resguardo de documentos conforme a las obligaciones legales en Guatemala.</p>',
+    content_file: 'content/posts/cooperacion-internacional-obligaciones-legales.html',
+    local_route: '/blog/cooperacion-internacional-obligaciones-legales/'
+  },
+  {
     slug: 'historia-de-sitradom',
     title: 'Entrevista a Maritza Velásquez sobre la historia del SITRADOM y su participación en el movimiento sindical.',
     publication_date: '2026-10-15T00:00:00-06:00',
