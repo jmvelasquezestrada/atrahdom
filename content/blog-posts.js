@@ -1,5 +1,18 @@
 window.ATRAHDOM_BLOG = [
   {
+    slug: 'por-que-tu-bomba-de-las-4-de-la-manana-no-es-la-adoracion-que-dios-busca',
+    title: 'Por qué tu "bomba" de las 4 de la mañana no es la adoración que Dios busca',
+    publication_date: '2026-10-30T00:00:00-06:00',
+    internal_author: 'Amory Marroquín',
+    editorial_type: 'Artículo de opinión',
+    categories: ['Blog', 'Opinión'],
+    tags: ['bombas de feria', 'contaminación acústica', 'ruido', 'convivencia comunitaria', 'salud'],
+    featured_image: 'assets/images/bomba-feria-adoracion.jpg',
+    excerpt_html: '<p>Ocurre en las trincheras más profundas del sueño REM. El mundo está envuelto en el silencio sagrado y reparador de las 4:00 de la mañana.</p>',
+    content_file: 'content/posts/por-que-tu-bomba-de-las-4-de-la-manana-no-es-la-adoracion-que-dios-busca.html',
+    local_route: '/blog/por-que-tu-bomba-de-las-4-de-la-manana-no-es-la-adoracion-que-dios-busca/'
+  },
+  {
     slug: 'mas-que-cuatro-paredes-aire-luz-silencio-derechos-laborales',
     title: 'Más que cuatro paredes: Por qué el aire, la luz y el silencio en tu trabajo son derechos laborales',
     publication_date: '2026-10-28T00:00:00-06:00',
