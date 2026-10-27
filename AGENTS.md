@@ -107,6 +107,16 @@ Aplica estos criterios mínimos a las publicaciones de `/blog/`, `/cendoc/` y `/
 - En el cuerpo de los artículos del Blog, alinea los párrafos con justificación y los encabezados H2 y H3 a la izquierda, sin justificación.
 - Conserva la jerarquía, el estilo visual y las convenciones existentes del sitio. Limita cualquier ajuste de estilo al cuerpo del artículo correspondiente; no introduzcas estilos globales que afecten otras secciones.
 
+### Presentación visual de imágenes del Blog
+
+- Trata todas las imágenes que aparezcan dentro del cuerpo de una publicación de `/blog/` como imágenes principales, cualquiera que sea su contenido. Colócalas al inicio del cuerpo, antes del primer encabezado o párrafo, en su orden original; céntralas horizontalmente en la columna de contenido y dentro de su contenedor. No dejes imágenes editoriales dentro del flujo de texto.
+- Reutiliza la clase `.blog-editorial-feature` para presentar cada imagen principal del artículo en un contenedor de proporción `16 / 9`, ancho adaptable al espacio disponible, centrado y con esquinas de `12px`. Las miniaturas editoriales del índice de `/blog/` también deben conservar proporción `16 / 9`, ajuste completo y colores originales.
+- Conserva la proporción del archivo original con `object-fit: contain` y centrado horizontal y vertical. Los espacios sobrantes deben usar el rosa pálido del fondo de la página mediante `var(--paper)`. No estires ni deformes imágenes.
+- No recortes imágenes automáticamente ni cambies sus colores, filtros o mezcla de color.
+- Las imágenes históricas, incluidos carteles, infografías, documentos y galerías, también se muestran completas y conservan su proporción y colores originales dentro del mismo contenedor; no alteres los archivos de imagen.
+- Reutiliza los mecanismos y estilos existentes cuando corresponda. Limita los ajustes al Blog y verifica proporción, ausencia de deformación, integridad visual y adaptación a escritorio y móvil.
+- Esta regla no autoriza por sí sola modificar publicaciones existentes, archivos de imagen ni estilos globales. Toda implementación debe respetar el alcance autorizado de la tarea.
+
 ### SEO y metadatos
 
 - Cuando formen parte de la tarea autorizada, verifica título, descripción, URL canónica con base preferida `https://www.atrahdom.org`, directivas de indexación, datos estructurados pertinentes y metadatos Open Graph y Twitter/X.
