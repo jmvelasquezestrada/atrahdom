@@ -8454,6 +8454,43 @@
       "editorial_citation_title": "Comunicado 20 de octubre de 2026",
       "editorial_institutions": "",
       "editorial_identifier": null
+    },
+    {
+      "original_url": "https://www.atrahdom.org/comunicados/conmemoracion-del-dia-internacional-de-los-cuidados-2026/",
+      "final_url": "https://www.atrahdom.org/comunicados/conmemoracion-del-dia-internacional-de-los-cuidados-2026/",
+      "type": "post",
+      "title": "Conmemoración del Día Internacional de los Cuidados, 2026",
+      "slug": "conmemoracion-del-dia-internacional-de-los-cuidados-2026",
+      "publication_date": "2026-10-29",
+      "wordpress_user": "",
+      "internal_author": "",
+      "categories": [
+        "Comunicados"
+      ],
+      "tags": [],
+      "parent": "",
+      "canonical_url": "https://www.atrahdom.org/comunicados/conmemoracion-del-dia-internacional-de-los-cuidados-2026/",
+      "local_route": "/comunicados/conmemoracion-del-dia-internacional-de-los-cuidados-2026/",
+      "content_file": "content/posts/conmemoracion-del-dia-internacional-de-los-cuidados-2026.html",
+      "content_hash_local": "2efe6cf097613b1d29639abcd2bd70ba2b93cf072a1e823e6978d42467aa9708",
+      "media_count": 1,
+      "attachment_count": 1,
+      "migration_status": "editorial",
+      "verification_status": "verified",
+      "featured_image": "",
+      "images": [],
+      "attachments": [
+        "assets/documents/conmemoracion-del-dia-internacional-de-los-cuidados-2026.pdf"
+      ],
+      "external_links": [],
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "Red Guatemalteca por los Cuidados",
+      "editorial_date": "2026-10-29",
+      "editorial_citation_title": "Conmemoración del día internacional de los cuidados, 2026",
+      "editorial_institutions": "",
+      "editorial_identifier": null,
+      "excerpt_html": "Los cuidados no son un acto de amor, son un derecho. Y exigimos que el Estado los reconozca como tales."
     }
   ],
   "attachments": [
@@ -9403,6 +9440,7 @@
   ],
   "editorial": {
     "communication_slugs": [
+      "conmemoracion-del-dia-internacional-de-los-cuidados-2026",
       "comunicado-20-de-octubre-de-2026",
       "comunicado-dia-internacional-alimentacion-2026",
       "posicionamiento-de-las-osc-en-el-fpan-2025",

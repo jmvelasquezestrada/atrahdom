@@ -3,6 +3,7 @@
   "source_workbook": "INVENTARIO CENDOC-COMUNICADOS.xlsx",
   "source_sheet": "ACTUALIZACION",
   "communication_slugs": [
+    "conmemoracion-del-dia-internacional-de-los-cuidados-2026",
     "comunicado-20-de-octubre-de-2026",
     "comunicado-dia-internacional-alimentacion-2026",
     "posicionamiento-de-las-osc-en-el-fpan-2025",
@@ -976,6 +977,14 @@
       "citation_title": "Comunicado en el Día Internacional de la Alimentación, 2026",
       "date": "2026-10-16",
       "author": "ATRAHDOM",
+      "institutions": "",
+      "identifier": null
+    },
+    "conmemoracion-del-dia-internacional-de-los-cuidados-2026": {
+      "title": "Conmemoración del Día Internacional de los Cuidados, 2026",
+      "citation_title": "Conmemoración del día internacional de los cuidados, 2026",
+      "date": "2026-10-29",
+      "author": "Red Guatemalteca por los Cuidados",
       "institutions": "",
       "identifier": null
     }

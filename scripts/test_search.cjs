@@ -29,7 +29,7 @@ assert(!index.records.some(r=>r.collection==='blog'&&r.body.includes('coordinaci
 assert(S.search(index.records,'trabajo').length>12);
 assert(S.search(index.records,'Convencionalidad')[0].slug===control);
 assert.equal(new Set(index.records.map(r=>r.local_route)).size,index.records.length);
-assert.equal(index.counts.cendoc,76);assert.equal(index.counts.comunicados,41);
+assert.equal(index.counts.cendoc,76);assert.equal(index.counts.comunicados,42);
 has('Comunicado 20 de octubre de 2026','comunicado-20-de-octubre-de-2026');
 const revolucion=subset('comunicados').find(r=>r.slug==='comunicado-20-de-octubre-de-2026');
 assert.equal(revolucion?.local_route,'/comunicados/comunicado-20-de-octubre-de-2026/');
@@ -42,6 +42,12 @@ assert.equal(alimentacion?.title,'Comunicado en el Día Internacional de la Alim
 assert.equal(alimentacion?.author,'ATRAHDOM');
 assert.equal(alimentacion?.date,'2026-10-16');
 assert(alimentacion?.attachments.includes('assets/documents/comunicado-dia-internacional-alimentacion-2026.pdf'));
+has('Conmemoración del Día Internacional de los Cuidados, 2026','conmemoracion-del-dia-internacional-de-los-cuidados-2026');
+const cuidados=subset('comunicados').find(r=>r.slug==='conmemoracion-del-dia-internacional-de-los-cuidados-2026');
+assert.equal(cuidados?.local_route,'/comunicados/conmemoracion-del-dia-internacional-de-los-cuidados-2026/');
+assert.equal(cuidados?.author,'Red Guatemalteca por los Cuidados');
+assert.equal(cuidados?.date,'2026-10-29');
+assert(cuidados?.attachments.includes('assets/documents/conmemoracion-del-dia-internacional-de-los-cuidados-2026.pdf'));
 const restoredCommunications=[
  'comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar',
  'comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar-2'
