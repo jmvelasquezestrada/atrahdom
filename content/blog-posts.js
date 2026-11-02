@@ -1,5 +1,18 @@
 window.ATRAHDOM_BLOG = [
   {
+    slug: 'nada-sobre-nosotras-sin-nosotras-sistema-nacional-de-cuidados',
+    title: "\"Nada sobre nosotras sin nosotras\". Por qué un Sistema Nacional de Cuidados debe construirse con las trabajadoras",
+    publication_date: '2026-11-02T00:00:00-06:00',
+    internal_author: 'ATRAHDOM',
+    editorial_type: 'Posicionamiento',
+    categories: ['Blog', 'Posicionamiento', 'Política pública', 'Trabajo de cuidados'],
+    tags: ['cuidados', 'trabajadoras de los cuidados', 'Sistema Nacional de Cuidados', 'Guatemala', 'derechos laborales'],
+    featured_image: 'assets/images/nada-sobre-nosotras-sin-nosotras-sistema-nacional-cuidados.png',
+    excerpt_html: '<p>En cada hogar de Guatemala, antes de que el primer rayo de sol ilumine las calles, una maquinaria invisible ya se ha puesto en marcha.</p>',
+    content_file: 'content/posts/nada-sobre-nosotras-sin-nosotras-sistema-nacional-de-cuidados.html',
+    local_route: '/blog/nada-sobre-nosotras-sin-nosotras-sistema-nacional-de-cuidados/'
+  },
+  {
     slug: 'por-que-tu-bomba-de-las-4-de-la-manana-no-es-la-adoracion-que-dios-busca',
     title: 'Por qué tu "bomba" de las 4 de la mañana no es la adoración que Dios busca',
     publication_date: '2026-10-30T00:00:00-06:00',
