@@ -20,6 +20,11 @@ const cuidadosBlog=subset('blog').find(r=>r.slug==='nada-sobre-nosotras-sin-noso
 assert.equal(cuidadosBlog?.local_route,'/blog/nada-sobre-nosotras-sin-nosotras-sistema-nacional-de-cuidados/');
 assert.equal(cuidadosBlog?.author,'ATRAHDOM');
 assert.equal(cuidadosBlog?.date,'2 de noviembre de 2026');
+has('diálogo tripartito trabajadoras guatemaltecas','voces-invisibles-trabajadoras-guatemaltecas-decisiones-laborales');
+const invisiblesBlog=subset('blog').find(r=>r.slug==='voces-invisibles-trabajadoras-guatemaltecas-decisiones-laborales');
+assert.equal(invisiblesBlog?.local_route,'/blog/voces-invisibles-trabajadoras-guatemaltecas-decisiones-laborales/');
+assert.equal(invisiblesBlog?.author,'ATRAHDOM');
+assert.equal(invisiblesBlog?.date,'4 de noviembre de 2026');
 const revista=subset('cendoc').find(r=>r.slug==='revista-sindical-sitradom');
 assert.equal(revista?.local_route,'/cendoc/revista-sindical-sitradom/');
 assert.equal(revista?.author,'Amory Marroquín; Sherly Najarro; Vicenta Montes; Gladis Castro; Cecilia Pérez');

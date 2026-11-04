@@ -1,5 +1,18 @@
 window.ATRAHDOM_BLOG = [
   {
+    slug: 'voces-invisibles-trabajadoras-guatemaltecas-decisiones-laborales',
+    title: "Voces invisibles: Por qué las trabajadoras guatemaltecas quedan excluidas de las decisiones laborales",
+    publication_date: '2026-11-04T00:00:00-06:00',
+    internal_author: 'ATRAHDOM',
+    editorial_type: 'Análisis',
+    categories: ["Blog","Análisis","Derechos laborales","Representación laboral"],
+    tags: ["diálogo tripartito","trabajo informal","trabajadoras domésticas","PRECAPI","maquila","representación laboral","Guatemala"],
+    featured_image: 'assets/images/voces-invisibles-dialogo-tripartito-guatemala.png',
+    excerpt_html: '<p>En Guatemala, se está llevando a cabo una conversación crítica a puerta cerrada, una que decide cuánto cobran las personas, qué ocurre cuando enferman y cómo se les protege de la violencia en el trabajo.</p>',
+    content_file: 'content/posts/voces-invisibles-trabajadoras-guatemaltecas-decisiones-laborales.html',
+    local_route: '/blog/voces-invisibles-trabajadoras-guatemaltecas-decisiones-laborales/'
+  },
+  {
     slug: 'nada-sobre-nosotras-sin-nosotras-sistema-nacional-de-cuidados',
     title: "\"Nada sobre nosotras sin nosotras\". Por qué un Sistema Nacional de Cuidados debe construirse con las trabajadoras",
     publication_date: '2026-11-02T00:00:00-06:00',
