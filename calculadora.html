@@ -19,6 +19,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/calculadora.css">
+  <link rel="stylesheet" href="css/calculadora-v2.css">
+  <link rel="stylesheet" href="css/calculadora-v22.css">
   <style>
     .site-header{position:sticky;top:0;z-index:50;background:rgba(253,248,246,.95);backdrop-filter:blur(14px);border-bottom:1px solid rgba(26,17,24,.14)}
     .utility-bar{height:40px;background:#1a1118}.utility-inner{max-width:1180px;margin:auto}
@@ -83,51 +85,68 @@
     </div>
   </header>
   <main id="calculadora" class="shell">
-    <header class="intro"><p class="kicker">ESTIMACIÓN ORIENTATIVA</p><h1>Calculadora de prestaciones laborales</h1><p>Ingresá los datos que conozcás. Los cálculos se hacen únicamente en este navegador.</p></header>
+    <header class="intro"><p class="kicker">ORIENTACIÓN LABORAL</p><h1>Calculadora laboral <span class="beta-badge">Beta</span></h1><p>Respondé algunas preguntas sobre tu trabajo y los pagos que recibiste. Revisá tus respuestas antes de ver el informe.</p></header>
     <div class="notice" role="note">Esta calculadora proporciona una estimación orientativa de posibles prestaciones y montos laborales con base en los datos ingresados y los parámetros incorporados por la normativa laboral vigente de Guatemala. <strong>No constituye una resolución legal, inspección laboral ni asesoría jurídica definitiva.</strong></div>
-    <div class="layout">
-      <form id="calculator-form" novalidate>
-        <section><h2>1. Relación laboral</h2><div class="fields two">
-          <label>Fecha de nacimiento <input type="date" name="birthDate" title="Formato: dd/mm/aaaa"></label>
-          <label>Sector <select name="sector"><option value="privado">Privado</option><option value="publico">Público</option><option value="otro">Otro / por determinar</option></select></label>
-          <label>Actividad económica <select name="activity"><option value="agricola">Agrícola</option><option value="noAgricola">No agrícola</option><option value="maquila">Exportación y maquila</option></select></label>
-          <label>Circunscripción <select name="circumscription"><option value="ce1">CE1 — Departamento de Guatemala</option><option value="ce2">CE2 — Resto del país</option></select><small>Para 2016–2022 se usa la tabla nacional.</small></label>
-          <label>Fecha de inicio <input required type="date" name="startDate" title="Formato: dd/mm/aaaa"></label><label>Fecha de terminación <input required type="date" name="endDate" title="Formato: dd/mm/aaaa"></label>
-          <label>Motivo <select name="reason"><option value="despido_injustificado">Despido injustificado</option><option value="renuncia">Renuncia voluntaria</option><option value="despido_justificado">Despido justificado</option><option value="mutuo_acuerdo">Mutuo acuerdo</option></select></label>
-        </div></section>
-        <section><h2>2. Jornada y salario</h2><div class="fields two">
-          <label>Tipo de jornada <select name="shift"><option value="diurna">Diurna (8 horas)</option><option value="nocturna">Nocturna (6 horas)</option><option value="mixta">Mixta (7 horas)</option></select></label>
-          <label>Horas por semana <input type="number" min="0" step=".5" name="weeklyHours" placeholder="Ej. 48"></label>
-          <label>Salario ordinario promedio (Q) <input required type="number" min="0" step=".01" name="ordinarySalary" placeholder="0.00"></label>
-          <label>Salario extraordinario promedio (Q) <input type="number" min="0" step=".01" name="extraordinarySalary" value="0"></label>
-          <label>Comisiones promedio (Q) <input type="number" min="0" step=".01" name="commissions" value="0"></label>
-          <label>Bonificación incentivo (Q) <input type="number" name="bonus" value="250" readonly><small>Parámetro del prototipo.</small></label>
-        </div></section>
-        <section><h2>3. Períodos de prestaciones</h2><div class="fields two">
-          <label>Último período de vacaciones pagado <input type="date" name="vacationLastPaid" title="Formato: dd/mm/aaaa"><small>El período pendiente comienza al día siguiente de esta fecha. Si se deja vacío, se usa el aniversario laboral más reciente.</small></label>
-          <label>Días de vacaciones gozadas <input type="number" min="0" name="vacationTaken" value="0"><small>El prototipo utiliza 15 días anuales como base.</small></label>
-          <label>Último período de aguinaldo pagado <input type="date" name="aguinaldoLastPaid" title="Formato: dd/mm/aaaa"></label>
-          <label>Último período de Bono 14 pagado <input type="date" name="bono14LastPaid" title="Formato: dd/mm/aaaa"></label><label>Último salario efectivamente pagado <input type="date" name="lastSalaryPaid" title="Formato: dd/mm/aaaa"></label>
-        </div><p class="hint">Si nunca recibió aguinaldo o Bono 14, dejá el campo vacío: se tomará la fecha de inicio.</p></section>
-        <section><h2>4. Montos pendientes</h2><div class="fields two">
-          <label>Horas extraordinarias sin pagar <input type="number" min="0" step=".5" name="unpaidOvertime" value="0"></label>
-          <label>Días pendientes para ajuste salarial <input type="number" min="0" step="1" name="salaryAdjustmentDays" value="0" readonly><small>Se calcula desde el último salario efectivamente pagado hasta la terminación.</small></label>
-          <label>¿Recibías ventajas económicas? <select name="economicAdvantages"><option value="no">No</option><option value="si">Sí</option></select></label>
-          <label>Bonificación incentivo <select name="bonusStatus"><option value="recibida">Recibida</option><option value="no_recibida">No recibida</option><option value="desconocida">No sé / no me la desglosaban</option></select></label>
-          <label>Días pendientes de bonificación incentivo <input type="number" min="0" step="1" name="bonusPendingDays" value="0"><small>Q250 ÷ 30 × días pendientes.</small></label>
-        </div>
-        <div class="repeat-head"><h3>Ajustes y salarios pendientes por año</h3><button type="button" class="secondary" id="add-adjustment">+ Agregar año</button></div>
-        <p class="hint">El ajuste salarial principal compara automáticamente tu salario ordinario promedio con el salario mínimo ordinario vigente más reciente (2026), según la actividad y circunscripción seleccionadas. Los registros por año usan días pendientes para salarios y reajustes.</p><div id="adjustments"></div>
+    <div class="wizard-layout">
+      <form id="calculator-form" class="wizard-panel" novalidate>
+        <div class="wizard-progress" id="wizard-progress" aria-live="polite"></div>
+        <section class="wizard-step" data-step="work">
+          <h2>Tu trabajo</h2><p>La calculadora estima prestaciones para relaciones del sector privado regidas por el Código de Trabajo de Guatemala.</p>
+          <div class="wizard-fields">
+            <label>¿Qué actividad realizabas?<select name="activity" required><option value="">Elegí una opción</option><option value="agricola">Agrícola</option><option value="noAgricola">No agrícola</option><option value="maquila">Exportación y maquila</option></select></label>
+            <label class="wide">¿En qué departamento trabajabas?<select name="circumscription" required><option value="">Elegí una opción</option><option value="ce1">CE1 – Departamento de Guatemala</option><option value="ce2">CE2 – Otro departamento</option></select><span class="field-note">Para algunos años la tabla disponible contiene una referencia nacional.</span></label>
+            <label class="wide">¿Cuándo empezaste a trabajar allí?<input type="date" name="startDate" required></label>
+          </div>
         </section>
-        <p id="form-errors" class="errors" role="alert"></p><button class="calculate" type="submit">Calcular estimación</button>
+        <section class="wizard-step" data-step="salary" hidden>
+          <h2>Tu salario</h2><p>Contanos cuánto recibías normalmente por tu trabajo, sin sumar la bonificación incentivo.</p>
+          <div class="wizard-fields">
+            <fieldset class="salary-field wide"><legend>¿Cuánto salario ordinario recibías al mes?</legend><input type="number" min="0" step=".01" name="ordinarySalary" inputmode="decimal"><span class="field-note">Anotá el salario antes de descuentos. No incluye comisiones ni la bonificación incentivo de Q250. Si no conocés el monto, podés dejarlo vacío; no se inventará una cifra y se explicará qué rubros dependen de este dato.</span></fieldset>
+            <label>¿Recibías comisiones?<select name="commissionsStatus" required><option value="">Elegí una opción</option><option value="no">No</option><option value="si">Sí</option></select></label>
+            <label class="conditional-field" data-show-when="commissionsStatus:si" hidden>Promedio mensual de comisiones (Q)<input type="number" min="0" step=".01" name="commissions" inputmode="decimal"></label>
+            <label>¿Recibías otros pagos como parte de tu salario?<select name="extraordinaryStatus" required><option value="">Elegí una opción</option><option value="no">No</option><option value="si">Sí</option></select></label>
+            <label class="conditional-field" data-show-when="extraordinaryStatus:si" hidden>Promedio mensual de esos pagos (Q)<input type="number" min="0" step=".01" name="extraordinarySalary" inputmode="decimal"></label>
+            <div class="field-note wide"><strong>Bonificación incentivo legal: Q250 mensuales.</strong> Se muestra aparte y no se suma al salario ordinario que ingreses.</div>
+          </div>
+        </section>
+        <section class="wizard-step" data-step="termination" hidden>
+          <h2>Cómo terminó el trabajo</h2><p>Elegí la opción que mejor describe lo ocurrido. La herramienta no determina legalmente tu situación.</p>
+          <div class="wizard-fields">
+            <label>¿Cómo terminó tu relación laboral?<select name="reason" required><option value="">Elegí una opción</option><option value="despido_injustificado">Me despidieron y no me explicaron una causa</option><option value="despido_justificado">Me despidieron con una causa indicada</option><option value="renuncia">Renuncié</option><option value="mutuo_acuerdo">Terminamos por acuerdo</option></select></label>
+            <label>¿Cuál fue tu último día de trabajo?<input type="date" name="endDate" required></label>
+          </div>
+        </section>
+        <section class="wizard-step" data-step="benefits" hidden>
+          <h2>Vacaciones y pagos anuales</h2><p>Indicá lo que recordás. Aguinaldo y Bono 14 tienen períodos distintos.</p>
+          <div class="wizard-fields">
+            <fieldset class="choice-field wide"><legend>¿Tomaste vacaciones durante los últimos cinco años?</legend><label><input type="radio" name="vacationStatus" value="yes"> Sí</label><label><input type="radio" name="vacationStatus" value="no"> No</label><span class="field-note">Si no podés confirmar que tomaste vacaciones, seleccioná No. Esa respuesta se usará como supuesto para estimar los días pendientes, sin que determine una deuda definitiva.</span></fieldset>
+            <label class="conditional-field wide" data-show-when="vacationStatus:yes" hidden>¿Cuántos días de vacaciones gozaste durante el período que se revisa?<input type="number" min="0" step="1" name="vacationTaken" inputmode="numeric"></label>
+            <fieldset class="choice-field"><legend>¿Recibiste el Aguinaldo del último período anual?</legend><label><input type="radio" name="aguinaldoStatus" value="yes"> Sí</label><label><input type="radio" name="aguinaldoStatus" value="no"> No</label><span class="field-note">La referencia anual va del 1 de diciembre al 30 de noviembre. Si no podés confirmar el pago, seleccioná No; se estimarán los períodos aplicables bajo ese supuesto orientativo.</span></fieldset>
+            <fieldset class="choice-field"><legend>¿Recibiste el Bono 14 del último período anual?</legend><label><input type="radio" name="bono14Status" value="yes"> Sí</label><label><input type="radio" name="bono14Status" value="no"> No</label><span class="field-note">Su referencia anual va del 1 de julio al 30 de junio. Si no podés confirmar el pago, seleccioná No; se estimarán los períodos aplicables bajo ese supuesto orientativo.</span></fieldset>
+          </div>
+        </section>
+        <section class="wizard-step" data-step="payments" hidden>
+          <h2>Otros pagos y derechos por revisar</h2><p>Algunos conceptos requieren más información para calcular un monto. Si falta, los señalaremos sin asignarles Q0.</p>
+          <div class="wizard-fields">
+            <fieldset class="choice-field"><legend>¿Recibías vivienda, alimentos u otras ventajas como parte de tu salario?</legend><label><input type="radio" name="economicAdvantages" value="yes"> Sí</label><label><input type="radio" name="economicAdvantages" value="no"> No</label><span class="field-note">No ingresés un monto. El motor estima este concepto con su fórmula vigente a partir del salario y las comisiones; su base jurídica sigue pendiente de revisión. Si no podés confirmar que las recibías, seleccioná No.</span></fieldset>
+            <fieldset class="choice-field wide"><legend>¿Trabajaste horas extraordinarias que no te pagaron?</legend><label><input type="radio" name="overtimeStatus" value="yes"> Sí</label><label><input type="radio" name="overtimeStatus" value="no"> No</label><span class="field-note">Si no podés confirmar que quedaron horas pendientes, seleccioná No. Si respondes que sí, indicá las horas y tu jornada habitual para aplicar el cálculo vigente.</span></fieldset>
+            <label class="conditional-field" data-show-when="overtimeStatus:yes" hidden>Horas extraordinarias no pagadas<input type="number" min="0.01" step=".25" name="overtimeHours" inputmode="decimal"></label>
+            <label class="conditional-field" data-show-when="overtimeStatus:yes" hidden>Tipo de jornada<select name="overtimeShift"><option value="">Elegí una opción</option><option value="diurna">Diurna (8 horas)</option><option value="nocturna">Nocturna (6 horas)</option><option value="mixta">Mixta (7 horas)</option></select></label>
+          </div>
+        </section>
+        <section class="wizard-step" data-step="summary" hidden><h2>Revisá tus respuestas</h2><p>Antes de preparar el informe, podés volver a cualquier tema y corregirlo.</p><div id="summary-content" class="summary-list"></div></section>
+        <section class="wizard-step" data-step="result" hidden><h2>Tu informe orientativo</h2><div id="results" class="guided-result" aria-live="polite"></div><div class="wizard-actions"><button type="button" class="secondary-action" data-edit-step="summary">Revisar respuestas</button><button type="button" class="primary" id="print-report">Imprimir o guardar como PDF</button></div></section>
+        <p id="form-errors" class="wizard-error" role="alert" aria-live="assertive"></p>
+        <div class="wizard-actions" id="wizard-actions"><button type="button" class="secondary-action" id="wizard-back">Atrás</button><button type="button" class="secondary-action" id="wizard-review" hidden>Revisar respuestas</button><button type="button" class="secondary-action" id="wizard-prepare-report" hidden>Preparar informe</button><button type="button" class="primary" id="wizard-next">Continuar</button></div>
       </form>
-      <aside id="results" aria-live="polite"><div class="results-empty"><p class="kicker">RESULTADOS</p><h2>Tu estimación aparecerá aquí</h2><p>Completá al menos las fechas y el salario ordinario para comenzar.</p></div></aside>
+      <aside class="wizard-help" id="step-help" aria-live="polite"><h2 id="help-title">Orientación para esta pregunta</h2><p><strong>Qué significa</strong><br><span id="help-what"></span></p><p><strong>Por qué importa</strong><br><span id="help-why"></span></p><p><strong>Si no lo sabés</strong><br><span id="help-unknown"></span></p><a class="right-reference" href="/cendoc/codigo-de-trabajo-republica-de-guatemala/">Consultar el Código de Trabajo</a></aside>
     </div>
   </main>
+
   <dialog id="search-dialog"><form method="dialog" class="search-panel"><button class="dialog-close" aria-label="Cerrar">×</button><label for="site-search">Buscar en todo el archivo</label><input id="site-search" type="search" placeholder="Escribe una palabra o tema…" autocomplete="off"><div id="search-results"></div></form></dialog>
   <section class="contact-band"><div class="contact-inner"><h2>¿Necesitas orientación laboral?</h2><a class="btn" href="/solicita-apoyo/">Escríbenos hoy</a></div></section>
   <footer class="site-footer"><div class="footer-grid"><section><h2>ATRAHDOM</h2><p>Organización de mujeres trabajadoras guatemaltecas dedicada a la formación, defensa de derechos humanos laborales y acompañamiento jurídico.</p></section><section class="footer-contact"><h3>Contacto</h3><a href="mailto:coordinacion@atrahdom.org">coordinacion@atrahdom.org</a><a href="mailto:amarroquin@atrahdom.org">amarroquin@atrahdom.org</a><a href="tel:+50222532382">(502) 2253 2382</a></section><section><h3>Explora</h3><a href="index.html#/recursos">Biblioteca</a><a href="/blog/">Blog</a><a href="index.html#/privacidad">Privacidad</a></section><section class="footer-address"><h3>Dirección</h3><p>10 avenida 4-18, Zona 1, Ciudad de Guatemala.</p><div class="map-buttons"><a class="map-button" href="https://www.google.com/maps/dir/?api=1&amp;destination=ATRAHDOM&amp;destination_place_id=ChIJezXLqhOiiYURXbj-F8oFOis&amp;dir_action=navigate" target="_blank" rel="noopener noreferrer" aria-label="Cómo llegar a ATRAHDOM en Google Maps"><img src="assets/images/google-maps-button-optimized.png" alt="Abrir ubicación en Google Maps"></a><a class="map-button" href="https://waze.com/ul?ll=14.64356%2C-90.50942&amp;navigate=yes" target="_blank" rel="noopener noreferrer" aria-label="Navegar a ATRAHDOM con Waze"><img src="assets/images/waze-icon-logo.png" alt="Abrir ubicación en Waze"></a></div></section><section class="footer-social"><h3>Redes Sociales</h3><div class="social-buttons"><a href="https://www.facebook.com/atrahdom.guatemala" target="_blank" rel="noopener noreferrer" aria-label="ATRAHDOM en Facebook"><img src="assets/images/social-facebook.png" alt="Facebook"></a><a href="https://www.instagram.com/atrahdom.guatemala" target="_blank" rel="noopener noreferrer" aria-label="ATRAHDOM en Instagram"><img src="assets/images/social-instagram-optimized.png" alt="Instagram"></a><a href="https://x.com/atrahdom" target="_blank" rel="noopener noreferrer" aria-label="ATRAHDOM en X"><img src="assets/images/social-x.png" alt="X"></a><a href="https://www.youtube.com/channel/UCqVsNyXnf-Uo9xllAFME1og" target="_blank" rel="noopener noreferrer" aria-label="ATRAHDOM en YouTube"><img src="assets/images/social-youtube.png" alt="YouTube"></a></div></section></div><div class="footer-bottom"><p>© 2026 ATRAHDOM.</p></div></footer>
-  <script src="content-data.js"></script><script src="data/salarios-minimos.js?v=10"></script><script src="js/prestaciones.js?v=10"></script><script src="js/ui.js?v=10"></script>
+  <script src="content-data.js"></script><script src="data/salarios-minimos.js?v=10"></script><script src="js/prestaciones.js?v=10"></script><script src="js/calculadora-v22-policy.js?v=1"></script><script src="js/calculadora-v22.js?v=1"></script>
   <script>const menuToggle=document.querySelector('.menu-toggle');const primaryMenu=document.querySelector('#primary-menu');menuToggle?.addEventListener('click',()=>{const open=primaryMenu.classList.toggle('open');menuToggle.setAttribute('aria-expanded',open)});document.querySelectorAll('.nav-trigger').forEach(trigger=>trigger.addEventListener('click',()=>trigger.closest('.nav-group').classList.toggle('open')));const searchDialog=document.querySelector('#search-dialog');const searchInput=document.querySelector('#site-search');const searchResults=document.querySelector('#search-results');const stripHtml=value=>{const el=document.createElement('div');el.innerHTML=value||'';return el.textContent.trim()};const data=window.ATRAHDOM_DATA||{};const searchItems=[...(data.pages||[]),...(data.posts||[])];document.querySelector('.search-open')?.addEventListener('click',()=>{searchDialog.showModal();searchInput.focus()});searchInput?.addEventListener('input',()=>{const q=searchInput.value.toLowerCase().trim();if(!q){searchResults.innerHTML='';return}const hits=searchItems.filter(item=>{const title=item.title?.rendered||item.title||'';return `${title} ${stripHtml(item.content?.rendered||item.content_html||'')}`.toLowerCase().includes(q)}).slice(0,10);searchResults.innerHTML=hits.length?`<p class="search-total">${hits.length} resultado${hits.length===1?'':'s'}</p>${hits.map(item=>{const title=item.title?.rendered||item.title||'Sin título';const route=item.type==='page'?`index.html#/${item.slug}`:`index.html#/contenido/${item.type}/${item.id}`;return `<div class="search-hit"><a href="${route}">${title}</a></div>`}).join('')}`:'<p class="search-total">Sin resultados.</p>'});</script>
 <script>
   document.querySelectorAll('.nav-trigger').forEach(button => button.addEventListener('click', () => {

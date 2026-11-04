@@ -17,7 +17,7 @@
   function calcularVacaciones(base,periodStartDate,end,annual,taken){const periodDays=days(periodStartDate,end);const generated=annual*periodDays/365;const pending=Math.max(0,generated-taken);const amount=Number((base/30*pending).toFixed(2));return {periodStart:periodStartDate,periodDays,generated,pending,amount};}
   function calcularHorasExtraordinarias(base,shift,hours){const shiftHours={diurna:8,nocturna:6,mixta:7}[shift];return (base/30/shiftHours)*1.5*hours;}
   function calculate(d){
-    const start=date(d.startDate),end=date(d.endDate); const tenure=calcularAntiguedad(start,end); const minimum=obtenerSalarioMinimo(end.getFullYear(),d.activity,d.circumscription);
+    const start=date(d.startDate),end=date(d.endDate); const tenure=calcularAntiguedad(start,end); const minimum=d.sector==='privado'?obtenerSalarioMinimo(end.getFullYear(),d.activity,d.circumscription):null;
     const ordinary=+d.ordinarySalary, commissions=+d.commissions||0, extraordinary=+d.extraordinarySalary||0;
     const ordinaryCommissions=ordinary+commissions, average=ordinaryCommissions+extraordinary; const base=Math.max(ordinaryCommissions,minimum?.monthly||0);
     const aguinaldoStart=periodStart(end,11,1,d.aguinaldoLastPaid,start), bonoStart=bono14Start(end,d.bono14LastPaid,start), vacationStart=vacationPeriodStart(start,end,d.vacationLastPaid);

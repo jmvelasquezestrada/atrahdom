@@ -1,0 +1,49 @@
+.wizard-layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(280px,.8fr);gap:24px;align-items:start}
+.wizard-panel,.wizard-help{background:var(--white);border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 35px #3e1c5610}
+.wizard-panel{padding:clamp(18px,3vw,32px)}
+.wizard-help{padding:24px;position:sticky;top:155px}
+.wizard-help h2{font-size:1.25rem}
+.wizard-help p{color:var(--muted)}
+.wizard-help strong{color:var(--ink)}
+.wizard-step[hidden]{display:none!important}
+.wizard-step>h2{font-size:clamp(1.5rem,3vw,2rem)}
+.wizard-step>p{color:var(--muted);max-width:65ch}
+.wizard-progress{margin:0 0 24px;color:var(--muted);font-size:.9rem}
+.wizard-progress progress{display:block;width:100%;height:10px;margin-top:8px;accent-color:var(--purple)}
+.route-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:24px}
+.route-card{min-height:170px;padding:22px;text-align:left;background:var(--paper);border:2px solid var(--line);border-radius:12px;color:var(--ink);font:inherit;cursor:pointer}
+.route-card:hover,.route-card:focus-visible{border-color:var(--purple);outline:3px solid #cfb6e8}
+.route-card strong{display:block;font:700 1.2rem/1.25 var(--serif);margin-bottom:9px}
+.route-card span{color:var(--muted);font-size:.92rem}
+.wizard-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:22px}
+.wizard-fields label{min-width:0;white-space:normal;align-content:start}
+.wizard-fields input,.wizard-fields select{min-height:44px}
+.wizard-fields .wide{grid-column:1/-1}
+.wizard-actions{display:flex;justify-content:space-between;gap:12px;margin-top:28px}
+.wizard-actions button,.wizard-inline-button{border:1px solid var(--purple);border-radius:8px;padding:11px 18px;font:700 .95rem var(--sans);cursor:pointer}
+.wizard-actions .primary{background:var(--purple);color:#fff}
+.wizard-actions .secondary-action,.wizard-inline-button{background:#fff;color:var(--deep)}
+.wizard-actions button:focus-visible,.wizard-inline-button:focus-visible{outline:3px solid #cfb6e8;outline-offset:2px}
+.conditional-field[hidden]{display:none!important}
+.field-note{font-size:.82rem;color:var(--muted);font-weight:400}
+.wizard-error{min-height:1.4em;margin:14px 0 0;color:#a9002a;font-weight:700}
+.summary-list{display:grid;gap:10px;margin:20px 0}
+.summary-group{border-top:1px solid var(--line);padding-top:14px}
+.summary-group-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.summary-group-head h3{font:700 1.15rem var(--serif)}
+.summary-group-head button{border:0;background:transparent;color:var(--purple);font:700 .85rem var(--sans);text-decoration:underline;cursor:pointer}
+.summary-item{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.summary-item strong{text-align:right}
+.wizard-step[data-step="payments"]>h3{font:700 1.2rem var(--serif);margin:22px 0 6px}
+.wizard-step[data-step="payments"]>h3:first-of-type{margin-top:18px}
+.guided-result{margin-top:20px}
+.guided-result h3{font:700 1.15rem var(--serif)}
+.guided-result article{padding:16px 0;border-bottom:1px solid var(--line)}
+.guided-result article p{margin:.45rem 0;color:var(--muted)}
+.guided-total{display:flex;justify-content:space-between;gap:16px;margin-top:22px;padding:18px;background:var(--lilac);border-radius:8px;color:var(--deep);font-weight:800}
+.review-notice{padding:14px 16px;background:#fff1b9;border-left:4px solid #977500;border-radius:6px}
+.right-reference{display:inline-block;margin-top:8px;color:var(--purple);font-weight:700}
+.history table{font-size:.9rem}
+@media(max-width:850px){.wizard-layout{grid-template-columns:1fr}.wizard-help{position:static;order:2}.route-options{grid-template-columns:1fr}}
+@media(max-width:520px){.wizard-panel,.wizard-help{padding:18px}.wizard-fields{grid-template-columns:1fr}.wizard-fields .wide{grid-column:auto}.wizard-actions button{padding:10px 13px}.guided-total{align-items:flex-start;flex-direction:column}}
+@media print{.site-header,.site-footer,.contact-band,.wizard-actions,.wizard-help,.wizard-progress,.wizard-error{display:none!important}.wizard-step:not([data-step="result"]){display:none!important}.wizard-panel{border:0;box-shadow:none;padding:0}.shell{padding:0}.guided-result{display:block!important}}
