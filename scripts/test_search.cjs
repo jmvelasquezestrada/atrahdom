@@ -25,6 +25,11 @@ const invisiblesBlog=subset('blog').find(r=>r.slug==='voces-invisibles-trabajado
 assert.equal(invisiblesBlog?.local_route,'/blog/voces-invisibles-trabajadoras-guatemaltecas-decisiones-laborales/');
 assert.equal(invisiblesBlog?.author,'ATRAHDOM');
 assert.equal(invisiblesBlog?.date,'4 de noviembre de 2026');
+has('Convenio 189 derechos realidad voces de base','derechos-a-realidad');
+const derechosRealidad=subset('blog').find(r=>r.slug==='derechos-a-realidad');
+assert.equal(derechosRealidad?.local_route,'/blog/derechos-a-realidad/');
+assert.equal(derechosRealidad?.author,'ATRAHDOM');
+assert.equal(derechosRealidad?.date,'9 de noviembre de 2026');
 const revista=subset('cendoc').find(r=>r.slug==='revista-sindical-sitradom');
 assert.equal(revista?.local_route,'/cendoc/revista-sindical-sitradom/');
 assert.equal(revista?.author,'Amory Marroquín; Sherly Najarro; Vicenta Montes; Gladis Castro; Cecilia Pérez');

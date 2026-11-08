@@ -100,7 +100,8 @@ h3{font-size:1.5rem}
 .dropdown{position:absolute;top:100%;left:0;min-width:238px;background:var(--paper);border:1px solid var(--linea);border-radius:12px;box-shadow:var(--sombra);padding:10px;display:flex;flex-direction:column;gap:2px;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .18s ease,transform .18s ease;z-index:60}
 .nav-group-library .dropdown{left:auto;right:0}
 .nav-group:hover .dropdown,.nav-group:focus-within .dropdown,.nav-group.open .dropdown{opacity:1;visibility:visible;transform:none}
-.dropdown a{padding:10px 12px;border-radius:8px;font-size:.9rem;font-weight:600;color:var(--ink);text-decoration:none;white-space:nowrap}
+.dropdown a,.dropdown button.dropdown-item{padding:10px 12px;border-radius:8px;font-size:.9rem;font-weight:600;color:var(--ink);text-decoration:none;white-space:nowrap}
+.dropdown button.dropdown-item{appearance:none;-webkit-appearance:none;display:block;width:100%;box-sizing:border-box;margin:0;padding:10px 12px;border:0;border-radius:8px;background:transparent;color:var(--ink);-webkit-text-fill-color:var(--ink);font-family:var(--sans);font-size:.9rem;font-weight:600;line-height:normal;text-align:left;cursor:default;opacity:1}
 .dropdown a:hover,.dropdown a:focus-visible{background:var(--rosa-suave);color:var(--morado)}
 
 /* ---------- Héroe con arcos de sombrilla ---------- */

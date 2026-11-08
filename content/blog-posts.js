@@ -1,5 +1,18 @@
 window.ATRAHDOM_BLOG = [
   {
+    slug: 'derechos-a-realidad',
+    title: 'De los derechos a la realidad: Las voces de las bases faltan en la mesa global',
+    publication_date: '2026-11-09T00:00:00-06:00',
+    internal_author: 'ATRAHDOM',
+    editorial_type: 'Posicionamiento',
+    categories: ['Blog', 'Posicionamiento', 'Trabajo doméstico', 'Representación laboral'],
+    tags: ['Convenio 189', 'trabajo doméstico', 'diálogo social', 'economía informal', 'representación laboral', 'trabajadoras de base'],
+    featured_image: 'assets/images/derechos-a-realidad-mesa-global.png',
+    excerpt_html: '<p>El decimoquinto aniversario del Convenio 189 de la Organización Internacional del Trabajo (OIT) debería ser un momento de celebración universal.</p>',
+    content_file: 'content/posts/derechos-a-realidad.html',
+    local_route: '/blog/derechos-a-realidad/'
+  },
+  {
     slug: 'voces-invisibles-trabajadoras-guatemaltecas-decisiones-laborales',
     title: "Voces invisibles: Por qué las trabajadoras guatemaltecas quedan excluidas de las decisiones laborales",
     publication_date: '2026-11-04T00:00:00-06:00',
