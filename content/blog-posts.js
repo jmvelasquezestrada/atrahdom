@@ -1,4 +1,30 @@
-window.ATRAHDOM_BLOG = [
+﻿window.ATRAHDOM_BLOG = [
+  {
+    slug: 'ia-y-trabajo-guatemala',
+    title: 'Inteligencia Artificial en Guatemala: tu voz es clave para que la tecnología nos beneficie a todas y todos',
+    publication_date: '2026-11-13T00:00:00-06:00',
+    internal_author: 'ATRAHDOM',
+    editorial_type: 'Opinión',
+    categories: ['Blog', 'Opinión', 'Inteligencia artificial', 'Derechos laborales', 'Guatemala'],
+    tags: ['inteligencia artificial', 'Estrategia Nacional de Inteligencia Artificial', 'ENIA', 'Convenio 144', 'gestión algorítmica', 'derechos laborales', 'Guatemala'],
+    featured_image: 'assets/images/ia-y-trabajo-guatemala.png',
+    excerpt_html: '<p>Desde que te levantas y pides un servicio de transporte por una aplicación, o cuando entras a una fábrica donde un sensor registra cada uno de tus movimientos, la Inteligencia Artificial (IA) ya está trabajando. No es algo sacado de una película de ciencia ficción ni un lujo reservado para países del primer mundo; es una realidad que está transformando profundamente cómo trabajamos, cómo nos organizamos y cómo defendemos nuestros derechos en Guatemala.</p>',
+    content_file: 'content/posts/ia-y-trabajo-guatemala.html',
+    local_route: '/blog/ia-y-trabajo-guatemala/'
+  },
+  {
+    slug: 'seguridad-y-cuidado',
+    title: 'La seguridad es parte del cuidado: el Estado debe proteger a quienes sostienen a Guatemala',
+    publication_date: '2026-11-11T00:00:00-06:00',
+    internal_author: 'ATRAHDOM',
+    editorial_type: 'Posicionamiento',
+    categories: ['Blog', 'Posicionamiento', 'Seguridad ciudadana', 'Trabajo de cuidados', 'Guatemala'],
+    tags: ['seguridad ciudadana', 'Sistema Nacional de Cuidados', 'economía del cuidado', 'extorsión', 'personas defensoras', 'libertad sindical', 'Guatemala'],
+    featured_image: 'assets/images/seguridad-y-cuidado-guatemala.png',
+    excerpt_html: '<p>Guatemala atraviesa un momento crítico que ha dejado al descubierto el colapso de nuestra seguridad institucional.</p>',
+    content_file: 'content/posts/seguridad-y-cuidado.html',
+    local_route: '/blog/seguridad-y-cuidado/'
+  },
   {
     slug: 'derechos-a-realidad',
     title: 'De los derechos a la realidad: Las voces de las bases faltan en la mesa global',

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.atrahdom.org/</loc>
@@ -26,6 +26,9 @@
   </url>
   <url>
     <loc>https://www.atrahdom.org/blog/</loc>
+  </url>
+  <url>
+    <loc>https://www.atrahdom.org/blog/ia-y-trabajo-guatemala/</loc>
   </url>
   <url>
     <loc>https://www.atrahdom.org/blog/derechos-a-realidad/</loc>
@@ -545,5 +548,8 @@
   </url>
   <url>
     <loc>https://www.atrahdom.org/blog/voces-invisibles-trabajadoras-guatemaltecas-decisiones-laborales/</loc>
+  </url>
+  <url>
+    <loc>https://www.atrahdom.org/blog/seguridad-y-cuidado/</loc>
   </url>
 </urlset>
