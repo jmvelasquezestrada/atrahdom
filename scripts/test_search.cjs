@@ -44,7 +44,11 @@ assert(!index.records.some(r=>r.collection==='blog'&&r.body.includes('coordinaci
 assert(S.search(index.records,'trabajo').length>12);
 assert(S.search(index.records,'Convencionalidad')[0].slug===control);
 assert.equal(new Set(index.records.map(r=>r.local_route)).size,index.records.length);
-assert.equal(index.counts.cendoc,76);assert.equal(index.counts.comunicados,42);
+assert.equal(index.counts.cendoc,76);assert.equal(index.counts.comunicados,editorial.communication_slugs.length);
+const impunidad=subset('comunicados').find(r=>r.slug==='comunicado-ante-las-mentiras-del-mintrab-en-la-358-reunion-del-consejo-de-administracion-de-la-oit');
+assert.equal(impunidad?.local_route,'/comunicados/comunicado-ante-las-mentiras-del-mintrab-en-la-358-reunion-del-consejo-de-administracion-de-la-oit/');
+assert(S.search(subset('comunicados'),'MINTRAB').some(r=>r.slug===impunidad?.slug));
+assert(S.search(index.records,'libertad sindical').some(r=>r.slug===impunidad?.slug));
 has('Comunicado 20 de octubre de 2026','comunicado-20-de-octubre-de-2026');
 const revolucion=subset('comunicados').find(r=>r.slug==='comunicado-20-de-octubre-de-2026');
 assert.equal(revolucion?.local_route,'/comunicados/comunicado-20-de-octubre-de-2026/');

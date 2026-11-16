@@ -116,15 +116,20 @@ def sidebar(post: dict[str, Any], date: str) -> str:
             parts.append(f'<p><strong>{label}:</strong><br>{html.escape(val)}</p>')
 
     title = str(post.get("editorial_citation_title") or post.get("title") or "Sin título")
-    year = citation_date(date)
-    if author:
-        citation = f'{html.escape(str(author))}. ({year}). <em>{html.escape(title)}</em>.'
+    citation_author = post.get("editorial_citation_author") or author
+    year = str(post.get("editorial_citation_date") or citation_date(date))
+    if citation_author:
+        citation = f'{html.escape(str(citation_author))}. ({year}). <em>{html.escape(title)}</em>.'
     else:
         citation = f'<em>{html.escape(title)}</em>. ({year}).'
     if identifier and identifier.get("type") == "DOI":
         doi = str(identifier.get("value", ""))
         if doi.startswith(("https://doi.org/", "http://doi.org/")):
             citation += f' <a href="{html.escape(doi, quote=True)}" rel="noopener">{html.escape(doi)}</a>'
+    elif post.get("editorial_citation_url"):
+        url = str(post["editorial_citation_url"])
+        if url.startswith(("https://", "http://")):
+            citation += f' <a href="{html.escape(url, quote=True)}" rel="noopener">{html.escape(url)}</a>'
     parts.append(f'<div class="citation-block"><p><strong>Cita sugerida:</strong></p><blockquote>{citation}</blockquote></div>')
     return "".join(parts)
 
@@ -173,16 +178,43 @@ def render_page(template: str, post: dict[str, Any], slug: str) -> str:
     date = post.get("editorial_date") if post.get("editorial_metadata_reviewed") and post.get("editorial_date") else post.get("publication_date") or post.get("date") or ""
     author = post.get("editorial_author") if post.get("editorial_metadata_reviewed") else (post.get("internal_author") or post.get("wordpress_user"))
     date_author = " · ".join(x for x in [html.escape(display_date(date)) if date else "", f'Por {html.escape(str(author))}' if author else ""] if x)
-    image = root_url(post.get("featured_image") or (post.get("images") or [""])[0])
+    image_source = post.get("featured_image") or (post.get("images") or [""])[0]
+    image = root_url(image_source) if image_source or not post.get("editorial_omit_social_image") else ""
+    structured_data = ""
+    if post.get("editorial_structured_data"):
+        schema_authors = post.get("editorial_schema_author") or ([str(author)] if author else [])
+        structured = {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": title,
+            "description": description,
+            "datePublished": str(date),
+            "author": [{"@type": "Organization", "name": str(name)} for name in schema_authors],
+            "publisher": {"@id": "https://www.atrahdom.org/#organization"},
+            "isPartOf": {"@id": "https://www.atrahdom.org/#website"},
+            "url": canonical,
+            "mainEntityOfPage": canonical,
+            "articleSection": post.get("categories") or [],
+        }
+        editorial_images = [post.get("featured_image"), *(post.get("images") or [])]
+        verified_image = next((item for item in editorial_images if item), None)
+        if verified_image:
+            structured["image"] = root_url(str(verified_image))
+        payload = json.dumps(structured, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+        structured_data = f'<script type="application/ld+json">{payload}</script>'
     values = {
         "TITLE": html.escape(title),
         "DESCRIPTION": html.escape(description, quote=True),
         "CANONICAL": canonical,
         "IMAGE": html.escape(image, quote=True),
+        "OG_IMAGE_TAG": f'<meta property="og:image" content="{html.escape(image, quote=True)}">' if image else "",
+        "TWITTER_IMAGE_TAG": f'<meta name="twitter:image" content="{html.escape(image, quote=True)}">' if image else "",
+        "TWITTER_IMAGE_ALT_TAG": f'<meta name="twitter:image:alt" content="Imagen asociada al comunicado: {html.escape(title, quote=True)}">' if image else "",
         "DATE_AUTHOR": date_author,
         "CONTENT": body,
         "ATTACHMENTS": attachment_markup(post, body),
         "SIDEBAR": sidebar(post, date),
+        "STRUCTURED_DATA": structured_data,
     }
     page = template
     for key, value in values.items():

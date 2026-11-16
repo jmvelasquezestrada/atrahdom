@@ -263,6 +263,59 @@
   ],
   "posts": [
     {
+      "original_url": "https://www.atrahdom.org/comunicados/comunicado-ante-las-mentiras-del-mintrab-en-la-358-reunion-del-consejo-de-administracion-de-la-oit/",
+      "final_url": "https://www.atrahdom.org/comunicados/comunicado-ante-las-mentiras-del-mintrab-en-la-358-reunion-del-consejo-de-administracion-de-la-oit/",
+      "type": "post",
+      "title": "Comunicado ante las mentiras del MINTRAB en la 358.ª reunión del Consejo de Administración de la OIT",
+      "slug": "comunicado-ante-las-mentiras-del-mintrab-en-la-358-reunion-del-consejo-de-administracion-de-la-oit",
+      "publication_date": "2026-11-15",
+      "wordpress_user": "",
+      "internal_author": "",
+      "categories": [
+        "Comunicados"
+      ],
+      "tags": [
+        "libertad sindical",
+        "OIT",
+        "MINTRAB",
+        "impunidad",
+        "discurso gubernamental",
+        "358.ª reunión"
+      ],
+      "parent": "",
+      "canonical_url": "https://www.atrahdom.org/comunicados/comunicado-ante-las-mentiras-del-mintrab-en-la-358-reunion-del-consejo-de-administracion-de-la-oit/",
+      "local_route": "/comunicados/comunicado-ante-las-mentiras-del-mintrab-en-la-358-reunion-del-consejo-de-administracion-de-la-oit/",
+      "content_file": "content/posts/comunicado-ante-las-mentiras-del-mintrab-en-la-358-reunion-del-consejo-de-administracion-de-la-oit.html",
+      "content_hash_local": "97842f4dc6e40bfd15b13ad0142b724abdb112cb7d80ee1632ee1ce2a0544644",
+      "media_count": 1,
+      "attachment_count": 1,
+      "migration_status": "editorial",
+      "verification_status": "verified",
+      "featured_image": "",
+      "images": [],
+      "attachments": [
+        "assets/documents/comunicado-ante-las-mentiras-del-mintrab-en-la-358-reunion-del-consejo-de-administracion-de-la-oit.pdf"
+      ],
+      "external_links": [],
+      "internal_links": [],
+      "editorial_metadata_reviewed": true,
+      "editorial_author": "ATRAHDOM; SITRADOM",
+      "editorial_date": "2026-11-15",
+      "editorial_citation_title": "Comunicado a la opinión pública nacional e internacional: la impunidad desmiente el discurso gubernamental ante la OIT",
+      "editorial_citation_author": "Asociación de Trabajadoras del Hogar, a Domicilio y de Maquila, & Sindicato de Trabajadoras Domésticas",
+      "editorial_citation_url": "https://www.atrahdom.org/assets/documents/comunicado-ante-las-mentiras-del-mintrab-en-la-358-reunion-del-consejo-de-administracion-de-la-oit.pdf",
+      "editorial_institutions": "",
+      "editorial_identifier": null,
+      "excerpt_html": "La impunidad profundiza el temor, debilita la organización colectiva y obstaculiza el ejercicio de la libertad sindical de las mujeres.",
+      "editorial_citation_date": "2026, 15 de noviembre",
+      "editorial_structured_data": true,
+      "editorial_schema_author": [
+        "Asociación de Trabajadoras del Hogar, a Domicilio y de Maquila",
+        "Sindicato de Trabajadoras Domésticas"
+      ],
+      "editorial_omit_social_image": true
+    },
+    {
       "original_url": "https://atrahdom.org/2012/10/24/has-una-donacion/",
       "final_url": "https://atrahdom.org/2012/10/24/has-una-donacion/",
       "status_code": 200,
@@ -9440,6 +9493,7 @@
   ],
   "editorial": {
     "communication_slugs": [
+      "comunicado-ante-las-mentiras-del-mintrab-en-la-358-reunion-del-consejo-de-administracion-de-la-oit",
       "conmemoracion-del-dia-internacional-de-los-cuidados-2026",
       "comunicado-20-de-octubre-de-2026",
       "comunicado-dia-internacional-alimentacion-2026",

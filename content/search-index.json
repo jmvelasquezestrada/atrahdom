@@ -1,12 +1,12 @@
 {
   "version": 1,
   "sources": {
-    "content/site.json": "8c2a62369a844acdb55824da68094df853d2bf594483bda1e9cc345df78192e5",
-    "content/editorial-config.json": "d092069fb8db3483ffbace677e41ba01e6b7cee4ba8112aa766fce406612d8c7",
+    "content/site.json": "e5c41746f306d238d33d8620902f876f8f3c1f418ce31cdab6b68685b414e4e8",
+    "content/editorial-config.json": "924421f5618da0520c91f6afa7fdf61cc1b9cb6fef430c00fb8f0caedc0dd0ae",
     "content/blog-posts.js": "e1a33726e4b37242cb92cdb3a8696272a7771114003d1f90c0d6bd219e4eb64b",
     "afiliate/index.html": "071ae1908c699f66fcc4712ad71bc2713502fc12ce67fe7a53e938c5e2e0bb7e",
     "blog/10-anos-del-c189/index.html": "20574d1567aaec6bab188d083f870d2469d0d37ead92351470f4831af255fa5e",
-    "blog/allanamiento-atrahdom-oit/index.html": "e5c698baee2560099399292f25d2298e27b6ffc4e87a997a16c56f7fda88857b",
+    "blog/allanamiento-atrahdom-oit/index.html": "180e723dcf003f25a43ac33847c107bb8ede9d1c720810c42bd8c3690b76997f",
     "blog/coalicion-de-genero-y-comercio/index.html": "691aa3fb88d7aa766202c64135c6a23265054f2dc2ec0fdd77dd052882bc41d3",
     "blog/conoce-tus-derechos-aguinaldo-bono-14-prestaciones/index.html": "1f42790e6f51b4ce07848a996029b8e9907f6d186f307e4f468d53cc2e8cac02",
     "blog/convenio-189-derechos-trabajadoras-hogar-guatemala/index.html": "ce209b79d893a4743817701be2b5e79b7017b3752c8945d43dd08ced43484b56",
@@ -20,7 +20,7 @@
     "blog/hemos-tocado-puertas-y-no-hemos-logrado-mas-que-setir-la-discriminacion-hacia-nuestra-condicion/index.html": "fdd0900ec7ec295114c344ad923d10e35088578f4ecab601edb222aab08c35ae",
     "blog/historia-de-sitradom/index.html": "833d6a6839ae580e2ba44d92d8bfd9862fc8752973cb2ecc054ddecf570cd675",
     "blog/historia-del-dia-de-la-revolucion-del-20-de-octubre-en-guatemala/index.html": "c83b364a338321a5feb98fa8dfdbd805c9fb47aab77de414920dd913a46bf198",
-    "blog/ia-y-trabajo-guatemala/index.html": "c52eee0da71f8b9555986eecf26a627e299b30aafaaf6974fcf5f74b9841b756",
+    "blog/ia-y-trabajo-guatemala/index.html": "7ef51e353c7cf91463840fee176f7fad7573518d60f913fb38b213329e7ddd37",
     "blog/incorrecto-retener-salarios-de-los-trabajadores-retardo-o-utilizar-otros-mecanismos-para-impedir-el-derecho-del-trabajador/index.html": "12d02310457a53d99d155be86ec804528098bc7d1338ea826560a25729cd6d23",
     "blog/juana-raymundo-una-lider-silenciada-por-defender-su-territorio-nuestro-territorio/index.html": "ca36b5984e9446753feb6436a3160fd1f48918a0bed1a044f5127f918e835881",
     "blog/la-comida-que-alimenta-al-mundo-un-analisis-en-la-era-digital/index.html": "caaab71ac84f3191fbc605f03f8bdba5ab0998289c1c783fe2249d1aed183452",
@@ -150,6 +150,7 @@
     "comunicados/comunicado-9-de-marzo-2020/index.html": "5c9bd4c2d5d67f9a5b96109dc46802b934e4505846d113da698ab065b4367c90",
     "comunicados/comunicado-ante-abuso-de-poder/index.html": "ea9aa8fd970a48b0a79da32c3727a0b921f621d02694cf7d8716bb58872ce9c5",
     "comunicados/comunicado-ante-la-situacion-de-cicig-en-guatemala-enero-2019/index.html": "55cd391424032f60abec7adc654a3b3b9b4b473d284e339b69c892d796abeceb",
+    "comunicados/comunicado-ante-las-mentiras-del-mintrab-en-la-358-reunion-del-consejo-de-administracion-de-la-oit/index.html": "90bf588e654fb108adaff094e01717df2f3da5bca00ac2285ca8aa304d0d10c0",
     "comunicados/comunicado-ante-situacion-en-colombia/index.html": "38f948d74ef98028b20b87b57cf553c86cdde608e1e5cf92e82df6b585f67605",
     "comunicados/comunicado-c189-guatemala/index.html": "0084e1074a46d67ab7eaff760fab6fa549dd088abf71ecb7307b1e62bcd1e750",
     "comunicados/comunicado-de-ciudadanas-ante-decreto-4-2020-agosto-de-2021/index.html": "88143cdab25d8707f6acc68602a16a8d9695c82474809ce13c58a2d583721f0b",
@@ -232,7 +233,7 @@
     "archive": 47,
     "blog": 47,
     "cendoc": 76,
-    "comunicados": 42,
+    "comunicados": 43,
     "pages": 11
   },
   "records": [
@@ -324,6 +325,35 @@
       "identifier": null,
       "attachments": [],
       "has_document": false,
+      "has_video": false
+    },
+    {
+      "slug": "comunicado-ante-las-mentiras-del-mintrab-en-la-358-reunion-del-consejo-de-administracion-de-la-oit",
+      "title": "Comunicado ante las mentiras del MINTRAB en la 358.ª reunión del Consejo de Administración de la OIT",
+      "local_route": "/comunicados/comunicado-ante-las-mentiras-del-mintrab-en-la-358-reunion-del-consejo-de-administracion-de-la-oit/",
+      "collection": "comunicados",
+      "type": "post",
+      "body": "Comunicado completo en PDF Abrir en pestaña nueva",
+      "description": "La impunidad profundiza el temor, debilita la organización colectiva y obstaculiza el ejercicio de la libertad sindical de las mujeres.",
+      "author": "ATRAHDOM; SITRADOM",
+      "institutions": "",
+      "date": "2026-11-15",
+      "categories": [
+        "Comunicados"
+      ],
+      "keywords": [
+        "libertad sindical",
+        "OIT",
+        "MINTRAB",
+        "impunidad",
+        "discurso gubernamental",
+        "358.ª reunión"
+      ],
+      "identifier": null,
+      "attachments": [
+        "assets/documents/comunicado-ante-las-mentiras-del-mintrab-en-la-358-reunion-del-consejo-de-administracion-de-la-oit.pdf"
+      ],
+      "has_document": true,
       "has_video": false
     },
     {
