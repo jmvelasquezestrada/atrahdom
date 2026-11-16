@@ -8396,19 +8396,40 @@
       ],
       "local_route": "/cendoc/primera-acta-constitutiva-sitradomsa/",
       "content_file": "content/posts/primera-acta-constitutiva-sitradomsa.html",
-      "excerpt_html": "<p>Acta constitutiva del Sindicato de Trabajadoras Domésticas, Similares y a Cuenta Propia (SITRADOMSA).</p>",
+      "excerpt_html": "<p>Consulta el borrador inicial del acta constitutiva de SITRADOMSA y la versión validada por el Ministerio de Trabajo y Previsión Social en 2011.</p>",
       "content_html": "",
       "featured_image": "",
       "images": [],
       "attachments": [
-        "assets/documents/primera-acta-constitutiva-sitradomsa.pdf"
+        "assets/documents/primera-acta-constitutiva-sitradomsa.pdf",
+        "assets/documents/Primera ACTA LEGAL SITRADOMSA 2011.pdf"
       ],
       "editorial_metadata_reviewed": true,
       "editorial_author": "SITRADOMSA",
       "editorial_date": "2011",
       "editorial_type": "Acta constitutiva",
       "editorial_institutions": "",
-      "editorial_identifier": null
+      "editorial_identifier": null,
+      "editorial_seo_title": "Primera Acta Constitutiva del SITRADOMSA | ATRAHDOM",
+      "editorial_remove_social_image": true,
+      "editorial_documents": [
+        {
+          "title": "Primera Acta Constitutiva del SITRADOMSA",
+          "description": "Borrador inicial discutido durante la primera asamblea del sindicato.",
+          "year": "2011",
+          "url": "https://www.atrahdom.org/assets/documents/primera-acta-constitutiva-sitradomsa.pdf",
+          "citation_title": "Primera acta constitutiva del SITRADOMSA",
+          "citation_note": "Borrador inicial"
+        },
+        {
+          "title": "Primera ACTA LEGAL SITRADOMSA 2011",
+          "description": "Acta constitutiva validada por el Ministerio de Trabajo y Previsión Social en 2011.",
+          "year": "2011",
+          "url": "https://www.atrahdom.org/assets/documents/Primera%20ACTA%20LEGAL%20SITRADOMSA%202011.pdf",
+          "citation_title": "Primera acta legal SITRADOMSA 2011",
+          "citation_note": "Acta validada"
+        }
+      ]
     },
     {
       "type": "post",

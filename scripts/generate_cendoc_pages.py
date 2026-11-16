@@ -260,13 +260,69 @@ def sidebar(post: dict[str, Any], categories: list[str], slug: str) -> str:
         if label == "DOI" and value.startswith(("https://doi.org/", "http://doi.org/")):
             value_html = f'<a href="{html.escape(value, quote=True)}" rel="noopener">{html.escape(value)}</a>'
         parts.append(f'<p><strong>{label}:</strong><br>{value_html}</p>')
-    citation_title = plain_text(str(post.get("editorial_citation_title") or title))
-    citation = f'{html.escape(author)}. ({citation_year(date)}). <em>{html.escape(citation_title)}</em>.' if author else f'<em>{html.escape(citation_title)}</em>. ({citation_year(date)}).'
-    if identifier and identifier.get("type") == "DOI" and str(identifier.get("value") or "").startswith(("https://doi.org/", "http://doi.org/")):
-        doi = str(identifier["value"])
-        citation += f' <a href="{html.escape(doi, quote=True)}" rel="noopener">{html.escape(doi)}</a>'
-    parts.append(f'<div class="citation-block"><p><strong>Cita sugerida:</strong></p><blockquote>{citation}</blockquote></div>')
+    documents = post.get("editorial_documents") or []
+    if documents:
+        citations = []
+        ordered_documents = sorted(documents, key=lambda document: str(document.get("citation_title") or document.get("title") or title).casefold())
+        for index, document in enumerate(ordered_documents):
+            year = str(document.get("year") or citation_year(date))
+            suffix = chr(ord("a") + index) if len(documents) > 1 else ""
+            citation_title = str(document.get("citation_title") or document.get("title") or title)
+            citation_note = str(document.get("citation_note") or "")
+            url = str(document.get("url") or "")
+            citation = f'{html.escape(author)}. ({html.escape(year + suffix)}). <em>{html.escape(citation_title)}</em>'
+            if citation_note:
+                citation += f' [{html.escape(citation_note)}]'
+            citation += "."
+            if url.startswith(("https://", "http://")):
+                citation += f' <a href="{html.escape(url, quote=True)}" rel="noopener">{html.escape(url)}</a>'
+            citations.append(f"<blockquote>{citation}</blockquote>")
+        parts.append('<div class="citation-block"><p><strong>Citas sugeridas:</strong></p>' + "".join(citations) + "</div>")
+    else:
+        citation_title = plain_text(str(post.get("editorial_citation_title") or title))
+        citation = f'{html.escape(author)}. ({citation_year(date)}). <em>{html.escape(citation_title)}</em>.' if author else f'<em>{html.escape(citation_title)}</em>. ({citation_year(date)}).'
+        if identifier and identifier.get("type") == "DOI" and str(identifier.get("value") or "").startswith(("https://doi.org/", "http://doi.org/")):
+            doi = str(identifier["value"])
+            citation += f' <a href="{html.escape(doi, quote=True)}" rel="noopener">{html.escape(doi)}</a>'
+        parts.append(f'<div class="citation-block"><p><strong>Cita sugerida:</strong></p><blockquote>{citation}</blockquote></div>')
     return "".join(parts)
+
+
+def structured_data(post: dict[str, Any], canonical: str) -> str:
+    documents = post.get("editorial_documents") or []
+    if not documents:
+        return ""
+    page_id = canonical + "#webpage"
+    graph: list[dict[str, Any]] = [{
+        "@type": "WebPage",
+        "@id": page_id,
+        "url": canonical,
+        "name": str(post.get("title") or ""),
+        "description": plain_text(post.get("excerpt_html") or ""),
+        "mainEntity": [{"@id": f"{document.get('url', '')}#digitaldocument"} for document in documents],
+    }]
+    author = post_author(post)
+    for document in documents:
+        url = str(document.get("url") or "")
+        if not url.startswith(("https://", "http://")):
+            continue
+        item: dict[str, Any] = {
+            "@type": "DigitalDocument",
+            "@id": url + "#digitaldocument",
+            "name": str(document.get("title") or ""),
+            "description": str(document.get("description") or ""),
+            "url": url,
+            "encodingFormat": "application/pdf",
+            "isPartOf": {"@id": page_id},
+        }
+        year = str(document.get("year") or "")
+        if year:
+            item["datePublished"] = year
+        if author:
+            item["author"] = {"@type": "Organization", "name": author}
+        graph.append(item)
+    data = json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False, separators=(",", ":"))
+    return f'  <script type="application/ld+json">{data}</script>\n'
 
 
 def date_author_line(post: dict[str, Any]) -> str:
@@ -329,13 +385,19 @@ def render_page(template: str, post: dict[str, Any], categories: list[str], all_
     title = str(post.get("title") or "Sin título")
     excerpt = plain_text(post.get("excerpt_html") or "") or plain_text(body)
     description = excerpt[:180].rstrip()
-    image = root_url(image_of(post))
+    image = "" if post.get("editorial_remove_social_image") else root_url(image_of(post))
     canonical = f"https://www.atrahdom.org/cendoc/{slug}/"
+    seo_title = str(post.get("editorial_seo_title") or f"{title} | Centro de Documentación Digital (CENDOC) | ATRAHDOM")
     values = {
         "TITLE": html.escape(title),
+        "SEO_TITLE": html.escape(seo_title),
         "DESCRIPTION": html.escape(description, quote=True),
         "CANONICAL": canonical,
         "IMAGE": html.escape(image, quote=True),
+        "OG_IMAGE_TAG": f'  <meta property="og:image" content="{html.escape(image, quote=True)}">' if image else "",
+        "TWITTER_IMAGE_TAG": f'  <meta name="twitter:image" content="{html.escape(image, quote=True)}">' if image else "",
+        "TWITTER_CARD": "summary_large_image" if image else "summary",
+        "STRUCTURED_DATA": structured_data(post, canonical),
         "CATEGORIES": " · ".join(html.escape(item) for item in categories) or "Archivo histórico",
         "DATE_AUTHOR": date_author_line(post),
         "CONTENT": body,
