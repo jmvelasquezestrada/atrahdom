@@ -1,5 +1,17 @@
-﻿window.ATRAHDOM_BLOG = [
+window.ATRAHDOM_BLOG = [
   {
+    slug: 'allanamiento-atrahdom-oit',
+    title: 'El allanamiento a ATRAHDOM que desmiente el discurso oficial de justicia de la delegación gubernamental en la 358 sesión del Consejo de Administración de la OIT.',
+    publication_date: '2026-11-16T00:00:00-06:00',
+    internal_author: 'ATRAHDOM',
+    editorial_type: 'Posicionamiento',
+    categories: ['Blog', 'Posicionamiento', 'Derechos laborales', 'Libertad sindical', 'Guatemala'],
+    tags: ['ATRAHDOM', 'SITRADOM', 'OIT', 'Convenios 87 y 98', 'libertad sindical', 'Instrucción 1-2015', 'Guatemala'],
+    featured_image: 'assets/images/allanamiento-atrahdom-sitradom-2025.png',
+    excerpt_html: '<p>Noviembre de 2026. En el lujoso salón del Consejo de Administración de la OIT en Ginebra, la delegación del Gobierno de Guatemala toma la palabra. La viceministra de Administración de Trabajo, Damarys Nohemí Oliva García, proyecta una imagen de progreso institucional: presume de nuevas capacitaciones a fiscales y de la reactivación de mesas técnicas. La línea 1543, a cargo del Ministerio de Gobernación, recibe reportes de amenazas y situaciones de riesgo contra personas defensoras de derechos humanos y sindicalistas. Ante la comunidad internacional, Guatemala parece un Estado comprometido con la defensa de los derechos sindicales.</p>',
+    content_file: 'content/posts/allanamiento-atrahdom-oit.html',
+    local_route: '/blog/allanamiento-atrahdom-oit/'
+  },  {
     slug: 'ia-y-trabajo-guatemala',
     title: 'Inteligencia Artificial en Guatemala: tu voz es clave para que la tecnología nos beneficie a todas y todos',
     publication_date: '2026-11-13T00:00:00-06:00',
