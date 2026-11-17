@@ -108,6 +108,15 @@ def main() -> None:
     expected={BASE+r for r in [*STATIC,*ROUTES.values()]}
     assert expected.issubset(set(urls))
     assert BASE+"/blog/sindicato-de-trabajadoras-domesticas-de-maquila-nexas-y-conexas-sitradom/" not in urls
+    config=json.loads((ROOT/"content/editorial-config.json").read_text(encoding="utf-8"))
+    for old_route,new_route in config.get("public_route_aliases",{}).items():
+        alias=(ROOT/old_route.strip("/")/"index.html").read_text(encoding="utf-8")
+        assert f'<link rel="canonical" href="{BASE+new_route}">' in alias
+        assert 'name="robots" content="noindex,follow"' in alias
+        assert f'http-equiv="refresh" content="0;url={new_route}"' in alias
+        assert f'location.replace("{new_route}")' in alias
+        assert BASE+new_route in urls
+        assert BASE+old_route not in urls
     for url in expected:
         rel=url.removeprefix(BASE+"/")
         assert (ROOT/rel/"index.html").is_file(),f"Missing sitemap target: {url}"

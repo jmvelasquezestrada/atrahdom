@@ -1625,7 +1625,8 @@
       "editorial_author": "",
       "editorial_date": null,
       "editorial_institutions": "",
-      "editorial_identifier": null
+      "editorial_identifier": null,
+      "editorial_citation_url": "https://www.atrahdom.org/cendoc/diagnostico/"
     },
     {
       "original_url": "https://atrahdom.org/2011/02/12/presentaciones-2009-2010/",
@@ -1672,7 +1673,8 @@
       "editorial_author": "",
       "editorial_date": null,
       "editorial_institutions": "",
-      "editorial_identifier": null
+      "editorial_identifier": null,
+      "editorial_citation_url": "https://www.atrahdom.org/cendoc/presentaciones-2009-2010/"
     },
     {
       "original_url": "https://atrahdom.org/2012/05/28/sitradomsa/",
@@ -9519,8 +9521,6 @@
       "comunicado-20-de-octubre-de-2026",
       "comunicado-dia-internacional-alimentacion-2026",
       "posicionamiento-de-las-osc-en-el-fpan-2025",
-      "diagnostico",
-      "presentaciones-2009-2010",
       "comunicado-por-el-dia-de-la-revolucion-20-de-octubre-2012",
       "comunicado-de-ciudadanas-ante-decreto-4-2020-agosto-de-2021",
       "comunicado-ante-abuso-de-poder",
@@ -9597,7 +9597,6 @@
       "conmemoracion-del-dia-latinoamericano-de-las-trabajadoras-del-hogar",
       "convocatoria-en-linea-al-sector-empleador",
       "creada-concertacion-regional-de-mujeres-por-un-trabajo-digno",
-      "diagnostico",
       "el-gran-ausente-ministerio-de-trabajo",
       "nuestra-postura-dia-internacional-de-la-trabajadora-domestica",
       "nuevos-apartados",
@@ -9606,7 +9605,6 @@
       "plataforma-politica-2010-2011",
       "por-un-convenio-y-recomendacion-a-favor-del-trabajo-domestico",
       "posicionamiento-de-las-osc-en-el-fpan-2025",
-      "presentaciones-2009-2010",
       "pronunciamiento-del-1ro-de-mayo-2012-dia-internacional-del-trabajo",
       "terminos-de-referencia-para-publicista-o-gestora"
     ],
@@ -9643,7 +9641,6 @@
       "conmemoracion-del-dia-latinoamericano-de-las-trabajadoras-del-hogar",
       "convocatoria-en-linea-al-sector-empleador",
       "creada-concertacion-regional-de-mujeres-por-un-trabajo-digno",
-      "diagnostico",
       "el-gran-ausente-ministerio-de-trabajo",
       "nuestra-postura-dia-internacional-de-la-trabajadora-domestica",
       "nuevos-apartados",
@@ -9652,7 +9649,6 @@
       "plataforma-politica-2010-2011",
       "por-un-convenio-y-recomendacion-a-favor-del-trabajo-domestico",
       "posicionamiento-de-las-osc-en-el-fpan-2025",
-      "presentaciones-2009-2010",
       "pronunciamiento-del-1ro-de-mayo-2012-dia-internacional-del-trabajo",
       "terminos-de-referencia-para-publicista-o-gestora"
     ],

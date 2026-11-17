@@ -284,6 +284,10 @@ def sidebar(post: dict[str, Any], categories: list[str], slug: str) -> str:
         if identifier and identifier.get("type") == "DOI" and str(identifier.get("value") or "").startswith(("https://doi.org/", "http://doi.org/")):
             doi = str(identifier["value"])
             citation += f' <a href="{html.escape(doi, quote=True)}" rel="noopener">{html.escape(doi)}</a>'
+        else:
+            citation_url = str(post.get("editorial_citation_url") or "")
+            if citation_url.startswith(("https://", "http://")):
+                citation += f' <a href="{html.escape(citation_url, quote=True)}" rel="noopener">{html.escape(citation_url)}</a>'
         parts.append(f'<div class="citation-block"><p><strong>Cita sugerida:</strong></p><blockquote>{citation}</blockquote></div>')
     return "".join(parts)
 

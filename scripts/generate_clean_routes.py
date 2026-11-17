@@ -12,7 +12,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from editorial_data import apply_editorial_overrides  # noqa: E402
+from editorial_data import apply_editorial_overrides, load_editorial_config  # noqa: E402
 
 BASE = "https://www.atrahdom.org"
 RECORDS = {
@@ -205,8 +205,9 @@ def render_record(tpl: str, post: dict, slug: str) -> str:
 
 
 def generated() -> dict[str,str]:
+    config=load_editorial_config()
     data=json.loads((ROOT/"content/site.json").read_text(encoding="utf-8"))
-    data=apply_editorial_overrides(data)
+    data=apply_editorial_overrides(data,config)
     by_slug={p.get("slug"):p for p in [*data.get("pages",[]),*data.get("posts",[])]}
     tpl=template(); outputs={}
     for route,(name,desc,eyebrow,intro) in STATIC.items():
@@ -232,6 +233,21 @@ def generated() -> dict[str,str]:
     alias=alias.replace("</head>",'<meta name="robots" content="noindex,follow"><meta http-equiv="refresh" content="0;url='+alias_target+'">\n</head>')
     alias=alias.replace("</body>",'<script>location.replace("'+alias_target+'");</script>\n</body>')
     outputs[BLOG_ALIAS+"index.html"]=alias
+    # Preserve incoming links when records move between public collections.
+    # The old paths remain non-indexable aliases to their CENDOC canonicals.
+    for old_route,new_route in config.get("public_route_aliases",{}).items():
+        if not old_route.startswith("/comunicados/") or not new_route.startswith("/cendoc/"):
+            raise ValueError(f"Unsupported public route migration: {old_route} -> {new_route}")
+        slug=new_route.rstrip("/").rsplit("/",1)[-1]
+        post=by_slug.get(slug)
+        if not post or new_route != f"/cendoc/{slug}/":
+            raise ValueError(f"Route migration does not resolve to a CENDOC source record: {old_route} -> {new_route}")
+        canonical=BASE+new_route
+        alias=page_shell(tpl,"Publicación trasladada","Esta publicación ahora forma parte del Centro de Documentación Digital.",canonical,
+            f'<main id="contenido"><section class="section"><div class="wrap"><p>Esta publicación ahora se encuentra en el <a href="{new_route}">Centro de Documentación Digital</a>.</p></div></section></main>')
+        alias=alias.replace("</head>",'<meta name="robots" content="noindex,follow"><meta http-equiv="refresh" content="0;url='+new_route+'">\n</head>')
+        alias=alias.replace("</body>",'<script>location.replace("'+new_route+'");</script>\n</body>')
+        outputs[old_route.lstrip("/")+"index.html"]=alias
     return outputs
 
 

@@ -91,7 +91,7 @@ def get_content(post: dict[str, Any]) -> str:
     return body
 
 
-def sidebar(post: dict[str, Any], date: str) -> str:
+def sidebar(post: dict[str, Any], date: str, canonical: str) -> str:
     parts = ['<p><strong>Tipo:</strong><br>Comunicado institucional</p>']
     author = post.get("editorial_author") if post.get("editorial_metadata_reviewed") else (post.get("internal_author") or post.get("wordpress_user"))
     if author:
@@ -126,8 +126,8 @@ def sidebar(post: dict[str, Any], date: str) -> str:
         doi = str(identifier.get("value", ""))
         if doi.startswith(("https://doi.org/", "http://doi.org/")):
             citation += f' <a href="{html.escape(doi, quote=True)}" rel="noopener">{html.escape(doi)}</a>'
-    elif post.get("editorial_citation_url"):
-        url = str(post["editorial_citation_url"])
+    else:
+        url = str(post.get("editorial_citation_url") or canonical)
         if url.startswith(("https://", "http://")):
             citation += f' <a href="{html.escape(url, quote=True)}" rel="noopener">{html.escape(url)}</a>'
     parts.append(f'<div class="citation-block"><p><strong>Cita sugerida:</strong></p><blockquote>{citation}</blockquote></div>')
@@ -169,6 +169,7 @@ def attachment_markup(post: dict[str, Any], body: str) -> str:
 
 def render_page(template: str, post: dict[str, Any], slug: str) -> str:
     title = str(post.get("title") or "Sin título")
+    seo_title = str(post.get("editorial_seo_title") or title)
     canonical = f"https://www.atrahdom.org/comunicados/{slug}/"
     body = get_content(post)
     if not body.strip():
@@ -180,41 +181,52 @@ def render_page(template: str, post: dict[str, Any], slug: str) -> str:
     date_author = " · ".join(x for x in [html.escape(display_date(date)) if date else "", f'Por {html.escape(str(author))}' if author else ""] if x)
     image_source = post.get("featured_image") or (post.get("images") or [""])[0]
     image = root_url(image_source) if image_source or not post.get("editorial_omit_social_image") else ""
-    structured_data = ""
-    if post.get("editorial_structured_data"):
-        schema_authors = post.get("editorial_schema_author") or ([str(author)] if author else [])
-        structured = {
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": title,
-            "description": description,
-            "datePublished": str(date),
-            "author": [{"@type": "Organization", "name": str(name)} for name in schema_authors],
-            "publisher": {"@id": "https://www.atrahdom.org/#organization"},
-            "isPartOf": {"@id": "https://www.atrahdom.org/#website"},
-            "url": canonical,
-            "mainEntityOfPage": canonical,
-            "articleSection": post.get("categories") or [],
-        }
-        editorial_images = [post.get("featured_image"), *(post.get("images") or [])]
-        verified_image = next((item for item in editorial_images if item), None)
-        if verified_image:
-            structured["image"] = root_url(str(verified_image))
-        payload = json.dumps(structured, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
-        structured_data = f'<script type="application/ld+json">{payload}</script>'
+    structured = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": title,
+        "description": description,
+        "publisher": {"@id": "https://www.atrahdom.org/#organization"},
+        "isPartOf": {"@id": "https://www.atrahdom.org/#website"},
+        "url": canonical,
+        "mainEntityOfPage": canonical,
+        "articleSection": "Comunicados",
+        "inLanguage": "es",
+    }
+    if date:
+        structured["datePublished"] = str(date)
+    schema_authors = post.get("editorial_schema_author") or []
+    if schema_authors:
+        structured["author"] = [{"@type": "Organization", "name": str(name)} for name in schema_authors]
+    elif author:
+        if post.get("editorial_metadata_reviewed"):
+            names = [name.strip() for name in str(author).split(";") if name.strip()]
+            author_type = "Organization"
+        else:
+            names = [str(author).strip()]
+            author_type = "Person"
+        if names:
+            structured["author"] = [{"@type": author_type, "name": name} for name in names]
+    editorial_images = [post.get("featured_image"), *(post.get("images") or [])]
+    verified_image = next((item for item in editorial_images if item and Path(str(item)).name != "cropped-atrahdom-logo-2019-91a74affa5.png"), None)
+    if verified_image:
+        structured["image"] = root_url(str(verified_image))
+    payload = json.dumps(structured, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+    structured_data = f'<script type="application/ld+json">{payload}</script>'
     values = {
         "TITLE": html.escape(title),
+        "SEO_TITLE": html.escape(seo_title),
         "DESCRIPTION": html.escape(description, quote=True),
         "CANONICAL": canonical,
         "IMAGE": html.escape(image, quote=True),
-        "OG_IMAGE_TAG": f'<meta property="og:image" content="{html.escape(image, quote=True)}">' if image else "",
-        "TWITTER_IMAGE_TAG": f'<meta name="twitter:image" content="{html.escape(image, quote=True)}">' if image else "",
-        "TWITTER_IMAGE_ALT_TAG": f'<meta name="twitter:image:alt" content="Imagen asociada al comunicado: {html.escape(title, quote=True)}">' if image else "",
+        "OG_IMAGE_TAG": f'  <meta property="og:image" content="{html.escape(image, quote=True)}">' if image else "",
+        "TWITTER_IMAGE_TAG": f'  <meta name="twitter:image" content="{html.escape(image, quote=True)}">' if image else "",
+        "TWITTER_IMAGE_ALT_TAG": f'  <meta name="twitter:image:alt" content="Imagen asociada al comunicado: {html.escape(title, quote=True)}">' if image else "",
         "DATE_AUTHOR": date_author,
         "CONTENT": body,
         "ATTACHMENTS": attachment_markup(post, body),
-        "SIDEBAR": sidebar(post, date),
-        "STRUCTURED_DATA": structured_data,
+        "SIDEBAR": sidebar(post, date, canonical),
+        "STRUCTURED_DATA": f'  {structured_data}' if structured_data and not image else structured_data,
     }
     page = template
     for key, value in values.items():

@@ -24,6 +24,23 @@ def apply_editorial_overrides(site_data: dict[str, Any], config: dict[str, Any] 
     protected = set(config.get("manual_excluded_slugs", []))
     no_metadata = set(config.get("bibliography_excluded_slugs", []))
     overrides = config.get("bibliography_overrides", {})
+    communication_slugs = set(config.get("communication_slugs", []))
+    descriptions = config.get("communication_description_overrides", {})
+    seo_titles = config.get("communication_seo_title_overrides", {})
+    omit_social_image = set(config.get("communication_omit_social_image_slugs", []))
+    if not isinstance(descriptions, dict):
+        raise ValueError("communication_description_overrides must be an object")
+    unknown_descriptions = set(descriptions) - communication_slugs
+    if unknown_descriptions:
+        raise ValueError(f"Communication descriptions reference non-communication records: {sorted(unknown_descriptions)}")
+    if not isinstance(seo_titles, dict):
+        raise ValueError("communication_seo_title_overrides must be an object")
+    unknown_seo_titles = set(seo_titles) - communication_slugs
+    if unknown_seo_titles:
+        raise ValueError(f"Communication SEO titles reference non-communication records: {sorted(unknown_seo_titles)}")
+    unknown_image_omissions = omit_social_image - communication_slugs
+    if unknown_image_omissions:
+        raise ValueError(f"Social-image omissions reference non-communication records: {sorted(unknown_image_omissions)}")
     if protected.intersection(overrides):
         raise ValueError(f"Manual-review slugs must not have automatic bibliographic overrides: {sorted(protected.intersection(overrides))}")
 
@@ -43,10 +60,25 @@ def apply_editorial_overrides(site_data: dict[str, Any], config: dict[str, Any] 
             post["editorial_citation_title"] = values["citation_title"]
         else:
             post.pop("editorial_citation_title", None)
+        if values.get("citation_url"):
+            post["editorial_citation_url"] = values["citation_url"]
         post["editorial_date"] = values.get("date") or None
         post["editorial_institutions"] = values.get("institutions") or ""
         post["editorial_identifier"] = values.get("identifier")
         # Categories, original publication dates, content, routes and source metadata stay intact.
+
+    for slug, description in descriptions.items():
+        if not isinstance(description, str) or not description.strip():
+            raise ValueError(f"Communication description is empty or invalid for {slug}")
+        by_slug[slug]["excerpt_html"] = description.strip()
+
+    for slug, seo_title in seo_titles.items():
+        if not isinstance(seo_title, str) or not seo_title.strip():
+            raise ValueError(f"Communication SEO title is empty or invalid for {slug}")
+        by_slug[slug]["editorial_seo_title"] = seo_title.strip()
+
+    for slug in omit_social_image:
+        by_slug[slug]["editorial_omit_social_image"] = True
 
     site_data["editorial"] = {
         "communication_slugs": list(config.get("communication_slugs", [])),

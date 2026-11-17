@@ -8,8 +8,6 @@
     "comunicado-20-de-octubre-de-2026",
     "comunicado-dia-internacional-alimentacion-2026",
     "posicionamiento-de-las-osc-en-el-fpan-2025",
-    "diagnostico",
-    "presentaciones-2009-2010",
     "comunicado-por-el-dia-de-la-revolucion-20-de-octubre-2012",
     "comunicado-de-ciudadanas-ante-decreto-4-2020-agosto-de-2021",
     "comunicado-ante-abuso-de-poder",
@@ -46,6 +44,11 @@
     "comunicado-ante-la-situacion-de-cicig-en-guatemala-enero-2019",
     "comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar",
     "comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar-2"
+  ],
+  "communication_omit_social_image_slugs": [
+    "conmemoracion-del-dia-internacional-de-los-cuidados-2026",
+    "comunicado-20-de-octubre-de-2026",
+    "comunicado-dia-internacional-alimentacion-2026"
   ],
   "communication_excluded_slugs": [
     "approval-of-15-non-governmental-organizations-for-association-with-un-public",
@@ -86,7 +89,6 @@
     "conmemoracion-del-dia-latinoamericano-de-las-trabajadoras-del-hogar",
     "convocatoria-en-linea-al-sector-empleador",
     "creada-concertacion-regional-de-mujeres-por-un-trabajo-digno",
-    "diagnostico",
     "el-gran-ausente-ministerio-de-trabajo",
     "nuestra-postura-dia-internacional-de-la-trabajadora-domestica",
     "nuevos-apartados",
@@ -95,7 +97,6 @@
     "plataforma-politica-2010-2011",
     "por-un-convenio-y-recomendacion-a-favor-del-trabajo-domestico",
     "posicionamiento-de-las-osc-en-el-fpan-2025",
-    "presentaciones-2009-2010",
     "pronunciamiento-del-1ro-de-mayo-2012-dia-internacional-del-trabajo",
     "terminos-de-referencia-para-publicista-o-gestora"
   ],
@@ -132,7 +133,6 @@
     "conmemoracion-del-dia-latinoamericano-de-las-trabajadoras-del-hogar",
     "convocatoria-en-linea-al-sector-empleador",
     "creada-concertacion-regional-de-mujeres-por-un-trabajo-digno",
-    "diagnostico",
     "el-gran-ausente-ministerio-de-trabajo",
     "nuestra-postura-dia-internacional-de-la-trabajadora-domestica",
     "nuevos-apartados",
@@ -141,12 +141,53 @@
     "plataforma-politica-2010-2011",
     "por-un-convenio-y-recomendacion-a-favor-del-trabajo-domestico",
     "posicionamiento-de-las-osc-en-el-fpan-2025",
-    "presentaciones-2009-2010",
     "pronunciamiento-del-1ro-de-mayo-2012-dia-internacional-del-trabajo",
     "terminos-de-referencia-para-publicista-o-gestora"
   ],
   "manual_excluded_slugs": [],
   "bibliography_excluded_slugs": [],
+  "communication_description_overrides": {
+    "comunicado-de-ciudadanas-ante-decreto-4-2020-agosto-de-2021": "Ciudadanas de Guatemala presentaron una acción de inconstitucionalidad contra el Decreto 4-2020 y sus efectos sobre los derechos de organización, participación y asociación.",
+    "comunicado-ante-abuso-de-poder": "Comunicado que denuncia el uso de la fuerza y agresiones policiales contra integrantes de ATRAHDOM durante un desalojo en Ciudad de Guatemala.",
+    "comunicado-en-referencia-a-salarios-regionalizados": "Pronunciamiento de organizaciones sindicales contra los salarios regionalizados y sus posibles efectos en la pobreza y las condiciones de vida de las personas trabajadoras.",
+    "comunicado-31-de-mayo-2020": "ATRAHDOM y SITRADOM rechazan el posible cierre de la SEPREM y advierten sobre sus efectos para la participación y el avance de las mujeres.",
+    "comunicado-25-anos-de-los-acuerdos-de-paz": "Pronunciamiento por los 25 años de los Acuerdos de Paz que recuerda a las víctimas del conflicto armado y demanda justicia, dignidad y paz.",
+    "comunicado-ante-situacion-en-colombia": "Organizaciones de mujeres y sindicatos expresan preocupación por la crisis social y política en Colombia, la violencia y los efectos de la propuesta de reforma tributaria.",
+    "atrahdom-se-pronuncia-ante-el-congreso-de-la-republica-por-la-inminetne-aprobacion-de-la-iniciativa-de-ley-5007": "ATRAHDOM cuestiona la iniciativa de ley 5007 por proponer exoneraciones fiscales para empresas del sector vestuario y textil y señala sus efectos en las condiciones laborales.",
+    "oferta-para-la-aplicacion-a-consultorias-2016": "Convocatoria para presentar propuestas de servicios de publicidad y gestión; el documento incluye términos de referencia y el plazo de recepción.",
+    "el-gran-ausente-ministerio-de-trabajo": "Pronunciamiento sobre la falta de actuación de la Inspección General de Trabajo ante denuncias de explotación laboral de mujeres y la protección de las trabajadoras.",
+    "comunicado-16-de-junio-de-2021-dia-internacional-del-trabajo-domestico": "Comunicado por los diez años del Convenio 189 y la Recomendación 201 de la OIT sobre trabajo decente para las trabajadoras y los trabajadores domésticos.",
+    "comunicado-24-de-mayo-2020": "Organizaciones sindicales y de mujeres plantean al presidente sus posturas ante la reapertura de centros comerciales y el transporte durante la emergencia por COVID-19.",
+    "comunicado-9-de-marzo-2020": "ATRAHDOM y SITRADOM conmemoran el Día Internacional de las Mujeres y denuncian la violencia y la crisis social, económica y política que afecta a las trabajadoras.",
+    "comunicado-dia-de-la-trabajadora-domestica-latinoamericana-2022": "Comunicado relacionado con el Día de la Trabajadora Doméstica Latinoamericana de 2022.",
+    "comunicado-8-de-marzo-de-2021": "Comunicado que expone cómo la pandemia de COVID-19 agravó la violencia, la discriminación y la carga de cuidados para las mujeres trabajadoras.",
+    "conmemoracion-del-dia-internacional-del-trabajo": "ATRAHDOM conmemora el Día Internacional del Trabajo y expresa solidaridad con las demandas de trabajadoras, sindicatos, comunidades indígenas y campesinas.",
+    "terminos-de-referencia-para-publicista-o-gestora": "Términos de referencia para contratar a una persona publicista y gestora, con información sobre el perfil y la presentación de propuestas.",
+    "analisis-de-acuerdo-gubernativo-430-2003": "Análisis del Acuerdo Gubernativo 430-2003 y su relación con el comercio, la maquila y la protección de los derechos laborales.",
+    "boletin-1-ano-1-2014": "Primer boletín de ATRAHDOM, con información sobre la organización, sus objetivos y acciones de apoyo a mujeres trabajadoras de sectores vulnerables.",
+    "comunicado-12-de-abril-2020": "ATRAHDOM expone su postura ante el presidente sobre la reapertura de centros comerciales y la circulación del transporte urbano durante la emergencia por COVID-19.",
+    "comunicado-28-de-marzo-2020": "Organizaciones sindicales y de mujeres manifiestan su preocupación por la crisis de COVID-19 y sus efectos en las personas trabajadoras y los sectores vulnerables.",
+    "creada-concertacion-regional-de-mujeres-por-un-trabajo-digno": "Declaración de organizaciones de cinco países centroamericanos sobre incumplimientos de derechos laborales, libertad sindical y violencia en el trabajo.",
+    "comunicado-por-los-derechos-de-la-poblacion-lgbti": "Pronunciamiento en defensa de la dignidad y la igualdad de derechos de las personas LGBTI, y contra la violencia y la discriminación, incluido el ámbito laboral.",
+    "comunicado-dia-internacional-del-trabajo": "ATRAHDOM y SITRADOM conmemoran el 1 de mayo y exigen respeto a los derechos laborales frente a la violencia y los abusos contra la clase trabajadora.",
+    "comunicado-30-de-marzo-dia-internacional-de-la-trabajadora-domestica": "Comunicado sobre el impacto de la pandemia en las trabajadoras domésticas, incluidos despidos y trabajo sin medidas adecuadas de protección sanitaria.",
+    "conmemoracion-del-dia-latinoamericano-de-las-trabajadoras-del-hogar": "Pronunciamiento sobre las condiciones de las trabajadoras del hogar y la falta de oportunidades, en el marco del Día Latinoamericano de las Trabajadoras del Hogar.",
+    "comunicado-20-de-octubre-dia-de-la-revolucion": "Comunicado que conmemora la Revolución del 20 de octubre de 1944 y vincula esa memoria con demandas de justicia y cuestionamientos a los abusos de poder.",
+    "comunicado-ante-la-situacion-de-cicig-en-guatemala-enero-2019": "ATRAHDOM se pronuncia sobre el ingreso de un funcionario de la CICIG a Guatemala y cuestiona los abusos de poder y la respuesta del Gobierno.",
+    "comunicado-20-de-octubre-de-2026": "Comunicado de ATRAHDOM y SITRADOM que conmemora la gesta revolucionaria del 20 de octubre de 1944 en Guatemala.",
+    "comunicado-dia-internacional-alimentacion-2026": "Comunicado de ATRAHDOM y SITRADOM por el Día Mundial de la Alimentación 2026, sobre la crisis alimentaria de Guatemala y el reclamo de justicia social y trabajo digno."
+  },
+  "communication_seo_title_overrides": {
+    "comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar": "Día Latinoamericano de las Trabajadoras del Hogar",
+    "atrahdom-se-pronuncia-ante-el-congreso-de-la-republica-por-la-inminetne-aprobacion-de-la-iniciativa-de-ley-5007": "ATRAHDOM ante la iniciativa de ley 5007",
+    "comunicado-ante-las-mentiras-del-mintrab-en-la-358-reunion-del-consejo-de-administracion-de-la-oit": "ATRAHDOM denuncia las mentiras del MINTRAB ante la OIT",
+    "carta-de-organizaciones-de-guatemala-dirigida-a-la-organizacion-de-naciones-unidas-onu": "Carta de organizaciones de mujeres de Guatemala a la ONU",
+    "comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar-2": "Día Latinoamericano de las Trabajadoras del Hogar (30 de marzo)",
+    "comunicado-16-de-junio-de-2021-dia-internacional-del-trabajo-domestico": "16 de junio: Día Internacional del Trabajo Doméstico",
+    "comunicado-30-de-marzo-dia-internacional-de-la-trabajadora-domestica": "30 de marzo: Día Internacional de la Trabajadora Doméstica",
+    "pronunciamiento-del-1ro-de-mayo-2012-dia-internacional-del-trabajo": "1 de mayo de 2012: Día Internacional del Trabajo",
+    "conmemoracion-del-dia-latinoamericano-de-las-trabajadoras-del-hogar": "2019: Día Latinoamericano de las Trabajadoras del Hogar"
+  },
   "bibliography_overrides": {
     "comunicado-30-de-marzo-dia-latinoamericano-de-las-trabajadoras-del-hogar": {
       "author": "SITRADOM; ATRAHDOM"
@@ -284,14 +325,16 @@
       "date": null,
       "author": "",
       "institutions": "",
-      "identifier": null
+      "identifier": null,
+      "citation_url": "https://www.atrahdom.org/cendoc/diagnostico/"
     },
     "presentaciones-2009-2010": {
       "title": "Presentaciones 2009 – 2010",
       "date": null,
       "author": "",
       "institutions": "",
-      "identifier": null
+      "identifier": null,
+      "citation_url": "https://www.atrahdom.org/cendoc/presentaciones-2009-2010/"
     },
     "comunicado-por-el-dia-de-la-revolucion-20-de-octubre-2012": {
       "title": "Comunicado por el Día de la Revolución, 20 de Octubre 2012.",
@@ -994,5 +1037,9 @@
     "approval-of-15-non-governmental-organizations-for-association-with-un-public",
     "plataforma-politica-2010-2011",
     "por-un-convenio-y-recomendacion-a-favor-del-trabajo-domestico"
-  ]
+  ],
+  "public_route_aliases": {
+    "/comunicados/diagnostico/": "/cendoc/diagnostico/",
+    "/comunicados/presentaciones-2009-2010/": "/cendoc/presentaciones-2009-2010/"
+  }
 }

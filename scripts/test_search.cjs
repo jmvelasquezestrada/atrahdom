@@ -35,8 +35,24 @@ assert.equal(revista?.local_route,'/cendoc/revista-sindical-sitradom/');
 assert.equal(revista?.author,'Amory Marroquín; Sherly Najarro; Vicenta Montes; Gladis Castro; Cecilia Pérez');
 assert.equal(revista?.institutions,'SITRADOM');
 assert.equal(revista?.date,'15 de octubre de 2026');
-has('Presentaciones 2009 - 2010','presentaciones-2009-2010');
-has('Diagnostico','diagnostico');
+for(const [slug,title] of [['diagnostico','Diagnóstico'],['presentaciones-2009-2010','Presentaciones 2009 - 2010']]){
+ const record=subset('cendoc').find(r=>r.slug===slug);
+ assert(record,`${slug} must be in CENDOC search`);
+ assert.equal(record.local_route,`/cendoc/${slug}/`);
+ assert(S.search(subset('cendoc'),title).some(r=>r.slug===slug));
+ assert(!subset('comunicados').some(r=>r.slug===slug),`${slug} must not be in Comunicados search`);
+ assert(!editorial.communication_slugs.includes(slug),`${slug} must not be an active comunicado`);
+ assert(!editorial.cendoc_excluded_slugs.includes(slug),`${slug} must be included in CENDOC`);
+ assert(!editorial.homepage_cendoc_excluded_slugs.includes(slug),`${slug} must be eligible for CENDOC homepage listings`);
+ assert.equal(site.editorial.cendoc_excluded_slugs.includes(slug),false);
+ assert.equal(site.editorial.communication_slugs.includes(slug),false);
+ assert(fs.existsSync(`cendoc/${slug}/index.html`),`${slug} CENDOC page is missing`);
+ assert(fs.existsSync(`comunicados/${slug}/index.html`),`${slug} legacy route alias is missing`);
+ assert(!fs.readFileSync('comunicados/index.html','utf8').includes(`/comunicados/${slug}/`),`${slug} must not be listed in Comunicados`);
+ const cendocPage=fs.readFileSync(`cendoc/${slug}/index.html`,'utf8');
+ const citation=cendocPage.match(/<div class="citation-block">[\s\S]*?<\/div>/)?.[0]||'';
+ assert(citation.includes(`href="https://www.atrahdom.org/cendoc/${slug}/"`),`${slug} suggested citation must link to its recovery URL`);
+}
 has('Donar','donar');has('Quiénes somos','quienes-somos');
 assert.equal(S.search(index.records,'zzzauditoria8090').length,0);
 const polluted=S.search(index.records,'coordinacion@atrahdom.org');
@@ -44,7 +60,7 @@ assert(!index.records.some(r=>r.collection==='blog'&&r.body.includes('coordinaci
 assert(S.search(index.records,'trabajo').length>12);
 assert(S.search(index.records,'Convencionalidad')[0].slug===control);
 assert.equal(new Set(index.records.map(r=>r.local_route)).size,index.records.length);
-assert.equal(index.counts.cendoc,76);assert.equal(index.counts.comunicados,editorial.communication_slugs.length);
+assert.equal(index.counts.cendoc,78);assert.equal(index.counts.comunicados,editorial.communication_slugs.length);
 const impunidad=subset('comunicados').find(r=>r.slug==='comunicado-ante-las-mentiras-del-mintrab-en-la-358-reunion-del-consejo-de-administracion-de-la-oit');
 assert.equal(impunidad?.local_route,'/comunicados/comunicado-ante-las-mentiras-del-mintrab-en-la-358-reunion-del-consejo-de-administracion-de-la-oit/');
 assert(S.search(subset('comunicados'),'MINTRAB').some(r=>r.slug===impunidad?.slug));

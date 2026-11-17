@@ -62,6 +62,7 @@ def generate(check=False):
     code="const fs=require('fs'),vm=require('vm');const ctx={window:{}};vm.runInNewContext(fs.readFileSync(process.argv[1],'utf8'),ctx);process.stdout.write(JSON.stringify(ctx.window.ATRAHDOM_BLOG));"
     blog=json.loads(subprocess.check_output([node,"-e",code,str(ROOT/"content/blog-posts.js")],text=True,encoding="utf-8"))
     excluded=set(cfg.get("cendoc_excluded_slugs",[])); comm_excluded=set(cfg.get("communication_excluded_slugs",[])); comm=set(cfg.get("communication_slugs",[]))-comm_excluded
+    route_aliases=set(cfg.get("public_route_aliases",{}))
     standalone=set(cfg.get("cendoc_standalone_slugs",[]))
     invalid_standalone=(standalone-excluded)|(standalone-comm_excluded)|(standalone&comm)
     if invalid_standalone: raise ValueError(f"Standalone CENDOC details must be excluded from both catalogs: {sorted(invalid_standalone)}")
@@ -115,7 +116,7 @@ def generate(check=False):
     if len(routes)!=len(set(routes)): raise ValueError("Duplicate public search routes")
     counts={c:sum(p["collection"]==c for p in records) for c in sorted({p["collection"] for p in records})}
     for collection in ["cendoc","comunicados"]:
-        files={"/"+p.parent.relative_to(ROOT).as_posix()+"/" for p in (ROOT/collection).glob("*/index.html")}
+        files={"/"+p.parent.relative_to(ROOT).as_posix()+"/" for p in (ROOT/collection).glob("*/index.html") if "/"+p.parent.relative_to(ROOT).as_posix()+"/" not in route_aliases}
         indexed={p["local_route"] for p in records if p["collection"]==collection}
         expected=indexed
         if collection=="cendoc":
