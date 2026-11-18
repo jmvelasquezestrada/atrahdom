@@ -1,5 +1,19 @@
 window.ATRAHDOM_BLOG = [
   {
+    slug: 'sexta-r-paternidad',
+    title: 'Más que un sueldo: La "sexta R" y el futuro de la paternidad',
+    publication_date: '2026-11-18T00:00:00-06:00',
+    internal_author: 'Amory Marroquín',
+    editorial_type: 'Columna de opinión',
+    categories: ['Blog', 'Columna de opinión', 'Derechos laborales', 'Paternidad', 'Economía del cuidado', 'Guatemala'],
+    tags: ['paternidad activa', 'economía del cuidado', 'tiempo de trabajo', 'derechos laborales', 'Guatemala'],
+    featured_image: 'assets/images/mas-que-un-sueldo-sexta-r-paternidad.png',
+    excerpt_html: '<p>Cada 19 de noviembre, llega el Día Internacional del Hombre con un guion impersonal e incluso hipócrita: algunas publicaciones en redes sociales sobre "modelos a seguir positivos" y quizás un guiño superficial a la salud masculina.</p>',
+    content_file: 'content/posts/mas-que-un-sueldo-sexta-r-paternidad.html',
+    local_route: '/blog/sexta-r-paternidad/'
+  },
+
+  {
     slug: 'allanamiento-atrahdom-oit',
     title: 'El allanamiento a ATRAHDOM que desmiente el discurso oficial de justicia de la delegación gubernamental en la 358 sesión del Consejo de Administración de la OIT.',
     publication_date: '2026-11-16T00:00:00-06:00',

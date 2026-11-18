@@ -3,7 +3,7 @@
   "sources": {
     "content/site.json": "343012fe927b98de616a5f560674d182e9093acf1f4eb73214601d63995fb1e3",
     "content/editorial-config.json": "de16eb4f53e1aa1078b0f116dd9e31e9a84de42e62d5e26ac1da9d9ac36ef3cd",
-    "content/blog-posts.js": "e1a33726e4b37242cb92cdb3a8696272a7771114003d1f90c0d6bd219e4eb64b",
+    "content/blog-posts.js": "123c5ca513b9f4359a6d19b03a788640686c33e65af3aec632d618b50f337570",
     "afiliate/index.html": "071ae1908c699f66fcc4712ad71bc2713502fc12ce67fe7a53e938c5e2e0bb7e",
     "blog/10-anos-del-c189/index.html": "20574d1567aaec6bab188d083f870d2469d0d37ead92351470f4831af255fa5e",
     "blog/allanamiento-atrahdom-oit/index.html": "180e723dcf003f25a43ac33847c107bb8ede9d1c720810c42bd8c3690b76997f",
@@ -47,6 +47,7 @@
     "blog/que-significa-una-mediacion-judicial/index.html": "87c9e69ae0172f0468565ad8756567392e9236317758e3242c8fd7871a03ad61",
     "blog/revolucion-de-1944-derechos-de-las-trabajadoras/index.html": "246a14d3263c1cff189a11ac181d73f927953812616b42cc3e1eb983df32ca90",
     "blog/seguridad-y-cuidado/index.html": "99a4afe189de4b8e2e2c46bc794caa7dad9e2bdf85bb5167706573b69dc19c2f",
+    "blog/sexta-r-paternidad/index.html": "3fd88e12ad33537aa80b0cc68086102af4a5c4fd92b9eea407d130156d5b10d0",
     "blog/sitradomsa-2011/index.html": "a02027b8b7ba294cf5ccb73b707190c9a99d282fee62e72190e71aa8c72c05f9",
     "blog/trabajo-a-domicilio-guatemala/index.html": "8c175ae560d93e5698914096f3506199e3b1188b88cf6e60af6ddd2d551d34e2",
     "blog/trabajo-del-hogar-remunerado-y-no-remunerado/index.html": "2a4732d4c4beb2f1f5f80913c60a1c5a69f47a73ac468373751d1063188c697f",
@@ -233,7 +234,7 @@
   },
   "counts": {
     "archive": 47,
-    "blog": 47,
+    "blog": 48,
     "cendoc": 78,
     "comunicados": 41,
     "pages": 11
@@ -4451,6 +4452,37 @@
       "attachments": [
         "assets/documents/conmemoracion-del-dia-internacional-de-los-cuidados-2026.pdf"
       ],
+      "has_document": true,
+      "has_video": false
+    },
+    {
+      "slug": "sexta-r-paternidad",
+      "title": "Más que un sueldo: La \"sexta R\" y el futuro de la paternidad",
+      "local_route": "/blog/sexta-r-paternidad/",
+      "collection": "blog",
+      "type": "post",
+      "body": "1. El gancho: ¿Eres un hombre o una máquina? Cada 19 de noviembre, llega el Día Internacional del Hombre con un guion impersonal e incluso hipócrita: algunas publicaciones en redes sociales sobre \"modelos a seguir positivos\" y quizás un guiño superficial a la salud masculina. Pero si quitamos la apariencia de celebración, emerge una realidad más fría. En nuestra situación económica actual, a menudo se valora menos como ser humano y más como una máquina biológica diseñada para producir. Nos enseñan que ser hombre es proveer, pero rara vez nos preguntamos: ¿quién provee para el proveedor? El discurso institucional sobre la \"Economía del Cuidado\" identifica cinco pilares: las 5 R: Reconocer el trabajo no remunerado, Reducir la carga mediante infraestructuras, Redistribuir la atención de mujeres a hombres y al Estado, Recompensar a los cuidadores pagados y Representar sus voces. Estos son objetivos nobles, pero para el hombre de clase trabajadora, a menudo parecen lujos abstractos. Falta una pieza en este rompecabezas: una \"Sexta R\", sin la cual las otras cinco siguen fuera del alcance de quienes están anclados en la realidad del trabajo intensivo. 2. Cómo éramos: Cómo quedamos atrapados en la \"trampa del sostén económico\" ¿Cómo llegamos a este punto de alienación? La historia ofrece una hoja de ruta. La era industrial consolidó lo que los sociólogos llaman la doctrina de las \"esferas separadas\". Los hombres fueron lanzados al mundo público y productivo como proveedores, mientras que las mujeres fueron relegadas al mundo privado y reproductivo como cuidadoras. Este \"mandato del proveedor\" creó una trampa histórica. El valor social de un hombre quedó exclusivamente ligado a su capacidad para trabajar. Para la década de 2010, la teoría comenzó a alejarse del simple \"equilibrio entre vida laboral y personal\" hacia la \"corresponsabilidad\", la idea de que los hombres y el Estado deben compartir la carga de cuidados. Sin embargo, el fantasma del proveedor industrial sigue acechando nuestras leyes laborales, insistiendo en que la presencia de un hombre en una máquina o un escritorio es más valiosa que su presencia en una cuna o en una mesilla. 3. La comprobación de la realidad: No todos los \"hombres\" son CEO Cuando hablamos de \"hombres\" como un grupo monolítico, ignoramos el abismo de clase. Hay una diferencia enorme entre un ejecutivo corporativo con un horario flexible y el 72% al 79% de los hombres guatemaltecos que trabajan en la economía informal. Para estos últimos, no existe el \"equilibrio entre vida laboral y personal\", solo existe la supervivencia. Ronald F. Levant formuló la hipótesis de la \"alexitimia masculina normativa\": limitaciones que algunos hombres experimentan para identificar, describir y expresar emociones, asociadas a la socialización en normas masculinas de restricción emocional. En este contexto, el mandato del \"proveedor\" puede reforzar la presión para ocultar la vulnerabilidad. Esto no es solo una peculiaridad psicológica; es una crisis de salud pública. En Guatemala, los hombres representan el 59% de los accidentes laborales, con un asombroso aumento del 168% en lesiones laborales reportadas solo en 2023. Cuando tu único valor es tu sueldo, tu seguridad física y salud mental pasan a segundo plano frente a la \"rutina\". 4. Las partes picantes: La broma de la paternidad de 2 días y otros escándalos Si querés ver lo poco que nuestro sistema valora el cuidado masculino, mirá la ley. En Guatemala, el Código de Trabajo (art. 61) concede a los padres apenas dos días de baja por paternidad. Eso no es un periodo de vínculo o cuidado; es un fin de semana largo. Envía un mensaje claro e institucional: \"Eres un visitante en tu propia casa; vuelve a la fábrica.\" Esto institucionaliza una \"Doble Carga\" de otro tipo. Mientras las mujeres están agotadas por el trabajo doméstico remunerado o no remunerado, los hombres son aplastados por la rigidez laboral. Esto conduce a una \"Crisis Silenciosa\" reflejada en los datos: las tasas de suicidio masculino en Guatemala son casi tres veces superiores a las femeninas (7,9 frente a 2,8 por cada 100.000 habitantes, cifras de 2021 estandarizadas por edad). Los críticos suelen usar estas cifras para desestimar los problemas de las mujeres, pero la verdad es más profunda: ambos géneros están siendo aplastados por un sistema que se niega a ver a los hombres como algo más que unidades de trabajo y provisión para los hogares. 5. El cambio radical: introduciendo la \"Sexta R\" Aquí es donde la propuesta cambia la conversación. Las 5 R originales son inalcanzables para la clase trabajadora sin la Sexta R: REGULAR. Regular el tiempo de trabajo es reconocer que la \"pobreza temporal\" es la barrera definitiva para la igualdad. No se puede \"redistribuir\" el trabajo de cuidado a un hombre que trabaja turnos de 12 horas más un trayecto de tres horas en el tráfico (gracias Arzuísmo). La Sexta R exige una regulación de la jornada laboral que proteja la vida sobre el beneficio. Significa luchar por jornadas laborales que permitan la paternidad activa. Es la realización de que ningún hombre puede ser un padre presente o un individuo sano si no le quedan horas en su día después de que la \"máquina\" termine con él. 6. La visión 2030: De máquinas a humanos El horizonte está cambiando. Organizaciones como CEPAL impulsan una \"Sociedad de Cuidado\" para 2030, tratando la atención como un derecho humano universal. En Guatemala, la batalla por la Iniciativa 5463 (la \"Ley de Paternidad Responsable\") representa un momento crucial. El objetivo es avanzar hacia las \"Masculinidades Solidarias\". No se trata solo de que los hombres freguen más platos; se trata de una reforma legislativa y cultural en la que ser un \"buen hombre\" se defina por la presencia emocional y el autocuidado, y no solo por el tamaño de una remesa. A medida que se actualicen las normativas laborales para un mundo digital y post-pandemia, la inclusión del \"horario flexible\" y la suspensión prolongada debe considerarse una victoria para todos, no solo una concesión para los padres. 7. Concluyendo: Justicia, no solo abrazos Una vida humana vale infinitamente más que la suma de su salario. En este Día Internacional del Hombre, deberíamos ir más allá de las frases hechas de los \"modelos a seguir\" y mirar la realidad estructural de la vida de los hombres. Con una esperanza de vida de 70,3 años frente a 74,9 para las mujeres, y con los hombres dedicando solo 2,8 horas diarias al cuidado frente a 6,2 para las mujeres, los datos claman por un cambio. No solo necesitamos \"enseñar\" a los hombres a preocuparse; necesitamos construir una sociedad que les permita preocuparse. La verdadera justicia para los hombres, y, por extensión, para las mujeres y niños en sus vidas, comienza con el derecho a alejarse de la máquina y reclamar el derecho a ser humanos. Recursos para el lector Código de Trabajo de Guatemala, artículo 61, literal ñ), numeral 3: licencia remunerada por nacimiento Suicide worldwide in 2021: Global health estimates — Organización Mundial de la Salud Levant, R. F., y Parent, M. C. (2019). The Development and Evaluation of a Brief Form of the Normative Male Alexithymia Scale (NMAS-BF)",
+      "description": "Cada 19 de noviembre, llega el Día Internacional del Hombre con un guion impersonal e incluso hipócrita: algunas publicaciones en redes sociales sobre \"modelos a seguir positivos\" y quizás un guiño superficial a la salud masculina.",
+      "author": "Amory Marroquín",
+      "institutions": "",
+      "date": "18 de noviembre de 2026",
+      "categories": [
+        "Blog",
+        "Columna de opinión",
+        "Derechos laborales",
+        "Paternidad",
+        "Economía del cuidado",
+        "Guatemala"
+      ],
+      "keywords": [
+        "paternidad activa",
+        "economía del cuidado",
+        "tiempo de trabajo",
+        "derechos laborales",
+        "Guatemala"
+      ],
+      "identifier": null,
+      "attachments": [],
       "has_document": true,
       "has_video": false
     },
