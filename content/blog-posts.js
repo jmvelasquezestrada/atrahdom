@@ -1,5 +1,18 @@
 window.ATRAHDOM_BLOG = [
   {
+    slug: 'convenio-144-oit-tripartismo',
+    title: 'Convenio 144 de la OIT: La farsa del «tripartismo» oficialista y la usurpación de la voz sindical en Guatemala',
+    publication_date: '2026-11-20T00:00:00-06:00',
+    internal_author: 'ATRAHDOM',
+    editorial_type: 'Análisis',
+    categories: ['Blog', 'Análisis', 'Derechos laborales', 'Libertad sindical', 'Guatemala'],
+    tags: ['Convenio 144', 'OIT', 'tripartismo', 'libertad sindical', 'consulta tripartita', 'Guatemala'],
+    featured_image: 'assets/images/convenio-144-oit-tripartismo.png',
+    excerpt_html: '<p>En Guatemala, las autoridades del Ministerio de Trabajo y Previsión Social (MINTRAB) han convertido el concepto de «diálogo tripartito» en una coartada política para simular democracia laboral mientras ejecutan una exclusión sistemática contra el sindicalismo independiente.</p>',
+    content_file: 'content/posts/convenio-144-oit-tripartismo.html',
+    local_route: '/blog/convenio-144-oit-tripartismo/'
+  },
+  {
     slug: 'sexta-r-paternidad',
     title: 'Más que un sueldo: La "sexta R" y el futuro de la paternidad',
     publication_date: '2026-11-18T00:00:00-06:00',
