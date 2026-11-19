@@ -50,6 +50,80 @@
     "comunicado-20-de-octubre-de-2026",
     "comunicado-dia-internacional-alimentacion-2026"
   ],
+  "cendoc_omit_social_image_slugs": [
+    "52-semanas-en-el-continente-americano",
+    "acuerdo-gubernativo-1-8-de-febrero-de-2019",
+    "acuerdo-ministerial-45-2018-ministerio-de-trabajo-y-prevision-social-comision-nacional-tripartita-de-relaciones-laborales-y-libertad-sindical",
+    "aporte-para-abordar-las-causas-que-afectan-a-la-laguna-chichoj-san-cristobal-verapaz-a-v-guatemala",
+    "boletin-no-5-trabajo-no-remunerado-y-labores-de-cuidado-en-guatemala",
+    "campana-para-la-ratificacion-del-convenio-189-a-favor-de-trabajo-decente-para-el-trabajo-domestico",
+    "caracterizacion-de-establecimientos-educativos-publicos-del-ciclo-diversificado",
+    "caracterizacion-de-las-trabajadoras-de-la-maquila-textil-frente-a-las-violencias-de-genero-incluida-la-economica-en-guatemala",
+    "codigo-de-trabajo-republica-de-guatemala",
+    "comercio-y-genero-modulo-1",
+    "comunicado-apmd-en-relacion-al-presupuesto-2022",
+    "constitucion-politica-de-la-republica-de-guatemala",
+    "cuadernillos-de-jurisprudencia-de-la-corte-interamericana-de-derechos-humanos-14-igualdad-y-no-discriminacion",
+    "cuantos-esclavos-hay-hoy-en-el-mundo",
+    "de-las-palabras-a-la-accion-proyectos-con-soluciones-innovadoras-para-la-naturaleza-la-accion-climatica-y-la-igualdad-de-genero",
+    "declaracion-universal-de-los-derechos-humanos",
+    "declaratoria-de-chimaltenango-ii-3r-congreso-de-mujeres-trabajadoras-de-guatemala",
+    "declaratoria-de-chimaltenango-iii-iv-congreso-de-mujeres-trabajadoras-de-guatemala-mayo-2014",
+    "declaratoria-del-v-encuentro-latinoamericano-de-trabajadoras-domesticas",
+    "declaratoria-vi-congreso-de-mujeres-trabajadoras-de-guatemala",
+    "derechos-de-las-trabajadoras-remunerasdas-del-hogar-de-las-americas-avances-y-brechas-persistentes",
+    "desigualdades-y-afectaciones-generadas-por-el-covid-19-en-la-vida-de-las-mujeres-trabajadoras-en-sectores-laborales-vulnerables-en-guatemala-2020-2021",
+    "diagnostico",
+    "dossier-comercio-sexual",
+    "el-bono-demografico-una-oportunidad-para-el-trabajo-decente-en-guatemala",
+    "el-control-de-convencionalidad-una-herramienta-estrategica",
+    "el-futuro-de-la-incidencia",
+    "el-telar-de-los-suenos",
+    "encuesta-a-poblacion-ocupada-en-el-depto-guatemala-parte-i",
+    "encuesta-a-poblacion-ocupada-en-el-depto-guatemala-parte-ii",
+    "encuesta-sobre-el-trabajo-en-plantacion",
+    "entornos-de-trabajo-seguros-y-saludables-libres-de-violencia-y-acoso",
+    "estado-de-situacion-del-sector-de-cuidados-en-guatemala-el-salvador-y-honduras",
+    "feminismo-y-prostitucion-la-persistencia-de-una-amarga-disputa",
+    "fund-for-gender-equality-annual-report-2017-2018",
+    "fusiles-racismo-y-protesta-la-historia-politica-de-guatemala",
+    "guia-para-las-personas-empleadora-y-tomadoras-de-decisiones-estatales-los-convenios-internacionales-y-como-cerrar-las-brechas-persistentes",
+    "has-una-donacion",
+    "informe-al-consejo-de-seguridad-de-la-onu-sobre-violencia-sexual-durante-conflictos-armados",
+    "informe-anual-de-la-alta-comisionada-de-las-naciones-unidas-para-los-derechos-humanos-2021",
+    "informe-anual-de-resultados-2020-onu-guatemala",
+    "iniciativa-de-ley-2698-convenio-183-de-oit-y-recomendacion-191",
+    "iniciativa-por-el-derecho-de-las-mujeres-a-un-trabajo-digno",
+    "investigacion-los-rostros-ocultos-en-la-maquila",
+    "la-inversion-publica-destinada-a-las-mujeres-en-guatemala",
+    "la-necesidad-de-trabajar-es-un-arma-de-dos-filos-para-las-trabajadoras-a-domicilio-el-campo-y-del-hogar-en-guatemala",
+    "la-violencia-laboral-en-guatemala-en-el-marco-del-convenio-190-de-la-oit",
+    "las-mujeres-en-el-mercado-laboral-guatemalteco",
+    "los-mecanismo-institucionales-de-la-mujer-bases-para-el-analisis-del-mecanismo-nacional-en-guatemala",
+    "mama-cash-nos-ovaciona",
+    "manual-de-la-democracia-social-1",
+    "manual-para-la-elaboracion-de-informes-de-derechos-humanos-para-la-incidencia",
+    "monitoreando-la-situacion-de-trata-laboral-con-fines-de-explotacion-sexual-en-guatemala-en-trabajadoras-domesticas-y-tortilleras",
+    "nuestros-derechos-como-trabajadoras-del-hogar-los-acuerdos-internacionales-que-los-respaldan-que-esta-sucediendo-hoy-en-dia-con-ellos-y-como-podemos-exigirlos",
+    "pandemia-y-derechos-humanos-en-las-americas",
+    "panorama-fiscal-de-america-latina-y-el-caribe-2021",
+    "para-ver-el-libro-en-linea",
+    "perspectivas-del-comercio-internacional-de-america-latina-y-el-caribe",
+    "planes-de-igualdad-de-genero-en-universidades-y-centros-de-investigacion-en-america-latina",
+    "plataforma-politica-2010-2011",
+    "politica-nacional-de-empleo-digno-2017-2032",
+    "por-un-convenio-y-recomendacion-a-favor-del-trabajo-domestico",
+    "practicas-de-reclutamiento-de-personas-trabajadoras-migrantes-en-belice-el-salvador-guatemala-honduras-y-mexico",
+    "presentacion-los-amigos-curan",
+    "presentaciones-2009-2010",
+    "progressing-national-sdgs-implementation",
+    "relatoria-del-foro-75-aniversario-del-codigo-de-trabajo",
+    "trabajo-domestico-en-el-contexto-de-la-pandemia-del-covid-19",
+    "trata-de-personas-y-sus-modalidades",
+    "tratado-de-versailles",
+    "ultima-advertencia-los-defensores-de-los-derechos-humanos-victimas-de-amenazas-de-muerte-y-asesinatos",
+    "upr-a-practical-guide-for-civil-society-coalitions-to-engage-in-implementation-mechanisms"
+  ],
   "communication_excluded_slugs": [
     "approval-of-15-non-governmental-organizations-for-association-with-un-public",
     "origen-del-aguinaldo",
@@ -215,7 +289,7 @@
     "estado-de-situacion-del-sector-de-cuidados-en-guatemala-el-salvador-y-honduras": {
       "title": "Estado de situación del sector de cuidados en Guatemala, El Salvador y Honduras",
       "date": "2025",
-      "author": "Maritza Velásquez Estrada; Ismael Ot Padilla; Amory Marroquín",
+      "author": "Ismael Ot Padilla; Maritza Velásquez Estrada; Amory Marroquín",
       "institutions": "Sur Futuro; IDRC - CRDI",
       "identifier": null
     },
@@ -1041,5 +1115,316 @@
   "public_route_aliases": {
     "/comunicados/diagnostico/": "/cendoc/diagnostico/",
     "/comunicados/presentaciones-2009-2010/": "/cendoc/presentaciones-2009-2010/"
+  },
+  "cendoc_description_overrides": {
+    "52-semanas-en-el-continente-americano": "investigación del CENDOC: «52 Semanas en el Continente Americano». Consulta la ficha documental de ATRAHDOM.",
+    "acuerdo-gubernativo-1-8-de-febrero-de-2019": "documento normativo del CENDOC: «Acuerdo Gubernativo 1, 8 de febrero de 2019». Consulta la ficha documental de ATRAHDOM.",
+    "acuerdo-ministerial-45-2018-ministerio-de-trabajo-y-prevision-social-comision-nacional-tripartita-de-relaciones-laborales-y-libertad-sindical": "documento normativo del CENDOC: «Acuerdo Ministerial 45-2018, Ministerio de Trabajo y Previsión Social, Comisión Nacional Tripartita…». Consulta la ficha documental de ATRAHDOM.",
+    "boletin-no-5-trabajo-no-remunerado-y-labores-de-cuidado-en-guatemala": "boletín del CENDOC: «Boletín No. 5 Trabajo no remunerado y labores de cuidado en Guatemala». Consulta la ficha documental de ATRAHDOM.",
+    "caracterizacion-de-establecimientos-educativos-publicos-del-ciclo-diversificado": "investigación del CENDOC: «Caracterización de establecimientos educativos públicos del ciclo diversificado». Consulta la ficha documental de ATRAHDOM.",
+    "caracterizacion-de-las-trabajadoras-de-la-maquila-textil-frente-a-las-violencias-de-genero-incluida-la-economica-en-guatemala": "investigación del CENDOC: «Caracterización de las trabajadoras de la maquila textil frente a las violencias de género, incluida la…». Consulta la ficha documental de ATRAHDOM.",
+    "codigo-de-trabajo-republica-de-guatemala": "documento normativo del CENDOC: «Código de Trabajo, República de Guatemala». Consulta la ficha documental de ATRAHDOM.",
+    "comercio-y-genero-modulo-1": "documento del CENDOC: «Comercio y Género, módulo 1». Consulta la ficha documental de ATRAHDOM.",
+    "comunicado-apmd-en-relacion-al-presupuesto-2022": "comunicado del CENDOC: «Comunicado APMD, en relación al Presupuesto 2022.». Consulta la ficha documental de ATRAHDOM.",
+    "constitucion-politica-de-la-republica-de-guatemala": "documento normativo del CENDOC: «Constitución Política de la República de Guatemala». Consulta la ficha documental de ATRAHDOM.",
+    "cuadernillos-de-jurisprudencia-de-la-corte-interamericana-de-derechos-humanos-14-igualdad-y-no-discriminacion": "documento normativo del CENDOC: «Cuadernillos de Jurisprudencia de la Corte Interamericana de Derechos Humanos, #14, Igualdad y No…». Consulta la ficha documental de ATRAHDOM.",
+    "cuantos-esclavos-hay-hoy-en-el-mundo": "documento del CENDOC: «¿Cuántos esclavos hay hoy en el mundo?». Consulta la ficha documental de ATRAHDOM.",
+    "de-las-palabras-a-la-accion-proyectos-con-soluciones-innovadoras-para-la-naturaleza-la-accion-climatica-y-la-igualdad-de-genero": "manual del CENDOC: «De las palabras a la acción: Proyectos con Soluciones Innovadoras para la Naturaleza, la Acción Climática y la…». Consulta la ficha documental de ATRAHDOM.",
+    "declaracion-universal-de-los-derechos-humanos": "documento normativo del CENDOC: «Declaración Universal de los Derechos Humanos». Consulta la ficha documental de ATRAHDOM.",
+    "declaratoria-de-chimaltenango-ii-3r-congreso-de-mujeres-trabajadoras-de-guatemala": "declaratoria del CENDOC: «Declaratoria de Chimaltenango II, 3er. Congreso de Mujeres Trabajadoras de Guatemala». Consulta la ficha documental de ATRAHDOM.",
+    "declaratoria-de-chimaltenango-iii-iv-congreso-de-mujeres-trabajadoras-de-guatemala-mayo-2014": "declaratoria del CENDOC: «DECLARATORIA DE CHIMALTENANGO III IV Congreso de Mujeres Trabajadoras de Guatemala Mayo 2014.». Consulta la ficha documental de ATRAHDOM.",
+    "declaratoria-del-v-encuentro-latinoamericano-de-trabajadoras-domesticas": "declaratoria del CENDOC: «Declaratoria del V Encuentro Latinoamericano de Trabajadoras Domésticas». Consulta la ficha documental de ATRAHDOM.",
+    "declaratoria-vi-congreso-de-mujeres-trabajadoras-de-guatemala": "declaratoria del CENDOC: «Declaratoria VI Congreso de Mujeres Trabajadoras de Guatemala». Consulta la ficha documental de ATRAHDOM.",
+    "desigualdades-y-afectaciones-generadas-por-el-covid-19-en-la-vida-de-las-mujeres-trabajadoras-en-sectores-laborales-vulnerables-en-guatemala-2020-2021": "documento del CENDOC: «Desigualdades y afectaciones generadas por el Covid-19 en la vida de las mujeres trabajadoras, en sectores…». Consulta la ficha documental de ATRAHDOM.",
+    "dossier-comercio-sexual": "dossier del CENDOC: «Dossier Comercio Sexual». Consulta la ficha documental de ATRAHDOM.",
+    "el-bono-demografico-una-oportunidad-para-el-trabajo-decente-en-guatemala": "investigación del CENDOC: «El bono demográfico una oportunidad para el trabajo decente en Guatemala». Consulta la ficha documental de ATRAHDOM.",
+    "el-control-de-convencionalidad-una-herramienta-estrategica": "documento del CENDOC: «El Control de Convencionalidad, una herramienta estratégica.». Consulta la ficha documental de ATRAHDOM.",
+    "el-futuro-de-la-incidencia": "investigación del CENDOC: «El futuro de la incidencia». Consulta la ficha documental de ATRAHDOM.",
+    "el-telar-de-los-suenos": "manual del CENDOC: «El telar de los sueños». Consulta la ficha documental de ATRAHDOM.",
+    "encuesta-a-poblacion-ocupada-en-el-depto-guatemala-parte-i": "encuesta del CENDOC: «Encuesta a población ocupada en el depto. Guatemala. Parte I». Consulta la ficha documental de ATRAHDOM.",
+    "encuesta-a-poblacion-ocupada-en-el-depto-guatemala-parte-ii": "encuesta del CENDOC: «Encuesta a población ocupada en el depto. Guatemala. Parte II». Consulta la ficha documental de ATRAHDOM.",
+    "encuesta-sobre-el-trabajo-en-plantacion": "encuesta del CENDOC: «Encuesta sobre el trabajo en plantaciones.». Consulta la ficha documental de ATRAHDOM.",
+    "entornos-de-trabajo-seguros-y-saludables-libres-de-violencia-y-acoso": "manual del CENDOC: «Entornos de trabajo seguros y saludables, libres de violencia y acoso». Consulta la ficha documental de ATRAHDOM.",
+    "feminismo-y-prostitucion-la-persistencia-de-una-amarga-disputa": "ensayo del CENDOC: «Feminismo y Prostitución: la persistencia de una amarga disputa». Consulta la ficha documental de ATRAHDOM.",
+    "fund-for-gender-equality-annual-report-2017-2018": "informe del CENDOC: «Fund For Gender Equality Annual Report 2017-2018». Consulta la ficha documental de ATRAHDOM.",
+    "fusiles-racismo-y-protesta-la-historia-politica-de-guatemala": "documento del CENDOC: «Fusiles, Racismo y Protesta. La historia política de Guatemala». Consulta la ficha documental de ATRAHDOM.",
+    "informe-al-consejo-de-seguridad-de-la-onu-sobre-violencia-sexual-durante-conflictos-armados": "informe del CENDOC: «Informe al Consejo de Seguridad de la ONU sobre Violencia Sexual durante conflictos armados». Consulta la ficha documental de ATRAHDOM.",
+    "informe-anual-de-la-alta-comisionada-de-las-naciones-unidas-para-los-derechos-humanos-2021": "informe del CENDOC: «Informe anual de la Alta Comisionada de las Naciones Unidas para los Derechos Humanos, 2021». Consulta la ficha documental de ATRAHDOM.",
+    "informe-anual-de-resultados-2020-onu-guatemala": "informe del CENDOC: «Informe Anual de Resultados 2020, ONU Guatemala». Consulta la ficha documental de ATRAHDOM.",
+    "iniciativa-de-ley-2698-convenio-183-de-oit-y-recomendacion-191": "documento normativo del CENDOC: «Iniciativa de Ley 2698, Convenio 183 de OIT y Recomendación 191». Consulta la ficha documental de ATRAHDOM.",
+    "iniciativa-por-el-derecho-de-las-mujeres-a-un-trabajo-digno": "documento del CENDOC: «Iniciativa por el Derecho de las Mujeres a un Trabajo Digno». Consulta la ficha documental de ATRAHDOM.",
+    "investigacion-los-rostros-ocultos-en-la-maquila": "documento del CENDOC: «Los Rostros Ocultos en la Maquila». Consulta la ficha documental de ATRAHDOM.",
+    "la-inversion-publica-destinada-a-las-mujeres-en-guatemala": "documento del CENDOC: «La inversión pública destinada a las mujeres en Guatemala». Consulta la ficha documental de ATRAHDOM.",
+    "la-necesidad-de-trabajar-es-un-arma-de-dos-filos-para-las-trabajadoras-a-domicilio-el-campo-y-del-hogar-en-guatemala": "documento del CENDOC: «La necesidad de trabajar… es un arma de dos filos… Para las trabajadoras a domicilio, el campo y del hogar… En…». Consulta la ficha documental de ATRAHDOM.",
+    "las-mujeres-en-el-mercado-laboral-guatemalteco": "documento del CENDOC: «Las mujeres en el Mercado Laboral Guatemalteco». Consulta la ficha documental de ATRAHDOM.",
+    "los-mecanismo-institucionales-de-la-mujer-bases-para-el-analisis-del-mecanismo-nacional-en-guatemala": "investigación del CENDOC: «Los mecanismo institucionales de la Mujer: Bases para el análisis del mecanismo nacional en Guatemala». Consulta la ficha documental de ATRAHDOM.",
+    "manual-de-la-democracia-social-1": "manual del CENDOC: «Manual de la Democracia Social 1». Consulta la ficha documental de ATRAHDOM.",
+    "manual-para-la-elaboracion-de-informes-de-derechos-humanos-para-la-incidencia": "manual del CENDOC: «Manual para la elaboración de informes de Derechos Humanos para la incidencia». Consulta la ficha documental de ATRAHDOM.",
+    "memoria-del-primer-congreso-nacional-de-los-cuidados-en-guatemala-voces-de-la-sociedad-civil": "documento del CENDOC: «Memoria del Primer Congreso Nacional de los Cuidados en Guatemala \"Voces de la Sociedad Civil\"». Consulta la ficha documental de ATRAHDOM.",
+    "monitoreando-la-situacion-de-trata-laboral-con-fines-de-explotacion-sexual-en-guatemala-en-trabajadoras-domesticas-y-tortilleras": "documento del CENDOC: «Monitoreando la situación de trata laboral con fines de explotación sexual en Guatemala en trabajadoras…». Consulta la ficha documental de ATRAHDOM.",
+    "pandemia-y-derechos-humanos-en-las-americas": "informe del CENDOC: «Pandemia y Derechos Humanos en las Américas». Consulta la ficha documental de ATRAHDOM.",
+    "panorama-fiscal-de-america-latina-y-el-caribe-2021": "informe del CENDOC: «Panorama Fiscal de América Latina y el Caribe, 2021». Consulta la ficha documental de ATRAHDOM.",
+    "para-ver-el-libro-en-linea": "documento del CENDOC: «De criadas y sirvientas a mujeres con derechos». Consulta la ficha documental de ATRAHDOM.",
+    "perspectivas-del-comercio-internacional-de-america-latina-y-el-caribe": "informe del CENDOC: «Perspectivas del Comercio Internacional de América Latina y el Caribe». Consulta la ficha documental de ATRAHDOM.",
+    "planes-de-igualdad-de-genero-en-universidades-y-centros-de-investigacion-en-america-latina": "investigación del CENDOC: «Planes de Igualdad de Género en Universidades y Centros de Investigación en América Latina». Consulta la ficha documental de ATRAHDOM.",
+    "politica-nacional-de-empleo-digno-2017-2032": "política pública del CENDOC: «Política Nacional de Empleo Digno, 2017-2032». Consulta la ficha documental de ATRAHDOM.",
+    "practicas-de-reclutamiento-de-personas-trabajadoras-migrantes-en-belice-el-salvador-guatemala-honduras-y-mexico": "documento del CENDOC: «Prácticas de reclutamiento de personas trabajadoras migrantes en Belice, El Salvador, Guatemala, Honduras y…». Consulta la ficha documental de ATRAHDOM.",
+    "presentacion-los-amigos-curan": "presentación del CENDOC: «Presentación los amigos curan». Consulta la ficha documental de ATRAHDOM.",
+    "progressing-national-sdgs-implementation": "informe del CENDOC: «Progressing National SDGs Implementation». Consulta la ficha documental de ATRAHDOM.",
+    "relatoria-del-foro-75-aniversario-del-codigo-de-trabajo": "informe del CENDOC: «Relatoría del foro 75 aniversario del Código de Trabajo». Consulta la ficha documental de ATRAHDOM.",
+    "trabajo-domestico-en-el-contexto-de-la-pandemia-del-covid-19": "documento del CENDOC: «Trabajo doméstico en el contexto de la pandemia del COVID-19». Consulta la ficha documental de ATRAHDOM.",
+    "trata-de-personas-y-sus-modalidades": "presentación del CENDOC: «Trata de personas y sus modalidades». Consulta la ficha documental de ATRAHDOM.",
+    "tratado-de-versailles": "documento normativo del CENDOC: «Tratado de Versailles». Consulta la ficha documental de ATRAHDOM.",
+    "ultima-advertencia-los-defensores-de-los-derechos-humanos-victimas-de-amenazas-de-muerte-y-asesinatos": "informe del CENDOC: «Última advertencia: los defensores de los derechos humanos, víctimas de amenazas de muerte y asesinatos». Consulta la ficha documental de ATRAHDOM."
+  },
+  "cendoc_seo_title_overrides": {
+    "3r-congreso-de-mujeres-trabajadoras-de-guatemala": "3er Congreso de Mujeres trabajadoras de Guatemala. | CENDOC",
+    "52-semanas-en-el-continente-americano": "52 Semanas en el Continente Americano | CENDOC",
+    "acuerdo-gubernativo-1-8-de-febrero-de-2019": "Acuerdo Gubernativo 1, 8 de febrero de 2019 | CENDOC",
+    "acuerdo-ministerial-45-2018-ministerio-de-trabajo-y-prevision-social-comision-nacional-tripartita-de-relaciones-laborales-y-libertad-sindical": "Acuerdo Ministerial 45-2018, Ministerio de Trabajo y Previsión Social, Comisión… | CENDOC",
+    "aporte-para-abordar-las-causas-que-afectan-a-la-laguna-chichoj-san-cristobal-verapaz-a-v-guatemala": "Aporte para abordar las causas que afectan a la Laguna Chichoj, San Cristóbal… | CENDOC",
+    "approval-of-15-non-governmental-organizations-for-association-with-un-public": "Approval of 15 non-governmental organizations for association with UN public. | CENDOC",
+    "boletin-no-5-trabajo-no-remunerado-y-labores-de-cuidado-en-guatemala": "Boletín No. 5 Trabajo no remunerado y labores de cuidado en Guatemala | CENDOC",
+    "campana-para-la-ratificacion-del-convenio-189-a-favor-de-trabajo-decente-para-el-trabajo-domestico": "Campaña para la ratificación del Convenio 189, a favor de trabajo decente para… | CENDOC",
+    "caracterizacion-de-establecimientos-educativos-publicos-del-ciclo-diversificado": "Caracterización de establecimientos educativos públicos del ciclo diversificado | CENDOC",
+    "caracterizacion-de-las-trabajadoras-de-la-maquila-textil-frente-a-las-violencias-de-genero-incluida-la-economica-en-guatemala": "Caracterización de las trabajadoras de la maquila textil frente a las… | CENDOC",
+    "codigo-de-trabajo-republica-de-guatemala": "Código de Trabajo, República de Guatemala | CENDOC",
+    "comunicado-apmd-en-relacion-al-presupuesto-2022": "Comunicado APMD, en relación al Presupuesto 2022. | CENDOC",
+    "constitucion-politica-de-la-republica-de-guatemala": "Constitución Política de la República de Guatemala | CENDOC",
+    "cuadernillos-de-jurisprudencia-de-la-corte-interamericana-de-derechos-humanos-14-igualdad-y-no-discriminacion": "Cuadernillos de Jurisprudencia de la Corte Interamericana de Derechos Humanos… | CENDOC",
+    "cuantos-esclavos-hay-hoy-en-el-mundo": "¿Cuántos esclavos hay hoy en el mundo? | CENDOC",
+    "de-las-palabras-a-la-accion-proyectos-con-soluciones-innovadoras-para-la-naturaleza-la-accion-climatica-y-la-igualdad-de-genero": "De las palabras a la acción: Proyectos con Soluciones Innovadoras para la… | CENDOC",
+    "declaracion-universal-de-los-derechos-humanos": "Declaración Universal de los Derechos Humanos | CENDOC",
+    "declaratoria-de-chimaltenango-ii-3r-congreso-de-mujeres-trabajadoras-de-guatemala": "Declaratoria de Chimaltenango II, 3er. Congreso de Mujeres Trabajadoras de… | CENDOC",
+    "declaratoria-de-chimaltenango-iii-iv-congreso-de-mujeres-trabajadoras-de-guatemala-mayo-2014": "DECLARATORIA DE CHIMALTENANGO III IV Congreso de Mujeres Trabajadoras de… | CENDOC",
+    "declaratoria-del-v-encuentro-latinoamericano-de-trabajadoras-domesticas": "Declaratoria del V Encuentro Latinoamericano de Trabajadoras Domésticas | CENDOC",
+    "declaratoria-guatemala-de-la-asuncion-ii": "Declaratoria Guatemala de la Asunción II. | CENDOC",
+    "declaratoria-vi-congreso-de-mujeres-trabajadoras-de-guatemala": "Declaratoria VI Congreso de Mujeres Trabajadoras de Guatemala | CENDOC",
+    "derechos-de-las-trabajadoras-remunerasdas-del-hogar-de-las-americas-avances-y-brechas-persistentes": "Derechos de las trabajadoras remunerasdas del hogar de las Américas: Avances y… | CENDOC",
+    "desigualdades-y-afectaciones-generadas-por-el-covid-19-en-la-vida-de-las-mujeres-trabajadoras-en-sectores-laborales-vulnerables-en-guatemala-2020-2021": "Desigualdades y afectaciones generadas por el Covid-19 en la vida de las… | CENDOC",
+    "el-bono-demografico-una-oportunidad-para-el-trabajo-decente-en-guatemala": "El bono demográfico una oportunidad para el trabajo decente en Guatemala | CENDOC",
+    "el-control-de-convencionalidad-una-herramienta-estrategica": "El Control de Convencionalidad, una herramienta estratégica. | CENDOC",
+    "el-convenio-189-de-la-oit-sobre-el-trabajo-decente-para-las-trabajadoras-y-los-trabajadores-domesticos-y-su-incorporacion-a-la-legislacion-guatemalteca": "El Convenio 189 de la OIT sobre el trabajo decente para las trabajadoras y los… | CENDOC",
+    "encuesta-a-poblacion-ocupada-en-el-depto-guatemala-parte-i": "Encuesta a población ocupada en el depto. Guatemala. Parte I | CENDOC",
+    "encuesta-a-poblacion-ocupada-en-el-depto-guatemala-parte-ii": "Encuesta a población ocupada en el depto. Guatemala. Parte II | CENDOC",
+    "encuesta-sobre-el-trabajo-en-plantacion": "Encuesta sobre el trabajo en plantaciones. | CENDOC",
+    "entornos-de-trabajo-seguros-y-saludables-libres-de-violencia-y-acoso": "Entornos de trabajo seguros y saludables, libres de violencia y acoso | CENDOC",
+    "estado-de-situacion-del-sector-de-cuidados-en-guatemala-el-salvador-y-honduras": "Estado de situación del sector de cuidados en Guatemala, El Salvador y Honduras | CENDOC",
+    "feminismo-y-prostitucion-la-persistencia-de-una-amarga-disputa": "Feminismo y Prostitución: la persistencia de una amarga disputa | CENDOC",
+    "fund-for-gender-equality-annual-report-2017-2018": "Fund For Gender Equality Annual Report 2017-2018 | CENDOC",
+    "fusiles-racismo-y-protesta-la-historia-politica-de-guatemala": "Fusiles, Racismo y Protesta. La historia política de Guatemala | CENDOC",
+    "guia-para-las-personas-empleadora-y-tomadoras-de-decisiones-estatales-los-convenios-internacionales-y-como-cerrar-las-brechas-persistentes": "Guía para las personas empleadora y tomadoras de decisiones estatales. Los… | CENDOC",
+    "informe-al-consejo-de-seguridad-de-la-onu-sobre-violencia-sexual-durante-conflictos-armados": "Informe al Consejo de Seguridad de la ONU sobre Violencia Sexual durante… | CENDOC",
+    "informe-anual-de-la-alta-comisionada-de-las-naciones-unidas-para-los-derechos-humanos-2021": "Informe anual de la Alta Comisionada de las Naciones Unidas para los Derechos… | CENDOC",
+    "informe-anual-de-resultados-2020-onu-guatemala": "Informe Anual de Resultados 2020, ONU Guatemala | CENDOC",
+    "iniciativa-de-ley-2698-convenio-183-de-oit-y-recomendacion-191": "Iniciativa de Ley 2698, Convenio 183 de OIT y Recomendación 191 | CENDOC",
+    "iniciativa-por-el-derecho-de-las-mujeres-a-un-trabajo-digno": "Iniciativa por el Derecho de las Mujeres a un Trabajo Digno | CENDOC",
+    "la-inversion-publica-destinada-a-las-mujeres-en-guatemala": "La inversión pública destinada a las mujeres en Guatemala | CENDOC",
+    "la-necesidad-de-trabajar-es-un-arma-de-dos-filos-para-las-trabajadoras-a-domicilio-el-campo-y-del-hogar-en-guatemala": "La necesidad de trabajar… es un arma de dos filos… Para las trabajadoras a… | CENDOC",
+    "la-violencia-laboral-en-guatemala-en-el-marco-del-convenio-190-de-la-oit": "La Violencia Laboral En Guatemala En El Marco Del Convenio 190 De La OIT | CENDOC",
+    "las-mujeres-en-el-mercado-laboral-guatemalteco": "Las mujeres en el Mercado Laboral Guatemalteco | CENDOC",
+    "los-mecanismo-institucionales-de-la-mujer-bases-para-el-analisis-del-mecanismo-nacional-en-guatemala": "Los mecanismo institucionales de la Mujer: Bases para el análisis del mecanismo… | CENDOC",
+    "manual-para-la-elaboracion-de-informes-de-derechos-humanos-para-la-incidencia": "Manual para la elaboración de informes de Derechos Humanos para la incidencia | CENDOC",
+    "memoria-del-primer-congreso-nacional-de-los-cuidados-en-guatemala-voces-de-la-sociedad-civil": "Memoria del Primer Congreso Nacional de los Cuidados en Guatemala \"Voces de la… | CENDOC",
+    "monitoreando-la-situacion-de-trata-laboral-con-fines-de-explotacion-sexual-en-guatemala-en-trabajadoras-domesticas-y-tortilleras": "Monitoreando la situación de trata laboral con fines de explotación sexual en… | CENDOC",
+    "nuestros-derechos-como-trabajadoras-del-hogar-los-acuerdos-internacionales-que-los-respaldan-que-esta-sucediendo-hoy-en-dia-con-ellos-y-como-podemos-exigirlos": "Nuestros derechos como trabajadoras del hogar. Los Acuerdos Internacionales que… | CENDOC",
+    "pandemia-y-derechos-humanos-en-las-americas": "Pandemia y Derechos Humanos en las Américas | CENDOC",
+    "panorama-fiscal-de-america-latina-y-el-caribe-2021": "Panorama Fiscal de América Latina y el Caribe, 2021 | CENDOC",
+    "para-ver-el-libro-en-linea": "De criadas y sirvientas a mujeres con derechos | CENDOC",
+    "perspectivas-del-comercio-internacional-de-america-latina-y-el-caribe": "Perspectivas del Comercio Internacional de América Latina y el Caribe | CENDOC",
+    "planes-de-igualdad-de-genero-en-universidades-y-centros-de-investigacion-en-america-latina": "Planes de Igualdad de Género en Universidades y Centros de Investigación en… | CENDOC",
+    "plataforma-politica-2010-2011": "Plataforma Politica Desde El Pensamiento De Las Mujeres Trabajadoras De… | CENDOC",
+    "politica-nacional-de-empleo-digno-2017-2032": "Política Nacional de Empleo Digno, 2017-2032 | CENDOC",
+    "por-un-convenio-y-recomendacion-a-favor-del-trabajo-domestico": "Por un Convenio y Recomendación a favor del Trabajo Doméstico. | CENDOC",
+    "practicas-de-reclutamiento-de-personas-trabajadoras-migrantes-en-belice-el-salvador-guatemala-honduras-y-mexico": "Prácticas de reclutamiento de personas trabajadoras migrantes en Belice, El… | CENDOC",
+    "progressing-national-sdgs-implementation": "Progressing National SDGs Implementation | CENDOC",
+    "relatoria-del-foro-75-aniversario-del-codigo-de-trabajo": "Relatoría del foro 75 aniversario del Código de Trabajo | CENDOC",
+    "tendencias-de-la-poblacion-de-america-latina-y-el-caribe-efectos-demograficos-dela-pandemia-de-covid-19": "Tendencias de la población de América Latina y el Caribe. Efectos demográficos… | CENDOC",
+    "trabajo-domestico-en-el-contexto-de-la-pandemia-del-covid-19": "Trabajo doméstico en el contexto de la pandemia del COVID-19 | CENDOC",
+    "ultima-advertencia-los-defensores-de-los-derechos-humanos-victimas-de-amenazas-de-muerte-y-asesinatos": "Última advertencia: los defensores de los derechos humanos, víctimas de… | CENDOC",
+    "upr-a-practical-guide-for-civil-society-coalitions-to-engage-in-implementation-mechanisms": "UPR: A Practical Guide for Civil Society Coalitions to Engage in Implementation… | CENDOC"
+  },
+  "cendoc_citation_overrides": {
+    "el-convenio-189-de-la-oit-sobre-el-trabajo-decente-para-las-trabajadoras-y-los-trabajadores-domesticos-y-su-incorporacion-a-la-legislacion-guatemalteca": {
+      "author": "Pinto Mendoza, S. C.",
+      "date": "2023",
+      "title": "El Convenio 189 de la OIT sobre el trabajo decente para las trabajadoras y los trabajadores domésticos y su incorporación a la legislación guatemalteca",
+      "note": "Tesis, Facultad de Ciencias Jurídicas y Sociales, Universidad de San Carlos de Guatemala",
+      "publisher": "ATRAHDOM"
+    }
+  },
+  "cendoc_citation_author_overrides": {
+    "52-semanas-en-el-continente-americano": {
+      "authors": [{"family": "Velázquez", "initials": ["D."]}],
+      "source_url": "https://escuelasparalajusticiasocial.net/libro-digital-52-semanas-en-el-continente-americano/"
+    },
+    "aporte-para-abordar-las-causas-que-afectan-a-la-laguna-chichoj-san-cristobal-verapaz-a-v-guatemala": {
+      "authors": [
+        {"family": "Velásquez Estrada", "initials": ["M."]},
+        {"family": "Chiquin Caal", "initials": ["O."]},
+        {"family": "Guillermo Pereira", "initials": ["D.", "M."]},
+        {"family": "Isem Coy", "initials": ["L.", "M."]},
+        {"family": "Galindo Veliz", "initials": ["K."]},
+        {"family": "Cho Mo", "initials": ["T.", "L."]},
+        {"family": "Tilom Pereira", "initials": ["F."]},
+        {"family": "Moran Cho", "initials": ["J."]}
+      ],
+      "source_url": "https://atrahdom.org/2023/06/15/aporte-para-abordar-las-causas-que-afectan-a-la-laguna-chichoj-san-cristobal-verapaz-a-v-guatemala/"
+    },
+    "caracterizacion-de-establecimientos-educativos-publicos-del-ciclo-diversificado": {
+      "authors": [{"family": "Orantes Cachupe", "initials": ["E.", "B."]}],
+      "source_url": "https://asies.org.gt/wp-content/uploads/pdfs/caracterizacion_de_establecimientos_educativos_publicos_del_ciclo_diversificado.pdf"
+    },
+    "cuantos-esclavos-hay-hoy-en-el-mundo": {
+      "authors": [{"family": "de Maever", "initials": ["P."]}],
+      "source_url": "https://atrahdom.org/2021/06/14/cuantos-esclavos-hay-hoy-en-el-mundo/"
+    },
+    "desigualdades-y-afectaciones-generadas-por-el-covid-19-en-la-vida-de-las-mujeres-trabajadoras-en-sectores-laborales-vulnerables-en-guatemala-2020-2021": {
+      "authors": [
+        {"family": "Velásquez Estrada", "initials": ["M."]},
+        {"family": "Ortega", "initials": ["E."]},
+        {"family": "Duarte", "initials": ["G."]},
+        {"family": "Linares", "initials": ["L."]}
+      ],
+      "source_url": "https://atrahdom.org/2021/12/02/desigualdades-y-afectaciones-generadas-por-el-covid-19-en-la-vida-de-las-mujeres-trabajadoras-en-sectores-laborales-vulnerables-en-guatemala-2020-2021/"
+    },
+    "dossier-comercio-sexual": {
+      "authors": [
+        {"family": "Madrid Romero", "initials": ["E."]},
+        {"family": "Montejo", "initials": ["J."]},
+        {"family": "Madrid", "initials": ["R.", "I."]}
+      ],
+      "source_url": "https://atrahdom.org/2021/02/24/dossier-comercio-sexual/"
+    },
+    "el-bono-demografico-una-oportunidad-para-el-trabajo-decente-en-guatemala": {
+      "authors": [
+        {"family": "Arévalo", "initials": ["J."]},
+        {"family": "Badilla Barrantes", "initials": ["E."]},
+        {"family": "Castro de Búrbano", "initials": ["G."]},
+        {"family": "García", "initials": ["J.", "L."]},
+        {"family": "González", "initials": ["G."]},
+        {"family": "Linares López", "initials": ["L.", "F."]}
+      ],
+      "source_url": "https://asies.org.gt/wp-content/uploads/pdfs/el_bono_demografico_una_oportunidad_para_el_trabajo_decente_en_guatemala.pdf"
+    },
+    "el-control-de-convencionalidad-una-herramienta-estrategica": {
+      "authors": [{"family": "Urizar", "initials": ["I.", "Z."]}],
+      "source_url": "https://atrahdom.org/wp-content/uploads/2024/08/ec189.pdf"
+    },
+    "estado-de-situacion-del-sector-de-cuidados-en-guatemala-el-salvador-y-honduras": {
+      "authors": [
+        {"family": "Ot Padilla", "initials": ["I."]},
+        {"family": "Velasquez Estrada", "initials": ["M."]},
+        {"family": "Marroquín", "initials": ["A."]}
+      ],
+      "source_url": "https://www.sur-futuro.org/publicaciones/cuidados-guatemala-elsalvador-honduras"
+    },
+    "feminismo-y-prostitucion-la-persistencia-de-una-amarga-disputa": {
+      "authors": [{"family": "Lamas", "initials": ["M."]}],
+      "source_url": "https://atrahdom.org/2021/02/24/feminismo-y-prostitucion-la-persistencia-de-una-amarga-disputa/"
+    },
+    "fusiles-racismo-y-protesta-la-historia-politica-de-guatemala": {
+      "authors": [{"family": "Villacorta", "initials": ["M."]}],
+      "source_url": "https://atrahdom.org/2021/05/24/fusiles-racismo-y-protesta-la-historia-politica-de-guatemala/"
+    },
+    "informacion-de-cooperantes": {
+      "authors": [{"family": "Velasquez", "initials": ["M."]}],
+      "source_url": "https://atrahdom.org/2011/02/11/informacion-de-cooperantes/"
+    },
+    "encuesta-a-poblacion-ocupada-en-el-depto-guatemala-parte-i": {
+      "authors": [
+        {"family": "Pira", "initials": ["J."]},
+        {"family": "López", "initials": ["E."]},
+        {"family": "Barahona", "initials": ["M."]},
+        {"family": "Linares", "initials": ["L."]}
+      ],
+      "source_url": "https://asies.org.gt/encuesta-a-poblacion-ocupada-en-el-departamento-de-guatemala-primera-parte/"
+    },
+    "encuesta-a-poblacion-ocupada-en-el-depto-guatemala-parte-ii": {
+      "authors": [
+        {"family": "Pira", "initials": ["J."]},
+        {"family": "López", "initials": ["E."]},
+        {"family": "Barahona", "initials": ["M."]},
+        {"family": "Linares", "initials": ["L."]}
+      ],
+      "source_url": "https://asies.org.gt/encuesta-a-poblacion-ocupada-en-el-departamento-de-guatemala-parte-ii/"
+    },
+    "encuesta-sobre-el-trabajo-en-plantacion": {
+      "authors": [
+        {"family": "Barahona", "initials": ["M."]},
+        {"family": "Linares", "initials": ["L."]},
+        {"family": "López", "initials": ["E."]},
+        {"family": "Pira", "initials": ["J."]}
+      ],
+      "source_url": "https://asies.org.gt/wp-content/uploads/pdfs/encuesta_sobre_el_trabajo_en_plantaciones.pdf"
+    },
+    "investigacion-los-rostros-ocultos-en-la-maquila": {
+      "authors": [
+        {"family": "Velásquez Estrada", "initials": ["M."]},
+        {"family": "Amaya", "initials": ["K."]}
+      ],
+      "source_url": "https://atrahdom.org/wp-content/uploads/2012/11/los-rostros-impre.pdf"
+    },
+    "la-inversion-publica-destinada-a-las-mujeres-en-guatemala": {
+      "authors": [
+        {"family": "Barrientos", "initials": ["R."]},
+        {"family": "Cevallos", "initials": ["A."]},
+        {"family": "Donis", "initials": ["S."]},
+        {"family": "Figueroa", "initials": ["W."]},
+        {"family": "Gossmann", "initials": ["C."]},
+        {"family": "Molina", "initials": ["M."]},
+        {"family": "Monzón", "initials": ["J.", "R."]}
+      ],
+      "source_url": "https://atrahdom.org/2021/11/05/la-inversion-publica-destinada-a-las-mujeres-en-guatemala/"
+    },
+    "la-violencia-laboral-en-guatemala-en-el-marco-del-convenio-190-de-la-oit": {
+      "authors": [
+        {"family": "Sticco", "initials": ["G."]},
+        {"family": "Villanueva", "initials": ["C."]}
+      ],
+      "source_url": "https://observatoriocentroamericanodeviolencialaboral.org/wp-content/uploads/2023/05/Violencia-laboral-Guatemala.pdf"
+    },
+    "los-mecanismo-institucionales-de-la-mujer-bases-para-el-analisis-del-mecanismo-nacional-en-guatemala": {
+      "authors": [{"family": "Rodríguez", "initials": ["A."]}],
+      "source_url": "https://atrahdom.org/2022/03/29/los-mecanismo-institucionales-de-la-mujer-bases-para-el-analisis-del-mecanismo-nacional-en-guatemala/"
+    },
+    "mama-cash-nos-ovaciona": {
+      "authors": [{"family": "Vonk", "initials": ["E."]}],
+      "source_url": "https://atrahdom.org/2015/12/01/mama-cash-nos-ovaciona/"
+    },
+    "manual-para-la-elaboracion-de-informes-de-derechos-humanos-para-la-incidencia": {
+      "authors": [{"family": "Cortés Ruiz", "initials": ["P.", "L."]}],
+      "source_url": "https://raceandequality.org/wp-content/uploads/2020/09/Manual-IDH_-web_texto.pdf"
+    },
+    "monitoreando-la-situacion-de-trata-laboral-con-fines-de-explotacion-sexual-en-guatemala-en-trabajadoras-domesticas-y-tortilleras": {
+      "authors": [
+        {"family": "Velásquez Estrada", "initials": ["M."]},
+        {"family": "Vásquez", "initials": ["S."]}
+      ],
+      "source_url": "https://atrahdom.org/2021/05/21/monitoreando-la-situacion-de-trata-laboral-con-fines-de-explotacion-sexual-en-guatemala-en-trabajadoras-domesticas-y-tortilleras/"
+    },
+    "relatoria-del-foro-75-aniversario-del-codigo-de-trabajo": {
+      "authors": [
+        {"family": "Contreras", "initials": ["A."]},
+        {"family": "Soberanis", "initials": ["C."]},
+        {"family": "Dardón", "initials": ["B."]},
+        {"family": "Linares", "initials": ["L."]}
+      ],
+      "source_url": "https://atrahdom.org/2022/06/02/relatoria-del-foro-75-aniversario-del-codigo-de-trabajo/"
+    },
+    "revista-sindical-sitradom": {
+      "authors": [
+        {"family": "Marroquín", "initials": ["A."]},
+        {"family": "Najarro", "initials": ["S."]},
+        {"family": "Montes", "initials": ["V."]},
+        {"family": "Castro", "initials": ["G."]},
+        {"family": "Pérez", "initials": ["C."]}
+      ],
+      "source_url": "https://www.atrahdom.org/cendoc/revista-sindical-sitradom/"
+    },
+    "trata-de-personas-y-sus-modalidades": {
+      "authors": [{"family": "Gularte Murga", "initials": ["S."]}],
+      "source_url": "https://atrahdom.org/2021/02/24/trata-de-personas-y-sus-modalidades/"
+    }
   }
 }

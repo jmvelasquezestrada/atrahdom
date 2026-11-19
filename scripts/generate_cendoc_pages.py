@@ -5,13 +5,14 @@ from __future__ import annotations
 import argparse
 import html
 import json
+import mimetypes
 import re
 import sys
 from datetime import datetime
 from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any
-from urllib.parse import urlparse
+from urllib.parse import quote, urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
@@ -238,10 +239,34 @@ def citation_year(date: str) -> str:
     return match.group(0) if match else "s.f."
 
 
+def format_apa_authors(authors: list[dict[str, Any]]) -> str:
+    """Format source-verified personal names for an APA 7 reference."""
+    names = [
+        f"{str(author['family']).strip()}, {' '.join(str(initial).strip() for initial in author['initials'])}"
+        for author in authors
+    ]
+    if len(names) == 1:
+        return names[0]
+    if len(names) <= 20:
+        return ", ".join(names[:-1]) + ", & " + names[-1]
+    return ", ".join(names[:19]) + ", . . . " + names[-1]
+
+
+def apa_terminal_period(value: str) -> str:
+    """Avoid adding a second sentence-ending mark to an APA reference element."""
+    return "" if value.rstrip().endswith((".", "?", "!")) else "."
+
+
 def sidebar(post: dict[str, Any], categories: list[str], slug: str) -> str:
     author = post_author(post)
+    citation_authors = post.get("editorial_citation_authors")
+    citation_author = format_apa_authors(citation_authors) if citation_authors else author
+    citation_author = citation_author.rstrip()
+    if citation_author and not citation_author.endswith("."):
+        citation_author += "."
     date = date_of(post)
     title = str(post.get("title") or "Sin título")
+    recovery_url = f"https://www.atrahdom.org/cendoc/{slug}/"
     parts = [f'<p><strong>Tipo:</strong><br>{html.escape(str(post.get("editorial_type") or "Publicación"))}</p>']
     if author:
         parts.append(f'<p><strong>Autoría:</strong><br>{html.escape(author)}</p>')
@@ -260,42 +285,109 @@ def sidebar(post: dict[str, Any], categories: list[str], slug: str) -> str:
         if label == "DOI" and value.startswith(("https://doi.org/", "http://doi.org/")):
             value_html = f'<a href="{html.escape(value, quote=True)}" rel="noopener">{html.escape(value)}</a>'
         parts.append(f'<p><strong>{label}:</strong><br>{value_html}</p>')
-    documents = post.get("editorial_documents") or []
-    if documents:
-        citations = []
-        ordered_documents = sorted(documents, key=lambda document: str(document.get("citation_title") or document.get("title") or title).casefold())
-        for index, document in enumerate(ordered_documents):
-            year = str(document.get("year") or citation_year(date))
-            suffix = chr(ord("a") + index) if len(documents) > 1 else ""
-            citation_title = str(document.get("citation_title") or document.get("title") or title)
-            citation_note = str(document.get("citation_note") or "")
-            url = str(document.get("url") or "")
-            citation = f'{html.escape(author)}. ({html.escape(year + suffix)}). <em>{html.escape(citation_title)}</em>'
-            if citation_note:
-                citation += f' [{html.escape(citation_note)}]'
-            citation += "."
-            if url.startswith(("https://", "http://")):
-                citation += f' <a href="{html.escape(url, quote=True)}" rel="noopener">{html.escape(url)}</a>'
-            citations.append(f"<blockquote>{citation}</blockquote>")
-        parts.append('<div class="citation-block"><p><strong>Citas sugeridas:</strong></p>' + "".join(citations) + "</div>")
-    else:
-        citation_title = plain_text(str(post.get("editorial_citation_title") or title))
-        citation = f'{html.escape(author)}. ({citation_year(date)}). <em>{html.escape(citation_title)}</em>.' if author else f'<em>{html.escape(citation_title)}</em>. ({citation_year(date)}).'
-        if identifier and identifier.get("type") == "DOI" and str(identifier.get("value") or "").startswith(("https://doi.org/", "http://doi.org/")):
-            doi = str(identifier["value"])
-            citation += f' <a href="{html.escape(doi, quote=True)}" rel="noopener">{html.escape(doi)}</a>'
-        else:
-            citation_url = str(post.get("editorial_citation_url") or "")
-            if citation_url.startswith(("https://", "http://")):
-                citation += f' <a href="{html.escape(citation_url, quote=True)}" rel="noopener">{html.escape(citation_url)}</a>'
+    citation_override = post.get("editorial_citation_override") or {}
+    if citation_override:
+        citation_author = html.escape(str(citation_override["author"]))
+        citation_date = html.escape(str(citation_override["date"]))
+        citation_title = html.escape(str(citation_override["title"]))
+        author_separator = " " if citation_author.endswith(".") else ". "
+        citation = f"{citation_author}{author_separator}({citation_date}). <em>{citation_title}</em>"
+        citation_note = str(citation_override.get("note") or "")
+        if citation_note:
+            citation += f" [{html.escape(citation_note)}]"
+        citation += apa_terminal_period(citation_note or citation_title)
+        publisher = str(citation_override.get("publisher") or "")
+        if publisher:
+            citation += f" {html.escape(publisher)}."
+        citation_url = str(citation_override.get("url") or recovery_url)
+        if citation_url.startswith(("https://", "http://")):
+            citation += f' <a href="{html.escape(citation_url, quote=True)}" rel="noopener">{html.escape(citation_url)}</a>'
         parts.append(f'<div class="citation-block"><p><strong>Cita sugerida:</strong></p><blockquote>{citation}</blockquote></div>')
+    else:
+        documents = post.get("editorial_documents") or []
+        if documents:
+            citations = []
+            ordered_documents = sorted(documents, key=lambda document: str(document.get("citation_title") or document.get("title") or title).casefold())
+            for index, document in enumerate(ordered_documents):
+                year = str(document.get("year") or citation_year(date))
+                suffix = chr(ord("a") + index) if len(documents) > 1 else ""
+                citation_title = str(document.get("citation_title") or document.get("title") or title)
+                citation_note = str(document.get("citation_note") or "")
+                url = str(document.get("url") or recovery_url)
+                citation = f'{html.escape(citation_author)} ({html.escape(year + suffix)}). <em>{html.escape(citation_title)}</em>'
+                if citation_note:
+                    citation += f' [{html.escape(citation_note)}]'
+                citation += apa_terminal_period(citation_note or citation_title)
+                if url.startswith(("https://", "http://")):
+                    citation += f' <a href="{html.escape(url, quote=True)}" rel="noopener">{html.escape(url)}</a>'
+                citations.append(f"<blockquote>{citation}</blockquote>")
+            parts.append('<div class="citation-block"><p><strong>Citas sugeridas:</strong></p>' + "".join(citations) + "</div>")
+        else:
+            citation_title = plain_text(str(post.get("editorial_citation_title") or title))
+            title_period = apa_terminal_period(citation_title)
+            citation = f'{html.escape(citation_author)} ({citation_year(date)}). <em>{html.escape(citation_title)}</em>{title_period}' if citation_author else f'<em>{html.escape(citation_title)}</em>{title_period} ({citation_year(date)}).'
+            if identifier and identifier.get("type") == "DOI" and str(identifier.get("value") or "").startswith(("https://doi.org/", "http://doi.org/")):
+                doi = str(identifier["value"])
+                citation += f' <a href="{html.escape(doi, quote=True)}" rel="noopener">{html.escape(doi)}</a>'
+            else:
+                citation_url = str(post.get("editorial_citation_url") or recovery_url)
+                if citation_url.startswith(("https://", "http://")):
+                    citation += f' <a href="{html.escape(citation_url, quote=True)}" rel="noopener">{html.escape(citation_url)}</a>'
+            parts.append(f'<div class="citation-block"><p><strong>Cita sugerida:</strong></p><blockquote>{citation}</blockquote></div>')
     return "".join(parts)
 
 
 def structured_data(post: dict[str, Any], canonical: str) -> str:
     documents = post.get("editorial_documents") or []
     if not documents:
-        return ""
+        page_id = canonical + "#webpage"
+        webpage: dict[str, Any] = {
+            "@type": "WebPage",
+            "@id": page_id,
+            "url": canonical,
+            "name": str(post.get("title") or ""),
+        }
+        graph: list[dict[str, Any]] = [webpage]
+        main_entities: list[dict[str, str]] = []
+        seen_urls: set[str] = set()
+        for attachment in post.get("attachments") or []:
+            path = attachment_path(attachment)
+            if not path:
+                continue
+            parsed_path = urlparse(path)
+            if parsed_path.scheme in {"http", "https"}:
+                document_url = path
+            else:
+                local_path = ROOT / path.lstrip("/")
+                if not local_path.is_file():
+                    raise ValueError(f"Structured-data attachment is missing for {post.get('slug')}: {path}")
+                document_url = root_url(path)
+            document_url = quote(document_url, safe=":/?#[]@!$&'()*+,;=%")
+            if document_url in seen_urls:
+                continue
+            seen_urls.add(document_url)
+            document_id = document_url + "#digitaldocument"
+            main_entities.append({"@id": document_id})
+            if isinstance(attachment, dict):
+                document_name = str(attachment.get("title") or attachment.get("name") or "")
+            else:
+                document_name = ""
+            document_name = document_name or Path(parsed_path.path).name
+            item: dict[str, Any] = {
+                "@type": "DigitalDocument",
+                "@id": document_id,
+                "name": document_name,
+                "url": document_url,
+                "isPartOf": {"@id": page_id},
+            }
+            encoding_format, _ = mimetypes.guess_type(parsed_path.path)
+            if encoding_format:
+                item["encodingFormat"] = encoding_format
+            graph.append(item)
+        if main_entities:
+            webpage["mainEntity"] = main_entities
+        data = json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False, separators=(",", ":"))
+        return f'  <script type="application/ld+json">{data}</script>\n'
     page_id = canonical + "#webpage"
     graph: list[dict[str, Any]] = [{
         "@type": "WebPage",
