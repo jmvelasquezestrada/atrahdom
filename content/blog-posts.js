@@ -1,4 +1,29 @@
 window.ATRAHDOM_BLOG = [
+{
+  "slug": "justicia-climatica-escazu",
+  "title": "Justicia climática y el escudo de Escazú: ¿Por qué la protección de defensoras es clave para el futuro de Guatemala en el marco de la COP31?",
+  "publication_date": "2026-11-23T00:00:00-06:00",
+  "internal_author": "ATRAHDOM",
+  "editorial_type": "Análisis",
+  "categories": [
+    "Blog",
+    "Análisis",
+    "Justicia climática",
+    "Derechos humanos",
+    "Guatemala"
+  ],
+  "tags": [
+    "Escazú",
+    "justicia climática",
+    "defensoras",
+    "COP31",
+    "economía del cuidado"
+  ],
+  "featured_image": "assets/images/justicia-climatica-escazu.png",
+  "excerpt_html": "<p>La crisis climática no es un fenómeno meteorológico aislado ni una preocupación exclusivamente técnica de científicos y diplomáticos. Para las mujeres trabajadoras de Guatemala, el...</p>",
+  "content_file": "content/posts/justicia-climatica-escazu.html",
+  "local_route": "/blog/justicia-climatica-escazu/"
+},
   {
     slug: 'convenio-144-oit-tripartismo',
     title: 'Convenio 144 de la OIT: La farsa del «tripartismo» oficialista y la usurpación de la voz sindical en Guatemala',
